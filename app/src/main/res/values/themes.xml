@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Tema ÚNICO de la app (Material Components M2), oscuro, sin action bar -->
+    <style name="Theme.Radiola" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Paleta -->
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorPrimaryVariant">@color/accent</item>
+        <item name="colorSecondary">@color/accent</item>
+
+        <!-- Superficies oscuras -->
+        <item name="android:colorBackground">@color/background_dark</item>
+        <item name="colorSurface">@color/surface_dark</item>
+        <item name="colorSurfaceVariant">@color/surface_variant_dark</item>
+        <item name="colorOnSurface">@color/on_dark</item>
+
+        <!-- Barras del sistema -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Tema para el botón de Cast -->
+        <item name="mediaRouteTheme">@style/CastMediaRouteButton.Radiola</item>
+    </style>
+
+    <!-- Tema para la Toolbar, para forzar el tinte de los iconos -->
+    <style name="Toolbar.Radiola" parent="">
+        <item name="iconTint">@color/on_dark</item>
+        <item name="android:textColorSecondary">@color/on_dark_60</item>
+    </style>
+
+    <!-- Estilo para el menú emergente (overflow) -->
+    <style name="ThemeOverlay.Radiola.Popup" parent="ThemeOverlay.MaterialComponents.Dark">
+        <item name="android:colorBackground">@color/surface_dark</item>
+        <item name="android:textColorPrimary">@color/on_dark</item>
+    </style>
+
+    <!-- Estilo para el botón de Cast -->
+    <style name="CastMediaRouteButton.Radiola" parent="Widget.MediaRouter.MediaRouteButton">
+        <item name="mediaRouteButtonTint">@android:color/white</item>
+    </style>
+
+    <style name="WhiteCastButton" parent="Widget.MediaRouter.MediaRouteButton">
+        <item name="mediaRouteButtonTint">@android:color/white</item>
+    </style>
+
+    <!-- Estilo para el Switch de la alarma -->
+    <style name="Switch.Radiola" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="thumbTint">@color/switch_thumb_selector</item>
+        <item name="trackTint">@color/switch_track_selector</item>
+    </style>
+
+    <!-- Estilo para los componentes de la alarma -->
+    <style name="Widget.Radiola.Alarm" parent="Theme.Radiola">
+        <item name="android:textColorPrimary">@color/on_dark</item>
+        <item name="android:textColorSecondary">@color/on_dark_60</item>
+    </style>
+
+</resources>

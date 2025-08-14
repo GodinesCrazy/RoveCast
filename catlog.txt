@@ -1,0 +1,545 @@
+--------- beginning of crash
+2025-08-11 14:50:52.952 13770-13966 AndroidRuntime          pid-13770                            E  FATAL EXCEPTION: pool-6-thread-1 (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.radiola, PID: 13770
+                                                                                                    java.lang.OutOfMemoryError: Failed to allocate a 133712200 byte allocation with 25165824 free bytes and 121MB until OOM, target footprint 299912344, growth limit 402653184
+                                                                                                    	at java.lang.StringFactory.newStringFromChars(StringFactory.java:260)
+                                                                                                    	at java.lang.StringBuffer.toString(StringBuffer.java:671)
+                                                                                                    	at java.io.BufferedReader.readLine(BufferedReader.java:338)
+                                                                                                    	at java.io.BufferedReader.readLine(BufferedReader.java:400)
+                                                                                                    	at com.ivanmarty.radiola.repository.RadioRepository.fetchRadios(RadioRepository.java:119)
+                                                                                                    	at com.ivanmarty.radiola.repository.RadioRepository.lambda$searchRadios$1(RadioRepository.java:57)
+                                                                                                    	at com.ivanmarty.radiola.repository.RadioRepository.$r8$lambda$YSaUdUx2dHC9cTx5VKXrXgffeqQ(Unknown Source:0)
+                                                                                                    	at com.ivanmarty.radiola.repository.RadioRepository$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+                                                                                                    	at java.lang.Thread.run(Thread.java:929)
+2025-08-11 14:51:53.289 14480-14671 AndroidRuntime          pid-14480                            E  FATAL EXCEPTION: pool-6-thread-1 (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.radiola, PID: 14480
+                                                                                                    java.lang.OutOfMemoryError: Failed to allocate a 133712200 byte allocation with 25165824 free bytes and 122MB until OOM, target footprint 299234240, growth limit 402653184
+                                                                                                    	at java.lang.StringFactory.newStringFromChars(StringFactory.java:260)
+                                                                                                    	at java.lang.StringBuffer.toString(StringBuffer.java:671)
+                                                                                                    	at java.io.BufferedReader.readLine(BufferedReader.java:338)
+                                                                                                    	at java.io.BufferedReader.readLine(BufferedReader.java:400)
+                                                                                                    	at com.ivanmarty.radiola.repository.RadioRepository.fetchRadios(RadioRepository.java:119)
+                                                                                                    	at com.ivanmarty.radiola.repository.RadioRepository.lambda$searchRadios$1(RadioRepository.java:57)
+                                                                                                    	at com.ivanmarty.radiola.repository.RadioRepository.$r8$lambda$YSaUdUx2dHC9cTx5VKXrXgffeqQ(Unknown Source:0)
+                                                                                                    	at com.ivanmarty.radiola.repository.RadioRepository$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+                                                                                                    	at java.lang.Thread.run(Thread.java:929)
+2025-08-11 18:56:51.960 17522-17522 AndroidRuntime          pid-17522                            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.radiola, PID: 17522
+                                                                                                    java.lang.RuntimeException: Unable to start activity ComponentInfo{com.ivanmarty.radiola/com.ivanmarty.radiola.ui.PlayerActivity}: java.lang.IllegalArgumentException: minBufferMs cannot be less than bufferForPlaybackAfterRebufferMs
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4060)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247)
+                                                                                                    	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.IllegalArgumentException: minBufferMs cannot be less than bufferForPlaybackAfterRebufferMs
+                                                                                                    	at androidx.media3.common.util.Assertions.checkArgument(Assertions.java:55)
+                                                                                                    	at androidx.media3.exoplayer.DefaultLoadControl.assertGreaterOrEqual(DefaultLoadControl.java:465)
+                                                                                                    	at androidx.media3.exoplayer.DefaultLoadControl.access$000(DefaultLoadControl.java:38)
+                                                                                                    	at androidx.media3.exoplayer.DefaultLoadControl$Builder.setBufferDurationsMs(DefaultLoadControl.java:172)
+                                                                                                    	at com.ivanmarty.radiola.ui.PlayerActivity.setupPlayer(PlayerActivity.java:82)
+                                                                                                    	at com.ivanmarty.radiola.ui.PlayerActivity.onCreate(PlayerActivity.java:76)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:8214)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:8202)
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1320)
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4033)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247) 
+                                                                                                    	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91) 
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149) 
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+2025-08-11 18:57:02.286 18468-18468 AndroidRuntime          pid-18468                            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.radiola, PID: 18468
+                                                                                                    java.lang.RuntimeException: Unable to start activity ComponentInfo{com.ivanmarty.radiola/com.ivanmarty.radiola.ui.PlayerActivity}: java.lang.IllegalArgumentException: minBufferMs cannot be less than bufferForPlaybackAfterRebufferMs
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4060)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247)
+                                                                                                    	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.IllegalArgumentException: minBufferMs cannot be less than bufferForPlaybackAfterRebufferMs
+                                                                                                    	at androidx.media3.common.util.Assertions.checkArgument(Assertions.java:55)
+                                                                                                    	at androidx.media3.exoplayer.DefaultLoadControl.assertGreaterOrEqual(DefaultLoadControl.java:465)
+                                                                                                    	at androidx.media3.exoplayer.DefaultLoadControl.access$000(DefaultLoadControl.java:38)
+                                                                                                    	at androidx.media3.exoplayer.DefaultLoadControl$Builder.setBufferDurationsMs(DefaultLoadControl.java:172)
+                                                                                                    	at com.ivanmarty.radiola.ui.PlayerActivity.setupPlayer(PlayerActivity.java:82)
+                                                                                                    	at com.ivanmarty.radiola.ui.PlayerActivity.onCreate(PlayerActivity.java:76)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:8214)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:8202)
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1320)
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4033)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247) 
+                                                                                                    	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91) 
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149) 
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+2025-08-11 18:57:13.847 18692-18692 AndroidRuntime          pid-18692                            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.radiola, PID: 18692
+                                                                                                    java.lang.RuntimeException: Unable to start activity ComponentInfo{com.ivanmarty.radiola/com.ivanmarty.radiola.ui.PlayerActivity}: java.lang.IllegalArgumentException: minBufferMs cannot be less than bufferForPlaybackAfterRebufferMs
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4060)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247)
+                                                                                                    	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.IllegalArgumentException: minBufferMs cannot be less than bufferForPlaybackAfterRebufferMs
+                                                                                                    	at androidx.media3.common.util.Assertions.checkArgument(Assertions.java:55)
+                                                                                                    	at androidx.media3.exoplayer.DefaultLoadControl.assertGreaterOrEqual(DefaultLoadControl.java:465)
+                                                                                                    	at androidx.media3.exoplayer.DefaultLoadControl.access$000(DefaultLoadControl.java:38)
+                                                                                                    	at androidx.media3.exoplayer.DefaultLoadControl$Builder.setBufferDurationsMs(DefaultLoadControl.java:172)
+                                                                                                    	at com.ivanmarty.radiola.ui.PlayerActivity.setupPlayer(PlayerActivity.java:82)
+                                                                                                    	at com.ivanmarty.radiola.ui.PlayerActivity.onCreate(PlayerActivity.java:76)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:8214)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:8202)
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1320)
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4033)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247) 
+                                                                                                    	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91) 
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149) 
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+--------- beginning of system
+2025-08-11 19:04:40.067 21372-21372 AndroidRuntime          pid-21372                            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.radiola, PID: 21372
+                                                                                                    java.lang.RuntimeException: Unable to start activity ComponentInfo{com.ivanmarty.radiola/com.ivanmarty.radiola.ui.PlayerActivity}: java.lang.IllegalArgumentException: minBufferMs cannot be less than bufferForPlaybackAfterRebufferMs
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4060)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247)
+                                                                                                    	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.IllegalArgumentException: minBufferMs cannot be less than bufferForPlaybackAfterRebufferMs
+                                                                                                    	at androidx.media3.common.util.Assertions.checkArgument(Assertions.java:55)
+                                                                                                    	at androidx.media3.exoplayer.DefaultLoadControl.assertGreaterOrEqual(DefaultLoadControl.java:465)
+                                                                                                    	at androidx.media3.exoplayer.DefaultLoadControl.access$000(DefaultLoadControl.java:38)
+                                                                                                    	at androidx.media3.exoplayer.DefaultLoadControl$Builder.setBufferDurationsMs(DefaultLoadControl.java:172)
+                                                                                                    	at com.ivanmarty.radiola.ui.PlayerActivity.setupPlayer(PlayerActivity.java:82)
+                                                                                                    	at com.ivanmarty.radiola.ui.PlayerActivity.onCreate(PlayerActivity.java:76)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:8214)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:8202)
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1320)
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4033)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247) 
+                                                                                                    	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91) 
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149) 
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+2025-08-14 17:14:50.904 17058-17058 AndroidRuntime          pid-17058                            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.radiola, PID: 17058
+                                                                                                    java.lang.IllegalArgumentException: menu item with ID 2131362189 doesn't have a MediaRouteActionProvider.
+                                                                                                    	at com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(com.google.android.gms:play-services-cast-framework@@21.4.0:11)
+                                                                                                    	at com.ivanmarty.radiola.ui.MainActivity.onCreateOptionsMenu(MainActivity.java:71)
+                                                                                                    	at android.app.Activity.onCreatePanelMenu(Activity.java:4261)
+                                                                                                    	at androidx.activity.ComponentActivity.onCreatePanelMenu(ComponentActivity.java:520)
+                                                                                                    	at androidx.appcompat.view.WindowCallbackWrapper.onCreatePanelMenu(WindowCallbackWrapper.java:94)
+                                                                                                    	at androidx.appcompat.app.AppCompatDelegateImpl$AppCompatWindowCallback.onCreatePanelMenu(AppCompatDelegateImpl.java:3413)
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar.populateOptionsMenu(ToolbarActionBar.java:458)
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar$1.run(ToolbarActionBar.java:58)
+                                                                                                    	at android.os.Handler.handleCallback(Handler.java:900)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:103)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.IllegalArgumentException: cannot refreshButtonSelector with null mediaRouteActionProvider
+                                                                                                    	at com.google.android.gms.cast.framework.CastButtonFactory.zzg(com.google.android.gms:play-services-cast-framework@@21.4.0:3)
+                                                                                                    	at com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(com.google.android.gms:play-services-cast-framework@@21.4.0:6)
+                                                                                                    	at com.ivanmarty.radiola.ui.MainActivity.onCreateOptionsMenu(MainActivity.java:71) 
+                                                                                                    	at android.app.Activity.onCreatePanelMenu(Activity.java:4261) 
+                                                                                                    	at androidx.activity.ComponentActivity.onCreatePanelMenu(ComponentActivity.java:520) 
+                                                                                                    	at androidx.appcompat.view.WindowCallbackWrapper.onCreatePanelMenu(WindowCallbackWrapper.java:94) 
+                                                                                                    	at androidx.appcompat.app.AppCompatDelegateImpl$AppCompatWindowCallback.onCreatePanelMenu(AppCompatDelegateImpl.java:3413) 
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar.populateOptionsMenu(ToolbarActionBar.java:458) 
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar$1.run(ToolbarActionBar.java:58) 
+                                                                                                    	at android.os.Handler.handleCallback(Handler.java:900) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:103) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+2025-08-14 17:14:56.359 17637-17637 AndroidRuntime          pid-17637                            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.radiola, PID: 17637
+                                                                                                    java.lang.IllegalArgumentException: menu item with ID 2131362189 doesn't have a MediaRouteActionProvider.
+                                                                                                    	at com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(com.google.android.gms:play-services-cast-framework@@21.4.0:11)
+                                                                                                    	at com.ivanmarty.radiola.ui.MainActivity.onCreateOptionsMenu(MainActivity.java:71)
+                                                                                                    	at android.app.Activity.onCreatePanelMenu(Activity.java:4261)
+                                                                                                    	at androidx.activity.ComponentActivity.onCreatePanelMenu(ComponentActivity.java:520)
+                                                                                                    	at androidx.appcompat.view.WindowCallbackWrapper.onCreatePanelMenu(WindowCallbackWrapper.java:94)
+                                                                                                    	at androidx.appcompat.app.AppCompatDelegateImpl$AppCompatWindowCallback.onCreatePanelMenu(AppCompatDelegateImpl.java:3413)
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar.populateOptionsMenu(ToolbarActionBar.java:458)
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar$1.run(ToolbarActionBar.java:58)
+                                                                                                    	at android.os.Handler.handleCallback(Handler.java:900)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:103)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.IllegalArgumentException: cannot refreshButtonSelector with null mediaRouteActionProvider
+                                                                                                    	at com.google.android.gms.cast.framework.CastButtonFactory.zzg(com.google.android.gms:play-services-cast-framework@@21.4.0:3)
+                                                                                                    	at com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(com.google.android.gms:play-services-cast-framework@@21.4.0:6)
+                                                                                                    	at com.ivanmarty.radiola.ui.MainActivity.onCreateOptionsMenu(MainActivity.java:71) 
+                                                                                                    	at android.app.Activity.onCreatePanelMenu(Activity.java:4261) 
+                                                                                                    	at androidx.activity.ComponentActivity.onCreatePanelMenu(ComponentActivity.java:520) 
+                                                                                                    	at androidx.appcompat.view.WindowCallbackWrapper.onCreatePanelMenu(WindowCallbackWrapper.java:94) 
+                                                                                                    	at androidx.appcompat.app.AppCompatDelegateImpl$AppCompatWindowCallback.onCreatePanelMenu(AppCompatDelegateImpl.java:3413) 
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar.populateOptionsMenu(ToolbarActionBar.java:458) 
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar$1.run(ToolbarActionBar.java:58) 
+                                                                                                    	at android.os.Handler.handleCallback(Handler.java:900) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:103) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+2025-08-14 17:16:26.361 18396-18396 AndroidRuntime          pid-18396                            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.radiola, PID: 18396
+                                                                                                    java.lang.IllegalArgumentException: menu item with ID 2131362189 doesn't have a MediaRouteActionProvider.
+                                                                                                    	at com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(com.google.android.gms:play-services-cast-framework@@21.4.0:11)
+                                                                                                    	at com.ivanmarty.radiola.ui.MainActivity.onCreateOptionsMenu(MainActivity.java:71)
+                                                                                                    	at android.app.Activity.onCreatePanelMenu(Activity.java:4261)
+                                                                                                    	at androidx.activity.ComponentActivity.onCreatePanelMenu(ComponentActivity.java:520)
+                                                                                                    	at androidx.appcompat.view.WindowCallbackWrapper.onCreatePanelMenu(WindowCallbackWrapper.java:94)
+                                                                                                    	at androidx.appcompat.app.AppCompatDelegateImpl$AppCompatWindowCallback.onCreatePanelMenu(AppCompatDelegateImpl.java:3413)
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar.populateOptionsMenu(ToolbarActionBar.java:458)
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar$1.run(ToolbarActionBar.java:58)
+                                                                                                    	at android.os.Handler.handleCallback(Handler.java:900)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:103)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.IllegalArgumentException: cannot refreshButtonSelector with null mediaRouteActionProvider
+                                                                                                    	at com.google.android.gms.cast.framework.CastButtonFactory.zzg(com.google.android.gms:play-services-cast-framework@@21.4.0:3)
+                                                                                                    	at com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(com.google.android.gms:play-services-cast-framework@@21.4.0:6)
+                                                                                                    	at com.ivanmarty.radiola.ui.MainActivity.onCreateOptionsMenu(MainActivity.java:71) 
+                                                                                                    	at android.app.Activity.onCreatePanelMenu(Activity.java:4261) 
+                                                                                                    	at androidx.activity.ComponentActivity.onCreatePanelMenu(ComponentActivity.java:520) 
+                                                                                                    	at androidx.appcompat.view.WindowCallbackWrapper.onCreatePanelMenu(WindowCallbackWrapper.java:94) 
+                                                                                                    	at androidx.appcompat.app.AppCompatDelegateImpl$AppCompatWindowCallback.onCreatePanelMenu(AppCompatDelegateImpl.java:3413) 
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar.populateOptionsMenu(ToolbarActionBar.java:458) 
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar$1.run(ToolbarActionBar.java:58) 
+                                                                                                    	at android.os.Handler.handleCallback(Handler.java:900) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:103) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+--------- beginning of main
+2025-08-14 17:16:40.961 18679-18679 AndroidRuntime          pid-18679                            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.radiola, PID: 18679
+                                                                                                    java.lang.IllegalArgumentException: menu item with ID 2131362189 doesn't have a MediaRouteActionProvider.
+                                                                                                    	at com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(com.google.android.gms:play-services-cast-framework@@21.4.0:11)
+                                                                                                    	at com.ivanmarty.radiola.ui.MainActivity.onCreateOptionsMenu(MainActivity.java:71)
+                                                                                                    	at android.app.Activity.onCreatePanelMenu(Activity.java:4261)
+                                                                                                    	at androidx.activity.ComponentActivity.onCreatePanelMenu(ComponentActivity.java:520)
+                                                                                                    	at androidx.appcompat.view.WindowCallbackWrapper.onCreatePanelMenu(WindowCallbackWrapper.java:94)
+                                                                                                    	at androidx.appcompat.app.AppCompatDelegateImpl$AppCompatWindowCallback.onCreatePanelMenu(AppCompatDelegateImpl.java:3413)
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar.populateOptionsMenu(ToolbarActionBar.java:458)
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar$1.run(ToolbarActionBar.java:58)
+                                                                                                    	at android.os.Handler.handleCallback(Handler.java:900)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:103)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.IllegalArgumentException: cannot refreshButtonSelector with null mediaRouteActionProvider
+                                                                                                    	at com.google.android.gms.cast.framework.CastButtonFactory.zzg(com.google.android.gms:play-services-cast-framework@@21.4.0:3)
+                                                                                                    	at com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(com.google.android.gms:play-services-cast-framework@@21.4.0:6)
+                                                                                                    	at com.ivanmarty.radiola.ui.MainActivity.onCreateOptionsMenu(MainActivity.java:71) 
+                                                                                                    	at android.app.Activity.onCreatePanelMenu(Activity.java:4261) 
+                                                                                                    	at androidx.activity.ComponentActivity.onCreatePanelMenu(ComponentActivity.java:520) 
+                                                                                                    	at androidx.appcompat.view.WindowCallbackWrapper.onCreatePanelMenu(WindowCallbackWrapper.java:94) 
+                                                                                                    	at androidx.appcompat.app.AppCompatDelegateImpl$AppCompatWindowCallback.onCreatePanelMenu(AppCompatDelegateImpl.java:3413) 
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar.populateOptionsMenu(ToolbarActionBar.java:458) 
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar$1.run(ToolbarActionBar.java:58) 
+                                                                                                    	at android.os.Handler.handleCallback(Handler.java:900) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:103) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+2025-08-14 17:17:41.170 19184-19204 HwActivityThreadImpl    com.ivanmarty.radiola                I  mSocketName: ed19ce96-5252-47f6-a5c4-987af9701bc5
+---------------------------- PROCESS STARTED (19184) for package com.ivanmarty.radiola ----------------------------
+2025-08-14 17:17:41.175 19184-19204 HwActivityThreadImpl    com.ivanmarty.radiola                I  initPreloadedSocked end mPreloadStatus 2
+2025-08-14 17:17:41.189 19184-19202 HwActivityThreadImpl    com.ivanmarty.radiola                I  before connect app.socketName:ed19ce96-5252-47f6-a5c4-987af9701bc5
+2025-08-14 17:17:41.197 19184-19184 ApplicationLoaders      com.ivanmarty.radiola                D  createClassLoader zip: /data/app/com.ivanmarty.radiola-IEwhArHXn21g_Hzzv8CagQ==/base.apk librarySearchPath: /data/app/com.ivanmarty.radiola-IEwhArHXn21g_Hzzv8CagQ==/lib/arm64 libraryPermittedPath: /data/user/0/com.ivanmarty.radiola parent: java.lang.BootClassLoader@94ea432 targetSdkVersion: 35 isBundled: false classLoaderName: null sharedLibraries: null
+2025-08-14 17:17:41.201 19184-19206 ActivityThread          com.ivanmarty.radiola                I  Init compatible state: true
+2025-08-14 17:17:41.202 19184-19206 HwFramewor...rtsFactory com.ivanmarty.radiola                D  HwFrameworkSecurityPartsFactory in.
+2025-08-14 17:17:41.202 19184-19206 HwFramewor...rtsFactory com.ivanmarty.radiola                I  add HwFrameworkSecurityPartsFactory to memory.
+2025-08-14 17:17:41.203 19184-19206 BehaviorCollectManager  com.ivanmarty.radiola                E  Fail to acquire dataAnalyzerService...
+2025-08-14 17:17:41.389 19184-19202 HwActivityThreadImpl    com.ivanmarty.radiola                E  connect Error.
+2025-08-14 17:17:41.389 19184-19202 HwActivityThreadImpl    com.ivanmarty.radiola                W  closeStream error.
+2025-08-14 17:17:41.389 19184-19202 HwActivityThreadImpl    com.ivanmarty.radiola                I  connectContinuePreload end mPreloadStatus 3
+2025-08-14 17:17:41.391 19184-19212 HwPartIawareFactory     com.ivanmarty.radiola                I  add android.common.HwPartIawareFactoryImpl to memory.
+2025-08-14 17:17:42.512 19184-19206 HwApiCacheMangerEx      com.ivanmarty.radiola                I  apicache path=/storage/emulated/0 state=mounted key=com.ivanmarty.radiola#10518#256
+2025-08-14 17:17:42.512 19184-19206 HwApiCacheMangerEx      com.ivanmarty.radiola                I  need clear apicache,because volumes changed,oldCnt=0 newCnt=1
+2025-08-14 17:17:42.513 19184-19206 HwApiCacheMangerEx      com.ivanmarty.radiola                I  apicache path=/storage/emulated/0 state=mounted key=com.ivanmarty.radiola#10518#0
+2025-08-14 17:17:42.513 19184-19206 HwApiCacheMangerEx      com.ivanmarty.radiola                I  need clear apicache,because volumes changed,oldCnt=1 newCnt=1
+2025-08-14 17:17:42.518 19184-19206 AwareBitmapCacher       com.ivanmarty.radiola                I  init processName:com.ivanmarty.radiola pid=19184 uid=10518
+2025-08-14 17:17:42.537 19184-19184 WM-WrkMgrInitializer    com.ivanmarty.radiola                D  Initializing WorkManager with default configuration.
+2025-08-14 17:17:42.690 19184-19184 StubController          com.ivanmarty.radiola                I  system app validUid:10518, isFriend:true
+2025-08-14 17:17:42.761 19184-19184 ApplicationLoaders      com.ivanmarty.radiola                D  createClassLoader zip: /system/framework/org.apache.http.legacy.jar librarySearchPath: /data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/lib/arm64:/data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@94ea432 targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
+2025-08-14 17:17:42.764 19184-19184 anmarty.radiol          com.ivanmarty.radiola                I  The ClassLoaderContext is a special shared library.
+2025-08-14 17:17:42.770 19184-19184 ApplicationLoaders      com.ivanmarty.radiola                D  createClassLoader zip: /system/framework/com.android.media.remotedisplay.jar librarySearchPath: /data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/lib/arm64:/data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@94ea432 targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
+2025-08-14 17:17:42.773 19184-19184 anmarty.radiol          com.ivanmarty.radiola                I  The ClassLoaderContext is a special shared library.
+2025-08-14 17:17:42.776 19184-19184 ApplicationLoaders      com.ivanmarty.radiola                D  createClassLoader zip: /system/framework/com.android.location.provider.jar librarySearchPath: /data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/lib/arm64:/data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@94ea432 targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
+2025-08-14 17:17:42.781 19184-19184 anmarty.radiol          com.ivanmarty.radiola                I  The ClassLoaderContext is a special shared library.
+2025-08-14 17:17:42.784 19184-19184 ApplicationLoaders      com.ivanmarty.radiola                D  createClassLoader zip: /data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/base.apk:/data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/split_config.es.apk:/data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/split_config.xxhdpi.apk librarySearchPath: /data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/lib/arm64:/data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@94ea432 targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: [dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/org.apache.http.legacy.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/lib/arm64, /data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]], dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/com.android.media.remotedisplay.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/lib/arm64, /data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]], dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/com.android.location.provider.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/lib/arm64, /data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-T2ytBAKCNXBAdJv_nLiAzg==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]]]
+2025-08-14 17:17:42.855 19184-19184 DynamiteModule          com.ivanmarty.radiola                I  Considering local module com.google.android.gms.ads.dynamite:0 and remote module com.google.android.gms.ads.dynamite:251815204
+2025-08-14 17:17:42.855 19184-19184 DynamiteModule          com.ivanmarty.radiola                I  Selected remote version of com.google.android.gms.ads.dynamite, version >= 251815204
+2025-08-14 17:17:42.891 19184-19184 anmarty.radiol          com.ivanmarty.radiola                I  The ClassLoaderContext is a special shared library.
+2025-08-14 17:17:42.900 19184-19184 DynamitePackage         com.ivanmarty.radiola                D  Instantiated singleton DynamitePackage.
+2025-08-14 17:17:42.900 19184-19184 DynamitePackage         com.ivanmarty.radiola                D  Instantiating com.google.android.gms.ads.ChimeraMobileAdsSettingManagerCreatorImpl
+2025-08-14 17:17:42.926 19184-19184 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden field Lsun/misc/Unsafe;->theUnsafe:Lsun/misc/Unsafe; (greylist, reflection, allowed)
+2025-08-14 17:17:42.926 19184-19184 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J (greylist,core-platform-api, linking, allowed)
+2025-08-14 17:17:42.926 19184-19184 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->arrayBaseOffset(Ljava/lang/Class;)I (greylist,core-platform-api, linking, allowed)
+2025-08-14 17:17:42.926 19184-19184 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->arrayIndexScale(Ljava/lang/Class;)I (greylist, linking, allowed)
+2025-08-14 17:17:42.942 19184-19184 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->getUnsafe()Lsun/misc/Unsafe; (greylist,core-platform-api, linking, allowed)
+2025-08-14 17:17:42.950 19184-19252 NetworkSecurityConfig   com.ivanmarty.radiola                D  Using Network Security Config from resource network_security_config debugBuild: true
+2025-08-14 17:17:42.953 19184-19184 HwCustConn...anagerImpl com.ivanmarty.radiola                D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-08-14 17:17:42.954 19184-19184 ConnectivityManager     com.ivanmarty.radiola                I  requestNetwork and the calling app is: com.ivanmarty.radiola
+2025-08-14 17:17:42.961 19184-19257 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-08-14 17:17:42.978 19184-19184 Ads                     com.ivanmarty.radiola                I  Updating ad debug logging enablement.
+2025-08-14 17:17:42.989 19184-19259 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapInt(Ljava/lang/Object;JII)Z (greylist, linking, allowed)
+2025-08-14 17:17:42.989 19184-19259 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->getObjectVolatile(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-08-14 17:17:42.990 19184-19259 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-08-14 17:17:42.990 19184-19259 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapLong(Ljava/lang/Object;JJJ)Z (greylist, linking, allowed)
+2025-08-14 17:17:43.065 19184-19184 WebViewFactory          com.ivanmarty.radiola                I  Loading com.google.android.webview version 138.0.7204.179 (code 720417933)
+2025-08-14 17:17:43.071 19184-19184 ApplicationLoaders      com.ivanmarty.radiola                D  createClassLoader zip: /data/app/com.google.android.trichromelibrary_720417933-Ml70ddMg10QAIbwtKqlbPQ==/base.apk librarySearchPath: /data/app/com.google.android.webview-LKxe0ziMnjIYULGoCcFUzw==/lib/arm64:/data/app/com.google.android.webview-LKxe0ziMnjIYULGoCcFUzw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.trichromelibrary_720417933-Ml70ddMg10QAIbwtKqlbPQ==/base.apk!/lib/arm64-v8a libraryPermittedPath:  parent: java.lang.BootClassLoader@94ea432 targetSdkVersion: 35 isBundled: false classLoaderName: null sharedLibraries: null
+2025-08-14 17:17:43.077 19184-19184 ApplicationLoaders      com.ivanmarty.radiola                D  createClassLoader zip: /data/app/com.google.android.webview-LKxe0ziMnjIYULGoCcFUzw==/base.apk librarySearchPath: /data/app/com.google.android.webview-LKxe0ziMnjIYULGoCcFUzw==/lib/arm64:/data/app/com.google.android.webview-LKxe0ziMnjIYULGoCcFUzw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.trichromelibrary_720417933-Ml70ddMg10QAIbwtKqlbPQ==/base.apk!/lib/arm64-v8a libraryPermittedPath:  parent: java.lang.BootClassLoader@94ea432 targetSdkVersion: 35 isBundled: false classLoaderName: null sharedLibraries: [dalvik.system.PathClassLoader[DexPathList[[zip file "/data/app/com.google.android.trichromelibrary_720417933-Ml70ddMg10QAIbwtKqlbPQ==/base.apk"],nativeLibraryDirectories=[/data/app/com.google.android.webview-LKxe0ziMnjIYULGoCcFUzw==/lib/arm64, /data/app/com.google.android.webview-LKxe0ziMnjIYULGoCcFUzw==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.trichromelibrary_720417933-Ml70ddMg10QAIbwtKqlbPQ==/base.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]]]
+2025-08-14 17:17:43.086 19184-19184 linker                  com.ivanmarty.radiola                W  Warning: "/data/app/com.google.android.trichromelibrary_720417933-Ml70ddMg10QAIbwtKqlbPQ==/base.apk!/lib/arm64-v8a/libmonochrome_64.so" unused DT entry: unknown processor-specific (type 0x70000001 arg 0x0) (ignoring)
+2025-08-14 17:17:43.152 19184-19184 cr_WVCFactoryProvider   com.ivanmarty.radiola                I  version=138.0.7204.179 (720417933) minSdkVersion=29 isBundle=false multiprocess=true packageId=127
+2025-08-14 17:17:43.167 19184-19284 chromium                com.ivanmarty.radiola                I  [0814/171743.166887:INFO:android_webview/browser/variations/variations_seed_loader.cc:67] Failed to open file for reading.: No such file or directory (2)
+2025-08-14 17:17:43.205 19184-19184 cr_LibraryLoader        com.ivanmarty.radiola                I  Successfully loaded native library
+2025-08-14 17:17:43.206 19184-19184 cr_CachingUmaRecorder   com.ivanmarty.radiola                I  Flushed 7 samples from 7 histograms, 0 samples were dropped.
+2025-08-14 17:17:43.214 19184-19184 cr_CombinedPProvider    com.ivanmarty.radiola                I  #registerProvider() provider:WV.d9@3b80b4 isPolicyCacheEnabled:false policyProvidersSize:0
+2025-08-14 17:17:43.216 19184-19184 cr_PolicyProvider       com.ivanmarty.radiola                I  #setManagerAndSource() 0
+2025-08-14 17:17:43.245 19184-19184 cr_CombinedPProvider    com.ivanmarty.radiola                I  #linkNativeInternal() 1
+2025-08-14 17:17:43.246 19184-19184 cr_AppResProvider       com.ivanmarty.radiola                I  #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
+2025-08-14 17:17:43.246 19184-19184 cr_PolicyProvider       com.ivanmarty.radiola                I  #notifySettingsAvailable() 0
+2025-08-14 17:17:43.246 19184-19184 cr_CombinedPProvider    com.ivanmarty.radiola                I  #onSettingsAvailable() 0
+2025-08-14 17:17:43.246 19184-19184 cr_CombinedPProvider    com.ivanmarty.radiola                I  #flushPolicies()
+2025-08-14 17:17:43.295 19184-19184 chromium                com.ivanmarty.radiola                W  [WARNING:android_webview/browser/network_service/net_helpers.cc:143] HTTP Cache size is: 20971520
+2025-08-14 17:17:43.359 19184-19184 HwCustConn...anagerImpl com.ivanmarty.radiola                D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-08-14 17:17:43.360 19184-19184 ConnectivityManager     com.ivanmarty.radiola                I  requestNetwork and the calling app is: com.ivanmarty.radiola
+2025-08-14 17:17:43.364 19184-19184 HwCustConn...anagerImpl com.ivanmarty.radiola                D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-08-14 17:17:43.430 19184-19184 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-08-14 17:17:43.457 19184-19184 DynamitePackage         com.ivanmarty.radiola                D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-08-14 17:17:43.477 19184-19184 Ads                     com.ivanmarty.radiola                I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-08-14 17:17:43.503 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Llibcore/io/Memory;->peekLong(JZ)J (greylist, reflection, allowed)
+2025-08-14 17:17:43.503 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Llibcore/io/Memory;->pokeLong(JJZ)V (greylist, reflection, allowed)
+2025-08-14 17:17:43.503 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Llibcore/io/Memory;->pokeInt(JIZ)V (greylist, reflection, allowed)
+2025-08-14 17:17:43.503 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Llibcore/io/Memory;->peekInt(JZ)I (greylist, reflection, allowed)
+2025-08-14 17:17:43.504 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Llibcore/io/Memory;->pokeByte(JB)V (greylist, reflection, allowed)
+2025-08-14 17:17:43.504 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Llibcore/io/Memory;->peekByte(J)B (greylist, reflection, allowed)
+2025-08-14 17:17:43.504 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Llibcore/io/Memory;->pokeByteArray(J[BII)V (greylist, reflection, allowed)
+2025-08-14 17:17:43.504 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Llibcore/io/Memory;->peekByteArray(J[BII)V (greylist, reflection, allowed)
+2025-08-14 17:17:43.507 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, reflection, allowed)
+2025-08-14 17:17:43.508 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden field Ljava/nio/Buffer;->address:J (greylist, reflection, allowed)
+2025-08-14 17:17:43.509 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, reflection, allowed)
+2025-08-14 17:17:43.509 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, reflection, allowed)
+2025-08-14 17:17:43.509 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, reflection, allowed)
+2025-08-14 17:17:43.509 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, reflection, allowed)
+2025-08-14 17:17:43.510 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, reflection, allowed)
+2025-08-14 17:17:43.510 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, reflection, allowed)
+2025-08-14 17:17:43.514 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-08-14 17:17:43.514 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-08-14 17:17:43.514 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-08-14 17:17:43.514 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, linking, allowed)
+2025-08-14 17:17:43.519 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-08-14 17:17:43.524 19184-19265 HwCustConn...anagerImpl com.ivanmarty.radiola                D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-08-14 17:17:43.524 19184-19265 ConnectivityManager     com.ivanmarty.radiola                I  requestNetwork and the calling app is: com.ivanmarty.radiola
+2025-08-14 17:17:43.529 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->putObjectVolatile(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-08-14 17:17:43.530 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-08-14 17:17:43.545 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-08-14 17:17:43.545 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-08-14 17:17:43.545 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, linking, allowed)
+2025-08-14 17:17:43.574 19184-19269 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-08-14 17:17:43.574 19184-19269 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-08-14 17:17:43.612 19184-19184 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-08-14 17:17:43.635 19184-19265 anmarty.radiol          com.ivanmarty.radiola                W  Failed execv(/system/bin/dex2oat --debuggable --instruction-set=arm64 --instruction-set-features=runtime --runtime-arg -Xhidden-api-policy:enabled --runtime-arg -Xrelocate --boot-image=/system/framework/boot.art --runtime-arg -Xms64m --runtime-arg -Xmx512m -j4 --instruction-set-variant=generic --instruction-set-features=default --generate-mini-debug-info --debuggable --generate-mini-debug-info --dex-file=/data/user/0/com.ivanmarty.radiola/app_pccache/5/9CE56990AE68D2C37B96085020C96E23574736D4/pcam.jar --output-vdex-fd=161 --oat-fd=162 --oat-location=/data/user/0/com.ivanmarty.radiola/app_pccache/5/9CE56990AE68D2C37B96085020C96E23574736D4/oat/arm64/pcam.odex --compiler-filter=verify --class-loader-context=& --compilation-reason=dynamic-load) because non-0 exit status
+2025-08-14 17:17:43.646 19184-19272 AudioManager            com.ivanmarty.radiola                V  getMode...
+2025-08-14 17:17:43.647 19184-19273 Ads                     com.ivanmarty.radiola                W  Invoke Firebase method getInstance error.
+2025-08-14 17:17:43.647 19184-19273 Ads                     com.ivanmarty.radiola                W  The Google Mobile Ads SDK will not integrate with Firebase. Admob/Firebase integration requires the latest Firebase SDK jar, but Firebase SDK is either missing or out of date
+2025-08-14 17:17:43.649 19184-19272 AudioManager            com.ivanmarty.radiola                V  isMusicActive...
+2025-08-14 17:17:43.652 19184-19272 AudioManager            com.ivanmarty.radiola                V  isSpeakerphoneOn: false
+2025-08-14 17:17:43.657 19184-19184 ServiceBindIntentUtils  com.ivanmarty.radiola                W  Dynamic lookup for intent failed for action: com.google.android.gms.ads.service.CACHE
+2025-08-14 17:17:43.661 19184-19272 AudioManager            com.ivanmarty.radiola                V  getStreamVolume streamType: 3 volume: 15
+2025-08-14 17:17:43.662 19184-19272 AudioManager            com.ivanmarty.radiola                V  getStreamMaxVolume  treamType: 3
+2025-08-14 17:17:43.663 19184-19272 AudioManager            com.ivanmarty.radiola                V  getStreamVolume streamType: 2 volume: 14
+2025-08-14 17:17:43.675 19184-19184 HwTypeface              com.ivanmarty.radiola                I  updateFont: scale=1.04
+2025-08-14 17:17:43.676 19184-19184 SystemFonts             com.ivanmarty.radiola                D  areFontsVariable: script=Latn
+2025-08-14 17:17:43.677 19184-19184 ActivityThread          com.ivanmarty.radiola                I  finishPreloaded preloadStatus 3
+2025-08-14 17:17:43.678 19184-19184 ActivityThread          com.ivanmarty.radiola                I  finishPreloaded end preloadStatus 3
+2025-08-14 17:17:43.682 19184-19269 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-08-14 17:17:43.683 19184-19184 RmeSchedManager         com.ivanmarty.radiola                I  init Rme, version is: v1.0
+2025-08-14 17:17:43.684 19184-19184 RtgSchedEvent           com.ivanmarty.radiola                I  current pid:19184 AppType:-1
+2025-08-14 17:17:43.683 19184-19184 RmeSchedManager         com.ivanmarty.radiola                I  init Rme, version is: v1.0
+2025-08-14 17:17:43.686 19184-19269 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-08-14 17:17:43.689 19184-19269 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-08-14 17:17:43.700 19184-19351 CameraManagerGlobal     com.ivanmarty.radiola                I  Connecting to camera service
+2025-08-14 17:17:43.725 19184-19353 OpenGLRenderer          com.ivanmarty.radiola                I  RenderThread: progress name = [com.ivanmarty.radiola], viewCornerType = 0
+2025-08-14 17:17:43.729 19184-19356 iGraphics               com.ivanmarty.radiola                I  [0020080c] pn: com.ivanmarty.radiola, p: 19184
+2025-08-14 17:17:43.730 19184-19356 iGraphics               com.ivanmarty.radiola                I  [0030080c] no spt app: com.ivanmarty.radiola
+2025-08-14 17:17:43.731 19184-19184 AdWorker(Defaul         com.ivanmarty.radiola                W  type=1400 audit(0.0:356773): avc: granted { execute } for pid=19184 path="/data/data/com.ivanmarty.radiola/app_pccache/5/9CE56990AE68D2C37B96085020C96E23574736D4/pcam.jar" dev="mmcblk0p71" ino=175236 scontext=u:r:untrusted_app:s0:c6,c258,c512,c768 tcontext=u:object_r:app_data_file:s0:c6,c258,c512,c768 tclass=file
+2025-08-14 17:17:43.820 19184-19184 AppCompatDelegate       com.ivanmarty.radiola                D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
+2025-08-14 17:17:43.837 19184-19184 ActivityThread          com.ivanmarty.radiola                V  callActivityOnCreate
+2025-08-14 17:17:43.927 19184-19184 DecorView[]             com.ivanmarty.radiola                I  pkgName:com.ivanmarty.radiola old windowMode:0 new windoMode:1, isFixedSize:false
+2025-08-14 17:17:43.960 19184-19184 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (greylist, reflection, allowed)
+2025-08-14 17:17:44.140 19184-19363 UserMessagingPlatform   com.ivanmarty.radiola                I  Use new ConsentDebugSettings.Builder().addTestDeviceHashedId("AFC033BBEAF477A33219CE7057D05B14") to set this as a debug device.
+2025-08-14 17:17:44.145 19184-19363 UserMessagingPlatform   com.ivanmarty.radiola                D  Stored info not exists: IABTCF_TCString
+2025-08-14 17:17:44.145 19184-19363 UserMessagingPlatform   com.ivanmarty.radiola                D  Stored info not exists: IABGPP_HDR_GppString
+2025-08-14 17:17:44.145 19184-19363 UserMessagingPlatform   com.ivanmarty.radiola                D  Stored info not exists: IABGPP_GppSID
+2025-08-14 17:17:44.145 19184-19363 UserMessagingPlatform   com.ivanmarty.radiola                D  Stored info not exists: IABUSPrivacy_String
+2025-08-14 17:17:44.193 19184-19184 MediaRouter             com.ivanmarty.radiola                V  Selecting route: RouteInfo{ name=Teléfono, description=null, status=null, category=RouteCategory{ name=Sistema types=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO  groupable=false }, supportedTypes=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO , presentationDisplay=null }
+2025-08-14 17:17:44.200 19184-19184 GlobalMediaRouter       com.ivanmarty.radiola                I  Found default route: MediaRouter.RouteInfo{ uniqueId=DEFAULT_ROUTE, name=Teléfono, description=null, iconUri=null, enabled=true, connectionState=0, canDisconnect=false, playbackType=0, playbackStream=3, deviceType=0, volumeHandling=1, volume=15, volumeMax=15, presentationDisplayId=-1, extras=null, settingsIntent=null, providerPackageName=android }
+2025-08-14 17:17:44.200 19184-19184 GlobalMediaRouter       com.ivanmarty.radiola                I  Unselecting the current route because it is no longer selectable: null
+2025-08-14 17:17:44.203 19184-19184 MediaRouterProxy        com.ivanmarty.radiola                I  Don't need to set MediaRouterParams for Android S v2 or below
+2025-08-14 17:17:44.213 19184-19184 DynamiteModule          com.ivanmarty.radiola                I  Considering local module com.google.android.gms.cast.framework.dynamite:0 and remote module com.google.android.gms.cast.framework.dynamite:253031000
+2025-08-14 17:17:44.213 19184-19184 DynamiteModule          com.ivanmarty.radiola                I  Selected remote version of com.google.android.gms.cast.framework.dynamite, version >= 253031000
+2025-08-14 17:17:44.213 19184-19184 DynamiteModule          com.ivanmarty.radiola                V  Dynamite loader version >= 2, using loadModule2NoCrashUtils
+2025-08-14 17:17:44.277 19184-19184 CastDynamiteModuleImpl  com.ivanmarty.radiola                I  uk created by ClassLoader dalvik.system.DelegateLastClassLoader[DexPathList[[zip file "/data/user_de/0/com.google.android.gms/app_chimera/m/00000183/DynamiteModulesC.uncompressed.apk"],nativeLibraryDirectories=[/data/user_de/0/com.google.android.gms/app_chimera/m/00000183/DynamiteModulesC.uncompressed.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]].
+2025-08-14 17:17:44.297 19184-19184 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapInt(Ljava/lang/Object;JII)Z (greylist, linking, allowed)
+2025-08-14 17:17:44.297 19184-19184 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapLong(Ljava/lang/Object;JJJ)Z (greylist, linking, allowed)
+2025-08-14 17:17:44.297 19184-19184 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->getIntVolatile(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-08-14 17:17:44.297 19184-19184 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->getObjectVolatile(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-08-14 17:17:44.297 19184-19184 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->putObjectVolatile(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-08-14 17:17:44.305 19184-19184 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-08-14 17:17:44.305 19184-19184 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-08-14 17:17:44.312 19184-19184 HwCustConn...anagerImpl com.ivanmarty.radiola                D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-08-14 17:17:44.350 19184-19184 anmarty.radiol          com.ivanmarty.radiola                I  Waiting for a blocking GC ClassLinker
+2025-08-14 17:17:44.371 19184-19184 anmarty.radiol          com.ivanmarty.radiola                I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 21.143ms
+2025-08-14 17:17:44.382 19184-19184 ActivityThread          com.ivanmarty.radiola                D  add activity client record, r= ActivityRecord{ad1bbc7 token=android.os.BinderProxy@3759981 {com.ivanmarty.radiola/com.ivanmarty.radiola.ui.MainActivity}} token= android.os.BinderProxy@3759981
+2025-08-14 17:17:44.388 19184-19184 AppVisibilityProxy      com.ivanmarty.radiola                I  onAppEnteredForeground
+2025-08-14 17:17:44.418 19184-19184 OverScroll...timization com.ivanmarty.radiola                I  start init SmartSlideOverScroller and get the overscroller config
+2025-08-14 17:17:44.418 19184-19184 OverScroll...timization com.ivanmarty.radiola                I  get the overscroller config
+2025-08-14 17:17:44.622 19184-19184 MouseWheelSynthesizer   com.ivanmarty.radiola                D  mMoveStepInDp: 64, mMoveStepInPixel: 192, mUpTimeDelayed: 100
+2025-08-14 17:17:44.624 19184-19184 ViewRootImpl            com.ivanmarty.radiola                D  ViewRootImpl mIsInProductivePCDisplay: false
+2025-08-14 17:17:44.626 19184-19184 HwPartPowe...iceFactory com.ivanmarty.radiola                I  add HwPartPowerOfficeFactoryImpl to memory.
+2025-08-14 17:17:44.639 19184-19184 InputEventReceiver      com.ivanmarty.radiola                D  dispatchInputInterval 1000000
+2025-08-14 17:17:44.643 19184-19184 RmeSchedManager         com.ivanmarty.radiola                I  init Rme, version is: v1.0
+2025-08-14 17:17:44.644 19184-19184 RtgSchedEvent           com.ivanmarty.radiola                I  current pid:19184 AppType:-1
+2025-08-14 17:17:44.644 19184-19184 DisplayEventDispatcher  com.ivanmarty.radiola                W  dispatcher 0x75d3edc3a0 ~ ignoring unknown event type 0x736f6674
+2025-08-14 17:17:44.645  2442-2777  DollieAdapterService    com.huawei.systemserver              E  notifyActivityState pkg:com.ivanmarty.radiola/com.ivanmarty.radiola.ui.MainActivity state:2 fg:true mUid:10518
+2025-08-14 17:17:44.646 19184-19184 Choreographer           com.ivanmarty.radiola                I  Skipped 126 frames!  The application may be doing too much work on its main thread.
+2025-08-14 17:17:44.652 19184-19379 HiTouch_HiTouchSensor   com.ivanmarty.radiola                W  depended package hiTouch does n't exist!
+2025-08-14 17:17:44.652 19184-19379 HiTouch_HiTouchSensor   com.ivanmarty.radiola                I  HiTouch restricted: system app HiTouch don't exist.
+2025-08-14 17:17:44.652 19184-19379 HiTouch_Pr...reDetector com.ivanmarty.radiola                D  onAttached, package=com.ivanmarty.radiola, windowType=1, mIsHiTouchRestricted=true
+2025-08-14 17:17:44.714 19184-19353 mali_winsys             com.ivanmarty.radiola                D  EGLint new_window_surface(egl_winsys_display *, void *, EGLSurface, EGLConfig, egl_winsys_surface **, EGLBoolean) returns 0x3000
+2025-08-14 17:17:44.743 19184-19353 Gralloc3                com.ivanmarty.radiola                W  mapper 3.x is not supported
+2025-08-14 17:17:44.828 19184-19353 OpenGLRenderer          com.ivanmarty.radiola                I  Davey! duration=2287ms; Flags=1, IntendedVsync=178880947962693, Vsync=178883047962609, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=178883054370099, AnimationStart=178883054464891, PerformTraversalsStart=178883054793016, DrawStart=178883123018537, SyncQueued=178883148832078, SyncStart=178883149338328, IssueDrawCommandsStart=178883149501870, SwapBuffers=178883232939370, FrameCompleted=178883235685724, DequeueBufferDuration=83000, QueueBufferDuration=957000, 
+2025-08-14 17:17:44.830 19184-19184 HwViewRootImpl          com.ivanmarty.radiola                I  removeInvalidNode jank list is null
+2025-08-14 17:17:44.873 19184-19259 Ads                     com.ivanmarty.radiola                W  Update ad debug logging enablement as false
+2025-08-14 17:17:44.884 19184-19321 cr_media                com.ivanmarty.radiola                W  getBluetoothAdapter() requires BLUETOOTH permission
+2025-08-14 17:17:44.885 19184-19321 cr_media                com.ivanmarty.radiola                W  registerBluetoothIntentsIfNeeded: Requires BLUETOOTH permission
+2025-08-14 17:17:44.894 19184-19184 MediaRouter             com.ivanmarty.radiola                V  Selecting route: RouteInfo{ name=Teléfono, description=null, status=null, category=RouteCategory{ name=Sistema types=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO  groupable=false }, supportedTypes=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO , presentationDisplay=null }
+2025-08-14 17:17:44.898 19184-19184 UserMessagingPlatform   com.ivanmarty.radiola                W  Publisher misconfiguration: Failed to read publisher's account configuration; this could be caused by an invalid app ID or lack of configured form(s). Verify that your app ID is correct and that you have configured one or more forms for this application, then try again. Received app ID: `ca-app-pub-2918417880001381~1513898154`.
+2025-08-14 17:17:44.899 19184-19184 HwViewGroupImpl         com.ivanmarty.radiola                E  parse speed value length error
+2025-08-14 17:17:44.945 19184-19344 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-08-14 17:17:44.945 19184-19344 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-08-14 17:17:44.946 19184-19344 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, linking, allowed)
+2025-08-14 17:17:44.946 19184-19344 anmarty.radiol          com.ivanmarty.radiola                W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-08-14 17:17:44.970  1726-1751  WindowManager           system_server                        E  win=Window{9e571fa u0 Splash Screen com.ivanmarty.radiola EXITING} destroySurfaces: appStopped=false win.mWindowRemovalAllowed=true win.mRemoveOnExit=true
+2025-08-14 17:17:44.993 19184-19184 BlockMonitor            com.ivanmarty.radiola                I  dispatchingThrewException In MainThread
+2025-08-14 17:17:44.993 19184-19184 AndroidRuntime          com.ivanmarty.radiola                D  Shutting down VM
+2025-08-14 17:17:44.994 19184-19184 QarthLog                com.ivanmarty.radiola                I  [PatchStore] createDisableExceptionQarthFile
+2025-08-14 17:17:44.994 19184-19184 QarthLog                com.ivanmarty.radiola                I  [PatchStore] create disable file for com.ivanmarty.radiola uid is 10518
+2025-08-14 17:17:44.998 19184-19184 AndroidRuntime          com.ivanmarty.radiola                E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.radiola, PID: 19184
+                                                                                                    java.lang.IllegalArgumentException: menu item with ID 2131362189 doesn't have a MediaRouteActionProvider.
+                                                                                                    	at com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(com.google.android.gms:play-services-cast-framework@@21.4.0:11)
+                                                                                                    	at com.ivanmarty.radiola.ui.MainActivity.onCreateOptionsMenu(MainActivity.java:71)
+                                                                                                    	at android.app.Activity.onCreatePanelMenu(Activity.java:4261)
+                                                                                                    	at androidx.activity.ComponentActivity.onCreatePanelMenu(ComponentActivity.java:520)
+                                                                                                    	at androidx.appcompat.view.WindowCallbackWrapper.onCreatePanelMenu(WindowCallbackWrapper.java:94)
+                                                                                                    	at androidx.appcompat.app.AppCompatDelegateImpl$AppCompatWindowCallback.onCreatePanelMenu(AppCompatDelegateImpl.java:3413)
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar.populateOptionsMenu(ToolbarActionBar.java:458)
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar$1.run(ToolbarActionBar.java:58)
+                                                                                                    	at android.os.Handler.handleCallback(Handler.java:900)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:103)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.IllegalArgumentException: cannot refreshButtonSelector with null mediaRouteActionProvider
+                                                                                                    	at com.google.android.gms.cast.framework.CastButtonFactory.zzg(com.google.android.gms:play-services-cast-framework@@21.4.0:3)
+                                                                                                    	at com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(com.google.android.gms:play-services-cast-framework@@21.4.0:6)
+                                                                                                    	at com.ivanmarty.radiola.ui.MainActivity.onCreateOptionsMenu(MainActivity.java:71) 
+                                                                                                    	at android.app.Activity.onCreatePanelMenu(Activity.java:4261) 
+                                                                                                    	at androidx.activity.ComponentActivity.onCreatePanelMenu(ComponentActivity.java:520) 
+                                                                                                    	at androidx.appcompat.view.WindowCallbackWrapper.onCreatePanelMenu(WindowCallbackWrapper.java:94) 
+                                                                                                    	at androidx.appcompat.app.AppCompatDelegateImpl$AppCompatWindowCallback.onCreatePanelMenu(AppCompatDelegateImpl.java:3413) 
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar.populateOptionsMenu(ToolbarActionBar.java:458) 
+                                                                                                    	at androidx.appcompat.app.ToolbarActionBar$1.run(ToolbarActionBar.java:58) 
+                                                                                                    	at android.os.Handler.handleCallback(Handler.java:900) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:103) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+2025-08-14 17:17:45.034 19184-19184 Process                 com.ivanmarty.radiola                I  Sending signal. PID: 19184 SIG: 9
+---------------------------- PROCESS ENDED (19184) for package com.ivanmarty.radiola ----------------------------
+2025-08-14 17:17:45.125  1726-1936  InputDispatcher         system_server                        E  channel '706e1c2 com.ivanmarty.radiola/com.ivanmarty.radiola.ui.MainActivity (server)' ~ Channel is unrecoverably broken and will be disposed!
+2025-08-14 17:17:45.159  1726-6229  WindowManager           system_server                        E  win=Window{706e1c2 u0 com.ivanmarty.radiola/com.ivanmarty.radiola.ui.MainActivity EXITING} destroySurfaces: appStopped=false win.mWindowRemovalAllowed=true win.mRemoveOnExit=true
+2025-08-14 17:17:45.242  2442-2777  DollieAdapterService    com.huawei.systemserver              E  notifyActivityState pkg:com.ivanmarty.radiola/com.ivanmarty.radiola.ui.MainActivity state:20 fg:false mUid:10518

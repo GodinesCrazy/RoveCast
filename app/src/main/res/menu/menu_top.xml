@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/media_route_menu_item"
+        android:title="Cast"
+        app:actionViewClass="androidx.mediarouter.app.MediaRouteButton"
+        android:actionLayout="@layout/custom_cast_button"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_alarm"
+        android:title="Alarma"
+        android:icon="@drawable/ic_alarm"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_premium"
+        android:title=""
+        android:icon="@drawable/ic_crown"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_privacy"
+        android:title="Privacy Policy"
+        app:showAsAction="never"/>
+</menu>

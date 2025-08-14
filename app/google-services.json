@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "585271997582",
+    "project_id": "radiola-9f0d2",
+    "storage_bucket": "radiola-9f0d2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585271997582:android:11b6dfc9c6ee6d7bccc5df",
+        "android_client_info": {
+          "package_name": "com.ivanmarty.radiola"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRiwQUB3ktI4SvtLdoQsK7Gpz-xianEpE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@color/surface_dark"
-        android:theme="@style/Toolbar.Radiola"
-        app:popupTheme="@style/ThemeOverlay.Radiola.Popup" />
+        android:theme="@style/Toolbar.RoveCast"
+        app:popupTheme="@style/ThemeOverlay.RoveCast.Popup" />
 
     <!-- Contenido entre barras -->
     <FrameLayout

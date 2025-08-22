@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_timer"
+        android:title="Sleep Timer"
+        android:icon="@drawable/ic_timer"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/media_route_menu_item"
+        android:title="Cast"
+        app:actionViewClass="androidx.mediarouter.app.MediaRouteButton"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_favorite"
+        android:title="Favorite"
+        android:icon="@drawable/ic_heart_outline"
+        app:showAsAction="always"/>
+
+</menu>

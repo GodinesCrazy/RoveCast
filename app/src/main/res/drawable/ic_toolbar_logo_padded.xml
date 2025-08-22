@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:width="64dp" android:height="64dp">
+        <inset
+            android:drawable="@drawable/ic_rovecast_logo"
+            android:insetLeft="12dp"
+            android:insetTop="12dp"
+            android:insetRight="12dp"
+            android:insetBottom="12dp" />
+    </item>
+</layer-list>

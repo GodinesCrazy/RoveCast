@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Estado conectado: color verde accent -->
+    <item android:color="@color/accent" android:state_checked="true"/>
+    <!-- Estado por defecto: blanco -->
+    <item android:color="@android:color/white"/>
+</selector>

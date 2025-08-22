@@ -5,7 +5,7 @@
         android:id="@+id/media_route_menu_item"
         android:title="Cast"
         app:actionViewClass="androidx.mediarouter.app.MediaRouteButton"
-        android:actionLayout="@layout/custom_cast_button"
+        
         app:showAsAction="always"/>
 
     <item

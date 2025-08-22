@@ -15,5 +15,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Radiola2"
+rootProject.name = "RoveCast"
 include(":app")

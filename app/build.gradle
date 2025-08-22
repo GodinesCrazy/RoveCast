@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.ivanmarty.radiola'
+    namespace 'com.ivanmarty.rovecast'
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.ivanmarty.radiola"
+        applicationId "com.ivanmarty.rovecast"
         minSdk 24
         targetSdk 35
         versionCode 1

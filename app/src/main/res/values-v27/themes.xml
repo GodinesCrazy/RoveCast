@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Tema ÚNICO de la app (Material Components M2), oscuro, sin action bar -->
-    <style name="Theme.Radiola" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.RoveCast" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Paleta -->
         <item name="colorPrimary">@color/accent</item>
         <item name="colorPrimaryVariant">@color/accent</item>

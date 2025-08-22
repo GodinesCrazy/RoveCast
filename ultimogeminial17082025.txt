@@ -1,0 +1,22 @@
+> 1) si conviertelo, pero ajustalo armonicamente al tamaño de la barra, tambien quiero que se vea como el que aparece aca                  │
+│    \\\\\\\"C:UsersivanmAndroidStudioProjectsRoveCastRespaldoImagenesimagenesicon_512_preview.png" pero con la calidad y fonmato que se ven  │
+│    los otros iconos. ( Este icono es solo para la barra superior ) el icono general de la app ( el que esta actualmente debes mantenerlo )  │
+│    2) Ajusta graficamente la pantalla donde uno fija el despertador, tambien debe tener la opcion de seleccionar la radio desde el listado  │
+│    de favoritos ) 3) Hazme un informe sobre el sistema de monetarizacion que tiene la app, en el sentido de cuantos interticiale aparecen,  │
+│    cada cuanto tiempo, cuando porque, hay banner etc y que sugeririas hacer para hacerlo eficiente comercialmente sin llegar a molestar al  │
+│    usurio )  hasta aca quedamos ayer y la app al compilarla arrojo el siguiente error: > Task :app:compileDebugJavaWithJavac
+Failed to open directory: C:\WINDOWS\TEMP
+C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\src\main\java\com\ivanmarty\rovecast\ui\PlayerActivity.java:151: error: cannot find symbol
+            currentStation.url = stationId;
+                          ^
+  symbol:   variable url
+  location: variable currentStation of type Station
+1 error
+
+> Task :app:compileDebugJavaWithJavac FAILED
+C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\src\main\java\com\ivanmarty\rovecast\ui\PlayerActivity.java:151: error: cannot find symbol
+            currentStation.url = stationId;
+                          ^
+  symbol:   variable url
+  location: variable currentStation of type Station
+<a href="open.plugin.studio.bot">Ask Gemini</a>

@@ -6,41 +6,14 @@
     android:layout_height="match_parent"
     android:background="@color/background_dark">
 
-    <!-- Back -->
-    <ImageButton
-        android:id="@+id/btnBack"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@android:drawable/ic_menu_close_clear_cancel"
-        app:tint="@color/on_dark"
-        android:padding="8dp"
-        android:layout_margin="8dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <!-- Cast -->
-    <androidx.mediarouter.app.MediaRouteButton
-        android:id="@+id/btnCast"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_margin="8dp"
-        android:contentDescription="@string/app_name"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Sleep Timer -->
-    <ImageButton
-        android:id="@+id/btnTimer"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_timer"
-        app:tint="@color/on_dark"
-        android:padding="8dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btnCast" />
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/playerTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/surface_dark"
+        android:theme="@style/Toolbar.RoveCast"
+        app:popupTheme="@style/ThemeOverlay.RoveCast.Popup"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Logo -->
     <ImageView
@@ -49,7 +22,7 @@
         android:layout_height="100dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_radio_placeholder"
-        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:layout_constraintTop_toBottomOf="@id/playerTopBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="12dp" />

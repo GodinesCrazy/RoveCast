@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.ivanmarty.radiola"
+<manifest package="com.ivanmarty.rovecast"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -15,22 +15,22 @@
     <application
         android:name=".App"
         android:allowBackup="true"
-        android:label="Radiola"
+        android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Radiola"
+        android:theme="@style/Theme.RoveCast"
         android:networkSecurityConfig="@xml/network_security_config">
 
         <!-- AdMob -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-2918417880001381~1513898154"/>
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
 
         <!-- Cast: Options provider (usa el DEFAULT_MEDIA_RECEIVER) -->
         <meta-data
             android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
-            android:value="com.ivanmarty.radiola.App"/>
+            android:value="com.ivanmarty.rovecast.App"/>
 
         <activity
             android:name=".ui.PlayerActivity"
@@ -59,6 +59,15 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
+
+        <service
+            android:name=".player.PlaybackService"
+            android:exported="true"
+            android:foregroundServiceType="mediaPlayback">
+            <intent-filter>
+                <action android:name="androidx.media3.session.MediaSessionService"/>
+            </intent-filter>
+        </service>
 
     </application>
 </manifest>

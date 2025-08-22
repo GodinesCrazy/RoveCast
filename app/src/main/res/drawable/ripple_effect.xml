@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#331DB954">
+    <!-- El color es el accent (#1DB954) con ~20% de opacidad (33) -->
+
+    <!-- Máscara (opcional, pero buena práctica). Limita el efecto a la forma del item. -->
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white" />
+        </shape>
+    </item>
+
+</ripple>

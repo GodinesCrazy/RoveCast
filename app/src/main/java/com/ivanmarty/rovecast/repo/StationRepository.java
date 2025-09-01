@@ -45,6 +45,12 @@ public class StationRepository {
 
     public void toggleFavorite(Station s, boolean makeFav) {
         io.execute(() -> {
+            // VALIDACIÓN MEJORADA: Prevenir crash si la estación o su UUID son nulos/vacíos.
+            if (s == null || s.stationuuid == null || s.stationuuid.trim().isEmpty()) {
+                android.util.Log.w("StationRepository", "Intento de guardar estación inválida o con UUID nulo/vacío. Se ignora.");
+                return; // No continuar con la operación de base de datos.
+            }
+
             if (makeFav) {
                 favoriteDao.insert(new FavoriteStation(s.stationuuid, s.name, s.getUrl(), s.favicon));
             } else {
@@ -74,8 +80,14 @@ public class StationRepository {
                     public void onResponse(Call<List<Station>> call, Response<List<Station>> resp) {
                         if (resp.isSuccessful() && resp.body() != null) {
                             io.execute(() -> {
+                                List<Station> validStations = new java.util.ArrayList<>();
+                                for (Station s : resp.body()) {
+                                    if (s.stationuuid != null && !s.stationuuid.trim().isEmpty()) {
+                                        validStations.add(s);
+                                    }
+                                }
                                 stationDao.deleteAll();
-                                stationDao.insertAll(resp.body());
+                                stationDao.insertAll(validStations);
                             });
                         } else {
                             loadTopFallback(); // Intenta con el fallback si la llamada por país falla
@@ -90,18 +102,30 @@ public class StationRepository {
     }
 
     private void loadTopFallback() {
-        api.topClick(100).enqueue(new Callback<List<Station>>() {
-            @Override
-            public void onResponse(Call<List<Station>> call, Response<List<Station>> resp) {
-                if (resp.isSuccessful() && resp.body() != null) {
-                    io.execute(() -> {
-                        stationDao.deleteAll();
-                        stationDao.insertAll(resp.body());
-                    });
-                }
+        io.execute(() -> {
+            if (stationDao.getStationCount() > 0) {
+                return; // No-op si ya hay estaciones en la caché
             }
-            @Override
-            public void onFailure(Call<List<Station>> call, Throwable t) { /* No-op en el fallback final */ }
+
+            api.topClick(100).enqueue(new Callback<List<Station>>() {
+                @Override
+                public void onResponse(Call<List<Station>> call, Response<List<Station>> resp) {
+                    if (resp.isSuccessful() && resp.body() != null) {
+                        io.execute(() -> {
+                            List<Station> validStations = new java.util.ArrayList<>();
+                            for (Station s : resp.body()) {
+                                if (s.stationuuid != null && !s.stationuuid.trim().isEmpty()) {
+                                    validStations.add(s);
+                                }
+                            }
+                            // No es necesario borrar, la caché ya está vacía en este punto.
+                            stationDao.insertAll(validStations);
+                        });
+                    }
+                }
+                @Override
+                public void onFailure(Call<List<Station>> call, Throwable t) { /* No-op en el fallback final */ }
+            });
         });
     }
 

@@ -1,0 +1,15 @@
+Enviar comentarios
+
+android.database.sqlite.SQLiteConstraintException:
+NOT NULL constraint failed: stations.stationuuid
+(code 1299 SQLITE_CONSTRAINT_NOTNULL)
+    at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+    at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:974)
+    at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:814)
+    at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+    at C0.k.b(SourceFile:3)
+    at X3.i.r(SourceFile:44)
+    at G.n.run(SourceFile:212)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1156)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:651)
+    at java.lang.Thread.run(Thread.java:1119)

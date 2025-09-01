@@ -1,0 +1,4381 @@
+﻿===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\.gradle\8.7\dependencies-accessors\19666b7ee7477488faba75fa6199859f9eeb0a35\sources\org\gradle\accessors\dm\LibrariesForLibs.java =====
+package org.gradle.accessors.dm;
+
+import org.gradle.api.NonNullApi;
+import org.gradle.api.artifacts.MinimalExternalModuleDependency;
+import org.gradle.plugin.use.PluginDependency;
+import org.gradle.api.artifacts.ExternalModuleDependencyBundle;
+import org.gradle.api.artifacts.MutableVersionConstraint;
+import org.gradle.api.provider.Provider;
+import org.gradle.api.model.ObjectFactory;
+import org.gradle.api.provider.ProviderFactory;
+import org.gradle.api.internal.catalog.AbstractExternalDependencyFactory;
+import org.gradle.api.internal.catalog.DefaultVersionCatalog;
+import java.util.Map;
+import org.gradle.api.internal.attributes.ImmutableAttributesFactory;
+import org.gradle.api.internal.artifacts.dsl.CapabilityNotationParser;
+import javax.inject.Inject;
+
+/**
+ * A catalog of dependencies accessible via the {@code libs} extension.
+ */
+@NonNullApi
+public class LibrariesForLibs extends AbstractExternalDependencyFactory {
+
+    private final AbstractExternalDependencyFactory owner = this;
+    private final EspressoLibraryAccessors laccForEspressoLibraryAccessors = new EspressoLibraryAccessors(owner);
+    private final ExtLibraryAccessors laccForExtLibraryAccessors = new ExtLibraryAccessors(owner);
+    private final VersionAccessors vaccForVersionAccessors = new VersionAccessors(providers, config);
+    private final BundleAccessors baccForBundleAccessors = new BundleAccessors(objects, providers, config, attributesFactory, capabilityNotationParser);
+    private final PluginAccessors paccForPluginAccessors = new PluginAccessors(providers, config);
+
+    @Inject
+    public LibrariesForLibs(DefaultVersionCatalog config, ProviderFactory providers, ObjectFactory objects, ImmutableAttributesFactory attributesFactory, CapabilityNotationParser capabilityNotationParser) {
+        super(config, providers, objects, attributesFactory, capabilityNotationParser);
+    }
+
+    /**
+     * Dependency provider for <b>activity</b> with <b>androidx.activity:activity</b> coordinates and
+     * with version reference <b>activity</b>
+     * <p>
+     * This dependency was declared in catalog libs.versions.toml
+     */
+    public Provider<MinimalExternalModuleDependency> getActivity() {
+        return create("activity");
+    }
+
+    /**
+     * Dependency provider for <b>appcompat</b> with <b>androidx.appcompat:appcompat</b> coordinates and
+     * with version reference <b>appcompat</b>
+     * <p>
+     * This dependency was declared in catalog libs.versions.toml
+     */
+    public Provider<MinimalExternalModuleDependency> getAppcompat() {
+        return create("appcompat");
+    }
+
+    /**
+     * Dependency provider for <b>constraintlayout</b> with <b>androidx.constraintlayout:constraintlayout</b> coordinates and
+     * with version reference <b>constraintlayout</b>
+     * <p>
+     * This dependency was declared in catalog libs.versions.toml
+     */
+    public Provider<MinimalExternalModuleDependency> getConstraintlayout() {
+        return create("constraintlayout");
+    }
+
+    /**
+     * Dependency provider for <b>junit</b> with <b>junit:junit</b> coordinates and
+     * with version reference <b>junit</b>
+     * <p>
+     * This dependency was declared in catalog libs.versions.toml
+     */
+    public Provider<MinimalExternalModuleDependency> getJunit() {
+        return create("junit");
+    }
+
+    /**
+     * Dependency provider for <b>material</b> with <b>com.google.android.material:material</b> coordinates and
+     * with version reference <b>material</b>
+     * <p>
+     * This dependency was declared in catalog libs.versions.toml
+     */
+    public Provider<MinimalExternalModuleDependency> getMaterial() {
+        return create("material");
+    }
+
+    /**
+     * Group of libraries at <b>espresso</b>
+     */
+    public EspressoLibraryAccessors getEspresso() {
+        return laccForEspressoLibraryAccessors;
+    }
+
+    /**
+     * Group of libraries at <b>ext</b>
+     */
+    public ExtLibraryAccessors getExt() {
+        return laccForExtLibraryAccessors;
+    }
+
+    /**
+     * Group of versions at <b>versions</b>
+     */
+    public VersionAccessors getVersions() {
+        return vaccForVersionAccessors;
+    }
+
+    /**
+     * Group of bundles at <b>bundles</b>
+     */
+    public BundleAccessors getBundles() {
+        return baccForBundleAccessors;
+    }
+
+    /**
+     * Group of plugins at <b>plugins</b>
+     */
+    public PluginAccessors getPlugins() {
+        return paccForPluginAccessors;
+    }
+
+    public static class EspressoLibraryAccessors extends SubDependencyFactory {
+
+        public EspressoLibraryAccessors(AbstractExternalDependencyFactory owner) { super(owner); }
+
+        /**
+         * Dependency provider for <b>core</b> with <b>androidx.test.espresso:espresso-core</b> coordinates and
+         * with version reference <b>espressoCore</b>
+         * <p>
+         * This dependency was declared in catalog libs.versions.toml
+         */
+        public Provider<MinimalExternalModuleDependency> getCore() {
+            return create("espresso.core");
+        }
+
+    }
+
+    public static class ExtLibraryAccessors extends SubDependencyFactory {
+
+        public ExtLibraryAccessors(AbstractExternalDependencyFactory owner) { super(owner); }
+
+        /**
+         * Dependency provider for <b>junit</b> with <b>androidx.test.ext:junit</b> coordinates and
+         * with version reference <b>junitVersion</b>
+         * <p>
+         * This dependency was declared in catalog libs.versions.toml
+         */
+        public Provider<MinimalExternalModuleDependency> getJunit() {
+            return create("ext.junit");
+        }
+
+    }
+
+    public static class VersionAccessors extends VersionFactory  {
+
+        public VersionAccessors(ProviderFactory providers, DefaultVersionCatalog config) { super(providers, config); }
+
+        /**
+         * Version alias <b>activity</b> with value <b>1.10.1</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getActivity() { return getVersion("activity"); }
+
+        /**
+         * Version alias <b>agp</b> with value <b>8.11.1</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getAgp() { return getVersion("agp"); }
+
+        /**
+         * Version alias <b>appcompat</b> with value <b>1.7.1</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getAppcompat() { return getVersion("appcompat"); }
+
+        /**
+         * Version alias <b>constraintlayout</b> with value <b>2.2.1</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getConstraintlayout() { return getVersion("constraintlayout"); }
+
+        /**
+         * Version alias <b>espressoCore</b> with value <b>3.6.1</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getEspressoCore() { return getVersion("espressoCore"); }
+
+        /**
+         * Version alias <b>junit</b> with value <b>4.13.2</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getJunit() { return getVersion("junit"); }
+
+        /**
+         * Version alias <b>junitVersion</b> with value <b>1.2.1</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getJunitVersion() { return getVersion("junitVersion"); }
+
+        /**
+         * Version alias <b>material</b> with value <b>1.12.0</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getMaterial() { return getVersion("material"); }
+
+    }
+
+    public static class BundleAccessors extends BundleFactory {
+
+        public BundleAccessors(ObjectFactory objects, ProviderFactory providers, DefaultVersionCatalog config, ImmutableAttributesFactory attributesFactory, CapabilityNotationParser capabilityNotationParser) { super(objects, providers, config, attributesFactory, capabilityNotationParser); }
+
+    }
+
+    public static class PluginAccessors extends PluginFactory {
+        private final AndroidPluginAccessors paccForAndroidPluginAccessors = new AndroidPluginAccessors(providers, config);
+
+        public PluginAccessors(ProviderFactory providers, DefaultVersionCatalog config) { super(providers, config); }
+
+        /**
+         * Group of plugins at <b>plugins.android</b>
+         */
+        public AndroidPluginAccessors getAndroid() {
+            return paccForAndroidPluginAccessors;
+        }
+
+    }
+
+    public static class AndroidPluginAccessors extends PluginFactory {
+
+        public AndroidPluginAccessors(ProviderFactory providers, DefaultVersionCatalog config) { super(providers, config); }
+
+        /**
+         * Plugin provider for <b>android.application</b> with plugin id <b>com.android.application</b> and
+         * with version reference <b>agp</b>
+         * <p>
+         * This plugin was declared in catalog libs.versions.toml
+         */
+        public Provider<PluginDependency> getApplication() { return createPlugin("android.application"); }
+
+    }
+
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\.gradle\8.7\dependencies-accessors\19666b7ee7477488faba75fa6199859f9eeb0a35\sources\org\gradle\accessors\dm\LibrariesForLibsInPluginsBlock.java =====
+package org.gradle.accessors.dm;
+
+import org.gradle.api.NonNullApi;
+import org.gradle.api.artifacts.MinimalExternalModuleDependency;
+import org.gradle.plugin.use.PluginDependency;
+import org.gradle.api.artifacts.ExternalModuleDependencyBundle;
+import org.gradle.api.artifacts.MutableVersionConstraint;
+import org.gradle.api.provider.Provider;
+import org.gradle.api.model.ObjectFactory;
+import org.gradle.api.provider.ProviderFactory;
+import org.gradle.api.internal.catalog.AbstractExternalDependencyFactory;
+import org.gradle.api.internal.catalog.DefaultVersionCatalog;
+import java.util.Map;
+import org.gradle.api.internal.attributes.ImmutableAttributesFactory;
+import org.gradle.api.internal.artifacts.dsl.CapabilityNotationParser;
+import javax.inject.Inject;
+
+/**
+ * A catalog of dependencies accessible via the {@code libs} extension.
+ */
+@NonNullApi
+public class LibrariesForLibsInPluginsBlock extends AbstractExternalDependencyFactory {
+
+    private final AbstractExternalDependencyFactory owner = this;
+    private final EspressoLibraryAccessors laccForEspressoLibraryAccessors = new EspressoLibraryAccessors(owner);
+    private final ExtLibraryAccessors laccForExtLibraryAccessors = new ExtLibraryAccessors(owner);
+    private final VersionAccessors vaccForVersionAccessors = new VersionAccessors(providers, config);
+    private final BundleAccessors baccForBundleAccessors = new BundleAccessors(objects, providers, config, attributesFactory, capabilityNotationParser);
+    private final PluginAccessors paccForPluginAccessors = new PluginAccessors(providers, config);
+
+    @Inject
+    public LibrariesForLibsInPluginsBlock(DefaultVersionCatalog config, ProviderFactory providers, ObjectFactory objects, ImmutableAttributesFactory attributesFactory, CapabilityNotationParser capabilityNotationParser) {
+        super(config, providers, objects, attributesFactory, capabilityNotationParser);
+    }
+
+    /**
+     * Dependency provider for <b>activity</b> with <b>androidx.activity:activity</b> coordinates and
+     * with version reference <b>activity</b>
+     * <p>
+     * This dependency was declared in catalog libs.versions.toml
+     *
+     * @deprecated Will be removed in Gradle 9.0.
+     */
+    @Deprecated
+    public Provider<MinimalExternalModuleDependency> getActivity() {
+        org.gradle.internal.deprecation.DeprecationLogger.deprecateBehaviour("Accessing libraries or bundles from version catalogs in the plugins block.").withAdvice("Only use versions or plugins from catalogs in the plugins block.").willBeRemovedInGradle9().withUpgradeGuideSection(8, "kotlin_dsl_deprecated_catalogs_plugins_block").nagUser();
+        return create("activity");
+    }
+
+    /**
+     * Dependency provider for <b>appcompat</b> with <b>androidx.appcompat:appcompat</b> coordinates and
+     * with version reference <b>appcompat</b>
+     * <p>
+     * This dependency was declared in catalog libs.versions.toml
+     *
+     * @deprecated Will be removed in Gradle 9.0.
+     */
+    @Deprecated
+    public Provider<MinimalExternalModuleDependency> getAppcompat() {
+        org.gradle.internal.deprecation.DeprecationLogger.deprecateBehaviour("Accessing libraries or bundles from version catalogs in the plugins block.").withAdvice("Only use versions or plugins from catalogs in the plugins block.").willBeRemovedInGradle9().withUpgradeGuideSection(8, "kotlin_dsl_deprecated_catalogs_plugins_block").nagUser();
+        return create("appcompat");
+    }
+
+    /**
+     * Dependency provider for <b>constraintlayout</b> with <b>androidx.constraintlayout:constraintlayout</b> coordinates and
+     * with version reference <b>constraintlayout</b>
+     * <p>
+     * This dependency was declared in catalog libs.versions.toml
+     *
+     * @deprecated Will be removed in Gradle 9.0.
+     */
+    @Deprecated
+    public Provider<MinimalExternalModuleDependency> getConstraintlayout() {
+        org.gradle.internal.deprecation.DeprecationLogger.deprecateBehaviour("Accessing libraries or bundles from version catalogs in the plugins block.").withAdvice("Only use versions or plugins from catalogs in the plugins block.").willBeRemovedInGradle9().withUpgradeGuideSection(8, "kotlin_dsl_deprecated_catalogs_plugins_block").nagUser();
+        return create("constraintlayout");
+    }
+
+    /**
+     * Dependency provider for <b>junit</b> with <b>junit:junit</b> coordinates and
+     * with version reference <b>junit</b>
+     * <p>
+     * This dependency was declared in catalog libs.versions.toml
+     *
+     * @deprecated Will be removed in Gradle 9.0.
+     */
+    @Deprecated
+    public Provider<MinimalExternalModuleDependency> getJunit() {
+        org.gradle.internal.deprecation.DeprecationLogger.deprecateBehaviour("Accessing libraries or bundles from version catalogs in the plugins block.").withAdvice("Only use versions or plugins from catalogs in the plugins block.").willBeRemovedInGradle9().withUpgradeGuideSection(8, "kotlin_dsl_deprecated_catalogs_plugins_block").nagUser();
+        return create("junit");
+    }
+
+    /**
+     * Dependency provider for <b>material</b> with <b>com.google.android.material:material</b> coordinates and
+     * with version reference <b>material</b>
+     * <p>
+     * This dependency was declared in catalog libs.versions.toml
+     *
+     * @deprecated Will be removed in Gradle 9.0.
+     */
+    @Deprecated
+    public Provider<MinimalExternalModuleDependency> getMaterial() {
+        org.gradle.internal.deprecation.DeprecationLogger.deprecateBehaviour("Accessing libraries or bundles from version catalogs in the plugins block.").withAdvice("Only use versions or plugins from catalogs in the plugins block.").willBeRemovedInGradle9().withUpgradeGuideSection(8, "kotlin_dsl_deprecated_catalogs_plugins_block").nagUser();
+        return create("material");
+    }
+
+    /**
+     * Group of libraries at <b>espresso</b>
+     *
+     * @deprecated Will be removed in Gradle 9.0.
+     */
+    @Deprecated
+    public EspressoLibraryAccessors getEspresso() {
+        org.gradle.internal.deprecation.DeprecationLogger.deprecateBehaviour("Accessing libraries or bundles from version catalogs in the plugins block.").withAdvice("Only use versions or plugins from catalogs in the plugins block.").willBeRemovedInGradle9().withUpgradeGuideSection(8, "kotlin_dsl_deprecated_catalogs_plugins_block").nagUser();
+        return laccForEspressoLibraryAccessors;
+    }
+
+    /**
+     * Group of libraries at <b>ext</b>
+     *
+     * @deprecated Will be removed in Gradle 9.0.
+     */
+    @Deprecated
+    public ExtLibraryAccessors getExt() {
+        org.gradle.internal.deprecation.DeprecationLogger.deprecateBehaviour("Accessing libraries or bundles from version catalogs in the plugins block.").withAdvice("Only use versions or plugins from catalogs in the plugins block.").willBeRemovedInGradle9().withUpgradeGuideSection(8, "kotlin_dsl_deprecated_catalogs_plugins_block").nagUser();
+        return laccForExtLibraryAccessors;
+    }
+
+    /**
+     * Group of versions at <b>versions</b>
+     */
+    public VersionAccessors getVersions() {
+        return vaccForVersionAccessors;
+    }
+
+    /**
+     * Group of bundles at <b>bundles</b>
+     *
+     * @deprecated Will be removed in Gradle 9.0.
+     */
+    @Deprecated
+    public BundleAccessors getBundles() {
+        org.gradle.internal.deprecation.DeprecationLogger.deprecateBehaviour("Accessing libraries or bundles from version catalogs in the plugins block.").withAdvice("Only use versions or plugins from catalogs in the plugins block.").willBeRemovedInGradle9().withUpgradeGuideSection(8, "kotlin_dsl_deprecated_catalogs_plugins_block").nagUser();
+        return baccForBundleAccessors;
+    }
+
+    /**
+     * Group of plugins at <b>plugins</b>
+     */
+    public PluginAccessors getPlugins() {
+        return paccForPluginAccessors;
+    }
+
+    /**
+     * @deprecated Will be removed in Gradle 9.0.
+     */
+    @Deprecated
+    public static class EspressoLibraryAccessors extends SubDependencyFactory {
+
+        public EspressoLibraryAccessors(AbstractExternalDependencyFactory owner) { super(owner); }
+
+        /**
+         * Dependency provider for <b>core</b> with <b>androidx.test.espresso:espresso-core</b> coordinates and
+         * with version reference <b>espressoCore</b>
+         * <p>
+         * This dependency was declared in catalog libs.versions.toml
+         *
+         * @deprecated Will be removed in Gradle 9.0.
+         */
+        @Deprecated
+        public Provider<MinimalExternalModuleDependency> getCore() {
+            org.gradle.internal.deprecation.DeprecationLogger.deprecateBehaviour("Accessing libraries or bundles from version catalogs in the plugins block.").withAdvice("Only use versions or plugins from catalogs in the plugins block.").willBeRemovedInGradle9().withUpgradeGuideSection(8, "kotlin_dsl_deprecated_catalogs_plugins_block").nagUser();
+            return create("espresso.core");
+        }
+
+    }
+
+    /**
+     * @deprecated Will be removed in Gradle 9.0.
+     */
+    @Deprecated
+    public static class ExtLibraryAccessors extends SubDependencyFactory {
+
+        public ExtLibraryAccessors(AbstractExternalDependencyFactory owner) { super(owner); }
+
+        /**
+         * Dependency provider for <b>junit</b> with <b>androidx.test.ext:junit</b> coordinates and
+         * with version reference <b>junitVersion</b>
+         * <p>
+         * This dependency was declared in catalog libs.versions.toml
+         *
+         * @deprecated Will be removed in Gradle 9.0.
+         */
+        @Deprecated
+        public Provider<MinimalExternalModuleDependency> getJunit() {
+            org.gradle.internal.deprecation.DeprecationLogger.deprecateBehaviour("Accessing libraries or bundles from version catalogs in the plugins block.").withAdvice("Only use versions or plugins from catalogs in the plugins block.").willBeRemovedInGradle9().withUpgradeGuideSection(8, "kotlin_dsl_deprecated_catalogs_plugins_block").nagUser();
+            return create("ext.junit");
+        }
+
+    }
+
+    public static class VersionAccessors extends VersionFactory  {
+
+        public VersionAccessors(ProviderFactory providers, DefaultVersionCatalog config) { super(providers, config); }
+
+        /**
+         * Version alias <b>activity</b> with value <b>1.10.1</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getActivity() { return getVersion("activity"); }
+
+        /**
+         * Version alias <b>agp</b> with value <b>8.11.1</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getAgp() { return getVersion("agp"); }
+
+        /**
+         * Version alias <b>appcompat</b> with value <b>1.7.1</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getAppcompat() { return getVersion("appcompat"); }
+
+        /**
+         * Version alias <b>constraintlayout</b> with value <b>2.2.1</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getConstraintlayout() { return getVersion("constraintlayout"); }
+
+        /**
+         * Version alias <b>espressoCore</b> with value <b>3.6.1</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getEspressoCore() { return getVersion("espressoCore"); }
+
+        /**
+         * Version alias <b>junit</b> with value <b>4.13.2</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getJunit() { return getVersion("junit"); }
+
+        /**
+         * Version alias <b>junitVersion</b> with value <b>1.2.1</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getJunitVersion() { return getVersion("junitVersion"); }
+
+        /**
+         * Version alias <b>material</b> with value <b>1.12.0</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getMaterial() { return getVersion("material"); }
+
+    }
+
+    /**
+     * @deprecated Will be removed in Gradle 9.0.
+     */
+    @Deprecated
+    public static class BundleAccessors extends BundleFactory {
+
+        public BundleAccessors(ObjectFactory objects, ProviderFactory providers, DefaultVersionCatalog config, ImmutableAttributesFactory attributesFactory, CapabilityNotationParser capabilityNotationParser) { super(objects, providers, config, attributesFactory, capabilityNotationParser); }
+
+    }
+
+    public static class PluginAccessors extends PluginFactory {
+        private final AndroidPluginAccessors paccForAndroidPluginAccessors = new AndroidPluginAccessors(providers, config);
+
+        public PluginAccessors(ProviderFactory providers, DefaultVersionCatalog config) { super(providers, config); }
+
+        /**
+         * Group of plugins at <b>plugins.android</b>
+         */
+        public AndroidPluginAccessors getAndroid() {
+            return paccForAndroidPluginAccessors;
+        }
+
+    }
+
+    public static class AndroidPluginAccessors extends PluginFactory {
+
+        public AndroidPluginAccessors(ProviderFactory providers, DefaultVersionCatalog config) { super(providers, config); }
+
+        /**
+         * Plugin provider for <b>android.application</b> with plugin id <b>com.android.application</b> and
+         * with version reference <b>agp</b>
+         * <p>
+         * This plugin was declared in catalog libs.versions.toml
+         */
+        public Provider<PluginDependency> getApplication() { return createPlugin("android.application"); }
+
+    }
+
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\.idea\AndroidProjectSystem.xml =====
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidProjectSystem">
+    <option name="providerId" value="com.android.tools.idea.GradleProjectSystem" />
+  </component>
+</project>
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\.idea\assetWizardSettings.xml =====
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WizardSettings">
+    <option name="children">
+      <map>
+        <entry key="imageWizard">
+          <value>
+            <PersistentState>
+              <option name="children">
+                <map>
+                  <entry key="imageAssetPanel">
+                    <value>
+                      <PersistentState>
+                        <option name="children">
+                          <map>
+                            <entry key="actionbar">
+                              <value>
+                                <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="clipArt">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                                <entry key="imagePath" value="C:\Windows\Temp\ic_android_black_24dp.xml" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="text">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="textAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                            <entry key="launcher">
+                              <value>
+                                <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="foregroundClipArt">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="imagePath" value="C:\Windows\Temp\ic_android_black_24dp.xml" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundImage">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                                <entry key="imagePath" value="C:\Users\ivanm\Downloads\radiola_icon_cutout_1024.png" />
+                                                <entry key="scalingPercent" value="67" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundText">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundTextAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                            <entry key="launcherLegacy">
+                              <value>
+                                <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="clipArt">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                                <entry key="imagePath" value="C:\Windows\Temp\ic_android_black_24dp.xml" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="text">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="textAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                            <entry key="notification">
+                              <value>
+                                <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="clipArt">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                                <entry key="imagePath" value="C:\Windows\Temp\ic_android_black_24dp.xml" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="text">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="textAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                            <entry key="tvBanner">
+                              <value>
+                                <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="foregroundText">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                            <entry key="tvChannel">
+                              <value>
+                                <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="foregroundClipArt">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="imagePath" value="C:\Windows\Temp\ic_android_black_24dp.xml" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundImage">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundText">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundTextAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </PersistentState>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </PersistentState>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\.idea\caches\deviceStreaming.xml =====
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DeviceStreaming">
+    <option name="deviceSelectionList">
+      <list>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="Sony" />
+          <option name="codename" value="A402SO" />
+          <option name="id" value="A402SO" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Sony" />
+          <option name="name" value="Xperia 10" />
+          <option name="screenDensity" value="450" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2520" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="27" />
+          <option name="brand" value="DOCOMO" />
+          <option name="codename" value="F01L" />
+          <option name="id" value="F01L" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="FUJITSU" />
+          <option name="name" value="F-01L" />
+          <option name="screenDensity" value="360" />
+          <option name="screenX" value="720" />
+          <option name="screenY" value="1280" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="OnePlus" />
+          <option name="codename" value="OP535DL1" />
+          <option name="id" value="OP535DL1" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="OnePlus" />
+          <option name="name" value="CPH2409" />
+          <option name="screenDensity" value="401" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2412" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="OnePlus" />
+          <option name="codename" value="OP5552L1" />
+          <option name="id" value="OP5552L1" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="OnePlus" />
+          <option name="name" value="CPH2415" />
+          <option name="screenDensity" value="480" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2412" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="OPPO" />
+          <option name="codename" value="OP573DL1" />
+          <option name="id" value="OP573DL1" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="OPPO" />
+          <option name="name" value="CPH2557" />
+          <option name="screenDensity" value="480" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2400" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="28" />
+          <option name="brand" value="DOCOMO" />
+          <option name="codename" value="SH-01L" />
+          <option name="id" value="SH-01L" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="SHARP" />
+          <option name="name" value="AQUOS sense2 SH-01L" />
+          <option name="screenDensity" value="480" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2160" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="a14m" />
+          <option name="id" value="a14m" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="SM-A145R" />
+          <option name="screenDensity" value="450" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2408" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="a15" />
+          <option name="id" value="a15" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="A15" />
+          <option name="screenDensity" value="450" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2340" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="a15x" />
+          <option name="id" value="a15x" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="A15 5G" />
+          <option name="screenDensity" value="450" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2340" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="a16x" />
+          <option name="id" value="a16x" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="A16 5G" />
+          <option name="screenDensity" value="450" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2340" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="a35x" />
+          <option name="id" value="a35x" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="A35" />
+          <option name="screenDensity" value="450" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2340" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="google" />
+          <option name="codename" value="akita" />
+          <option name="id" value="akita" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 8a" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2400" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="35" />
+          <option name="brand" value="google" />
+          <option name="codename" value="akita" />
+          <option name="id" value="akita" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 8a" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2400" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="motorola" />
+          <option name="codename" value="arcfox" />
+          <option name="id" value="arcfox" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Motorola" />
+          <option name="name" value="razr plus 2024" />
+          <option name="screenDensity" value="360" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="1272" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="33" />
+          <option name="brand" value="motorola" />
+          <option name="codename" value="austin" />
+          <option name="id" value="austin" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Motorola" />
+          <option name="name" value="moto g 5G (2022)" />
+          <option name="screenDensity" value="280" />
+          <option name="screenX" value="720" />
+          <option name="screenY" value="1600" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="33" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="b0q" />
+          <option name="id" value="b0q" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="Galaxy S22 Ultra" />
+          <option name="screenDensity" value="600" />
+          <option name="screenX" value="1440" />
+          <option name="screenY" value="3088" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="b6q" />
+          <option name="id" value="b6q" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="Flip 6" />
+          <option name="screenDensity" value="340" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2640" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="32" />
+          <option name="brand" value="google" />
+          <option name="codename" value="bluejay" />
+          <option name="id" value="bluejay" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 6a" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2400" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="google" />
+          <option name="codename" value="caiman" />
+          <option name="id" value="caiman" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 9 Pro" />
+          <option name="screenDensity" value="360" />
+          <option name="screenX" value="960" />
+          <option name="screenY" value="2142" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="35" />
+          <option name="brand" value="google" />
+          <option name="codename" value="caiman" />
+          <option name="id" value="caiman" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 9 Pro" />
+          <option name="screenDensity" value="360" />
+          <option name="screenX" value="960" />
+          <option name="screenY" value="2142" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="google" />
+          <option name="codename" value="comet" />
+          <option name="default" value="true" />
+          <option name="id" value="comet" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 9 Pro Fold" />
+          <option name="screenDensity" value="390" />
+          <option name="screenX" value="2076" />
+          <option name="screenY" value="2152" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="35" />
+          <option name="brand" value="google" />
+          <option name="codename" value="comet" />
+          <option name="default" value="true" />
+          <option name="id" value="comet" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 9 Pro Fold" />
+          <option name="screenDensity" value="390" />
+          <option name="screenX" value="2076" />
+          <option name="screenY" value="2152" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="29" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="crownqlteue" />
+          <option name="id" value="crownqlteue" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="Galaxy Note9" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="2220" />
+          <option name="screenY" value="1080" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="dm2q" />
+          <option name="id" value="dm2q" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="S23 Plus" />
+          <option name="screenDensity" value="450" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2340" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="dm3q" />
+          <option name="id" value="dm3q" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="Galaxy S23 Ultra" />
+          <option name="screenDensity" value="600" />
+          <option name="screenX" value="1440" />
+          <option name="screenY" value="3088" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="motorola" />
+          <option name="codename" value="dubai" />
+          <option name="id" value="dubai" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Motorola" />
+          <option name="name" value="edge 30" />
+          <option name="screenDensity" value="405" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2400" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="e1q" />
+          <option name="default" value="true" />
+          <option name="id" value="e1q" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="Galaxy S24" />
+          <option name="screenDensity" value="480" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2340" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="e3q" />
+          <option name="id" value="e3q" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="Galaxy S24 Ultra" />
+          <option name="screenDensity" value="450" />
+          <option name="screenX" value="1440" />
+          <option name="screenY" value="3120" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="33" />
+          <option name="brand" value="google" />
+          <option name="codename" value="eos" />
+          <option name="id" value="eos" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Eos" />
+          <option name="screenDensity" value="320" />
+          <option name="screenX" value="384" />
+          <option name="screenY" value="384" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="35" />
+          <option name="brand" value="motorola" />
+          <option name="codename" value="eqe" />
+          <option name="id" value="eqe" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Motorola" />
+          <option name="name" value="edge 50 pro" />
+          <option name="screenDensity" value="450" />
+          <option name="screenX" value="1220" />
+          <option name="screenY" value="2712" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="33" />
+          <option name="brand" value="google" />
+          <option name="codename" value="felix" />
+          <option name="id" value="felix" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel Fold" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="2208" />
+          <option name="screenY" value="1840" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="google" />
+          <option name="codename" value="felix" />
+          <option name="id" value="felix" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel Fold" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="2208" />
+          <option name="screenY" value="1840" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="33" />
+          <option name="brand" value="google" />
+          <option name="codename" value="felix_camera" />
+          <option name="id" value="felix_camera" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel Fold (Camera-enabled)" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="2208" />
+          <option name="screenY" value="1840" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="motorola" />
+          <option name="codename" value="fogona" />
+          <option name="id" value="fogona" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Motorola" />
+          <option name="name" value="moto g play - 2024" />
+          <option name="screenDensity" value="280" />
+          <option name="screenX" value="720" />
+          <option name="screenY" value="1600" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="motorola" />
+          <option name="codename" value="fogos" />
+          <option name="id" value="fogos" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Motorola" />
+          <option name="name" value="moto g34 5G" />
+          <option name="screenDensity" value="280" />
+          <option name="screenX" value="720" />
+          <option name="screenY" value="1600" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="g0q" />
+          <option name="id" value="g0q" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="SM-S906U1" />
+          <option name="screenDensity" value="450" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2340" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="gta9pwifi" />
+          <option name="id" value="gta9pwifi" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="SM-X210" />
+          <option name="screenDensity" value="240" />
+          <option name="screenX" value="1200" />
+          <option name="screenY" value="1920" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="33" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="gts7lwifi" />
+          <option name="id" value="gts7lwifi" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="SM-T870" />
+          <option name="screenDensity" value="340" />
+          <option name="screenX" value="1600" />
+          <option name="screenY" value="2560" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="gts7xllite" />
+          <option name="id" value="gts7xllite" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="SM-T738U" />
+          <option name="screenDensity" value="340" />
+          <option name="screenX" value="1600" />
+          <option name="screenY" value="2560" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="33" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="gts8uwifi" />
+          <option name="formFactor" value="Tablet" />
+          <option name="id" value="gts8uwifi" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="Galaxy Tab S8 Ultra" />
+          <option name="screenDensity" value="320" />
+          <option name="screenX" value="1848" />
+          <option name="screenY" value="2960" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="gts8wifi" />
+          <option name="formFactor" value="Tablet" />
+          <option name="id" value="gts8wifi" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="Galaxy Tab S8" />
+          <option name="screenDensity" value="274" />
+          <option name="screenX" value="1600" />
+          <option name="screenY" value="2560" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="gts9fe" />
+          <option name="id" value="gts9fe" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="Galaxy Tab S9 FE 5G" />
+          <option name="screenDensity" value="280" />
+          <option name="screenX" value="1440" />
+          <option name="screenY" value="2304" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="gts9wifi" />
+          <option name="id" value="gts9wifi" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="SM-X710" />
+          <option name="screenDensity" value="340" />
+          <option name="screenX" value="1600" />
+          <option name="screenY" value="2560" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="google" />
+          <option name="codename" value="husky" />
+          <option name="id" value="husky" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 8 Pro" />
+          <option name="screenDensity" value="390" />
+          <option name="screenX" value="1008" />
+          <option name="screenY" value="2244" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="30" />
+          <option name="brand" value="motorola" />
+          <option name="codename" value="java" />
+          <option name="id" value="java" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Motorola" />
+          <option name="name" value="G20" />
+          <option name="screenDensity" value="280" />
+          <option name="screenX" value="720" />
+          <option name="screenY" value="1600" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="google" />
+          <option name="codename" value="komodo" />
+          <option name="id" value="komodo" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 9 Pro XL" />
+          <option name="screenDensity" value="360" />
+          <option name="screenX" value="1008" />
+          <option name="screenY" value="2244" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="35" />
+          <option name="brand" value="google" />
+          <option name="codename" value="komodo" />
+          <option name="id" value="komodo" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 9 Pro XL" />
+          <option name="screenDensity" value="360" />
+          <option name="screenX" value="1008" />
+          <option name="screenY" value="2244" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="motorola" />
+          <option name="codename" value="lion" />
+          <option name="id" value="lion" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Motorola" />
+          <option name="name" value="moto g04" />
+          <option name="screenDensity" value="280" />
+          <option name="screenX" value="720" />
+          <option name="screenY" value="1612" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="33" />
+          <option name="brand" value="google" />
+          <option name="codename" value="lynx" />
+          <option name="id" value="lynx" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 7a" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2400" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="motorola" />
+          <option name="codename" value="lyriq" />
+          <option name="id" value="lyriq" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Motorola" />
+          <option name="name" value="edge 40" />
+          <option name="screenDensity" value="400" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2400" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="motorola" />
+          <option name="codename" value="manaus" />
+          <option name="id" value="manaus" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Motorola" />
+          <option name="name" value="edge 40 neo" />
+          <option name="screenDensity" value="400" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2400" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="33" />
+          <option name="brand" value="motorola" />
+          <option name="codename" value="maui" />
+          <option name="id" value="maui" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Motorola" />
+          <option name="name" value="moto g play - 2023" />
+          <option name="screenDensity" value="280" />
+          <option name="screenX" value="720" />
+          <option name="screenY" value="1600" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="o1q" />
+          <option name="id" value="o1q" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="Galaxy S21" />
+          <option name="screenDensity" value="421" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2400" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="31" />
+          <option name="brand" value="google" />
+          <option name="codename" value="oriole" />
+          <option name="id" value="oriole" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 6" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2400" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="35" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="pa3q" />
+          <option name="id" value="pa3q" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="Galaxy S25 Ultra" />
+          <option name="screenDensity" value="600" />
+          <option name="screenX" value="1440" />
+          <option name="screenY" value="3120" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="33" />
+          <option name="brand" value="google" />
+          <option name="codename" value="panther" />
+          <option name="id" value="panther" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 7" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2400" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="q5q" />
+          <option name="id" value="q5q" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="Galaxy Z Fold5" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="1812" />
+          <option name="screenY" value="2176" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="q6q" />
+          <option name="id" value="q6q" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="Galaxy Z Fold6" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="1856" />
+          <option name="screenY" value="2160" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="30" />
+          <option name="brand" value="google" />
+          <option name="codename" value="r11" />
+          <option name="formFactor" value="Wear OS" />
+          <option name="id" value="r11" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel Watch" />
+          <option name="screenDensity" value="320" />
+          <option name="screenX" value="384" />
+          <option name="screenY" value="384" />
+          <option name="type" value="WEAR_OS" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="r11q" />
+          <option name="id" value="r11q" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="SM-S711U" />
+          <option name="screenDensity" value="450" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2340" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="30" />
+          <option name="brand" value="google" />
+          <option name="codename" value="redfin" />
+          <option name="id" value="redfin" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 5" />
+          <option name="screenDensity" value="440" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2340" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="google" />
+          <option name="codename" value="shiba" />
+          <option name="id" value="shiba" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 8" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2400" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="t2q" />
+          <option name="id" value="t2q" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="Galaxy S21 Plus" />
+          <option name="screenDensity" value="394" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2400" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="33" />
+          <option name="brand" value="google" />
+          <option name="codename" value="tangorpro" />
+          <option name="formFactor" value="Tablet" />
+          <option name="id" value="tangorpro" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel Tablet" />
+          <option name="screenDensity" value="320" />
+          <option name="screenX" value="1600" />
+          <option name="screenY" value="2560" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="35" />
+          <option name="brand" value="google" />
+          <option name="codename" value="tegu" />
+          <option name="id" value="tegu" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 9a" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2424" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="google" />
+          <option name="codename" value="tokay" />
+          <option name="default" value="true" />
+          <option name="id" value="tokay" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 9" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2424" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="35" />
+          <option name="brand" value="google" />
+          <option name="codename" value="tokay" />
+          <option name="default" value="true" />
+          <option name="id" value="tokay" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 9" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2424" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="36" />
+          <option name="brand" value="google" />
+          <option name="codename" value="tokay" />
+          <option name="default" value="true" />
+          <option name="id" value="tokay" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 9" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2424" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="xcover7" />
+          <option name="id" value="xcover7" />
+          <option name="labId" value="google" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="SM-G556B" />
+          <option name="screenDensity" value="450" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2408" />
+        </PersistentDeviceSelectionData>
+      </list>
+    </option>
+  </component>
+</project>
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\.idea\compiler.xml =====
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="21" />
+  </component>
+</project>
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\.idea\deploymentTargetSelector.xml =====
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="deploymentTargetSelector">
+    <selectionStates>
+      <SelectionState runConfigName="app">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+    </selectionStates>
+  </component>
+</project>
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\.idea\deviceManager.xml =====
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DeviceTable">
+    <option name="columnSorters">
+      <list>
+        <ColumnSorterState>
+          <option name="column" value="Name" />
+          <option name="order" value="ASCENDING" />
+        </ColumnSorterState>
+      </list>
+    </option>
+  </component>
+</project>
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\.idea\gradle.xml =====
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\.idea\migrations.xml =====
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectMigrations">
+    <option name="MigrateToGradleLocalJavaHome">
+      <set>
+        <option value="$PROJECT_DIR$" />
+      </set>
+    </option>
+  </component>
+</project>
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\.idea\misc.xml =====
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="jbr-21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\.idea\runConfigurations.xml =====
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RunConfigurationProducerService">
+    <option name="ignoredProducers">
+      <set>
+        <option value="com.intellij.execution.junit.AbstractAllInDirectoryConfigurationProducer" />
+        <option value="com.intellij.execution.junit.AllInPackageConfigurationProducer" />
+        <option value="com.intellij.execution.junit.PatternConfigurationProducer" />
+        <option value="com.intellij.execution.junit.TestInClassConfigurationProducer" />
+        <option value="com.intellij.execution.junit.UniqueIdConfigurationProducer" />
+        <option value="com.intellij.execution.junit.testDiscovery.JUnitTestDiscoveryConfigurationProducer" />
+        <option value="org.jetbrains.kotlin.idea.junit.KotlinJUnitRunConfigurationProducer" />
+        <option value="org.jetbrains.kotlin.idea.junit.KotlinPatternConfigurationProducer" />
+      </set>
+    </option>
+  </component>
+</project>
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\.idea\vcs.xml =====
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+  </component>
+</project>
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\.idea\workspace.xml =====
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/heart_selector.xml">
+        <config>
+          <theme>@style/Theme.Radiola</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/heart_tint_selector.xml">
+        <config>
+          <theme>@style/Theme.Radiola</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_crown.xml">
+        <config>
+          <theme>@style/Theme.Radiola</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_heart.xml">
+        <config>
+          <theme>@style/Theme.Material3.DayNight.NoActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_heart_filled.xml">
+        <config>
+          <theme>@style/Theme.Radiola</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_heart_outline.xml">
+        <config>
+          <theme>@style/Theme.Radiola</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_home.xml">
+        <config>
+          <theme>@style/Theme.Material3.DayNight.NoActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_radio_placeholder.xml">
+        <config>
+          <theme>@style/Theme.Material3.DayNight.NoActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_timer.xml">
+        <config>
+          <theme>@style/Theme.Radiola</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_logo_bg.xml">
+        <config>
+          <theme>@style/Theme.Radiola</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+        <config>
+          <theme>@style/Theme.Material3.DayNight.NoActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_player.xml">
+        <config>
+          <theme>@style/Theme.Material3.DayNight.NoActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_favorites.xml">
+        <config>
+          <theme>@style/Theme.Radiola</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+        <config>
+          <theme>@style/Theme.Radiola</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_search.xml">
+        <config>
+          <theme>@style/Theme.Radiola</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_station.xml">
+        <config>
+          <theme>@style/Theme.Radiola</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_bottom.xml">
+        <config>
+          <theme>@style/Theme.Material3.DayNight.NoActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_top.xml">
+        <config>
+          <theme>@style/Theme.Radiola</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/xml/network_security_config.xml">
+        <config>
+          <theme>@style/Theme.Material3.DayNight.NoActionBar</theme>
+        </config>
+      </layout>
+    </layouts>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dac163bf-4835-4174-a0ce-427bc17e00e5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/privacy_policy_en.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/privacy_policy_en.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ivanmarty/rovecast/ads/AdsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ivanmarty/rovecast/ads/AdsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ivanmarty/rovecast/billing/BillingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ivanmarty/rovecast/billing/BillingManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ivanmarty/rovecast/repo/StationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ivanmarty/rovecast/repo/StationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ivanmarty/rovecast/ui/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ivanmarty/rovecast/ui/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\ivanm\.android\avd\Medium_Phone.avd)]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="RoveCast" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile" />
+        <option value="resourceFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="C:\Documentos\rovecast-release-key.jks" />
+    <option name="KEY_ALIAS" value="keyRoverCast" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;GodinesCrazy&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/GodinesCrazy/RoveCast.git&quot;,
+    &quot;accountId&quot;: &quot;dce15474-fd4c-4182-8bb1-4ab19728b19c&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="31A9BjekdSeVqyyrPEkHKdAcy62" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Android App.app.executor&quot;: &quot;Run&quot;,
+    &quot;BundleExportedModule&quot;: &quot;RoveCast.app&quot;,
+    &quot;ExportBundle.BundlePathForRoveCast.app&quot;: &quot;C:\\Users\\ivanm\\AndroidStudioProjects\\RoveCast\\app&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ivanm/AndroidStudioProjects/RoveCast&quot;,
+    &quot;recommended.upgrade.do.not.ask.for.project&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ExportApk.BuildVariants&quot;: [
+      &quot;release&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="RoveCast.app" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dac163bf-4835-4174-a0ce-427bc17e00e5" name="Changes" comment="" />
+      <created>1754955876845</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1754955876845</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="play_dynamic_filters_status">
+    <option name="appIdToCheckInfo">
+      <map>
+        <entry key="com.ivanmarty.radiola">
+          <value>
+            <CheckInfo lastCheckTimestamp="1754957467896" />
+          </value>
+        </entry>
+        <entry key="com.ivanmarty.radiola.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1754957467895" />
+          </value>
+        </entry>
+        <entry key="com.ivanmarty.rovecast">
+          <value>
+            <CheckInfo lastCheckTimestamp="1755371411282" />
+          </value>
+        </entry>
+        <entry key="com.ivanmarty.rovecast.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1755371411281" />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build.gradle =====
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.ivanmarty.rovecast'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.ivanmarty.rovecast"
+        minSdk 24
+        targetSdk 35
+        versionCode 7
+        versionName "1.1.1"
+        vectorDrawables.useSupportLibrary true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug { minifyEnabled false }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    // Tema (Material Components M2) + AppCompat (NECESARIOS para Theme.MaterialComponents)
+    implementation "com.google.android.material:material:1.12.0"
+    implementation "androidx.appcompat:appcompat:1.7.0"
+
+    // Media3
+    def media3 = "1.3.1"
+    implementation "androidx.media3:media3-exoplayer:$media3"
+    implementation "androidx.media3:media3-ui:$media3"
+    implementation "androidx.media3:media3-session:$media3"
+
+    // Retrofit / OkHttp / Gson
+    implementation "com.squareup.retrofit2:retrofit:2.11.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.11.0"
+    implementation "com.squareup.okhttp3:okhttp:4.12.0"
+
+    // Room
+    def room = "2.6.1"
+    implementation "androidx.room:room-runtime:$room"
+    annotationProcessor "androidx.room:room-compiler:$room"
+
+    // Lifecycle + UI
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.8.4"
+    implementation "androidx.lifecycle:lifecycle-livedata:2.8.4"
+    implementation "androidx.recyclerview:recyclerview:1.3.2"
+    implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+    implementation "androidx.cardview:cardview:1.0.0"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:4.16.0"
+    annotationProcessor "com.github.bumptech.glide:compiler:4.16.0"
+
+    // Ads + UMP + Review
+    implementation "com.google.android.gms:play-services-ads:23.3.0"
+    implementation "com.google.android.ump:user-messaging-platform:2.2.0"
+    implementation "com.google.android.play:review:2.0.1"
+
+    // Cast
+    implementation "com.google.android.gms:play-services-cast-framework:21.4.0"
+    implementation "androidx.mediarouter:mediarouter:1.6.0"
+
+    // Billing
+    implementation "com.android.billingclient:billing:8.0.0"
+
+    // Pruebas
+    testImplementation "junit:junit:4.13.2"
+    androidTestImplementation "androidx.test.ext:junit:1.2.1"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.6.1"
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build\generated\ap_generated_sources\debug\out\com\ivanmarty\rovecast\data\AppDatabase_Impl.java =====
+package com.ivanmarty.rovecast.data;
+
+import androidx.annotation.NonNull;
+import androidx.room.DatabaseConfiguration;
+import androidx.room.InvalidationTracker;
+import androidx.room.RoomDatabase;
+import androidx.room.RoomOpenHelper;
+import androidx.room.migration.AutoMigrationSpec;
+import androidx.room.migration.Migration;
+import androidx.room.util.DBUtil;
+import androidx.room.util.TableInfo;
+import androidx.sqlite.db.SupportSQLiteDatabase;
+import androidx.sqlite.db.SupportSQLiteOpenHelper;
+import java.lang.Class;
+import java.lang.Override;
+import java.lang.String;
+import java.lang.SuppressWarnings;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import javax.annotation.processing.Generated;
+
+@Generated("androidx.room.RoomProcessor")
+@SuppressWarnings({"unchecked", "deprecation"})
+public final class AppDatabase_Impl extends AppDatabase {
+  private volatile FavoriteDao _favoriteDao;
+
+  private volatile StationDao _stationDao;
+
+  private volatile SleepTimerPresetDao _sleepTimerPresetDao;
+
+  @Override
+  @NonNull
+  protected SupportSQLiteOpenHelper createOpenHelper(@NonNull final DatabaseConfiguration config) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(3) {
+      @Override
+      public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
+        db.execSQL("CREATE TABLE IF NOT EXISTS `favorites` (`stationuuid` TEXT NOT NULL, `name` TEXT, `url` TEXT, `favicon` TEXT, `country` TEXT, PRIMARY KEY(`stationuuid`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `stations` (`stationuuid` TEXT NOT NULL, `name` TEXT, `url_resolved` TEXT, `favicon` TEXT, `country` TEXT, `language` TEXT, `bitrate` INTEGER NOT NULL, `codec` TEXT, `tags` TEXT, PRIMARY KEY(`stationuuid`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `sleep_timer_presets` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `durationMinutes` INTEGER NOT NULL)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '2a0d3d8d354de15cfcabe6f7820e6d71')");
+      }
+
+      @Override
+      public void dropAllTables(@NonNull final SupportSQLiteDatabase db) {
+        db.execSQL("DROP TABLE IF EXISTS `favorites`");
+        db.execSQL("DROP TABLE IF EXISTS `stations`");
+        db.execSQL("DROP TABLE IF EXISTS `sleep_timer_presets`");
+        final List<? extends RoomDatabase.Callback> _callbacks = mCallbacks;
+        if (_callbacks != null) {
+          for (RoomDatabase.Callback _callback : _callbacks) {
+            _callback.onDestructiveMigration(db);
+          }
+        }
+      }
+
+      @Override
+      public void onCreate(@NonNull final SupportSQLiteDatabase db) {
+        final List<? extends RoomDatabase.Callback> _callbacks = mCallbacks;
+        if (_callbacks != null) {
+          for (RoomDatabase.Callback _callback : _callbacks) {
+            _callback.onCreate(db);
+          }
+        }
+      }
+
+      @Override
+      public void onOpen(@NonNull final SupportSQLiteDatabase db) {
+        mDatabase = db;
+        internalInitInvalidationTracker(db);
+        final List<? extends RoomDatabase.Callback> _callbacks = mCallbacks;
+        if (_callbacks != null) {
+          for (RoomDatabase.Callback _callback : _callbacks) {
+            _callback.onOpen(db);
+          }
+        }
+      }
+
+      @Override
+      public void onPreMigrate(@NonNull final SupportSQLiteDatabase db) {
+        DBUtil.dropFtsSyncTriggers(db);
+      }
+
+      @Override
+      public void onPostMigrate(@NonNull final SupportSQLiteDatabase db) {
+      }
+
+      @Override
+      @NonNull
+      public RoomOpenHelper.ValidationResult onValidateSchema(
+          @NonNull final SupportSQLiteDatabase db) {
+        final HashMap<String, TableInfo.Column> _columnsFavorites = new HashMap<String, TableInfo.Column>(5);
+        _columnsFavorites.put("stationuuid", new TableInfo.Column("stationuuid", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsFavorites.put("name", new TableInfo.Column("name", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsFavorites.put("url", new TableInfo.Column("url", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsFavorites.put("favicon", new TableInfo.Column("favicon", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsFavorites.put("country", new TableInfo.Column("country", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysFavorites = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesFavorites = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoFavorites = new TableInfo("favorites", _columnsFavorites, _foreignKeysFavorites, _indicesFavorites);
+        final TableInfo _existingFavorites = TableInfo.read(db, "favorites");
+        if (!_infoFavorites.equals(_existingFavorites)) {
+          return new RoomOpenHelper.ValidationResult(false, "favorites(com.ivanmarty.rovecast.data.FavoriteStation).\n"
+                  + " Expected:\n" + _infoFavorites + "\n"
+                  + " Found:\n" + _existingFavorites);
+        }
+        final HashMap<String, TableInfo.Column> _columnsStations = new HashMap<String, TableInfo.Column>(9);
+        _columnsStations.put("stationuuid", new TableInfo.Column("stationuuid", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsStations.put("name", new TableInfo.Column("name", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsStations.put("url_resolved", new TableInfo.Column("url_resolved", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsStations.put("favicon", new TableInfo.Column("favicon", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsStations.put("country", new TableInfo.Column("country", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsStations.put("language", new TableInfo.Column("language", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsStations.put("bitrate", new TableInfo.Column("bitrate", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsStations.put("codec", new TableInfo.Column("codec", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsStations.put("tags", new TableInfo.Column("tags", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysStations = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesStations = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoStations = new TableInfo("stations", _columnsStations, _foreignKeysStations, _indicesStations);
+        final TableInfo _existingStations = TableInfo.read(db, "stations");
+        if (!_infoStations.equals(_existingStations)) {
+          return new RoomOpenHelper.ValidationResult(false, "stations(com.ivanmarty.rovecast.model.Station).\n"
+                  + " Expected:\n" + _infoStations + "\n"
+                  + " Found:\n" + _existingStations);
+        }
+        final HashMap<String, TableInfo.Column> _columnsSleepTimerPresets = new HashMap<String, TableInfo.Column>(3);
+        _columnsSleepTimerPresets.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsSleepTimerPresets.put("name", new TableInfo.Column("name", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsSleepTimerPresets.put("durationMinutes", new TableInfo.Column("durationMinutes", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysSleepTimerPresets = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesSleepTimerPresets = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoSleepTimerPresets = new TableInfo("sleep_timer_presets", _columnsSleepTimerPresets, _foreignKeysSleepTimerPresets, _indicesSleepTimerPresets);
+        final TableInfo _existingSleepTimerPresets = TableInfo.read(db, "sleep_timer_presets");
+        if (!_infoSleepTimerPresets.equals(_existingSleepTimerPresets)) {
+          return new RoomOpenHelper.ValidationResult(false, "sleep_timer_presets(com.ivanmarty.rovecast.data.SleepTimerPreset).\n"
+                  + " Expected:\n" + _infoSleepTimerPresets + "\n"
+                  + " Found:\n" + _existingSleepTimerPresets);
+        }
+        return new RoomOpenHelper.ValidationResult(true, null);
+      }
+    }, "2a0d3d8d354de15cfcabe6f7820e6d71", "b2dddddccb4a93ed809df8cb8aa08ba8");
+    final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
+    final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
+    return _helper;
+  }
+
+  @Override
+  @NonNull
+  protected InvalidationTracker createInvalidationTracker() {
+    final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
+    final HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "favorites","stations","sleep_timer_presets");
+  }
+
+  @Override
+  public void clearAllTables() {
+    super.assertNotMainThread();
+    final SupportSQLiteDatabase _db = super.getOpenHelper().getWritableDatabase();
+    try {
+      super.beginTransaction();
+      _db.execSQL("DELETE FROM `favorites`");
+      _db.execSQL("DELETE FROM `stations`");
+      _db.execSQL("DELETE FROM `sleep_timer_presets`");
+      super.setTransactionSuccessful();
+    } finally {
+      super.endTransaction();
+      _db.query("PRAGMA wal_checkpoint(FULL)").close();
+      if (!_db.inTransaction()) {
+        _db.execSQL("VACUUM");
+      }
+    }
+  }
+
+  @Override
+  @NonNull
+  protected Map<Class<?>, List<Class<?>>> getRequiredTypeConverters() {
+    final HashMap<Class<?>, List<Class<?>>> _typeConvertersMap = new HashMap<Class<?>, List<Class<?>>>();
+    _typeConvertersMap.put(FavoriteDao.class, FavoriteDao_Impl.getRequiredConverters());
+    _typeConvertersMap.put(StationDao.class, StationDao_Impl.getRequiredConverters());
+    _typeConvertersMap.put(SleepTimerPresetDao.class, SleepTimerPresetDao_Impl.getRequiredConverters());
+    return _typeConvertersMap;
+  }
+
+  @Override
+  @NonNull
+  public Set<Class<? extends AutoMigrationSpec>> getRequiredAutoMigrationSpecs() {
+    final HashSet<Class<? extends AutoMigrationSpec>> _autoMigrationSpecsSet = new HashSet<Class<? extends AutoMigrationSpec>>();
+    return _autoMigrationSpecsSet;
+  }
+
+  @Override
+  @NonNull
+  public List<Migration> getAutoMigrations(
+      @NonNull final Map<Class<? extends AutoMigrationSpec>, AutoMigrationSpec> autoMigrationSpecs) {
+    final List<Migration> _autoMigrations = new ArrayList<Migration>();
+    return _autoMigrations;
+  }
+
+  @Override
+  public FavoriteDao favoriteDao() {
+    if (_favoriteDao != null) {
+      return _favoriteDao;
+    } else {
+      synchronized(this) {
+        if(_favoriteDao == null) {
+          _favoriteDao = new FavoriteDao_Impl(this);
+        }
+        return _favoriteDao;
+      }
+    }
+  }
+
+  @Override
+  public StationDao stationDao() {
+    if (_stationDao != null) {
+      return _stationDao;
+    } else {
+      synchronized(this) {
+        if(_stationDao == null) {
+          _stationDao = new StationDao_Impl(this);
+        }
+        return _stationDao;
+      }
+    }
+  }
+
+  @Override
+  public SleepTimerPresetDao sleepTimerPresetDao() {
+    if (_sleepTimerPresetDao != null) {
+      return _sleepTimerPresetDao;
+    } else {
+      synchronized(this) {
+        if(_sleepTimerPresetDao == null) {
+          _sleepTimerPresetDao = new SleepTimerPresetDao_Impl(this);
+        }
+        return _sleepTimerPresetDao;
+      }
+    }
+  }
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build\generated\ap_generated_sources\debug\out\com\ivanmarty\rovecast\data\FavoriteDao_Impl.java =====
+package com.ivanmarty.rovecast.data;
+
+import android.database.Cursor;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.lifecycle.LiveData;
+import androidx.room.EntityDeletionOrUpdateAdapter;
+import androidx.room.EntityInsertionAdapter;
+import androidx.room.RoomDatabase;
+import androidx.room.RoomSQLiteQuery;
+import androidx.room.SharedSQLiteStatement;
+import androidx.room.util.CursorUtil;
+import androidx.room.util.DBUtil;
+import androidx.sqlite.db.SupportSQLiteStatement;
+import java.lang.Boolean;
+import java.lang.Class;
+import java.lang.Exception;
+import java.lang.Integer;
+import java.lang.Override;
+import java.lang.String;
+import java.lang.SuppressWarnings;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.Callable;
+import javax.annotation.processing.Generated;
+
+@Generated("androidx.room.RoomProcessor")
+@SuppressWarnings({"unchecked", "deprecation"})
+public final class FavoriteDao_Impl implements FavoriteDao {
+  private final RoomDatabase __db;
+
+  private final EntityInsertionAdapter<FavoriteStation> __insertionAdapterOfFavoriteStation;
+
+  private final EntityDeletionOrUpdateAdapter<FavoriteStation> __deletionAdapterOfFavoriteStation;
+
+  private final SharedSQLiteStatement __preparedStmtOfDeleteById;
+
+  public FavoriteDao_Impl(@NonNull final RoomDatabase __db) {
+    this.__db = __db;
+    this.__insertionAdapterOfFavoriteStation = new EntityInsertionAdapter<FavoriteStation>(__db) {
+      @Override
+      @NonNull
+      protected String createQuery() {
+        return "INSERT OR REPLACE INTO `favorites` (`stationuuid`,`name`,`url`,`favicon`,`country`) VALUES (?,?,?,?,?)";
+      }
+
+      @Override
+      protected void bind(@NonNull final SupportSQLiteStatement statement,
+          final FavoriteStation entity) {
+        if (entity.stationuuid == null) {
+          statement.bindNull(1);
+        } else {
+          statement.bindString(1, entity.stationuuid);
+        }
+        if (entity.name == null) {
+          statement.bindNull(2);
+        } else {
+          statement.bindString(2, entity.name);
+        }
+        if (entity.url == null) {
+          statement.bindNull(3);
+        } else {
+          statement.bindString(3, entity.url);
+        }
+        if (entity.favicon == null) {
+          statement.bindNull(4);
+        } else {
+          statement.bindString(4, entity.favicon);
+        }
+        if (entity.country == null) {
+          statement.bindNull(5);
+        } else {
+          statement.bindString(5, entity.country);
+        }
+      }
+    };
+    this.__deletionAdapterOfFavoriteStation = new EntityDeletionOrUpdateAdapter<FavoriteStation>(__db) {
+      @Override
+      @NonNull
+      protected String createQuery() {
+        return "DELETE FROM `favorites` WHERE `stationuuid` = ?";
+      }
+
+      @Override
+      protected void bind(@NonNull final SupportSQLiteStatement statement,
+          final FavoriteStation entity) {
+        if (entity.stationuuid == null) {
+          statement.bindNull(1);
+        } else {
+          statement.bindString(1, entity.stationuuid);
+        }
+      }
+    };
+    this.__preparedStmtOfDeleteById = new SharedSQLiteStatement(__db) {
+      @Override
+      @NonNull
+      public String createQuery() {
+        final String _query = "DELETE FROM favorites WHERE stationuuid = ?";
+        return _query;
+      }
+    };
+  }
+
+  @Override
+  public void upsert(final FavoriteStation s) {
+    __db.assertNotSuspendingTransaction();
+    __db.beginTransaction();
+    try {
+      __insertionAdapterOfFavoriteStation.insert(s);
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+    }
+  }
+
+  @Override
+  public void insert(final FavoriteStation s) {
+    __db.assertNotSuspendingTransaction();
+    __db.beginTransaction();
+    try {
+      __insertionAdapterOfFavoriteStation.insert(s);
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+    }
+  }
+
+  @Override
+  public void delete(final FavoriteStation s) {
+    __db.assertNotSuspendingTransaction();
+    __db.beginTransaction();
+    try {
+      __deletionAdapterOfFavoriteStation.handle(s);
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+    }
+  }
+
+  @Override
+  public void deleteById(final String uuid) {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteById.acquire();
+    int _argIndex = 1;
+    if (uuid == null) {
+      _stmt.bindNull(_argIndex);
+    } else {
+      _stmt.bindString(_argIndex, uuid);
+    }
+    try {
+      __db.beginTransaction();
+      try {
+        _stmt.executeUpdateDelete();
+        __db.setTransactionSuccessful();
+      } finally {
+        __db.endTransaction();
+      }
+    } finally {
+      __preparedStmtOfDeleteById.release(_stmt);
+    }
+  }
+
+  @Override
+  public LiveData<List<FavoriteStation>> getAll() {
+    final String _sql = "SELECT * FROM favorites ORDER BY name COLLATE NOCASE ASC";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    return __db.getInvalidationTracker().createLiveData(new String[] {"favorites"}, false, new Callable<List<FavoriteStation>>() {
+      @Override
+      @Nullable
+      public List<FavoriteStation> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfStationuuid = CursorUtil.getColumnIndexOrThrow(_cursor, "stationuuid");
+          final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+          final int _cursorIndexOfUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "url");
+          final int _cursorIndexOfFavicon = CursorUtil.getColumnIndexOrThrow(_cursor, "favicon");
+          final int _cursorIndexOfCountry = CursorUtil.getColumnIndexOrThrow(_cursor, "country");
+          final List<FavoriteStation> _result = new ArrayList<FavoriteStation>(_cursor.getCount());
+          while (_cursor.moveToNext()) {
+            final FavoriteStation _item;
+            _item = new FavoriteStation();
+            if (_cursor.isNull(_cursorIndexOfStationuuid)) {
+              _item.stationuuid = null;
+            } else {
+              _item.stationuuid = _cursor.getString(_cursorIndexOfStationuuid);
+            }
+            if (_cursor.isNull(_cursorIndexOfName)) {
+              _item.name = null;
+            } else {
+              _item.name = _cursor.getString(_cursorIndexOfName);
+            }
+            if (_cursor.isNull(_cursorIndexOfUrl)) {
+              _item.url = null;
+            } else {
+              _item.url = _cursor.getString(_cursorIndexOfUrl);
+            }
+            if (_cursor.isNull(_cursorIndexOfFavicon)) {
+              _item.favicon = null;
+            } else {
+              _item.favicon = _cursor.getString(_cursorIndexOfFavicon);
+            }
+            if (_cursor.isNull(_cursorIndexOfCountry)) {
+              _item.country = null;
+            } else {
+              _item.country = _cursor.getString(_cursorIndexOfCountry);
+            }
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
+  }
+
+  @Override
+  public LiveData<Boolean> isFavorite(final String uuid) {
+    final String _sql = "SELECT EXISTS(SELECT 1 FROM favorites WHERE stationuuid = ?)";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    if (uuid == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, uuid);
+    }
+    return __db.getInvalidationTracker().createLiveData(new String[] {"favorites"}, false, new Callable<Boolean>() {
+      @Override
+      @Nullable
+      public Boolean call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final Boolean _result;
+          if (_cursor.moveToFirst()) {
+            final Integer _tmp;
+            if (_cursor.isNull(0)) {
+              _tmp = null;
+            } else {
+              _tmp = _cursor.getInt(0);
+            }
+            _result = _tmp == null ? null : _tmp != 0;
+          } else {
+            _result = null;
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
+  }
+
+  @Override
+  public boolean isFavoriteNow(final String uuid) {
+    final String _sql = "SELECT EXISTS(SELECT 1 FROM favorites WHERE stationuuid = ?)";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    if (uuid == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, uuid);
+    }
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+    try {
+      final boolean _result;
+      if (_cursor.moveToFirst()) {
+        final int _tmp;
+        _tmp = _cursor.getInt(0);
+        _result = _tmp != 0;
+      } else {
+        _result = false;
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
+  @NonNull
+  public static List<Class<?>> getRequiredConverters() {
+    return Collections.emptyList();
+  }
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build\generated\ap_generated_sources\debug\out\com\ivanmarty\rovecast\data\SleepTimerPresetDao_Impl.java =====
+package com.ivanmarty.rovecast.data;
+
+import android.database.Cursor;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.lifecycle.LiveData;
+import androidx.room.EntityDeletionOrUpdateAdapter;
+import androidx.room.EntityInsertionAdapter;
+import androidx.room.RoomDatabase;
+import androidx.room.RoomSQLiteQuery;
+import androidx.room.util.CursorUtil;
+import androidx.room.util.DBUtil;
+import androidx.sqlite.db.SupportSQLiteStatement;
+import java.lang.Class;
+import java.lang.Exception;
+import java.lang.Override;
+import java.lang.String;
+import java.lang.SuppressWarnings;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.Callable;
+import javax.annotation.processing.Generated;
+
+@Generated("androidx.room.RoomProcessor")
+@SuppressWarnings({"unchecked", "deprecation"})
+public final class SleepTimerPresetDao_Impl implements SleepTimerPresetDao {
+  private final RoomDatabase __db;
+
+  private final EntityInsertionAdapter<SleepTimerPreset> __insertionAdapterOfSleepTimerPreset;
+
+  private final EntityDeletionOrUpdateAdapter<SleepTimerPreset> __deletionAdapterOfSleepTimerPreset;
+
+  private final EntityDeletionOrUpdateAdapter<SleepTimerPreset> __updateAdapterOfSleepTimerPreset;
+
+  public SleepTimerPresetDao_Impl(@NonNull final RoomDatabase __db) {
+    this.__db = __db;
+    this.__insertionAdapterOfSleepTimerPreset = new EntityInsertionAdapter<SleepTimerPreset>(__db) {
+      @Override
+      @NonNull
+      protected String createQuery() {
+        return "INSERT OR ABORT INTO `sleep_timer_presets` (`id`,`name`,`durationMinutes`) VALUES (nullif(?, 0),?,?)";
+      }
+
+      @Override
+      protected void bind(@NonNull final SupportSQLiteStatement statement,
+          final SleepTimerPreset entity) {
+        statement.bindLong(1, entity.id);
+        if (entity.name == null) {
+          statement.bindNull(2);
+        } else {
+          statement.bindString(2, entity.name);
+        }
+        statement.bindLong(3, entity.durationMinutes);
+      }
+    };
+    this.__deletionAdapterOfSleepTimerPreset = new EntityDeletionOrUpdateAdapter<SleepTimerPreset>(__db) {
+      @Override
+      @NonNull
+      protected String createQuery() {
+        return "DELETE FROM `sleep_timer_presets` WHERE `id` = ?";
+      }
+
+      @Override
+      protected void bind(@NonNull final SupportSQLiteStatement statement,
+          final SleepTimerPreset entity) {
+        statement.bindLong(1, entity.id);
+      }
+    };
+    this.__updateAdapterOfSleepTimerPreset = new EntityDeletionOrUpdateAdapter<SleepTimerPreset>(__db) {
+      @Override
+      @NonNull
+      protected String createQuery() {
+        return "UPDATE OR ABORT `sleep_timer_presets` SET `id` = ?,`name` = ?,`durationMinutes` = ? WHERE `id` = ?";
+      }
+
+      @Override
+      protected void bind(@NonNull final SupportSQLiteStatement statement,
+          final SleepTimerPreset entity) {
+        statement.bindLong(1, entity.id);
+        if (entity.name == null) {
+          statement.bindNull(2);
+        } else {
+          statement.bindString(2, entity.name);
+        }
+        statement.bindLong(3, entity.durationMinutes);
+        statement.bindLong(4, entity.id);
+      }
+    };
+  }
+
+  @Override
+  public void insert(final SleepTimerPreset preset) {
+    __db.assertNotSuspendingTransaction();
+    __db.beginTransaction();
+    try {
+      __insertionAdapterOfSleepTimerPreset.insert(preset);
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+    }
+  }
+
+  @Override
+  public void delete(final SleepTimerPreset preset) {
+    __db.assertNotSuspendingTransaction();
+    __db.beginTransaction();
+    try {
+      __deletionAdapterOfSleepTimerPreset.handle(preset);
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+    }
+  }
+
+  @Override
+  public void update(final SleepTimerPreset preset) {
+    __db.assertNotSuspendingTransaction();
+    __db.beginTransaction();
+    try {
+      __updateAdapterOfSleepTimerPreset.handle(preset);
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+    }
+  }
+
+  @Override
+  public LiveData<List<SleepTimerPreset>> getAll() {
+    final String _sql = "SELECT * FROM sleep_timer_presets ORDER BY durationMinutes ASC";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    return __db.getInvalidationTracker().createLiveData(new String[] {"sleep_timer_presets"}, false, new Callable<List<SleepTimerPreset>>() {
+      @Override
+      @Nullable
+      public List<SleepTimerPreset> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+          final int _cursorIndexOfDurationMinutes = CursorUtil.getColumnIndexOrThrow(_cursor, "durationMinutes");
+          final List<SleepTimerPreset> _result = new ArrayList<SleepTimerPreset>(_cursor.getCount());
+          while (_cursor.moveToNext()) {
+            final SleepTimerPreset _item;
+            _item = new SleepTimerPreset();
+            _item.id = _cursor.getInt(_cursorIndexOfId);
+            if (_cursor.isNull(_cursorIndexOfName)) {
+              _item.name = null;
+            } else {
+              _item.name = _cursor.getString(_cursorIndexOfName);
+            }
+            _item.durationMinutes = _cursor.getLong(_cursorIndexOfDurationMinutes);
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
+  }
+
+  @NonNull
+  public static List<Class<?>> getRequiredConverters() {
+    return Collections.emptyList();
+  }
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build\generated\ap_generated_sources\debug\out\com\ivanmarty\rovecast\data\StationDao_Impl.java =====
+package com.ivanmarty.rovecast.data;
+
+import android.database.Cursor;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.lifecycle.LiveData;
+import androidx.room.EntityInsertionAdapter;
+import androidx.room.RoomDatabase;
+import androidx.room.RoomSQLiteQuery;
+import androidx.room.SharedSQLiteStatement;
+import androidx.room.util.CursorUtil;
+import androidx.room.util.DBUtil;
+import androidx.sqlite.db.SupportSQLiteStatement;
+import com.ivanmarty.rovecast.model.Station;
+import java.lang.Class;
+import java.lang.Exception;
+import java.lang.Override;
+import java.lang.String;
+import java.lang.SuppressWarnings;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.Callable;
+import javax.annotation.processing.Generated;
+
+@Generated("androidx.room.RoomProcessor")
+@SuppressWarnings({"unchecked", "deprecation"})
+public final class StationDao_Impl implements StationDao {
+  private final RoomDatabase __db;
+
+  private final EntityInsertionAdapter<Station> __insertionAdapterOfStation;
+
+  private final SharedSQLiteStatement __preparedStmtOfDeleteAll;
+
+  public StationDao_Impl(@NonNull final RoomDatabase __db) {
+    this.__db = __db;
+    this.__insertionAdapterOfStation = new EntityInsertionAdapter<Station>(__db) {
+      @Override
+      @NonNull
+      protected String createQuery() {
+        return "INSERT OR REPLACE INTO `stations` (`stationuuid`,`name`,`url_resolved`,`favicon`,`country`,`language`,`bitrate`,`codec`,`tags`) VALUES (?,?,?,?,?,?,?,?,?)";
+      }
+
+      @Override
+      protected void bind(@NonNull final SupportSQLiteStatement statement, final Station entity) {
+        if (entity.stationuuid == null) {
+          statement.bindNull(1);
+        } else {
+          statement.bindString(1, entity.stationuuid);
+        }
+        if (entity.name == null) {
+          statement.bindNull(2);
+        } else {
+          statement.bindString(2, entity.name);
+        }
+        if (entity.url_resolved == null) {
+          statement.bindNull(3);
+        } else {
+          statement.bindString(3, entity.url_resolved);
+        }
+        if (entity.favicon == null) {
+          statement.bindNull(4);
+        } else {
+          statement.bindString(4, entity.favicon);
+        }
+        if (entity.country == null) {
+          statement.bindNull(5);
+        } else {
+          statement.bindString(5, entity.country);
+        }
+        if (entity.language == null) {
+          statement.bindNull(6);
+        } else {
+          statement.bindString(6, entity.language);
+        }
+        statement.bindLong(7, entity.bitrate);
+        if (entity.codec == null) {
+          statement.bindNull(8);
+        } else {
+          statement.bindString(8, entity.codec);
+        }
+        if (entity.tags == null) {
+          statement.bindNull(9);
+        } else {
+          statement.bindString(9, entity.tags);
+        }
+      }
+    };
+    this.__preparedStmtOfDeleteAll = new SharedSQLiteStatement(__db) {
+      @Override
+      @NonNull
+      public String createQuery() {
+        final String _query = "DELETE FROM stations";
+        return _query;
+      }
+    };
+  }
+
+  @Override
+  public void insertAll(final List<Station> stations) {
+    __db.assertNotSuspendingTransaction();
+    __db.beginTransaction();
+    try {
+      __insertionAdapterOfStation.insert(stations);
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+    }
+  }
+
+  @Override
+  public void deleteAll() {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteAll.acquire();
+    try {
+      __db.beginTransaction();
+      try {
+        _stmt.executeUpdateDelete();
+        __db.setTransactionSuccessful();
+      } finally {
+        __db.endTransaction();
+      }
+    } finally {
+      __preparedStmtOfDeleteAll.release(_stmt);
+    }
+  }
+
+  @Override
+  public LiveData<List<Station>> getStations() {
+    final String _sql = "SELECT * FROM stations ORDER BY RANDOM()";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    return __db.getInvalidationTracker().createLiveData(new String[] {"stations"}, false, new Callable<List<Station>>() {
+      @Override
+      @Nullable
+      public List<Station> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfStationuuid = CursorUtil.getColumnIndexOrThrow(_cursor, "stationuuid");
+          final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+          final int _cursorIndexOfUrlResolved = CursorUtil.getColumnIndexOrThrow(_cursor, "url_resolved");
+          final int _cursorIndexOfFavicon = CursorUtil.getColumnIndexOrThrow(_cursor, "favicon");
+          final int _cursorIndexOfCountry = CursorUtil.getColumnIndexOrThrow(_cursor, "country");
+          final int _cursorIndexOfLanguage = CursorUtil.getColumnIndexOrThrow(_cursor, "language");
+          final int _cursorIndexOfBitrate = CursorUtil.getColumnIndexOrThrow(_cursor, "bitrate");
+          final int _cursorIndexOfCodec = CursorUtil.getColumnIndexOrThrow(_cursor, "codec");
+          final int _cursorIndexOfTags = CursorUtil.getColumnIndexOrThrow(_cursor, "tags");
+          final List<Station> _result = new ArrayList<Station>(_cursor.getCount());
+          while (_cursor.moveToNext()) {
+            final Station _item;
+            _item = new Station();
+            if (_cursor.isNull(_cursorIndexOfStationuuid)) {
+              _item.stationuuid = null;
+            } else {
+              _item.stationuuid = _cursor.getString(_cursorIndexOfStationuuid);
+            }
+            if (_cursor.isNull(_cursorIndexOfName)) {
+              _item.name = null;
+            } else {
+              _item.name = _cursor.getString(_cursorIndexOfName);
+            }
+            if (_cursor.isNull(_cursorIndexOfUrlResolved)) {
+              _item.url_resolved = null;
+            } else {
+              _item.url_resolved = _cursor.getString(_cursorIndexOfUrlResolved);
+            }
+            if (_cursor.isNull(_cursorIndexOfFavicon)) {
+              _item.favicon = null;
+            } else {
+              _item.favicon = _cursor.getString(_cursorIndexOfFavicon);
+            }
+            if (_cursor.isNull(_cursorIndexOfCountry)) {
+              _item.country = null;
+            } else {
+              _item.country = _cursor.getString(_cursorIndexOfCountry);
+            }
+            if (_cursor.isNull(_cursorIndexOfLanguage)) {
+              _item.language = null;
+            } else {
+              _item.language = _cursor.getString(_cursorIndexOfLanguage);
+            }
+            _item.bitrate = _cursor.getInt(_cursorIndexOfBitrate);
+            if (_cursor.isNull(_cursorIndexOfCodec)) {
+              _item.codec = null;
+            } else {
+              _item.codec = _cursor.getString(_cursorIndexOfCodec);
+            }
+            if (_cursor.isNull(_cursorIndexOfTags)) {
+              _item.tags = null;
+            } else {
+              _item.tags = _cursor.getString(_cursorIndexOfTags);
+            }
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
+  }
+
+  @NonNull
+  public static List<Class<?>> getRequiredConverters() {
+    return Collections.emptyList();
+  }
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build\generated\data_binding_base_class_source_out\debug\out\com\ivanmarty\rovecast\databinding\ActivityMainBinding.java =====
+// Generated by view binder compiler. Do not edit!
+package com.ivanmarty.rovecast.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.ivanmarty.rovecast.R;
+import java.lang.NullPointerException;
+import java.lang.Override;
+import java.lang.String;
+
+public final class ActivityMainBinding implements ViewBinding {
+  @NonNull
+  private final CoordinatorLayout rootView;
+
+  @NonNull
+  public final BottomNavigationView bottomNav;
+
+  @NonNull
+  public final FrameLayout fragmentContainer;
+
+  @NonNull
+  public final ViewMiniPlayerBinding miniPlayer;
+
+  @NonNull
+  public final MaterialToolbar topBar;
+
+  private ActivityMainBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull BottomNavigationView bottomNav, @NonNull FrameLayout fragmentContainer,
+      @NonNull ViewMiniPlayerBinding miniPlayer, @NonNull MaterialToolbar topBar) {
+    this.rootView = rootView;
+    this.bottomNav = bottomNav;
+    this.fragmentContainer = fragmentContainer;
+    this.miniPlayer = miniPlayer;
+    this.topBar = topBar;
+  }
+
+  @Override
+  @NonNull
+  public CoordinatorLayout getRoot() {
+    return rootView;
+  }
+
+  @NonNull
+  public static ActivityMainBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, null, false);
+  }
+
+  @NonNull
+  public static ActivityMainBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup parent, boolean attachToParent) {
+    View root = inflater.inflate(R.layout.activity_main, parent, false);
+    if (attachToParent) {
+      parent.addView(root);
+    }
+    return bind(root);
+  }
+
+  @NonNull
+  public static ActivityMainBinding bind(@NonNull View rootView) {
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.bottomNav;
+      BottomNavigationView bottomNav = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNav == null) {
+        break missingId;
+      }
+
+      id = R.id.fragmentContainer;
+      FrameLayout fragmentContainer = ViewBindings.findChildViewById(rootView, id);
+      if (fragmentContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.miniPlayer;
+      View miniPlayer = ViewBindings.findChildViewById(rootView, id);
+      if (miniPlayer == null) {
+        break missingId;
+      }
+      ViewMiniPlayerBinding binding_miniPlayer = ViewMiniPlayerBinding.bind(miniPlayer);
+
+      id = R.id.topBar;
+      MaterialToolbar topBar = ViewBindings.findChildViewById(rootView, id);
+      if (topBar == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((CoordinatorLayout) rootView, bottomNav, fragmentContainer,
+          binding_miniPlayer, topBar);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
+  }
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build\generated\data_binding_base_class_source_out\debug\out\com\ivanmarty\rovecast\databinding\ActivityPlayerBinding.java =====
+// Generated by view binder compiler. Do not edit!
+package com.ivanmarty.rovecast.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.media3.ui.PlayerView;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.google.android.material.appbar.MaterialToolbar;
+import com.ivanmarty.rovecast.R;
+import java.lang.NullPointerException;
+import java.lang.Override;
+import java.lang.String;
+
+public final class ActivityPlayerBinding implements ViewBinding {
+  @NonNull
+  private final ConstraintLayout rootView;
+
+  @NonNull
+  public final ImageView ivLogo;
+
+  @NonNull
+  public final MaterialToolbar playerTopBar;
+
+  @NonNull
+  public final PlayerView playerView;
+
+  @NonNull
+  public final TextView tvMeta;
+
+  @NonNull
+  public final TextView tvTitle;
+
+  private ActivityPlayerBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView ivLogo,
+      @NonNull MaterialToolbar playerTopBar, @NonNull PlayerView playerView,
+      @NonNull TextView tvMeta, @NonNull TextView tvTitle) {
+    this.rootView = rootView;
+    this.ivLogo = ivLogo;
+    this.playerTopBar = playerTopBar;
+    this.playerView = playerView;
+    this.tvMeta = tvMeta;
+    this.tvTitle = tvTitle;
+  }
+
+  @Override
+  @NonNull
+  public ConstraintLayout getRoot() {
+    return rootView;
+  }
+
+  @NonNull
+  public static ActivityPlayerBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, null, false);
+  }
+
+  @NonNull
+  public static ActivityPlayerBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup parent, boolean attachToParent) {
+    View root = inflater.inflate(R.layout.activity_player, parent, false);
+    if (attachToParent) {
+      parent.addView(root);
+    }
+    return bind(root);
+  }
+
+  @NonNull
+  public static ActivityPlayerBinding bind(@NonNull View rootView) {
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.ivLogo;
+      ImageView ivLogo = ViewBindings.findChildViewById(rootView, id);
+      if (ivLogo == null) {
+        break missingId;
+      }
+
+      id = R.id.playerTopBar;
+      MaterialToolbar playerTopBar = ViewBindings.findChildViewById(rootView, id);
+      if (playerTopBar == null) {
+        break missingId;
+      }
+
+      id = R.id.playerView;
+      PlayerView playerView = ViewBindings.findChildViewById(rootView, id);
+      if (playerView == null) {
+        break missingId;
+      }
+
+      id = R.id.tvMeta;
+      TextView tvMeta = ViewBindings.findChildViewById(rootView, id);
+      if (tvMeta == null) {
+        break missingId;
+      }
+
+      id = R.id.tvTitle;
+      TextView tvTitle = ViewBindings.findChildViewById(rootView, id);
+      if (tvTitle == null) {
+        break missingId;
+      }
+
+      return new ActivityPlayerBinding((ConstraintLayout) rootView, ivLogo, playerTopBar,
+          playerView, tvMeta, tvTitle);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
+  }
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build\generated\data_binding_base_class_source_out\debug\out\com\ivanmarty\rovecast\databinding\ActivityPrivacyPolicyBinding.java =====
+// Generated by view binder compiler. Do not edit!
+package com.ivanmarty.rovecast.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.webkit.WebView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.viewbinding.ViewBinding;
+import com.ivanmarty.rovecast.R;
+import java.lang.NullPointerException;
+import java.lang.Override;
+
+public final class ActivityPrivacyPolicyBinding implements ViewBinding {
+  @NonNull
+  private final WebView rootView;
+
+  @NonNull
+  public final WebView privacyPolicyWebview;
+
+  private ActivityPrivacyPolicyBinding(@NonNull WebView rootView,
+      @NonNull WebView privacyPolicyWebview) {
+    this.rootView = rootView;
+    this.privacyPolicyWebview = privacyPolicyWebview;
+  }
+
+  @Override
+  @NonNull
+  public WebView getRoot() {
+    return rootView;
+  }
+
+  @NonNull
+  public static ActivityPrivacyPolicyBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, null, false);
+  }
+
+  @NonNull
+  public static ActivityPrivacyPolicyBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup parent, boolean attachToParent) {
+    View root = inflater.inflate(R.layout.activity_privacy_policy, parent, false);
+    if (attachToParent) {
+      parent.addView(root);
+    }
+    return bind(root);
+  }
+
+  @NonNull
+  public static ActivityPrivacyPolicyBinding bind(@NonNull View rootView) {
+    if (rootView == null) {
+      throw new NullPointerException("rootView");
+    }
+
+    WebView privacyPolicyWebview = (WebView) rootView;
+
+    return new ActivityPrivacyPolicyBinding((WebView) rootView, privacyPolicyWebview);
+  }
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build\generated\data_binding_base_class_source_out\debug\out\com\ivanmarty\rovecast\databinding\CustomCastButtonBinding.java =====
+// Generated by view binder compiler. Do not edit!
+package com.ivanmarty.rovecast.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.mediarouter.app.MediaRouteButton;
+import androidx.viewbinding.ViewBinding;
+import com.ivanmarty.rovecast.R;
+import java.lang.NullPointerException;
+import java.lang.Override;
+
+public final class CustomCastButtonBinding implements ViewBinding {
+  @NonNull
+  private final MediaRouteButton rootView;
+
+  private CustomCastButtonBinding(@NonNull MediaRouteButton rootView) {
+    this.rootView = rootView;
+  }
+
+  @Override
+  @NonNull
+  public MediaRouteButton getRoot() {
+    return rootView;
+  }
+
+  @NonNull
+  public static CustomCastButtonBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, null, false);
+  }
+
+  @NonNull
+  public static CustomCastButtonBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup parent, boolean attachToParent) {
+    View root = inflater.inflate(R.layout.custom_cast_button, parent, false);
+    if (attachToParent) {
+      parent.addView(root);
+    }
+    return bind(root);
+  }
+
+  @NonNull
+  public static CustomCastButtonBinding bind(@NonNull View rootView) {
+    if (rootView == null) {
+      throw new NullPointerException("rootView");
+    }
+
+    return new CustomCastButtonBinding((MediaRouteButton) rootView);
+  }
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build\generated\data_binding_base_class_source_out\debug\out\com\ivanmarty\rovecast\databinding\DialogEditPresetBinding.java =====
+// Generated by view binder compiler. Do not edit!
+package com.ivanmarty.rovecast.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.ivanmarty.rovecast.R;
+import java.lang.NullPointerException;
+import java.lang.Override;
+import java.lang.String;
+
+public final class DialogEditPresetBinding implements ViewBinding {
+  @NonNull
+  private final LinearLayout rootView;
+
+  @NonNull
+  public final EditText etPresetDuration;
+
+  @NonNull
+  public final EditText etPresetName;
+
+  private DialogEditPresetBinding(@NonNull LinearLayout rootView,
+      @NonNull EditText etPresetDuration, @NonNull EditText etPresetName) {
+    this.rootView = rootView;
+    this.etPresetDuration = etPresetDuration;
+    this.etPresetName = etPresetName;
+  }
+
+  @Override
+  @NonNull
+  public LinearLayout getRoot() {
+    return rootView;
+  }
+
+  @NonNull
+  public static DialogEditPresetBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, null, false);
+  }
+
+  @NonNull
+  public static DialogEditPresetBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup parent, boolean attachToParent) {
+    View root = inflater.inflate(R.layout.dialog_edit_preset, parent, false);
+    if (attachToParent) {
+      parent.addView(root);
+    }
+    return bind(root);
+  }
+
+  @NonNull
+  public static DialogEditPresetBinding bind(@NonNull View rootView) {
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.etPresetDuration;
+      EditText etPresetDuration = ViewBindings.findChildViewById(rootView, id);
+      if (etPresetDuration == null) {
+        break missingId;
+      }
+
+      id = R.id.etPresetName;
+      EditText etPresetName = ViewBindings.findChildViewById(rootView, id);
+      if (etPresetName == null) {
+        break missingId;
+      }
+
+      return new DialogEditPresetBinding((LinearLayout) rootView, etPresetDuration, etPresetName);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
+  }
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build\generated\data_binding_base_class_source_out\debug\out\com\ivanmarty\rovecast\databinding\DialogSleepTimerPresetsBinding.java =====
+// Generated by view binder compiler. Do not edit!
+package com.ivanmarty.rovecast.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.ivanmarty.rovecast.R;
+import java.lang.NullPointerException;
+import java.lang.Override;
+import java.lang.String;
+
+public final class DialogSleepTimerPresetsBinding implements ViewBinding {
+  @NonNull
+  private final LinearLayout rootView;
+
+  @NonNull
+  public final Button btnAddPreset;
+
+  @NonNull
+  public final RecyclerView recyclerPresets;
+
+  private DialogSleepTimerPresetsBinding(@NonNull LinearLayout rootView,
+      @NonNull Button btnAddPreset, @NonNull RecyclerView recyclerPresets) {
+    this.rootView = rootView;
+    this.btnAddPreset = btnAddPreset;
+    this.recyclerPresets = recyclerPresets;
+  }
+
+  @Override
+  @NonNull
+  public LinearLayout getRoot() {
+    return rootView;
+  }
+
+  @NonNull
+  public static DialogSleepTimerPresetsBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, null, false);
+  }
+
+  @NonNull
+  public static DialogSleepTimerPresetsBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup parent, boolean attachToParent) {
+    View root = inflater.inflate(R.layout.dialog_sleep_timer_presets, parent, false);
+    if (attachToParent) {
+      parent.addView(root);
+    }
+    return bind(root);
+  }
+
+  @NonNull
+  public static DialogSleepTimerPresetsBinding bind(@NonNull View rootView) {
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.btnAddPreset;
+      Button btnAddPreset = ViewBindings.findChildViewById(rootView, id);
+      if (btnAddPreset == null) {
+        break missingId;
+      }
+
+      id = R.id.recycler_presets;
+      RecyclerView recyclerPresets = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerPresets == null) {
+        break missingId;
+      }
+
+      return new DialogSleepTimerPresetsBinding((LinearLayout) rootView, btnAddPreset,
+          recyclerPresets);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
+  }
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build\generated\data_binding_base_class_source_out\debug\out\com\ivanmarty\rovecast\databinding\FragmentAlarmBinding.java =====
+// Generated by view binder compiler. Do not edit!
+package com.ivanmarty.rovecast.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
+import com.google.android.material.switchmaterial.SwitchMaterial;
+import com.google.android.material.textfield.TextInputLayout;
+import com.ivanmarty.rovecast.R;
+import java.lang.NullPointerException;
+import java.lang.Override;
+import java.lang.String;
+
+public final class FragmentAlarmBinding implements ViewBinding {
+  @NonNull
+  private final ConstraintLayout rootView;
+
+  @NonNull
+  public final Button btnSaveAlarm;
+
+  @NonNull
+  public final MaterialCardView cardAlarm;
+
+  @NonNull
+  public final Chip chipFri;
+
+  @NonNull
+  public final ChipGroup chipGroupDays;
+
+  @NonNull
+  public final Chip chipMon;
+
+  @NonNull
+  public final Chip chipSat;
+
+  @NonNull
+  public final Chip chipSun;
+
+  @NonNull
+  public final Chip chipThu;
+
+  @NonNull
+  public final Chip chipTue;
+
+  @NonNull
+  public final Chip chipWed;
+
+  @NonNull
+  public final AutoCompleteTextView stationAutoComplete;
+
+  @NonNull
+  public final TextInputLayout stationSpinnerLayout;
+
+  @NonNull
+  public final SwitchMaterial switchAlarm;
+
+  @NonNull
+  public final TextView tvTime;
+
+  private FragmentAlarmBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnSaveAlarm,
+      @NonNull MaterialCardView cardAlarm, @NonNull Chip chipFri, @NonNull ChipGroup chipGroupDays,
+      @NonNull Chip chipMon, @NonNull Chip chipSat, @NonNull Chip chipSun, @NonNull Chip chipThu,
+      @NonNull Chip chipTue, @NonNull Chip chipWed,
+      @NonNull AutoCompleteTextView stationAutoComplete,
+      @NonNull TextInputLayout stationSpinnerLayout, @NonNull SwitchMaterial switchAlarm,
+      @NonNull TextView tvTime) {
+    this.rootView = rootView;
+    this.btnSaveAlarm = btnSaveAlarm;
+    this.cardAlarm = cardAlarm;
+    this.chipFri = chipFri;
+    this.chipGroupDays = chipGroupDays;
+    this.chipMon = chipMon;
+    this.chipSat = chipSat;
+    this.chipSun = chipSun;
+    this.chipThu = chipThu;
+    this.chipTue = chipTue;
+    this.chipWed = chipWed;
+    this.stationAutoComplete = stationAutoComplete;
+    this.stationSpinnerLayout = stationSpinnerLayout;
+    this.switchAlarm = switchAlarm;
+    this.tvTime = tvTime;
+  }
+
+  @Override
+  @NonNull
+  public ConstraintLayout getRoot() {
+    return rootView;
+  }
+
+  @NonNull
+  public static FragmentAlarmBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, null, false);
+  }
+
+  @NonNull
+  public static FragmentAlarmBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup parent, boolean attachToParent) {
+    View root = inflater.inflate(R.layout.fragment_alarm, parent, false);
+    if (attachToParent) {
+      parent.addView(root);
+    }
+    return bind(root);
+  }
+
+  @NonNull
+  public static FragmentAlarmBinding bind(@NonNull View rootView) {
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.btnSaveAlarm;
+      Button btnSaveAlarm = ViewBindings.findChildViewById(rootView, id);
+      if (btnSaveAlarm == null) {
+        break missingId;
+      }
+
+      id = R.id.cardAlarm;
+      MaterialCardView cardAlarm = ViewBindings.findChildViewById(rootView, id);
+      if (cardAlarm == null) {
+        break missingId;
+      }
+
+      id = R.id.chipFri;
+      Chip chipFri = ViewBindings.findChildViewById(rootView, id);
+      if (chipFri == null) {
+        break missingId;
+      }
+
+      id = R.id.chipGroupDays;
+      ChipGroup chipGroupDays = ViewBindings.findChildViewById(rootView, id);
+      if (chipGroupDays == null) {
+        break missingId;
+      }
+
+      id = R.id.chipMon;
+      Chip chipMon = ViewBindings.findChildViewById(rootView, id);
+      if (chipMon == null) {
+        break missingId;
+      }
+
+      id = R.id.chipSat;
+      Chip chipSat = ViewBindings.findChildViewById(rootView, id);
+      if (chipSat == null) {
+        break missingId;
+      }
+
+      id = R.id.chipSun;
+      Chip chipSun = ViewBindings.findChildViewById(rootView, id);
+      if (chipSun == null) {
+        break missingId;
+      }
+
+      id = R.id.chipThu;
+      Chip chipThu = ViewBindings.findChildViewById(rootView, id);
+      if (chipThu == null) {
+        break missingId;
+      }
+
+      id = R.id.chipTue;
+      Chip chipTue = ViewBindings.findChildViewById(rootView, id);
+      if (chipTue == null) {
+        break missingId;
+      }
+
+      id = R.id.chipWed;
+      Chip chipWed = ViewBindings.findChildViewById(rootView, id);
+      if (chipWed == null) {
+        break missingId;
+      }
+
+      id = R.id.stationAutoComplete;
+      AutoCompleteTextView stationAutoComplete = ViewBindings.findChildViewById(rootView, id);
+      if (stationAutoComplete == null) {
+        break missingId;
+      }
+
+      id = R.id.stationSpinnerLayout;
+      TextInputLayout stationSpinnerLayout = ViewBindings.findChildViewById(rootView, id);
+      if (stationSpinnerLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.switchAlarm;
+      SwitchMaterial switchAlarm = ViewBindings.findChildViewById(rootView, id);
+      if (switchAlarm == null) {
+        break missingId;
+      }
+
+      id = R.id.tvTime;
+      TextView tvTime = ViewBindings.findChildViewById(rootView, id);
+      if (tvTime == null) {
+        break missingId;
+      }
+
+      return new FragmentAlarmBinding((ConstraintLayout) rootView, btnSaveAlarm, cardAlarm, chipFri,
+          chipGroupDays, chipMon, chipSat, chipSun, chipThu, chipTue, chipWed, stationAutoComplete,
+          stationSpinnerLayout, switchAlarm, tvTime);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
+  }
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build\generated\data_binding_base_class_source_out\debug\out\com\ivanmarty\rovecast\databinding\FragmentFavoritesBinding.java =====
+// Generated by view binder compiler. Do not edit!
+package com.ivanmarty.rovecast.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.ivanmarty.rovecast.R;
+import java.lang.NullPointerException;
+import java.lang.Override;
+import java.lang.String;
+
+public final class FragmentFavoritesBinding implements ViewBinding {
+  @NonNull
+  private final FrameLayout rootView;
+
+  @NonNull
+  public final RecyclerView recyclerFav;
+
+  private FragmentFavoritesBinding(@NonNull FrameLayout rootView,
+      @NonNull RecyclerView recyclerFav) {
+    this.rootView = rootView;
+    this.recyclerFav = recyclerFav;
+  }
+
+  @Override
+  @NonNull
+  public FrameLayout getRoot() {
+    return rootView;
+  }
+
+  @NonNull
+  public static FragmentFavoritesBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, null, false);
+  }
+
+  @NonNull
+  public static FragmentFavoritesBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup parent, boolean attachToParent) {
+    View root = inflater.inflate(R.layout.fragment_favorites, parent, false);
+    if (attachToParent) {
+      parent.addView(root);
+    }
+    return bind(root);
+  }
+
+  @NonNull
+  public static FragmentFavoritesBinding bind(@NonNull View rootView) {
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.recyclerFav;
+      RecyclerView recyclerFav = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerFav == null) {
+        break missingId;
+      }
+
+      return new FragmentFavoritesBinding((FrameLayout) rootView, recyclerFav);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
+  }
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build\generated\data_binding_base_class_source_out\debug\out\com\ivanmarty\rovecast\databinding\FragmentHomeBinding.java =====
+// Generated by view binder compiler. Do not edit!
+package com.ivanmarty.rovecast.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.google.android.gms.ads.AdView;
+import com.ivanmarty.rovecast.R;
+import java.lang.NullPointerException;
+import java.lang.Override;
+import java.lang.String;
+
+public final class FragmentHomeBinding implements ViewBinding {
+  @NonNull
+  private final RelativeLayout rootView;
+
+  @NonNull
+  public final AdView adView;
+
+  @NonNull
+  public final RecyclerView recycler;
+
+  private FragmentHomeBinding(@NonNull RelativeLayout rootView, @NonNull AdView adView,
+      @NonNull RecyclerView recycler) {
+    this.rootView = rootView;
+    this.adView = adView;
+    this.recycler = recycler;
+  }
+
+  @Override
+  @NonNull
+  public RelativeLayout getRoot() {
+    return rootView;
+  }
+
+  @NonNull
+  public static FragmentHomeBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, null, false);
+  }
+
+  @NonNull
+  public static FragmentHomeBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup parent, boolean attachToParent) {
+    View root = inflater.inflate(R.layout.fragment_home, parent, false);
+    if (attachToParent) {
+      parent.addView(root);
+    }
+    return bind(root);
+  }
+
+  @NonNull
+  public static FragmentHomeBinding bind(@NonNull View rootView) {
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.adView;
+      AdView adView = ViewBindings.findChildViewById(rootView, id);
+      if (adView == null) {
+        break missingId;
+      }
+
+      id = R.id.recycler;
+      RecyclerView recycler = ViewBindings.findChildViewById(rootView, id);
+      if (recycler == null) {
+        break missingId;
+      }
+
+      return new FragmentHomeBinding((RelativeLayout) rootView, adView, recycler);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
+  }
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build\generated\data_binding_base_class_source_out\debug\out\com\ivanmarty\rovecast\databinding\FragmentSearchBinding.java =====
+// Generated by view binder compiler. Do not edit!
+package com.ivanmarty.rovecast.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.ivanmarty.rovecast.R;
+import java.lang.NullPointerException;
+import java.lang.Override;
+import java.lang.String;
+
+public final class FragmentSearchBinding implements ViewBinding {
+  @NonNull
+  private final LinearLayout rootView;
+
+  @NonNull
+  public final EditText etSearch;
+
+  @NonNull
+  public final RecyclerView recyclerSearch;
+
+  private FragmentSearchBinding(@NonNull LinearLayout rootView, @NonNull EditText etSearch,
+      @NonNull RecyclerView recyclerSearch) {
+    this.rootView = rootView;
+    this.etSearch = etSearch;
+    this.recyclerSearch = recyclerSearch;
+  }
+
+  @Override
+  @NonNull
+  public LinearLayout getRoot() {
+    return rootView;
+  }
+
+  @NonNull
+  public static FragmentSearchBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, null, false);
+  }
+
+  @NonNull
+  public static FragmentSearchBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup parent, boolean attachToParent) {
+    View root = inflater.inflate(R.layout.fragment_search, parent, false);
+    if (attachToParent) {
+      parent.addView(root);
+    }
+    return bind(root);
+  }
+
+  @NonNull
+  public static FragmentSearchBinding bind(@NonNull View rootView) {
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.etSearch;
+      EditText etSearch = ViewBindings.findChildViewById(rootView, id);
+      if (etSearch == null) {
+        break missingId;
+      }
+
+      id = R.id.recyclerSearch;
+      RecyclerView recyclerSearch = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerSearch == null) {
+        break missingId;
+      }
+
+      return new FragmentSearchBinding((LinearLayout) rootView, etSearch, recyclerSearch);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
+  }
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build\generated\data_binding_base_class_source_out\debug\out\com\ivanmarty\rovecast\databinding\ItemStationBinding.java =====
+// Generated by view binder compiler. Do not edit!
+package com.ivanmarty.rovecast.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.ivanmarty.rovecast.R;
+import java.lang.NullPointerException;
+import java.lang.Override;
+import java.lang.String;
+
+public final class ItemStationBinding implements ViewBinding {
+  @NonNull
+  private final CardView rootView;
+
+  @NonNull
+  public final ImageButton btnFav;
+
+  @NonNull
+  public final ImageView logo;
+
+  @NonNull
+  public final TextView subtitle;
+
+  @NonNull
+  public final TextView title;
+
+  private ItemStationBinding(@NonNull CardView rootView, @NonNull ImageButton btnFav,
+      @NonNull ImageView logo, @NonNull TextView subtitle, @NonNull TextView title) {
+    this.rootView = rootView;
+    this.btnFav = btnFav;
+    this.logo = logo;
+    this.subtitle = subtitle;
+    this.title = title;
+  }
+
+  @Override
+  @NonNull
+  public CardView getRoot() {
+    return rootView;
+  }
+
+  @NonNull
+  public static ItemStationBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, null, false);
+  }
+
+  @NonNull
+  public static ItemStationBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup parent, boolean attachToParent) {
+    View root = inflater.inflate(R.layout.item_station, parent, false);
+    if (attachToParent) {
+      parent.addView(root);
+    }
+    return bind(root);
+  }
+
+  @NonNull
+  public static ItemStationBinding bind(@NonNull View rootView) {
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.btnFav;
+      ImageButton btnFav = ViewBindings.findChildViewById(rootView, id);
+      if (btnFav == null) {
+        break missingId;
+      }
+
+      id = R.id.logo;
+      ImageView logo = ViewBindings.findChildViewById(rootView, id);
+      if (logo == null) {
+        break missingId;
+      }
+
+      id = R.id.subtitle;
+      TextView subtitle = ViewBindings.findChildViewById(rootView, id);
+      if (subtitle == null) {
+        break missingId;
+      }
+
+      id = R.id.title;
+      TextView title = ViewBindings.findChildViewById(rootView, id);
+      if (title == null) {
+        break missingId;
+      }
+
+      return new ItemStationBinding((CardView) rootView, btnFav, logo, subtitle, title);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
+  }
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build\generated\data_binding_base_class_source_out\debug\out\com\ivanmarty\rovecast\databinding\ListItemStationAlarmBinding.java =====
+// Generated by view binder compiler. Do not edit!
+package com.ivanmarty.rovecast.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.viewbinding.ViewBinding;
+import com.ivanmarty.rovecast.R;
+import java.lang.NullPointerException;
+import java.lang.Override;
+
+public final class ListItemStationAlarmBinding implements ViewBinding {
+  @NonNull
+  private final TextView rootView;
+
+  @NonNull
+  public final TextView text1;
+
+  private ListItemStationAlarmBinding(@NonNull TextView rootView, @NonNull TextView text1) {
+    this.rootView = rootView;
+    this.text1 = text1;
+  }
+
+  @Override
+  @NonNull
+  public TextView getRoot() {
+    return rootView;
+  }
+
+  @NonNull
+  public static ListItemStationAlarmBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, null, false);
+  }
+
+  @NonNull
+  public static ListItemStationAlarmBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup parent, boolean attachToParent) {
+    View root = inflater.inflate(R.layout.list_item_station_alarm, parent, false);
+    if (attachToParent) {
+      parent.addView(root);
+    }
+    return bind(root);
+  }
+
+  @NonNull
+  public static ListItemStationAlarmBinding bind(@NonNull View rootView) {
+    if (rootView == null) {
+      throw new NullPointerException("rootView");
+    }
+
+    TextView text1 = (TextView) rootView;
+
+    return new ListItemStationAlarmBinding((TextView) rootView, text1);
+  }
+}
+
+===== FILE: C:\Users\ivanm\AndroidStudioProjects\RoveCast\app\build\generated\data_binding_base_class_source_out\debug\out\com\ivanmarty\rovecast\databinding\ViewMiniPlayerBinding.java =====
+// Generated by view binder compiler. Do not edit!
+package com.ivanmarty.rovecast.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.ivanmarty.rovecast.R;
+import java.lang.NullPointerException;
+import java.lang.Override;
+import java.lang.String;
+
+public final class ViewMiniPlayerBinding implements ViewBinding {
+  @NonNull
+  private final ConstraintLayout rootView;
+
+  @NonNull
+  public final ConstraintLayout miniPlayerContainer;
+
+  @NonNull
+  public final ImageView miniPlayerLogo;
+
+  @NonNull
+  public final ImageButton miniPlayerPlayPause;
+
+  @NonNull
+  public final TextView miniPlayerStatus;
+
+  @NonNull
+  public final TextView miniPlayerTitle;
+
+  private ViewMiniPlayerBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ConstraintLayout miniPlayerContainer, @NonNull ImageView miniPlayerLogo,
+      @NonNull ImageButton miniPlayerPlayPause, @NonNull TextView miniPlayerStatus,
+      @NonNull TextView miniPlayerTitle) {
+    this.rootView = rootView;
+    this.miniPlayerContainer = miniPlayerContainer;
+    this.miniPlayerLogo = miniPlayerLogo;
+    this.miniPlayerPlayPause = miniPlayerPlayPause;
+    this.miniPlayerStatus = miniPlayerStatus;
+    this.miniPlayerTitle = miniPlayerTitle;
+  }
+
+  @Override
+  @NonNull
+  public ConstraintLayout getRoot() {
+    return rootView;
+  }
+
+  @NonNull
+  public static ViewMiniPlayerBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, null, false);
+  }
+
+  @NonNull
+  public static ViewMiniPlayerBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup parent, boolean attachToParent) {
+    View root = inflater.inflate(R.layout.view_mini_player, parent, false);
+    if (attachToParent) {
+      parent.addView(root);
+    }
+    return bind(root);
+  }
+
+  @NonNull
+  public static ViewMiniPlayerBinding bin
+... [TRUNCADO para limite de contexto] ...

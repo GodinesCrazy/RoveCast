@@ -15,6 +15,9 @@ public interface StationDao {
     @Query("SELECT * FROM stations ORDER BY RANDOM()") // Orden aleatorio para que la lista no sea siempre igual
     LiveData<List<Station>> getStations();
 
+    @Query("SELECT COUNT(*) FROM stations")
+    int getStationCount();
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAll(List<Station> stations);
 

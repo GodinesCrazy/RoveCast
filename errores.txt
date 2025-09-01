@@ -1,0 +1,24 @@
+Cannot resolve symbol 'facebook' — línea 47
+
+Cannot resolve method 'startShimmer()' — línea 210
+
+Cannot resolve method 'setVisibility(int)' — línea 211
+
+Cannot resolve method 'stopShimmer()' — línea 218
+
+Cannot resolve method 'setVisibility(int)' — línea 219
+
+Advertencias (amarillo):
+6. Statement lambda can be replaced with expression lambda — línea 69
+7. Method 'onMediaItemChanged(androidx.media3.common.MediaItem, int)' is never used — línea 157
+8. Parameter 'mediaItem' is never used — línea 157
+9. Parameter 'reason' is never used — línea 157
+10. Condition 'item.mediaMetadata != null' is always 'true' when reached — línea 188
+11. String literal in 'setText' can not be translated. Use Android resources instead. — línea 201
+12. String literal in 'setText' can not be translated. Use Android resources instead. — línea 204
+
+Ortografía / typos (verde):
+13. Typo: In word 'conectar' — línea 145
+14. Typo: In word 'Reproduciendo' — línea 201
+15. Typo: In word 'Pausado' — línea 204
+16. Typo: In word 'activado' — línea 269

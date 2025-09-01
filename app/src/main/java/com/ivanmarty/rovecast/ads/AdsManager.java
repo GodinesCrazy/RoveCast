@@ -25,7 +25,7 @@ public final class AdsManager {
     private long lastShownMs = 0L;
 
     // --- Configuración --- //
-    private static final String AD_ID_INTERSTITIAL = "ca-app-pub-3940256099942544/1033173712";
+    private static final String AD_ID_INTERSTITIAL = "ca-app-pub-2918417880001381/8618426192";
     private long minIntervalMs = 300_000L; // 5 minutos
     private int maxPerDay = 8;
 

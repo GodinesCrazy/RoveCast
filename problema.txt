@@ -1,0 +1,41 @@
+Actúa como ingeniero Android senior. Proyecto: RoveCast (Java, minSdk 24, targetSdk 35, Gradle Groovy, Media3/ExoPlayer). Objetivo: implementar un **mini-reproductor** (barra fija en la parte inferior) que muestre controles básicos sin romper nada ni reiniciar tracks en Google Play.
+
+REQUISITOS DETALLADOS:
+1. Mantener nombres de clases, paquetes, recursos e IDs existentes. NO cambiar el applicationId.
+2. Implementar una **barra fija** (mini-player) visible en la pantalla principal con:
+   - Imagen (logo de la estación).
+   - Título de la estación (o texto genérico si no hay metadata).
+   - Estado dinámico: "Reproduciendo..." o "Pausado".
+   - Botón Play/Pause que controle el ExoPlayer actual.
+   - Toque sobre la barra → abrir pantalla completa del reproductor (si existe).
+3. Ubicar el mini-player **justo arriba del banner AdMob** si ya existe, sin superposición.
+4. Reutilizar la instancia actual de `ExoPlayer` (no crear nuevos players). Integrar listeners.
+5. Visibilidad dinámica:
+   - Ocultar si no hay media cargada.
+   - Mostrar automáticamente al reproducir o pausar.
+6. Código robusto:
+   - Actualizar íconos play/pause según estado real.
+   - Obtener título desde `MediaItem.mediaMetadata.title`.
+   - Cargar imagen/logo con Glide o librería ya usada.
+7. Entrega exacta:
+   - Layout XML completo `view_mini_player.xml`.
+   - Modificaciones completas de `activity_main.xml` con flechas indicando dónde incluirlo.
+   - Código Java exacto para inicializarlo, actualizar UI y manejar listeners del player.
+   - Código para abrir PlayerActivity o pantalla completa desde el mini-player.
+   - Ajustes en `build.gradle` solo si es necesario.
+8. Visuales:
+   - Entregar **diagramas ASCII** o **comentarios con flechas** que muestren:
+     - La estructura de la pantalla principal antes y después.
+     - Dónde se coloca `<include layout="@layout/view_mini_player" />`.
+9. Generar instrucciones paso a paso para:
+   - Insertar cada fragmento de código.
+   - Probar en Debug (play, pause, cambio de estación).
+   - Confirmar que compila y funciona igual.
+10. Incrementar `versionCode` y `versionName` para generar nuevo `app-release.aab` firmado.
+11. Aclarar que este cambio **no reinicia el ciclo de 14 días** de la Prueba cerrada.
+
+CRITERIOS DE ACEPTACIÓN:
+- Barra fija funcional, integrada sin romper navegación ni reproductor actual.
+- Controles Play/Pause reflejan estado real.
+- No hay instancias duplicadas del player.
+- Código completo, listo para compilar y subir como nueva versión a Play Console.

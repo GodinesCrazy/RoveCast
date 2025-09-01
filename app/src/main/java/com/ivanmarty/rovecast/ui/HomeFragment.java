@@ -31,6 +31,7 @@ public class HomeFragment extends Fragment implements StationAdapter.StationList
     private StationAdapter adapter;
     private boolean premium = false;
     private AdView adView;
+    private android.widget.ProgressBar progressBar;
 
     @Nullable @Override
     public View onCreateView(@NonNull LayoutInflater inf, @Nullable ViewGroup container, @Nullable Bundle saved) {
@@ -43,6 +44,7 @@ public class HomeFragment extends Fragment implements StationAdapter.StationList
 
         premium = PremiumManager.isPremium(requireContext());
 
+        progressBar = v.findViewById(R.id.progressBar);
         adView = v.findViewById(R.id.adView);
         if (premium) {
             adView.setVisibility(View.GONE);
@@ -52,10 +54,13 @@ public class HomeFragment extends Fragment implements StationAdapter.StationList
         }
 
         vm = new ViewModelProvider(this).get(HomeViewModel.class);
+
+        progressBar.setVisibility(View.VISIBLE);
         vm.refreshStations(); // Lanza la actualización en segundo plano
 
         // El observador de estaciones ahora recibe la caché al instante y luego el refresh de la red
         vm.getStations().observe(getViewLifecycleOwner(), stations -> {
+            progressBar.setVisibility(View.GONE);
             adapter.submitList(stations);
         });
 

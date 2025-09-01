@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/background_dark">
 
-    <!-- Barra superior oscura, solo iconos si luego quieres -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/topBar"
         android:layout_width="match_parent"
@@ -15,22 +14,38 @@
         android:theme="@style/Toolbar.RoveCast"
         app:popupTheme="@style/ThemeOverlay.RoveCast.Popup" />
 
-    <!-- Contenido entre barras -->
+    <!-- Contenido Principal -->
+    <!-- El margen inferior asegura que el contenido termina por encima del LinearLayout del pie de página -->
     <FrameLayout
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="56dp"
-        android:layout_marginBottom="72dp"/>
+        android:layout_marginBottom="136dp"/>
 
-    <!-- Barra inferior oscura -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNav"
+    <!-- INICIO: Contenedor de Pie de Página -->
+    <!-- Agrupamos el mini-reproductor y la navegación en un LinearLayout para un posicionamiento robusto -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:layout_gravity="bottom"
-        android:background="@color/surface_dark"
-        app:itemIconTint="@color/bottom_nav_selector"
-        app:menu="@menu/menu_bottom"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom">
+
+        <!-- Mini-reproductor -->
+        <include
+            android:id="@+id/miniPlayer"
+            layout="@layout/view_mini_player" />
+
+        <!-- Barra de navegación inferior -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:background="@color/surface_dark"
+            app:itemIconTint="@color/bottom_nav_selector"
+            app:menu="@menu/menu_bottom"/>
+
+    </LinearLayout>
+    <!-- FIN: Contenedor de Pie de Página -->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

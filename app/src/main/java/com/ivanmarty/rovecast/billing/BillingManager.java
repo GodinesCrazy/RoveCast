@@ -14,6 +14,10 @@ import com.android.billingclient.api.ProductDetails;
 import com.android.billingclient.api.Purchase;
 import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.QueryProductDetailsParams;
+import com.android.billingclient.api.PendingPurchasesParams;
+import com.android.billingclient.api.QueryPurchasesParams;
+import com.android.billingclient.api.QueryProductDetailsResult;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,9 +38,13 @@ public class BillingManager implements PurchasesUpdatedListener {
     public BillingManager(Activity activity, Listener listener) {
         this.activity = activity;
         this.listener = listener;
+        PendingPurchasesParams pendingPurchasesParams = PendingPurchasesParams.newBuilder()
+            .enableOneTimeProducts()
+            .build();
+
         client = BillingClient.newBuilder(activity)
-                .enablePendingPurchases()
                 .setListener(this)
+                .enablePendingPurchases(pendingPurchasesParams)
                 .build();
     }
 
@@ -47,11 +55,16 @@ public class BillingManager implements PurchasesUpdatedListener {
                 if (br.getResponseCode() == BillingClient.BillingResponseCode.OK) {
                     queryProduct();
                     // Revisa compras previas (restaurar)
-                    client.queryPurchasesAsync(BillingClient.ProductType.INAPP, (result, list) -> {
-                        if (result.getResponseCode() == BillingClient.BillingResponseCode.OK && list != null) {
-                            for (Purchase p : list) handlePurchase(p);
+                    client.queryPurchasesAsync(
+                        QueryPurchasesParams.newBuilder()
+                            .setProductType(BillingClient.ProductType.INAPP)
+                            .build(),
+                        (result, list) -> {
+                            if (result.getResponseCode() == BillingClient.BillingResponseCode.OK && list != null) {
+                                for (Purchase p : list) handlePurchase(p);
+                            }
                         }
-                    });
+                    );
                 } else {
                     if (listener != null) listener.onError("Billing setup: " + br.getDebugMessage());
                 }
@@ -69,9 +82,9 @@ public class BillingManager implements PurchasesUpdatedListener {
         QueryProductDetailsParams params = QueryProductDetailsParams.newBuilder()
                 .setProductList(products).build();
 
-        client.queryProductDetailsAsync(params, (br, list) -> {
-            if (br.getResponseCode() == BillingClient.BillingResponseCode.OK && list != null && !list.isEmpty()) {
-                premiumDetails.set(list.get(0));
+        client.queryProductDetailsAsync(params, (br, queryProductDetailsResult) -> {
+            if (br.getResponseCode() == BillingClient.BillingResponseCode.OK && queryProductDetailsResult.getProductDetailsList() != null && !queryProductDetailsResult.getProductDetailsList().isEmpty()) {
+                premiumDetails.set(queryProductDetailsResult.getProductDetailsList().get(0));
             } else if (listener != null) {
                 listener.onError("Producto no encontrado en Play Console: " + PRODUCT_ID);
             }

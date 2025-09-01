@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">RoveCast</string>
+    <string name="status_playing">Playing</string>
+    <string name="status_paused">Paused</string>
 </resources>

@@ -1,0 +1,60 @@
+Actúa como ingeniero Android senior. Proyecto: RoveCast (Java, minSdk 24, target 35, Gradle Groovy, Room). Objetivo: consolidar el fix para el crash por stationuuid nulo/vacío, subir versión de prueba cerrada y dejar pasos de build.
+
+Tareas obligatorias (aplica cambios mínimos, sin renombrar clases ni paquetes, sin romper compatibilidad):
+
+1) Verificación y hardening del fix:
+   - Localiza StationRepository.java (o la clase equivalente que maneja toggle/insert de favoritos).
+   - Antes de cualquier inserción/actualización a DB: valida
+     if (s == null || s.stationuuid == null || s.stationuuid.trim().isEmpty()) {
+         Log.w("StationRepository", "Intento de guardar estación con UUID nulo/vacío. Se ignora.");
+         return; // no insertar
+     }
+   - Confirma que la entidad Room de favoritos (Favorite.java / FavoriteEntity.java) define:
+       @Entity(tableName = "favorites")
+       public class Favorite {
+           @PrimaryKey @NonNull
+           public String stationuuid;
+           // campos restantes...
+       }
+     y que no se requiere migración para este fix.
+   - Revisa FavoritesDao.java (o StationDao.java) y confirma uso de OnConflictStrategy apropiado (INSERT IGNORE o REPLACE); si no existe, déjalo como está salvo que sea necesario para evitar duplicados de stationuuid.
+
+2) Auditoría del esquema:
+   - Si existe otra tabla "stations" legacy no usada por Room, garantiza que el código actual no la inserta.
+   - Si queda código huérfano que siga intentando insertar en "stations", bórralo o desactívalo (comentario con explicación), y referencia única vía Room/favorites.
+
+3) Build config:
+   - Abre app/build.gradle (módulo app) y establece:
+       defaultConfig {
+           applicationId "com.ivanmarty.rovecast"
+           minSdkVersion 24
+           targetSdkVersion 35
+           versionCode 5   // incrementar +1 respecto a la última subida
+           versionName "1.0.2"
+       }
+   - Sincroniza dependencias sin introducir librerías nuevas innecesarias.
+
+4) Pruebas locales rápidas (instrucciones):
+   - Ejecuta en Debug.
+   - Marca una estación válida como favorita y verifica que no hay crash.
+   - (Prueba negativa simulada) Antes del insert, fuerza s.stationuuid = null y confirma que el flujo se ignora con el Log WARNING y sin crash.
+
+5) Generar AAB firmado (instrucciones reproducibles):
+   - GUI: Build → Generate Signed Bundle / APK → Android App Bundle → KeyStore/alias habituales → Release → Finish.
+   - CLI: .\gradlew.bat bundleRelease
+   - Artefacto final: app/build/outputs/bundle/release/app-release.aab
+
+6) Notas de versión (es y en) para el track de Prueba cerrada:
+   - es-419: "Corrección de crash al guardar estaciones sin stationuuid. Inserciones más seguras y mejora de estabilidad."
+   - en-US: "Fixed crash when saving stations without stationuuid. Safer inserts and stability improvements."
+
+7) Entregables:
+   - Diffs completos de archivos modificados (StationRepository.java, entidad Favorite, DAO si tocaste algo, app/build.gradle).
+   - Confirmación de compilación exitosa (Build Successful).
+   - Lista exacta de pasos para subir el AAB al track de Prueba cerrada sin reiniciar los 14 días.
+
+Criterios de aceptación:
+- No aparece SQLiteConstraintException NOT NULL stationuuid.
+- La app inicia y gestionar favoritos sin crash.
+- No se introducen cambios innecesarios ni se rompen nombres/clases/paquetes.
+- Se entrega AAB de release y notas de versión listas para Play Conso

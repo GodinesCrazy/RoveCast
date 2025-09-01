@@ -10,8 +10,8 @@ android {
         applicationId "com.ivanmarty.rovecast"
         minSdk 24
         targetSdk 35
-        versionCode 1
-        versionName "1.0"
+        versionCode 8
+        versionName "1.1.2"
         vectorDrawables.useSupportLibrary true
     }
 
@@ -66,6 +66,9 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:4.16.0"
     annotationProcessor "com.github.bumptech.glide:compiler:4.16.0"
 
+    // Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
     // Ads + UMP + Review
     implementation "com.google.android.gms:play-services-ads:23.3.0"
     implementation "com.google.android.ump:user-messaging-platform:2.2.0"
@@ -76,7 +79,7 @@ dependencies {
     implementation "androidx.mediarouter:mediarouter:1.6.0"
 
     // Billing
-    implementation "com.android.billingclient:billing:6.2.1"
+    implementation "com.android.billingclient:billing:8.0.0"
 
     // Pruebas
     testImplementation "junit:junit:4.13.2"

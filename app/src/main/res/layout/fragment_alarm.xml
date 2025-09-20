@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_dark"
+    
     tools:context=".ui.alarm.AlarmFragment">
 
     <com.google.android.material.card.MaterialCardView
@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="07:00"
+                android:text="@string/alarm_default_time"
                 android:textColor="@color/on_dark"
                 android:textSize="48sp"
                 android:textStyle="bold" />
@@ -42,9 +42,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:hint="Seleccionar radio">
+                android:hint="@string/hint_select_radio">
 
                 <AutoCompleteTextView
+                    tools:ignore="LabelFor"
                     android:id="@+id/stationAutoComplete"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -66,49 +67,49 @@
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="L" />
+                    android:text="@string/day_monday_short" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipTue"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="M" />
+                    android:text="@string/day_tuesday_short" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipWed"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="X" />
+                    android:text="@string/day_wednesday_short" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipThu"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="J" />
+                    android:text="@string/day_thursday_short" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipFri"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="V" />
+                    android:text="@string/day_friday_short" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipSat"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="S" />
+                    android:text="@string/day_saturday_short" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipSun"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="D" />
+                    android:text="@string/day_sunday_short" />
 
             </com.google.android.material.chip.ChipGroup>
 
@@ -118,7 +119,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Activar Alarma" />
+                android:text="@string/alarm_activate" />
 
             <Button
                 android:id="@+id/btnSaveAlarm"
@@ -126,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginTop="16dp"
-                android:text="Guardar" />
+                android:text="@string/save" />
 
         </LinearLayout>
 

@@ -12,6 +12,7 @@ import com.google.android.gms.cast.framework.CastOptions;
 import com.google.android.gms.cast.framework.OptionsProvider;
 import com.google.android.gms.cast.framework.SessionProvider;
 import com.ivanmarty.rovecast.ads.AdsManager;
+import com.ivanmarty.rovecast.cast.CastManager;
 
 import java.util.List;
 
@@ -31,6 +32,12 @@ public class App extends Application implements OptionsProvider {
         MobileAds.initialize(this, initializationStatus -> { /* no-op */ });
 
         
+
+        // Inicializa los managers de la app que requieren contexto.
+        // Al hacerlo aquí, nos aseguramos de que usan el contexto de la aplicación
+        // y evitamos fugas de memoria.
+        AdsManager.init(this);
+        CastManager.init(this);
 
         // (Opcional futuro): inicializar UMP (consentimiento) y analytics/crashlytics.
     }

@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="64dp"
     android:background="@drawable/bg_mini_player"
+    android:foreground="?attr/selectableItemBackground"
     android:clickable="true"
     android:focusable="true"
     android:elevation="8dp"
@@ -17,11 +18,12 @@
         android:id="@+id/miniPlayerLogo"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_radio_placeholder" />
+        android:src="@drawable/ic_radio_placeholder"
+        android:contentDescription="@string/cd_station_logo" />
 
     <TextView
         android:id="@+id/miniPlayerTitle"
@@ -57,12 +59,13 @@
         android:id="@+id/miniPlayerPlayPause"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="12dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:src="@drawable/ic_play_arrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/on_dark" />
+        app:tint="@color/on_dark"
+        android:contentDescription="@string/cd_play_pause_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

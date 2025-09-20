@@ -1,6 +1,30 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="48dp" android:height="48dp"
-    android:viewportWidth="24" android:viewportHeight="24">
-    <path android:fillColor="#FFFFFFFF"
-        android:pathData="M4,8h16v10H4zM2,6h20v2H2zM7,12h6v2H7z"/>
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Fondo circular estilo Spotify -->
+    <path
+        android:fillColor="@color/accent"
+        android:pathData="M12,2a10,10 0 1,0 0,20a10,10 0 1,0 0,-20z"/>
+
+    <!-- Antena -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M7,7 l9,-4 l0.6,1.8 l-9,4 z"/>
+
+    <!-- Cuerpo de la radio -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M6,9 h12 a1.5,1.5 0 0,1 1.5,1.5 v6 a1.5,1.5 0 0,1 -1.5,1.5 h-12 a1.5,1.5 0 0,1 -1.5,-1.5 v-6 a1.5,1.5 0 0,1 1.5,-1.5 z"/>
+
+    <!-- Parlante circular -->
+    <path
+        android:fillColor="@color/accent"
+        android:pathData="M14.5,13.5a2.5,2.5 0 1,1 -5,0a2.5,2.5 0 1,1 5,0z"/>
+
+    <!-- Perillas -->
+    <path
+        android:fillColor="@color/accent"
+        android:pathData="M17.5,11.5h1.5v1.5h-1.5zM17.5,14h1.5v1.5h-1.5z"/>
 </vector>

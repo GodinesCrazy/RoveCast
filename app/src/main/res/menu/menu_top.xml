@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/media_route_menu_item"
-        android:title="Cast"
+        android:title="@string/menu_cast"
         app:actionViewClass="androidx.mediarouter.app.MediaRouteButton"
         
         app:showAsAction="always"/>
 
     <item
         android:id="@+id/menu_alarm"
-        android:title="Alarma"
+        android:title="@string/menu_alarm"
         android:icon="@drawable/ic_alarm"
         app:showAsAction="always"/>
 
@@ -22,6 +22,6 @@
 
     <item
         android:id="@+id/menu_privacy"
-        android:title="Privacy Policy"
+        android:title="@string/menu_privacy_policy"
         app:showAsAction="never"/>
 </menu>

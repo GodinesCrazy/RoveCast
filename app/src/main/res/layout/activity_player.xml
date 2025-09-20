@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_dark">
+    >
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/playerTopBar"
@@ -15,31 +15,46 @@
         app:popupTheme="@style/ThemeOverlay.RoveCast.Popup"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Logo -->
-    <ImageView
-        android:id="@+id/ivLogo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_radio_placeholder"
+    <!-- Arte con shimmer placeholder -->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerArt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/playerTopBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/logoCard"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_radio_placeholder" />
+        </com.google.android.material.card.MaterialCardView>
+    </com.facebook.shimmer.ShimmerFrameLayout>
 
     <!-- Título -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Radio"
+        android:text="@string/player_title_radio"
         android:textColor="@color/on_dark"
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center"
         android:paddingHorizontal="16dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/ivLogo"
+        app:layout_constraintTop_toBottomOf="@id/shimmerArt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -48,7 +63,7 @@
         android:id="@+id/tvMeta"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Meta"
+        android:text="@string/player_metadata_placeholder"
         android:textColor="@color/on_dark_60"
         android:textSize="14sp"
         android:gravity="center"
@@ -72,4 +87,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Barra de progreso sutil (buffering/indeterminate) -->
+    <ProgressBar
+        android:id="@+id/bufferingProgress"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:indeterminate="true"
+        android:progressTint="@color/accent"
+        app:layout_constraintTop_toBottomOf="@id/tvMeta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone" />
 </androidx.constraintlayout.widget.ConstraintLayout>

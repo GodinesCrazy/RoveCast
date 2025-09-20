@@ -82,12 +82,19 @@ public class StationRepository {
                             io.execute(() -> {
                                 List<Station> validStations = new java.util.ArrayList<>();
                                 for (Station s : resp.body()) {
-                                    if (s.stationuuid != null && !s.stationuuid.trim().isEmpty()) {
+                                    if (s != null && s.stationuuid != null && !s.stationuuid.trim().isEmpty()) {
+                                        if ((s.url_resolved == null || s.url_resolved.trim().isEmpty()) && s.url != null) {
+                                            s.url_resolved = s.url;
+                                        }
                                         validStations.add(s);
                                     }
                                 }
-                                stationDao.deleteAll();
-                                stationDao.insertAll(validStations);
+                                if (validStations.isEmpty()) {
+                                    loadTopFallback();
+                                } else {
+                                    stationDao.deleteAll();
+                                    stationDao.insertAll(validStations);
+                                }
                             });
                         } else {
                             loadTopFallback(); // Intenta con el fallback si la llamada por país falla

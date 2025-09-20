@@ -13,7 +13,6 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.ivanmarty.rovecast.R;
-import com.ivanmarty.rovecast.ads.AdsManager;
 import com.ivanmarty.rovecast.data.FavoriteStation;
 import com.ivanmarty.rovecast.model.Station;
 import com.ivanmarty.rovecast.player.PlaybackService;
@@ -24,6 +23,8 @@ public class SearchFragment extends Fragment implements StationAdapter.StationLi
 
     private SearchViewModel vm;
     private StationAdapter adapter;
+    private List<Station> currentStations = new ArrayList<>();
+    private Set<String> favoriteStationIds = new HashSet<>();
 
     @Nullable @Override
     public View onCreateView(@NonNull LayoutInflater inf, @Nullable ViewGroup container, @Nullable Bundle saved) {
@@ -35,13 +36,17 @@ public class SearchFragment extends Fragment implements StationAdapter.StationLi
         rv.setAdapter(adapter);
 
         EditText et = v.findViewById(R.id.etSearch);
+        final com.facebook.shimmer.ShimmerFrameLayout shimmer = v.findViewById(R.id.shimmerSearch);
         vm = new ViewModelProvider(this).get(SearchViewModel.class);
 
-        // Observa favoritos para marcar corazones
         vm.getRepo().getFavorites().observe(getViewLifecycleOwner(), favs -> {
-            Set<String> ids = new HashSet<>();
-            if (favs != null) for (FavoriteStation f : favs) if (f.stationuuid != null) ids.add(f.stationuuid);
-            adapter.updateFavorites(ids);
+            favoriteStationIds.clear();
+            if (favs != null) {
+                for (FavoriteStation f : favs) {
+                    if (f.stationuuid != null) favoriteStationIds.add(f.stationuuid);
+                }
+            }
+            updateAdapterList();
         });
 
         et.addTextChangedListener(new TextWatcher() {
@@ -49,13 +54,16 @@ public class SearchFragment extends Fragment implements StationAdapter.StationLi
             @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
             @Override public void afterTextChanged(Editable s) {
                 String q = s.toString().trim();
-                Log.d("SearchFragment", "Query text changed to: " + q);
-                if (q.length() < 2) { adapter.submitList(new ArrayList<>()); return; }
+                if (q.length() < 2) {
+                    currentStations.clear();
+                    updateAdapterList();
+                    return;
+                }
+                if (shimmer != null) { shimmer.setVisibility(View.VISIBLE); shimmer.startShimmer(); }
                 vm.search(q).observe(getViewLifecycleOwner(), list -> {
-                    if (list != null) {
-                        Log.d("SearchFragment", "Received " + list.size() + " stations for query: " + q);
-                        adapter.submitList(list);
-                    }
+                    currentStations = list != null ? list : new ArrayList<>();
+                    updateAdapterList();
+                    if (shimmer != null) { shimmer.stopShimmer(); shimmer.setVisibility(View.GONE); }
                 });
             }
         });
@@ -89,4 +97,27 @@ public class SearchFragment extends Fragment implements StationAdapter.StationLi
     }
 
     @Override public void onFavoriteToggle(Station s, boolean makeFav) { vm.getRepo().toggleFavorite(s, makeFav); }
+
+    private void updateAdapterList() {
+        if (currentStations == null) {
+            adapter.submitList(java.util.Collections.emptyList());
+            return;
+        }
+        List<Station> processedList = new java.util.ArrayList<>();
+        for (Station originalStation : currentStations) {
+            Station station = new Station();
+            station.stationuuid = originalStation.stationuuid;
+            station.name = originalStation.name;
+            station.url_resolved = originalStation.url_resolved;
+            station.favicon = originalStation.favicon;
+            station.country = originalStation.country;
+            station.language = originalStation.language;
+            station.bitrate = originalStation.bitrate;
+            station.codec = originalStation.codec;
+            station.tags = originalStation.tags;
+            station.isFavorite = favoriteStationIds.contains(originalStation.stationuuid);
+            processedList.add(station);
+        }
+        adapter.submitList(processedList);
+    }
 }

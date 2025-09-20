@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_dark">
+    >
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/topBar"
@@ -19,13 +19,12 @@
     <FrameLayout
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="56dp"
-        android:layout_marginBottom="136dp"/>
+        android:layout_height="match_parent" />
 
     <!-- INICIO: Contenedor de Pie de Página -->
     <!-- Agrupamos el mini-reproductor y la navegación en un LinearLayout para un posicionamiento robusto -->
     <LinearLayout
+        android:id="@+id/bottomContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -33,7 +32,7 @@
 
         <!-- Mini-reproductor -->
         <include
-            android:id="@+id/miniPlayer"
+            android:id="@+id/miniPlayerContainer"
             layout="@layout/view_mini_player" />
 
         <!-- Barra de navegación inferior -->

@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
@@ -18,6 +19,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.media3.common.MediaItem;
 import androidx.media3.common.Player;
@@ -55,6 +60,11 @@ public class MainActivity extends AppCompatActivity implements Player.Listener {
     @Override
     protected void onCreate(Bundle b) {
         super.onCreate(b);
+
+        // SOLUCIÓN: Habilita el modo edge-to-edge para que la app se dibuje detrás de las barras de sistema.
+        // Esto es necesario porque el tema usa una barra de estado transparente.
+        WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
+
         setContentView(R.layout.activity_main);
 
         com.ivanmarty.rovecast.util.FirstLaunchManager firstLaunchManager = new com.ivanmarty.rovecast.util.FirstLaunchManager(this);
@@ -70,11 +80,53 @@ public class MainActivity extends AppCompatActivity implements Player.Listener {
         });
 
         top = findViewById(R.id.topBar);
+
+        // SOLUCIÓN: Aplica un listener a la barra de herramientas para ajustar su margen superior
+        // dinámicamente según el tamaño de la barra de estado del sistema.
+        ViewCompat.setOnApplyWindowInsetsListener(top, (v, windowInsets) -> {
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            // Se obtiene la altura de la barra de estado y se aplica como margen superior a la Toolbar.
+            ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
+            mlp.topMargin = insets.top;
+            v.setLayoutParams(mlp);
+            // Se devuelven los insets para que otras vistas (como el teclado) puedan usarlos.
+            return windowInsets;
+        });
+
         setSupportActionBar(top);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
         top.setNavigationIcon(R.drawable.ic_toolbar_logo_padded);
+
+        // Ajuste de insets para el contenedor inferior (mini player + navegación) para evitar solapamientos
+        View bottomContainer = findViewById(R.id.bottomContainer);
+        if (bottomContainer != null) {
+            ViewCompat.setOnApplyWindowInsetsListener(bottomContainer, (v, windowInsets) -> {
+                Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+                v.setPadding(v.getPaddingLeft(), v.getPaddingTop(), v.getPaddingRight(), insets.bottom);
+                return windowInsets;
+            });
+        }
+
+        // Asegura que el contenido principal nunca quede oculto ni por la Toolbar ni por el contenedor inferior
+        View fragmentContainer = findViewById(R.id.fragmentContainer);
+        if (fragmentContainer != null && bottomContainer != null) {
+            Runnable applySafePadding = () -> {
+                int topPadding = top != null ? top.getBottom() : 0; // incluye altura + margen/top inset
+                int bottomPadding = bottomContainer.getHeight();     // incluye altura + padding por insets
+                fragmentContainer.setPadding(
+                        fragmentContainer.getPaddingLeft(),
+                        topPadding,
+                        fragmentContainer.getPaddingRight(),
+                        bottomPadding
+                );
+            };
+            // Aplicar al inicializar y cada vez que cambie la altura del contenedor inferior
+            fragmentContainer.post(applySafePadding);
+            bottomContainer.getViewTreeObserver().addOnGlobalLayoutListener(applySafePadding::run);
+            top.getViewTreeObserver().addOnGlobalLayoutListener(applySafePadding::run);
+        }
 
         BottomNavigationView nav = findViewById(R.id.bottomNav);
         nav.setOnItemSelectedListener(item -> {
@@ -106,28 +158,46 @@ public class MainActivity extends AppCompatActivity implements Player.Listener {
     }
 
     private void setupMiniPlayer() {
-        miniPlayerContainer = findViewById(R.id.miniPlayer);
+        // Obtén directamente el contenedor del mini player
+        View container = findViewById(R.id.miniPlayerContainer);
+        if (!(container instanceof ConstraintLayout)) {
+            Log.e("MainActivity", "miniPlayerContainer not found or wrong type");
+            return;
+        }
+        miniPlayerContainer = (ConstraintLayout) container;
+
+        // Inicializa sub-vistas de forma segura
         miniPlayerLogo = miniPlayerContainer.findViewById(R.id.miniPlayerLogo);
         miniPlayerTitle = miniPlayerContainer.findViewById(R.id.miniPlayerTitle);
         miniPlayerStatus = miniPlayerContainer.findViewById(R.id.miniPlayerStatus);
         miniPlayerPlayPause = miniPlayerContainer.findViewById(R.id.miniPlayerPlayPause);
 
-        miniPlayerPlayPause.setOnClickListener(v -> {
-            try {
-                MediaController mediaController = mediaControllerFuture.get();
-                if (mediaController != null) {
-                    if (mediaController.isPlaying()) {
-                        mediaController.pause();
-                    } else {
-                        mediaController.play();
+        if (miniPlayerPlayPause != null) {
+            miniPlayerPlayPause.setOnClickListener(v -> {
+                try {
+                    if (mediaControllerFuture != null) {
+                        MediaController mediaController = mediaControllerFuture.get();
+                        if (mediaController != null) {
+                            if (mediaController.isPlaying()) {
+                                mediaController.pause();
+                            } else {
+                                mediaController.play();
+                            }
+                        }
                     }
+                } catch (Exception e) {
+                    Log.e("MainActivity", "Error in play/pause click handler", e);
                 }
-            } catch (Exception e) { /* Ignored */ }
-        });
+            });
+        }
 
         miniPlayerContainer.setOnClickListener(v -> {
-            Intent intent = new Intent(this, PlayerActivity.class);
-            startActivity(intent);
+            try {
+                Intent intent = new Intent(this, PlayerActivity.class);
+                startActivity(intent);
+            } catch (Exception e) {
+                Log.e("MainActivity", "Error starting PlayerActivity", e);
+            }
         });
     }
 
@@ -197,9 +267,17 @@ public class MainActivity extends AppCompatActivity implements Player.Listener {
         if (isPlaying) {
             miniPlayerStatus.setText(R.string.status_playing);
             miniPlayerPlayPause.setImageResource(R.drawable.ic_pause);
+            try {
+                int accent = androidx.core.content.ContextCompat.getColor(this, R.color.accent);
+                miniPlayerPlayPause.setColorFilter(accent);
+            } catch (Exception ignored) {}
         } else {
             miniPlayerStatus.setText(R.string.status_paused);
             miniPlayerPlayPause.setImageResource(R.drawable.ic_play_arrow);
+            try {
+                int onDark = androidx.core.content.ContextCompat.getColor(this, R.color.on_dark);
+                miniPlayerPlayPause.setColorFilter(onDark);
+            } catch (Exception ignored) {}
         }
     }
 
@@ -236,6 +314,9 @@ public class MainActivity extends AppCompatActivity implements Player.Listener {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_top, menu);
+        try {
+            com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(getApplicationContext(), menu, R.id.media_route_menu_item);
+        } catch (Throwable ignored) {}
         menu.findItem(R.id.menu_premium).setVisible(!PremiumManager.isPremium(this));
         return true;
     }

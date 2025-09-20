@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@android:color/black">
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerFav"
-        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:padding="8dp"/>
+
+    <!-- Estado vacío -->
+    <ImageView
+        android:id="@+id/ivEmptyFav"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/ic_empty_state"
+        android:tint="@color/textSecondary"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+
+    <!-- Shimmer de favoritos -->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerFav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:focusable="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+            <include layout="@layout/item_station_shimmer" />
+            <include layout="@layout/item_station_shimmer" />
+            <include layout="@layout/item_station_shimmer" />
+            <include layout="@layout/item_station_shimmer" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
 </FrameLayout>

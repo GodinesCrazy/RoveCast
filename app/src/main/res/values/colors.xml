@@ -8,7 +8,7 @@
     <color name="on_dark_60">#99FFFFFF</color>
 
     <!-- Usados por layouts/adapters -->
-    <color name="bg">#000000</color>
+    
     <color name="bgElevated">#181818</color>
     <color name="textPrimary">#FFFFFFFF</color>
     <color name="textSecondary">#B3FFFFFF</color>

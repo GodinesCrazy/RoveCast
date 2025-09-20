@@ -2,7 +2,6 @@ package com.ivanmarty.rovecast.player;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.media3.common.AudioAttributes;
@@ -11,8 +10,11 @@ import androidx.media3.common.MediaItem;
 import androidx.media3.common.MediaMetadata;
 import androidx.media3.exoplayer.DefaultLoadControl;
 import androidx.media3.exoplayer.ExoPlayer;
+import androidx.media3.session.DefaultMediaNotificationProvider;
 import androidx.media3.session.MediaSession;
 import androidx.media3.session.MediaSessionService;
+
+import com.ivanmarty.rovecast.R;
 
 public class PlaybackService extends MediaSessionService {
 
@@ -35,23 +37,28 @@ public class PlaybackService extends MediaSessionService {
                 .setUsage(C.USAGE_MEDIA)
                 .build();
 
-        // Aumentamos considerablemente el búfer para minimizar las pausas en conexiones inestables.
+        // Buffer equilibrado: inicio rápido y estabilidad para streaming de radio
         DefaultLoadControl loadControl = new DefaultLoadControl.Builder()
                 .setBufferDurationsMs(
-                        120000, // min 120s (2 min)
-                        240000, // max 240s (4 min)
-                        20000,  // buffer para empezar a reproducir: 20s
-                        30000   // buffer para reanudar tras interrupción: 30s
+                        15000, // min 15s
+                        45000, // max 45s
+                        1000,  // empezar a reproducir con 1s
+                        3000   // reanudar con 3s
                 ).build();
 
         player = new ExoPlayer.Builder(this)
                 .setAudioAttributes(audioAttributes, true)
                 .setHandleAudioBecomingNoisy(true)
                 .setLoadControl(loadControl)
-                .setWakeMode(C.WAKE_MODE_NETWORK) // Mantiene la CPU y WiFi activas durante la reproducción
+                .setWakeMode(C.WAKE_MODE_NETWORK)
                 .build();
 
         mediaSession = new MediaSession.Builder(this, player).build();
+
+        // Notificación de reproducción (Media3)
+        DefaultMediaNotificationProvider provider = new DefaultMediaNotificationProvider(this);
+        // Algunas versiones de Media3 no exponen setSmallIconResourceId; usamos el valor por defecto.
+        setMediaNotificationProvider(provider);
     }
 
     @Override
@@ -66,8 +73,8 @@ public class PlaybackService extends MediaSessionService {
             if (url != null) {
                 MediaMetadata mediaMetadata = new MediaMetadata.Builder()
                         .setTitle(name)
-                        .setArtist(meta) // Usamos artist para la metadata secundaria
-                        .setArtworkUri(Uri.parse(logo))
+                        .setArtist(meta)
+                        .setArtworkUri(logo != null ? Uri.parse(logo) : null)
                         .build();
 
                 MediaItem mediaItem = new MediaItem.Builder()

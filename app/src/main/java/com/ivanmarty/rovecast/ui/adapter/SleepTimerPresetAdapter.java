@@ -61,7 +61,8 @@ public class SleepTimerPresetAdapter extends RecyclerView.Adapter<SleepTimerPres
         }
 
         public void bind(final SleepTimerPreset preset, final OnPresetClickListener listener) {
-            textView.setText(preset.name + " (" + preset.durationMinutes + " min)");
+            String text = itemView.getContext().getString(R.string.preset_display_format, preset.name, preset.durationMinutes);
+            textView.setText(text);
             itemView.setOnClickListener(v -> listener.onPresetClick(preset));
             itemView.setOnLongClickListener(v -> {
                 listener.onPresetLongClick(preset);

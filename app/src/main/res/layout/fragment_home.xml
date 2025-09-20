@@ -3,12 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black">
+    >
+
+    <!-- Banner informativo para la primera carga -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/firstLaunchBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/bgElevated"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textColor="@color/textSecondary"
+            android:textSize="14sp"
+            android:text="Cargando estaciones e imágenes por primera vez. Puede tardar unos segundos según tu conexión."/>
+    </com.google.android.material.card.MaterialCardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/firstLaunchBanner"
         android:layout_above="@+id/adView"
         android:padding="8dp" />
 
@@ -20,6 +41,38 @@
         android:layout_centerInParent="true"
         android:visibility="gone" />
 
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_empty_state"
+        android:textColor="@color/textSecondary"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <!-- Shimmer overlay -->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:focusable="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <include layout="@layout/item_station_shimmer" />
+            <include layout="@layout/item_station_shimmer" />
+            <include layout="@layout/item_station_shimmer" />
+            <include layout="@layout/item_station_shimmer" />
+            <include layout="@layout/item_station_shimmer" />
+            <include layout="@layout/item_station_shimmer" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="wrap_content"
@@ -27,6 +80,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-2918417880001381/9660847456" />
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111" />
 
 </RelativeLayout>

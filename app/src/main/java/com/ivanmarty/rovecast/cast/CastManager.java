@@ -20,11 +20,14 @@ public class CastManager {
 
     private static CastManager INSTANCE;
 
-    public static CastManager get(@NonNull Context ctx) {
+    public static CastManager get() {
+        return INSTANCE;
+    }
+
+    public static void init(@NonNull Context ctx) {
         if (INSTANCE == null) {
             INSTANCE = new CastManager(ctx.getApplicationContext());
         }
-        return INSTANCE;
     }
 
     private final Context app;

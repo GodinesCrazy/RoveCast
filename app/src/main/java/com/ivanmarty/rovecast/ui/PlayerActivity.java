@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.util.Log;
 
@@ -47,6 +48,8 @@ public class PlayerActivity extends AppCompatActivity {
     private MediaController controller;
     private PlayerView playerView;
     private ImageView ivLogo;
+    private com.facebook.shimmer.ShimmerFrameLayout shimmerArt;
+    private ProgressBar bufferingProgress;
     private TextView tvTitle, tvMeta;
     private FavoriteRepository favoriteRepository;
     private SleepTimerPresetRepository sleepTimerPresetRepository;
@@ -77,6 +80,9 @@ public class PlayerActivity extends AppCompatActivity {
         playerView = findViewById(R.id.playerView);
         playerView.setControllerAutoShow(false);
         ivLogo = findViewById(R.id.ivLogo);
+        shimmerArt = findViewById(R.id.shimmerArt);
+        bufferingProgress = findViewById(R.id.bufferingProgress);
+        if (shimmerArt != null) { shimmerArt.startShimmer(); }
         tvTitle = findViewById(R.id.tvTitle);
         tvMeta = findViewById(R.id.tvMeta);
     }
@@ -84,6 +90,9 @@ public class PlayerActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_player, menu);
+        try {
+            com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(getApplicationContext(), menu, R.id.media_route_menu_item);
+        } catch (Throwable ignored) {}
         
         MenuItem favoriteItem = menu.findItem(R.id.menu_favorite);
         if (isFavorite) {
@@ -138,6 +147,21 @@ public class PlayerActivity extends AppCompatActivity {
             public void onMediaMetadataChanged(@NonNull MediaMetadata mediaMetadata) {
                 updateUiForMediaMetadata(mediaMetadata);
             }
+            @Override
+            public void onIsPlayingChanged(boolean isPlaying) {
+                if (bufferingProgress != null && bufferingProgress.getVisibility() == View.VISIBLE && isPlaying) {
+                    bufferingProgress.setVisibility(View.GONE);
+                }
+            }
+            @Override
+            public void onPlaybackStateChanged(int state) {
+                if (bufferingProgress == null) return;
+                if (state == Player.STATE_BUFFERING) {
+                    bufferingProgress.setVisibility(View.VISIBLE);
+                } else if (state == Player.STATE_READY || state == Player.STATE_ENDED) {
+                    bufferingProgress.setVisibility(View.GONE);
+                }
+            }
         });
     }
 
@@ -166,6 +190,20 @@ public class PlayerActivity extends AppCompatActivity {
             Glide.with(this)
                     .load(meta.artworkUri)
                     .placeholder(R.drawable.ic_radio_placeholder)
+                    .listener(new com.bumptech.glide.request.RequestListener<android.graphics.drawable.Drawable>() {
+                        @Override
+                        public boolean onLoadFailed(@androidx.annotation.Nullable com.bumptech.glide.load.engine.GlideException e, Object model, com.bumptech.glide.request.target.Target<android.graphics.drawable.Drawable> target, boolean isFirstResource) {
+                            if (shimmerArt != null) shimmerArt.stopShimmer();
+                            if (shimmerArt != null) shimmerArt.setVisibility(View.GONE);
+                            return false;
+                        }
+                        @Override
+                        public boolean onResourceReady(android.graphics.drawable.Drawable resource, Object model, com.bumptech.glide.request.target.Target<android.graphics.drawable.Drawable> target, com.bumptech.glide.load.DataSource dataSource, boolean isFirstResource) {
+                            if (shimmerArt != null) shimmerArt.stopShimmer();
+                            if (shimmerArt != null) shimmerArt.setVisibility(View.GONE);
+                            return false;
+                        }
+                    })
                     .into(ivLogo);
         }
     }

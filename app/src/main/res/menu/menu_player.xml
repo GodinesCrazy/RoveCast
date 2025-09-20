@@ -4,19 +4,19 @@
 
     <item
         android:id="@+id/menu_timer"
-        android:title="Sleep Timer"
+        android:title="@string/menu_sleep_timer"
         android:icon="@drawable/ic_timer"
         app:showAsAction="always"/>
 
     <item
         android:id="@+id/media_route_menu_item"
-        android:title="Cast"
+        android:title="@string/menu_cast"
         app:actionViewClass="androidx.mediarouter.app.MediaRouteButton"
         app:showAsAction="always"/>
 
     <item
         android:id="@+id/menu_favorite"
-        android:title="Favorite"
+        android:title="@string/menu_favorite"
         android:icon="@drawable/ic_heart_outline"
         app:showAsAction="always"/>
 

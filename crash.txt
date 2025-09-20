@@ -98,24 +98,7 @@
                                                                                                     	at java.lang.reflect.Method.invoke(Native Method) 
                                                                                                     	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
                                                                                                     	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
---------- beginning of system
-2025-09-01 17:50:05.672 13773-13773 ActivityThread          com.ivanmarty.rovecast               D  Attach thread to application
-2025-09-01 17:50:05.708 13773-13816 ActivityThread          com.ivanmarty.rovecast               I  Init compatible state: true
-2025-09-01 17:50:10.093 13773-13773 ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded preloadStatus 0
-2025-09-01 17:50:12.336 14052-14052 ActivityThread          com.ivanmarty.rovecast               D  Attach thread to application
-2025-09-01 17:50:12.773 14052-14076 ActivityThread          com.ivanmarty.rovecast               I  Init compatible state: true
-2025-09-01 17:50:17.972 14052-14052 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
-2025-09-01 17:50:18.341 14052-14052 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
-2025-09-01 17:50:18.347 14052-14052 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
-2025-09-01 17:50:18.421 14052-14052 ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded preloadStatus 0
-2025-09-01 17:50:18.426 14052-14052 RtgSchedEvent           com.ivanmarty.rovecast               I  current pid:14052 AppType:-1
-2025-09-01 17:50:18.532 14052-14052 ActivityThread          com.ivanmarty.rovecast               V  callActivityOnCreate
---------- beginning of main
-2025-09-01 17:50:18.813 14052-14052 BlockMonitor            com.ivanmarty.rovecast               I  dispatchingThrewException In MainThread
-2025-09-01 17:50:18.813 14052-14052 AndroidRuntime          com.ivanmarty.rovecast               D  Shutting down VM
-2025-09-01 17:50:18.814 14052-14052 QarthLog                com.ivanmarty.rovecast               I  [PatchStore] createDisableExceptionQarthFile
-2025-09-01 17:50:18.816 14052-14052 QarthLog                com.ivanmarty.rovecast               I  [PatchStore] create disable file for com.ivanmarty.rovecast uid is 10606
-2025-09-01 17:50:18.829 14052-14052 AndroidRuntime          com.ivanmarty.rovecast               E  FATAL EXCEPTION: main (Ask Gemini)
+2025-09-01 17:50:18.829 14052-14052 AndroidRuntime          pid-14052                            E  FATAL EXCEPTION: main (Ask Gemini)
                                                                                                     Process: com.ivanmarty.rovecast, PID: 14052
                                                                                                     java.lang.RuntimeException: Unable to start activity ComponentInfo{com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity}: android.view.InflateException: Binary XML file line #37 in com.ivanmarty.rovecast:layout/activity_main: Binary XML file line #68: You must supply a layout_width attribute.
                                                                                                     	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4060)
@@ -163,109 +146,7 @@
                                                                                                     	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247)
                                                                                                     	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91)
                                                                                                     	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149)
-2025-09-01 17:50:18.830 14052-14052 AndroidRuntime          com.ivanmarty.rovecast               E  	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103) (Ask Gemini)
-                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613)
-                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110)
-                                                                                                    	at android.os.Looper.loop(Looper.java:219)
-                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
-                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
-                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
-                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
-2025-09-01 17:50:18.889 14052-14052 Process                 com.ivanmarty.rovecast               I  Sending signal. PID: 14052 SIG: 9
-2025-09-01 17:50:20.392 14476-14476 nmarty.rovecas          com.ivanmarty.rovecast               I  Late-enabling -Xcheck:jni
-2025-09-01 17:50:20.425 14476-14476 nmarty.rovecas          com.ivanmarty.rovecast               E  LoadAppImageStartupCache enabled : 1
-2025-09-01 17:50:20.425 14476-14476 nmarty.rovecas          com.ivanmarty.rovecast               E  Unknown bits set in runtime_flags: 0x8000
-2025-09-01 17:50:20.426 14476-14476 nmarty.rovecas          com.ivanmarty.rovecast               I  Reinit property: dalvik.vm.checkjni= false
-2025-09-01 17:50:20.426 14476-14476 nmarty.rovecas          com.ivanmarty.rovecast               I  ReInitProperties: persist.vm.debug.dumpapi= false
-2025-09-01 17:50:20.441 14476-14476 ActivityThread          com.ivanmarty.rovecast               D  Attach thread to application
-2025-09-01 17:50:20.452 14476-14494 HwActivityThreadImpl    com.ivanmarty.rovecast               I  mSocketName: ce885b98-5725-4331-9e63-9b0a415a0f76
-2025-09-01 17:50:20.452 14476-14494 HwActivityThreadImpl    com.ivanmarty.rovecast               I  initPreloadedSocked end mPreloadStatus 2
-2025-09-01 17:50:20.464 14476-14495 ActivityThread          com.ivanmarty.rovecast               I  Init compatible state: true
-2025-09-01 17:50:20.465 14476-14495 HwFramewor...rtsFactory com.ivanmarty.rovecast               D  HwFrameworkSecurityPartsFactory in.
-2025-09-01 17:50:20.465 14476-14495 HwFramewor...rtsFactory com.ivanmarty.rovecast               I  add HwFrameworkSecurityPartsFactory to memory.
-2025-09-01 17:50:20.467 14476-14495 BehaviorCollectManager  com.ivanmarty.rovecast               E  Fail to acquire dataAnalyzerService...
-2025-09-01 17:50:20.483 14476-14476 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.ivanmarty.rovecast-_KK995yuu_SQb7SwwQy3Dg==/base.apk librarySearchPath: /data/app/com.ivanmarty.rovecast-_KK995yuu_SQb7SwwQy3Dg==/lib/arm64 libraryPermittedPath: /data/user/0/com.ivanmarty.rovecast parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 35 isBundled: false classLoaderName: null sharedLibraries: null
-2025-09-01 17:50:20.532 14476-14493 HwActivityThreadImpl    com.ivanmarty.rovecast               I  before connect app.socketName:ce885b98-5725-4331-9e63-9b0a415a0f76
-2025-09-01 17:50:20.730 14476-14493 HwActivityThreadImpl    com.ivanmarty.rovecast               E  connect Error.
-2025-09-01 17:50:20.730 14476-14493 HwActivityThreadImpl    com.ivanmarty.rovecast               W  closeStream error.
-2025-09-01 17:50:20.730 14476-14493 HwActivityThreadImpl    com.ivanmarty.rovecast               I  connectContinuePreload end mPreloadStatus 3
-2025-09-01 17:50:20.734 14476-14493 HwPartIawareFactory     com.ivanmarty.rovecast               I  add android.common.HwPartIawareFactoryImpl to memory.
-2025-09-01 17:50:21.824 14476-14495 HwApiCacheMangerEx      com.ivanmarty.rovecast               I  apicache path=/storage/emulated/0 state=mounted key=com.ivanmarty.rovecast#10606#256
-2025-09-01 17:50:21.824 14476-14495 HwApiCacheMangerEx      com.ivanmarty.rovecast               I  need clear apicache,because volumes changed,oldCnt=0 newCnt=1
-2025-09-01 17:50:21.825 14476-14495 HwApiCacheMangerEx      com.ivanmarty.rovecast               I  apicache path=/storage/emulated/0 state=mounted key=com.ivanmarty.rovecast#10606#0
-2025-09-01 17:50:21.825 14476-14495 HwApiCacheMangerEx      com.ivanmarty.rovecast               I  need clear apicache,because volumes changed,oldCnt=1 newCnt=1
-2025-09-01 17:50:21.829 14476-14495 AwareBitmapCacher       com.ivanmarty.rovecast               I  init processName:com.ivanmarty.rovecast pid=14476 uid=10606
-2025-09-01 17:50:21.831 14476-14523 AwareLog                com.ivanmarty.rovecast               E  AtomicFileUtils: readFileLines file not exist: android.util.AtomicFile@2bba7c9
-2025-09-01 17:50:21.831 14476-14523 AwareLog                com.ivanmarty.rovecast               E  AtomicFileUtils: readFileLines file not exist: android.util.AtomicFile@57bdece
-2025-09-01 17:50:21.856 14476-14476 WM-WrkMgrInitializer    com.ivanmarty.rovecast               D  Initializing WorkManager with default configuration.
-2025-09-01 17:50:21.971 14476-14476 StubController          com.ivanmarty.rovecast               I  system app validUid:10606, isFriend:true
-2025-09-01 17:50:21.991 14476-14476 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /system/framework/org.apache.http.legacy.jar librarySearchPath: /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
-2025-09-01 17:50:21.993 14476-14476 nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
-2025-09-01 17:50:21.995 14476-14476 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /system/framework/com.android.media.remotedisplay.jar librarySearchPath: /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
-2025-09-01 17:50:21.997 14476-14476 nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
-2025-09-01 17:50:21.999 14476-14476 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /system/framework/com.android.location.provider.jar librarySearchPath: /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
-2025-09-01 17:50:22.000 14476-14476 nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
-2025-09-01 17:50:22.003 14476-14476 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk librarySearchPath: /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: [dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/org.apache.http.legacy.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]], dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/com.android.media.remotedisplay.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]], dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/com.android.location.provider.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]]]
-2025-09-01 17:50:22.046 14476-14476 DynamiteModule          com.ivanmarty.rovecast               I  Considering local module com.google.android.gms.ads.dynamite:0 and remote module com.google.android.gms.ads.dynamite:251815204
-2025-09-01 17:50:22.046 14476-14476 DynamiteModule          com.ivanmarty.rovecast               I  Selected remote version of com.google.android.gms.ads.dynamite, version >= 251815204
-2025-09-01 17:50:22.079 14476-14476 nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
-2025-09-01 17:50:22.088 14476-14476 DynamitePackage         com.ivanmarty.rovecast               D  Instantiated singleton DynamitePackage.
-2025-09-01 17:50:22.088 14476-14476 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraMobileAdsSettingManagerCreatorImpl
-2025-09-01 17:50:22.107 14476-14476 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden field Lsun/misc/Unsafe;->theUnsafe:Lsun/misc/Unsafe; (greylist, reflection, allowed)
-2025-09-01 17:50:22.107 14476-14476 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J (greylist,core-platform-api, linking, allowed)
-2025-09-01 17:50:22.107 14476-14476 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->arrayBaseOffset(Ljava/lang/Class;)I (greylist,core-platform-api, linking, allowed)
-2025-09-01 17:50:22.107 14476-14476 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->arrayIndexScale(Ljava/lang/Class;)I (greylist, linking, allowed)
-2025-09-01 17:50:22.115 14476-14476 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getUnsafe()Lsun/misc/Unsafe; (greylist,core-platform-api, linking, allowed)
-2025-09-01 17:50:22.119 14476-14532 NetworkSecurityConfig   com.ivanmarty.rovecast               D  Using Network Security Config from resource network_security_config debugBuild: true
-2025-09-01 17:50:22.119 14476-14476 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
-2025-09-01 17:50:22.120 14476-14476 ConnectivityManager     com.ivanmarty.rovecast               I  requestNetwork and the calling app is: com.ivanmarty.rovecast
-2025-09-01 17:50:22.125 14476-14535 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
-2025-09-01 17:50:22.133 14476-14476 Ads                     com.ivanmarty.rovecast               I  Updating ad debug logging enablement.
-2025-09-01 17:50:22.134 14476-14538 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapInt(Ljava/lang/Object;JII)Z (greylist, linking, allowed)
-2025-09-01 17:50:22.134 14476-14538 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObjectVolatile(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
-2025-09-01 17:50:22.134 14476-14538 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
-2025-09-01 17:50:22.135 14476-14538 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapLong(Ljava/lang/Object;JJJ)Z (greylist, linking, allowed)
-2025-09-01 17:50:22.187 14476-14547 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
-2025-09-01 17:50:22.189 14476-14476 WebViewFactory          com.ivanmarty.rovecast               I  Loading com.google.android.webview version 139.0.7258.143 (code 725814333)
-2025-09-01 17:50:22.195 14476-14476 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk librarySearchPath: /data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/lib/arm64:/data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk!/lib/arm64-v8a libraryPermittedPath:  parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 35 isBundled: false classLoaderName: null sharedLibraries: null
-2025-09-01 17:50:22.198 14476-14476 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/base.apk librarySearchPath: /data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/lib/arm64:/data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk!/lib/arm64-v8a libraryPermittedPath:  parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 35 isBundled: false classLoaderName: null sharedLibraries: [dalvik.system.PathClassLoader[DexPathList[[zip file "/data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk"],nativeLibraryDirectories=[/data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/lib/arm64, /data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]]]
-2025-09-01 17:50:22.206 14476-14476 linker                  com.ivanmarty.rovecast               W  Warning: "/data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk!/lib/arm64-v8a/libmonochrome_64.so" unused DT entry: unknown processor-specific (type 0x70000001 arg 0x0) (ignoring)
-2025-09-01 17:50:22.252 14476-14476 cr_WVCFactoryProvider   com.ivanmarty.rovecast               I  version=139.0.7258.143 (725814333) minSdkVersion=29 multiprocess=true packageId=127 splits=<none>
-2025-09-01 17:50:22.263 14476-14606 chromium                com.ivanmarty.rovecast               E  [0901/175022.263350:ERROR:android_webview/browser/variations/variations_seed_loader.cc:39] Seed missing signature.
-2025-09-01 17:50:22.288 14476-14476 cr_LibraryLoader        com.ivanmarty.rovecast               I  Successfully loaded native library
-2025-09-01 17:50:22.289 14476-14476 cr_CachingUmaRecorder   com.ivanmarty.rovecast               I  Flushed 7 samples from 7 histograms, 0 samples were dropped.
-2025-09-01 17:50:22.294 14476-14476 cr_CombinedPProvider    com.ivanmarty.rovecast               I  #registerProvider() provider:WV.t9@c31f5b5 isPolicyCacheEnabled:false policyProvidersSize:0
-2025-09-01 17:50:22.296 14476-14476 cr_PolicyProvider       com.ivanmarty.rovecast               I  #setManagerAndSource() 0
-2025-09-01 17:50:22.330 14476-14476 cr_CombinedPProvider    com.ivanmarty.rovecast               I  #linkNativeInternal() 1
-2025-09-01 17:50:22.331 14476-14476 cr_AppResProvider       com.ivanmarty.rovecast               I  #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
-2025-09-01 17:50:22.332 14476-14476 cr_PolicyProvider       com.ivanmarty.rovecast               I  #notifySettingsAvailable() 0
-2025-09-01 17:50:22.332 14476-14476 cr_CombinedPProvider    com.ivanmarty.rovecast               I  #onSettingsAvailable() 0
-2025-09-01 17:50:22.332 14476-14476 cr_CombinedPProvider    com.ivanmarty.rovecast               I  #flushPolicies()
-2025-09-01 17:50:22.378 14476-14476 chromium                com.ivanmarty.rovecast               W  [WARNING:android_webview/browser/network_service/net_helpers.cc:143] HTTP Cache size is: 20971520
-2025-09-01 17:50:22.446 14476-14476 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
-2025-09-01 17:50:22.446 14476-14476 ConnectivityManager     com.ivanmarty.rovecast               I  requestNetwork and the calling app is: com.ivanmarty.rovecast
-2025-09-01 17:50:22.450 14476-14476 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
-2025-09-01 17:50:22.503 14476-14476 HwTypeface              com.ivanmarty.rovecast               I  updateFont: scale=1.04
-2025-09-01 17:50:22.504 14476-14476 SystemFonts             com.ivanmarty.rovecast               D  areFontsVariable: script=Latn
-2025-09-01 17:50:22.505 14476-14476 ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded preloadStatus 3
-2025-09-01 17:50:22.505 14476-14476 ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded end preloadStatus 3
-2025-09-01 17:50:22.508 14476-14476 RmeSchedManager         com.ivanmarty.rovecast               I  init Rme, version is: v1.0
-2025-09-01 17:50:22.508 14476-14476 RmeSchedManager         com.ivanmarty.rovecast               I  init Rme, version is: v1.0
-2025-09-01 17:50:22.509 14476-14476 RtgSchedEvent           com.ivanmarty.rovecast               I  current pid:14476 AppType:-1
-2025-09-01 17:50:22.509 14476-14476 ActivityThread          com.ivanmarty.rovecast               W  handleWindowVisibility: no activity for token android.os.BinderProxy@443bdd6
-2025-09-01 17:50:22.509 14476-14658 CameraManagerGlobal     com.ivanmarty.rovecast               I  Connecting to camera service
-2025-09-01 17:50:22.520 14476-14660 OpenGLRenderer          com.ivanmarty.rovecast               I  RenderThread: progress name = [com.ivanmarty.rovecast], viewCornerType = 0
-2025-09-01 17:50:22.521 14476-14662 iGraphics               com.ivanmarty.rovecast               I  [0020080c] pn: com.ivanmarty.rovecast, p: 14476
-2025-09-01 17:50:22.521 14476-14662 iGraphics               com.ivanmarty.rovecast               I  [0030080c] no spt app: com.ivanmarty.rovecast
-2025-09-01 17:50:22.591 14476-14476 AppCompatDelegate       com.ivanmarty.rovecast               D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
-2025-09-01 17:50:22.601 14476-14476 ActivityThread          com.ivanmarty.rovecast               V  callActivityOnCreate
-2025-09-01 17:50:22.650 14476-14476 DecorView[]             com.ivanmarty.rovecast               I  pkgName:com.ivanmarty.rovecast old windowMode:0 new windoMode:1, isFixedSize:false
-2025-09-01 17:50:22.679 14476-14476 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (greylist, reflection, allowed)
-2025-09-01 17:50:22.790 14476-14476 BlockMonitor            com.ivanmarty.rovecast               I  dispatchingThrewException In MainThread
-2025-09-01 17:50:22.790 14476-14476 AndroidRuntime          com.ivanmarty.rovecast               D  Shutting down VM
-2025-09-01 17:50:22.791 14476-14476 QarthLog                com.ivanmarty.rovecast               I  [PatchStore] createDisableExceptionQarthFile
-2025-09-01 17:50:22.791 14476-14476 QarthLog                com.ivanmarty.rovecast               I  [PatchStore] create disable file for com.ivanmarty.rovecast uid is 10606
-2025-09-01 17:50:22.796 14476-14476 AndroidRuntime          com.ivanmarty.rovecast               E  FATAL EXCEPTION: main (Ask Gemini)
+2025-09-01 17:50:22.796 14476-14476 AndroidRuntime          pid-14476                            E  FATAL EXCEPTION: main (Ask Gemini)
                                                                                                     Process: com.ivanmarty.rovecast, PID: 14476
                                                                                                     java.lang.RuntimeException: Unable to start activity ComponentInfo{com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity}: android.view.InflateException: Binary XML file line #37 in com.ivanmarty.rovecast:layout/activity_main: Binary XML file line #68: You must supply a layout_width attribute.
                                                                                                     	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4060)
@@ -313,100 +194,7 @@
                                                                                                     	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247)
                                                                                                     	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91)
                                                                                                     	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149)
-2025-09-01 17:50:22.796 14476-14476 AndroidRuntime          com.ivanmarty.rovecast               E  	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103) (Ask Gemini)
-                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613)
-                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110)
-                                                                                                    	at android.os.Looper.loop(Looper.java:219)
-                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
-                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
-                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
-                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
-2025-09-01 17:50:27.373 15127-15127 nmarty.rovecas          com.ivanmarty.rovecast               I  Late-enabling -Xcheck:jni
-2025-09-01 17:50:27.409 15127-15127 nmarty.rovecas          com.ivanmarty.rovecast               E  LoadAppImageStartupCache enabled : 1
-2025-09-01 17:50:27.409 15127-15127 nmarty.rovecas          com.ivanmarty.rovecast               E  Unknown bits set in runtime_flags: 0x8000
-2025-09-01 17:50:27.411 15127-15127 nmarty.rovecas          com.ivanmarty.rovecast               I  Reinit property: dalvik.vm.checkjni= false
-2025-09-01 17:50:27.411 15127-15127 nmarty.rovecas          com.ivanmarty.rovecast               I  ReInitProperties: persist.vm.debug.dumpapi= false
-2025-09-01 17:50:27.434 15127-15127 ActivityThread          com.ivanmarty.rovecast               D  Attach thread to application
-2025-09-01 17:50:27.488 15127-15148 ActivityThread          com.ivanmarty.rovecast               I  Init compatible state: true
-2025-09-01 17:50:27.489 15127-15148 HwFramewor...rtsFactory com.ivanmarty.rovecast               D  HwFrameworkSecurityPartsFactory in.
-2025-09-01 17:50:27.490 15127-15148 HwFramewor...rtsFactory com.ivanmarty.rovecast               I  add HwFrameworkSecurityPartsFactory to memory.
-2025-09-01 17:50:27.490 15127-15148 BehaviorCollectManager  com.ivanmarty.rovecast               E  Fail to acquire dataAnalyzerService...
-2025-09-01 17:50:27.494 15127-15127 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.ivanmarty.rovecast-_KK995yuu_SQb7SwwQy3Dg==/base.apk librarySearchPath: /data/app/com.ivanmarty.rovecast-_KK995yuu_SQb7SwwQy3Dg==/lib/arm64 libraryPermittedPath: /data/user/0/com.ivanmarty.rovecast parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 35 isBundled: false classLoaderName: null sharedLibraries: null
-2025-09-01 17:50:27.523 15127-15147 HwPartIawareFactory     com.ivanmarty.rovecast               I  add android.common.HwPartIawareFactoryImpl to memory.
-2025-09-01 17:50:28.844 15127-15148 HwApiCacheMangerEx      com.ivanmarty.rovecast               I  apicache path=/storage/emulated/0 state=mounted key=com.ivanmarty.rovecast#10606#256
-2025-09-01 17:50:28.844 15127-15148 HwApiCacheMangerEx      com.ivanmarty.rovecast               I  need clear apicache,because volumes changed,oldCnt=0 newCnt=1
-2025-09-01 17:50:28.845 15127-15148 HwApiCacheMangerEx      com.ivanmarty.rovecast               I  apicache path=/storage/emulated/0 state=mounted key=com.ivanmarty.rovecast#10606#0
-2025-09-01 17:50:28.845 15127-15148 HwApiCacheMangerEx      com.ivanmarty.rovecast               I  need clear apicache,because volumes changed,oldCnt=1 newCnt=1
-2025-09-01 17:50:28.852 15127-15173 AwareLog                com.ivanmarty.rovecast               E  AtomicFileUtils: readFileLines file not exist: android.util.AtomicFile@2bba7c9
-2025-09-01 17:50:28.853 15127-15173 AwareLog                com.ivanmarty.rovecast               E  AtomicFileUtils: readFileLines file not exist: android.util.AtomicFile@57bdece
-2025-09-01 17:50:28.853 15127-15148 AwareBitmapCacher       com.ivanmarty.rovecast               I  init processName:com.ivanmarty.rovecast pid=15127 uid=10606
-2025-09-01 17:50:28.883 15127-15127 WM-WrkMgrInitializer    com.ivanmarty.rovecast               D  Initializing WorkManager with default configuration.
-2025-09-01 17:50:29.010 15127-15127 StubController          com.ivanmarty.rovecast               I  system app validUid:10606, isFriend:true
-2025-09-01 17:50:29.034 15127-15127 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /system/framework/org.apache.http.legacy.jar librarySearchPath: /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
-2025-09-01 17:50:29.036 15127-15127 nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
-2025-09-01 17:50:29.040 15127-15127 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /system/framework/com.android.media.remotedisplay.jar librarySearchPath: /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
-2025-09-01 17:50:29.042 15127-15127 nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
-2025-09-01 17:50:29.044 15127-15127 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /system/framework/com.android.location.provider.jar librarySearchPath: /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
-2025-09-01 17:50:29.045 15127-15127 nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
-2025-09-01 17:50:29.048 15127-15127 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk librarySearchPath: /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: [dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/org.apache.http.legacy.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]], dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/com.android.media.remotedisplay.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]], dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/com.android.location.provider.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]]]
-2025-09-01 17:50:29.085 15127-15127 DynamiteModule          com.ivanmarty.rovecast               I  Considering local module com.google.android.gms.ads.dynamite:0 and remote module com.google.android.gms.ads.dynamite:251815204
-2025-09-01 17:50:29.085 15127-15127 DynamiteModule          com.ivanmarty.rovecast               I  Selected remote version of com.google.android.gms.ads.dynamite, version >= 251815204
-2025-09-01 17:50:29.123 15127-15127 nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
-2025-09-01 17:50:29.133 15127-15127 DynamitePackage         com.ivanmarty.rovecast               D  Instantiated singleton DynamitePackage.
-2025-09-01 17:50:29.133 15127-15127 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraMobileAdsSettingManagerCreatorImpl
-2025-09-01 17:50:29.155 15127-15127 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden field Lsun/misc/Unsafe;->theUnsafe:Lsun/misc/Unsafe; (greylist, reflection, allowed)
-2025-09-01 17:50:29.155 15127-15127 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J (greylist,core-platform-api, linking, allowed)
-2025-09-01 17:50:29.155 15127-15127 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->arrayBaseOffset(Ljava/lang/Class;)I (greylist,core-platform-api, linking, allowed)
-2025-09-01 17:50:29.155 15127-15127 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->arrayIndexScale(Ljava/lang/Class;)I (greylist, linking, allowed)
-2025-09-01 17:50:29.165 15127-15127 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getUnsafe()Lsun/misc/Unsafe; (greylist,core-platform-api, linking, allowed)
-2025-09-01 17:50:29.169 15127-15188 NetworkSecurityConfig   com.ivanmarty.rovecast               D  Using Network Security Config from resource network_security_config debugBuild: true
-2025-09-01 17:50:29.170 15127-15127 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
-2025-09-01 17:50:29.170 15127-15127 ConnectivityManager     com.ivanmarty.rovecast               I  requestNetwork and the calling app is: com.ivanmarty.rovecast
-2025-09-01 17:50:29.177 15127-15191 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
-2025-09-01 17:50:29.185 15127-15127 Ads                     com.ivanmarty.rovecast               I  Updating ad debug logging enablement.
-2025-09-01 17:50:29.187 15127-15194 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapInt(Ljava/lang/Object;JII)Z (greylist, linking, allowed)
-2025-09-01 17:50:29.187 15127-15194 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObjectVolatile(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
-2025-09-01 17:50:29.187 15127-15194 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
-2025-09-01 17:50:29.187 15127-15194 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapLong(Ljava/lang/Object;JJJ)Z (greylist, linking, allowed)
-2025-09-01 17:50:29.237 15127-15127 WebViewFactory          com.ivanmarty.rovecast               I  Loading com.google.android.webview version 139.0.7258.143 (code 725814333)
-2025-09-01 17:50:29.243 15127-15127 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk librarySearchPath: /data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/lib/arm64:/data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk!/lib/arm64-v8a libraryPermittedPath:  parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 35 isBundled: false classLoaderName: null sharedLibraries: null
-2025-09-01 17:50:29.246 15127-15127 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/base.apk librarySearchPath: /data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/lib/arm64:/data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk!/lib/arm64-v8a libraryPermittedPath:  parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 35 isBundled: false classLoaderName: null sharedLibraries: [dalvik.system.PathClassLoader[DexPathList[[zip file "/data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk"],nativeLibraryDirectories=[/data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/lib/arm64, /data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]]]
-2025-09-01 17:50:29.253 15127-15127 linker                  com.ivanmarty.rovecast               W  Warning: "/data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk!/lib/arm64-v8a/libmonochrome_64.so" unused DT entry: unknown processor-specific (type 0x70000001 arg 0x0) (ignoring)
-2025-09-01 17:50:29.292 15127-15127 cr_WVCFactoryProvider   com.ivanmarty.rovecast               I  version=139.0.7258.143 (725814333) minSdkVersion=29 multiprocess=true packageId=127 splits=<none>
-2025-09-01 17:50:29.303 15127-15217 chromium                com.ivanmarty.rovecast               E  [0901/175029.302993:ERROR:android_webview/browser/variations/variations_seed_loader.cc:39] Seed missing signature.
-2025-09-01 17:50:29.329 15127-15127 cr_LibraryLoader        com.ivanmarty.rovecast               I  Successfully loaded native library
-2025-09-01 17:50:29.330 15127-15127 cr_CachingUmaRecorder   com.ivanmarty.rovecast               I  Flushed 7 samples from 7 histograms, 0 samples were dropped.
-2025-09-01 17:50:29.334 15127-15127 cr_CombinedPProvider    com.ivanmarty.rovecast               I  #registerProvider() provider:WV.t9@c31f5b5 isPolicyCacheEnabled:false policyProvidersSize:0
-2025-09-01 17:50:29.336 15127-15127 cr_PolicyProvider       com.ivanmarty.rovecast               I  #setManagerAndSource() 0
-2025-09-01 17:50:29.360 15127-15127 cr_CombinedPProvider    com.ivanmarty.rovecast               I  #linkNativeInternal() 1
-2025-09-01 17:50:29.361 15127-15127 cr_AppResProvider       com.ivanmarty.rovecast               I  #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
-2025-09-01 17:50:29.362 15127-15127 cr_PolicyProvider       com.ivanmarty.rovecast               I  #notifySettingsAvailable() 0
-2025-09-01 17:50:29.362 15127-15127 cr_CombinedPProvider    com.ivanmarty.rovecast               I  #onSettingsAvailable() 0
-2025-09-01 17:50:29.362 15127-15127 cr_CombinedPProvider    com.ivanmarty.rovecast               I  #flushPolicies()
-2025-09-01 17:50:29.406 15127-15127 chromium                com.ivanmarty.rovecast               W  [WARNING:android_webview/browser/network_service/net_helpers.cc:143] HTTP Cache size is: 20971520
-2025-09-01 17:50:29.472 15127-15127 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
-2025-09-01 17:50:29.472 15127-15127 ConnectivityManager     com.ivanmarty.rovecast               I  requestNetwork and the calling app is: com.ivanmarty.rovecast
-2025-09-01 17:50:29.476 15127-15127 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
-2025-09-01 17:50:29.527 15127-15127 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
-2025-09-01 17:50:29.529 15127-15127 HwTypeface              com.ivanmarty.rovecast               I  updateFont: scale=1.04
-2025-09-01 17:50:29.529 15127-15127 SystemFonts             com.ivanmarty.rovecast               D  areFontsVariable: script=Latn
-2025-09-01 17:50:29.530 15127-15127 ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded preloadStatus 0
-2025-09-01 17:50:29.534 15127-15127 RmeSchedManager         com.ivanmarty.rovecast               I  init Rme, version is: v1.0
-2025-09-01 17:50:29.534 15127-15127 RmeSchedManager         com.ivanmarty.rovecast               I  init Rme, version is: v1.0
-2025-09-01 17:50:29.534 15127-15127 RtgSchedEvent           com.ivanmarty.rovecast               I  current pid:15127 AppType:-1
-2025-09-01 17:50:29.535 15127-15265 CameraManagerGlobal     com.ivanmarty.rovecast               I  Connecting to camera service
-2025-09-01 17:50:29.546 15127-15267 OpenGLRenderer          com.ivanmarty.rovecast               I  RenderThread: progress name = [com.ivanmarty.rovecast], viewCornerType = 0
-2025-09-01 17:50:29.547 15127-15269 iGraphics               com.ivanmarty.rovecast               I  [0020080c] pn: com.ivanmarty.rovecast, p: 15127
-2025-09-01 17:50:29.547 15127-15269 iGraphics               com.ivanmarty.rovecast               I  [0030080c] no spt app: com.ivanmarty.rovecast
-2025-09-01 17:50:29.629 15127-15127 AppCompatDelegate       com.ivanmarty.rovecast               D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
-2025-09-01 17:50:29.640 15127-15127 ActivityThread          com.ivanmarty.rovecast               V  callActivityOnCreate
-2025-09-01 17:50:29.696 15127-15127 DecorView[]             com.ivanmarty.rovecast               I  pkgName:com.ivanmarty.rovecast old windowMode:0 new windoMode:1, isFixedSize:false
-2025-09-01 17:50:29.732 15127-15127 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (greylist, reflection, allowed)
-2025-09-01 17:50:29.858 15127-15127 BlockMonitor            com.ivanmarty.rovecast               I  dispatchingThrewException In MainThread
-2025-09-01 17:50:29.859 15127-15127 AndroidRuntime          com.ivanmarty.rovecast               D  Shutting down VM
-2025-09-01 17:50:29.859 15127-15127 QarthLog                com.ivanmarty.rovecast               I  [PatchStore] createDisableExceptionQarthFile
-2025-09-01 17:50:29.859 15127-15127 QarthLog                com.ivanmarty.rovecast               I  [PatchStore] create disable file for com.ivanmarty.rovecast uid is 10606
-2025-09-01 17:50:29.864 15127-15127 AndroidRuntime          com.ivanmarty.rovecast               E  FATAL EXCEPTION: main (Ask Gemini)
+2025-09-01 17:50:29.864 15127-15127 AndroidRuntime          pid-15127                            E  FATAL EXCEPTION: main (Ask Gemini)
                                                                                                     Process: com.ivanmarty.rovecast, PID: 15127
                                                                                                     java.lang.RuntimeException: Unable to start activity ComponentInfo{com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity}: android.view.InflateException: Binary XML file line #37 in com.ivanmarty.rovecast:layout/activity_main: Binary XML file line #68: You must supply a layout_width attribute.
                                                                                                     	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4060)
@@ -454,13 +242,580 @@
                                                                                                     	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247)
                                                                                                     	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91)
                                                                                                     	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149)
-2025-09-01 17:50:29.865 15127-15127 AndroidRuntime          com.ivanmarty.rovecast               E  	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103) (Ask Gemini)
-                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613)
+2025-09-02 11:44:03.750 28316-28316 AndroidRuntime          pid-28316                            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.rovecast, PID: 28316
+                                                                                                    java.lang.RuntimeException: Unable to start service com.ivanmarty.rovecast.player.PlaybackService@f55b1a4 with Intent { act=com.ivanmarty.rovecast.player.ACTION_PLAY cmp=com.ivanmarty.rovecast/.player.PlaybackService (has extras) }: java.lang.NullPointerException
+                                                                                                    	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4971)
+                                                                                                    	at android.app.ActivityThread.access$3300(ActivityThread.java:260)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2486)
                                                                                                     	at android.os.Handler.dispatchMessage(Handler.java:110)
                                                                                                     	at android.os.Looper.loop(Looper.java:219)
                                                                                                     	at android.app.ActivityThread.main(ActivityThread.java:8668)
                                                                                                     	at java.lang.reflect.Method.invoke(Native Method)
                                                                                                     	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
                                                                                                     	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
-2025-09-01 17:50:29.891 15127-15127 Process                 com.ivanmarty.rovecast               I  Sending signal. PID: 15127 SIG: 9
-2025-09-01 17:50:29.963  1634-1735  WindowManager           system_server                        E  win=Window{eb7cc68 u0 Splash Screen com.ivanmarty.rovecast EXITING} destroySurfaces: appStopped=false win.mWindowRemovalAllowed=true win.mRemoveOnExit=true
+                                                                                                    Caused by: java.lang.NullPointerException
+                                                                                                    	at androidx.media3.common.util.Assertions.checkNotNull(Assertions.java:155)
+                                                                                                    	at androidx.media3.common.MediaItem$Builder.setMediaId(MediaItem.java:136)
+                                                                                                    	at com.ivanmarty.rovecast.player.PlaybackService.onStartCommand(PlaybackService.java:75)
+                                                                                                    	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4951)
+                                                                                                    	at android.app.ActivityThread.access$3300(ActivityThread.java:260) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2486) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+2025-09-03 14:57:17.950   597-597   AndroidRuntime          pid-597                              E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.rovecast, PID: 597
+                                                                                                    java.lang.RuntimeException: Unable to start service com.ivanmarty.rovecast.player.PlaybackService@5eeba2c with Intent { act=com.ivanmarty.rovecast.player.ACTION_PLAY cmp=com.ivanmarty.rovecast/.player.PlaybackService (has extras) }: java.lang.NullPointerException
+                                                                                                    	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4971)
+                                                                                                    	at android.app.ActivityThread.access$3300(ActivityThread.java:260)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2486)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.NullPointerException
+                                                                                                    	at androidx.media3.common.util.Assertions.checkNotNull(Assertions.java:155)
+                                                                                                    	at androidx.media3.common.MediaItem$Builder.setMediaId(MediaItem.java:137)
+                                                                                                    	at com.ivanmarty.rovecast.player.PlaybackService.onStartCommand(PlaybackService.java:75)
+                                                                                                    	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4951)
+                                                                                                    	at android.app.ActivityThread.access$3300(ActivityThread.java:260) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2486) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+2025-09-03 17:03:30.296 31378-31378 AndroidRuntime          pid-31378                            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.rovecast, PID: 31378
+                                                                                                    java.lang.RuntimeException: Unable to start service com.ivanmarty.rovecast.player.PlaybackService@be1aead with Intent { act=com.ivanmarty.rovecast.player.ACTION_PLAY cmp=com.ivanmarty.rovecast/.player.PlaybackService (has extras) }: java.lang.NullPointerException
+                                                                                                    	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4971)
+                                                                                                    	at android.app.ActivityThread.access$3300(ActivityThread.java:260)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2486)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.NullPointerException
+                                                                                                    	at androidx.media3.common.util.Assertions.checkNotNull(Assertions.java:155)
+                                                                                                    	at androidx.media3.common.MediaItem$Builder.setMediaId(MediaItem.java:137)
+                                                                                                    	at com.ivanmarty.rovecast.player.PlaybackService.onStartCommand(PlaybackService.java:75)
+                                                                                                    	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4951)
+                                                                                                    	at android.app.ActivityThread.access$3300(ActivityThread.java:260) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2486) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+2025-09-03 21:09:49.452  6522-6522  AndroidRuntime          pid-6522                             E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.rovecast, PID: 6522
+                                                                                                    java.lang.RuntimeException: Unable to start service com.ivanmarty.rovecast.player.PlaybackService@3f9f15b with Intent { act=com.ivanmarty.rovecast.player.ACTION_PLAY cmp=com.ivanmarty.rovecast/.player.PlaybackService (has extras) }: java.lang.NullPointerException
+                                                                                                    	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4971)
+                                                                                                    	at android.app.ActivityThread.access$3300(ActivityThread.java:260)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2486)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.NullPointerException
+                                                                                                    	at androidx.media3.common.util.Assertions.checkNotNull(Assertions.java:155)
+                                                                                                    	at androidx.media3.common.MediaItem$Builder.setMediaId(MediaItem.java:137)
+                                                                                                    	at com.ivanmarty.rovecast.player.PlaybackService.onStartCommand(PlaybackService.java:75)
+                                                                                                    	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4951)
+                                                                                                    	at android.app.ActivityThread.access$3300(ActivityThread.java:260) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2486) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+--------- beginning of system
+2025-09-03 21:16:52.041  7711-7711  AndroidRuntime          pid-7711                             E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.rovecast, PID: 7711
+                                                                                                    java.lang.RuntimeException: Unable to start service com.ivanmarty.rovecast.player.PlaybackService@805314a with Intent { act=com.ivanmarty.rovecast.player.ACTION_PLAY cmp=com.ivanmarty.rovecast/.player.PlaybackService (has extras) }: java.lang.NullPointerException
+                                                                                                    	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4971)
+                                                                                                    	at android.app.ActivityThread.access$3300(ActivityThread.java:260)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2486)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.NullPointerException
+                                                                                                    	at androidx.media3.common.util.Assertions.checkNotNull(Assertions.java:155)
+                                                                                                    	at androidx.media3.common.MediaItem$Builder.setMediaId(MediaItem.java:137)
+                                                                                                    	at com.ivanmarty.rovecast.player.PlaybackService.onStartCommand(PlaybackService.java:75)
+                                                                                                    	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4951)
+                                                                                                    	at android.app.ActivityThread.access$3300(ActivityThread.java:260) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2486) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+2025-09-03 22:16:18.468  2167-2167  ActivityThread          com.ivanmarty.rovecast               D  Attach thread to application
+2025-09-03 22:16:18.510  2167-2237  ActivityThread          com.ivanmarty.rovecast               I  Init compatible state: true
+2025-09-03 22:16:23.120  2167-2167  ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded preloadStatus 0
+2025-09-03 22:16:25.431  3014-3014  ActivityThread          com.ivanmarty.rovecast               D  Attach thread to application
+2025-09-03 22:16:25.504  3014-3072  ActivityThread          com.ivanmarty.rovecast               I  Init compatible state: true
+2025-09-03 22:16:31.929  3014-3014  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-03 22:16:32.094  3014-3014  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-03 22:16:32.260  3014-3752  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-03 22:16:32.456  3014-3014  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-03 22:16:32.469  3014-3014  ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded preloadStatus 0
+2025-09-03 22:16:32.471  3014-3014  RtgSchedEvent           com.ivanmarty.rovecast               I  current pid:3014 AppType:-1
+2025-09-03 22:16:32.620  3014-3014  ActivityThread          com.ivanmarty.rovecast               V  callActivityOnCreate
+2025-09-03 22:16:33.247  3014-3014  ActivityThread          com.ivanmarty.rovecast               D  add activity client record, r= ActivityRecord{21f8f2d token=android.os.BinderProxy@2345ab3 {com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity}} token= android.os.BinderProxy@2345ab3
+2025-09-03 22:16:33.951  3014-3014  RtgSchedEvent           com.ivanmarty.rovecast               I  current pid:3014 AppType:-1
+2025-09-03 22:16:34.971  3014-4045  AndroidRuntime          com.ivanmarty.rovecast               E  FATAL EXCEPTION: arch_disk_io_0 (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.rovecast, PID: 3014
+                                                                                                    java.lang.IllegalStateException: Room cannot verify the data integrity. Looks like you've changed schema but forgot to update the version number. You can simply fix this by increasing the version number. Expected identity hash: d09c5277157823e26cb4dfd834bab6fa, found: 2a0d3d8d354de15cfcabe6f7820e6d71
+                                                                                                    	at androidx.room.BaseRoomConnectionManager.checkIdentity(RoomConnectionManager.kt:288)
+                                                                                                    	at androidx.room.BaseRoomConnectionManager.onOpen(RoomConnectionManager.kt:267)
+                                                                                                    	at androidx.room.RoomConnectionManager$SupportOpenHelperCallback.onOpen(RoomConnectionManager.android.kt:164)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.onOpen(FrameworkSQLiteOpenHelper.android.kt:279)
+                                                                                                    	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:447)
+                                                                                                    	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:332)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getWritableOrReadableDatabase(FrameworkSQLiteOpenHelper.android.kt:224)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.innerGetDatabase(FrameworkSQLiteOpenHelper.android.kt:180)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getSupportDatabase(FrameworkSQLiteOpenHelper.android.kt:141)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper.getWritableDatabase(FrameworkSQLiteOpenHelper.android.kt:96)
+                                                                                                    	at androidx.room.driver.SupportSQLiteDriver.open(SupportSQLiteDriver.android.kt:26)
+                                                                                                    	at androidx.room.driver.SupportSQLiteConnectionPool.getSupportConnection(SupportSQLiteConnectionPool.android.kt:35)
+                                                                                                    	at androidx.room.driver.SupportSQLiteConnectionPool.useConnection(SupportSQLiteConnectionPool.android.kt:42)
+                                                                                                    	at androidx.room.RoomConnectionManager.useConnection(RoomConnectionManager.android.kt:126)
+                                                                                                    	at androidx.room.RoomDatabase.useConnection$room_runtime_release(RoomDatabase.android.kt:593)
+                                                                                                    	at androidx.room.TriggerBasedInvalidationTracker.syncTriggers$room_runtime_release(InvalidationTracker.kt:300)
+                                                                                                    	at androidx.room.InvalidationTracker$addObserver$1.invokeSuspend(InvalidationTracker.android.kt:253)
+                                                                                                    	at androidx.room.InvalidationTracker$addObserver$1.invoke(Unknown Source:8)
+                                                                                                    	at androidx.room.InvalidationTracker$addObserver$1.invoke(Unknown Source:4)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invokeSuspend(RunBlockingUninterruptible.android.kt:52)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invoke(Unknown Source:8)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invoke(Unknown Source:4)
+                                                                                                    	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:44)
+                                                                                                    	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:112)
+                                                                                                    	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:126)
+                                                                                                    	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:56)
+                                                                                                    	at kotlinx.coroutines.BuildersKt.launch(Unknown Source:1)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1.invokeSuspend(RunBlockingUninterruptible.android.kt:51)
+                                                                                                    	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+                                                                                                    	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+                                                                                                    	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:280)
+                                                                                                    	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:85)
+                                                                                                    	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:59)
+                                                                                                    	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+                                                                                                    	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38)
+                                                                                                    	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt.runBlockingUninterruptible(RunBlockingUninterruptible.android.kt:45)
+2025-09-03 22:16:34.972  3014-4045  AndroidRuntime          com.ivanmarty.rovecast               E  	at androidx.room.InvalidationTracker.addObserver(InvalidationTracker.android.kt:253) (Ask Gemini)
+                                                                                                    	at androidx.room.InvalidationTracker.addWeakObserver(InvalidationTracker.android.kt:295)
+                                                                                                    	at androidx.room.RoomTrackingLiveData.refresh(RoomTrackingLiveData.android.kt:69)
+                                                                                                    	at androidx.room.RoomTrackingLiveData.access$refresh(RoomTrackingLiveData.android.kt:40)
+                                                                                                    	at androidx.room.RoomTrackingLiveData$onActive$1.invokeSuspend(RoomTrackingLiveData.android.kt:123)
+                                                                                                    	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+                                                                                                    	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+                                                                                                    	at java.lang.Thread.run(Thread.java:929)
+                                                                                                    	Suppressed: kotlinx.coroutines.internal.DiagnosticCoroutineContextException: [StandaloneCoroutine{Cancelling}@44847f9, androidx.arch.core.executor.ArchTaskExecutor$$ExternalSyntheticLambda1@c4ab33e]
+2025-09-03 22:16:37.014  4293-4293  ActivityThread          com.ivanmarty.rovecast               D  Attach thread to application
+2025-09-03 22:16:37.078  4293-4318  HwActivityThreadImpl    com.ivanmarty.rovecast               I  mSocketName: c70f0b14-2803-4403-b265-6332ccef8036
+2025-09-03 22:16:37.083  4293-4318  HwActivityThreadImpl    com.ivanmarty.rovecast               I  initPreloadedSocked end mPreloadStatus 2
+2025-09-03 22:16:37.114  4293-4319  ActivityThread          com.ivanmarty.rovecast               I  Init compatible state: true
+2025-09-03 22:16:37.115  4293-4318  HwActivityThreadImpl    com.ivanmarty.rovecast               I  before connect app.socketName:c70f0b14-2803-4403-b265-6332ccef8036
+2025-09-03 22:16:37.313  4293-4318  HwActivityThreadImpl    com.ivanmarty.rovecast               E  connect Error.
+2025-09-03 22:16:37.313  4293-4318  HwActivityThreadImpl    com.ivanmarty.rovecast               I  connectContinuePreload end mPreloadStatus 3
+2025-09-03 22:16:39.020  4293-4293  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-03 22:16:39.115  4293-4293  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-03 22:16:39.219  4293-4496  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-03 22:16:39.399  4293-4293  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-03 22:16:39.411  4293-4293  ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded preloadStatus 3
+2025-09-03 22:16:39.412  4293-4293  ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded end preloadStatus 3
+2025-09-03 22:16:39.414  4293-4293  RtgSchedEvent           com.ivanmarty.rovecast               I  current pid:4293 AppType:-1
+2025-09-03 22:16:39.536  4293-4293  ActivityThread          com.ivanmarty.rovecast               V  callActivityOnCreate
+2025-09-03 22:16:39.954  4293-4293  ActivityThread          com.ivanmarty.rovecast               D  add activity client record, r= ActivityRecord{c2b1e7b token=android.os.BinderProxy@20abc6e {com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity}} token= android.os.BinderProxy@20abc6e
+2025-09-03 22:16:40.421  4293-4293  RtgSchedEvent           com.ivanmarty.rovecast               I  current pid:4293 AppType:-1
+2025-09-03 22:16:40.868  4293-4594  AndroidRuntime          com.ivanmarty.rovecast               E  FATAL EXCEPTION: arch_disk_io_0 (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.rovecast, PID: 4293
+                                                                                                    java.lang.IllegalStateException: Room cannot verify the data integrity. Looks like you've changed schema but forgot to update the version number. You can simply fix this by increasing the version number. Expected identity hash: d09c5277157823e26cb4dfd834bab6fa, found: 2a0d3d8d354de15cfcabe6f7820e6d71
+                                                                                                    	at androidx.room.BaseRoomConnectionManager.checkIdentity(RoomConnectionManager.kt:288)
+                                                                                                    	at androidx.room.BaseRoomConnectionManager.onOpen(RoomConnectionManager.kt:267)
+                                                                                                    	at androidx.room.RoomConnectionManager$SupportOpenHelperCallback.onOpen(RoomConnectionManager.android.kt:164)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.onOpen(FrameworkSQLiteOpenHelper.android.kt:279)
+                                                                                                    	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:447)
+                                                                                                    	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:332)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getWritableOrReadableDatabase(FrameworkSQLiteOpenHelper.android.kt:224)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.innerGetDatabase(FrameworkSQLiteOpenHelper.android.kt:180)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getSupportDatabase(FrameworkSQLiteOpenHelper.android.kt:141)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper.getWritableDatabase(FrameworkSQLiteOpenHelper.android.kt:96)
+                                                                                                    	at androidx.room.driver.SupportSQLiteDriver.open(SupportSQLiteDriver.android.kt:26)
+                                                                                                    	at androidx.room.driver.SupportSQLiteConnectionPool.getSupportConnection(SupportSQLiteConnectionPool.android.kt:35)
+                                                                                                    	at androidx.room.driver.SupportSQLiteConnectionPool.useConnection(SupportSQLiteConnectionPool.android.kt:42)
+                                                                                                    	at androidx.room.RoomConnectionManager.useConnection(RoomConnectionManager.android.kt:126)
+                                                                                                    	at androidx.room.RoomDatabase.useConnection$room_runtime_release(RoomDatabase.android.kt:593)
+                                                                                                    	at androidx.room.TriggerBasedInvalidationTracker.syncTriggers$room_runtime_release(InvalidationTracker.kt:300)
+                                                                                                    	at androidx.room.InvalidationTracker$addObserver$1.invokeSuspend(InvalidationTracker.android.kt:253)
+                                                                                                    	at androidx.room.InvalidationTracker$addObserver$1.invoke(Unknown Source:8)
+                                                                                                    	at androidx.room.InvalidationTracker$addObserver$1.invoke(Unknown Source:4)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invokeSuspend(RunBlockingUninterruptible.android.kt:52)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invoke(Unknown Source:8)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invoke(Unknown Source:4)
+                                                                                                    	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:44)
+                                                                                                    	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:112)
+                                                                                                    	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:126)
+                                                                                                    	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:56)
+                                                                                                    	at kotlinx.coroutines.BuildersKt.launch(Unknown Source:1)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1.invokeSuspend(RunBlockingUninterruptible.android.kt:51)
+                                                                                                    	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+                                                                                                    	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+                                                                                                    	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:280)
+                                                                                                    	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:85)
+                                                                                                    	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:59)
+                                                                                                    	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+                                                                                                    	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38)
+                                                                                                    	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt.runBlockingUninterruptible(RunBlockingUninterruptible.android.kt:45)
+2025-09-03 22:16:40.869  4293-4594  AndroidRuntime          com.ivanmarty.rovecast               E  	at androidx.room.InvalidationTracker.addObserver(InvalidationTracker.android.kt:253) (Ask Gemini)
+                                                                                                    	at androidx.room.InvalidationTracker.addWeakObserver(InvalidationTracker.android.kt:295)
+                                                                                                    	at androidx.room.RoomTrackingLiveData.refresh(RoomTrackingLiveData.android.kt:69)
+                                                                                                    	at androidx.room.RoomTrackingLiveData.access$refresh(RoomTrackingLiveData.android.kt:40)
+                                                                                                    	at androidx.room.RoomTrackingLiveData$onActive$1.invokeSuspend(RoomTrackingLiveData.android.kt:123)
+                                                                                                    	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+                                                                                                    	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+                                                                                                    	at java.lang.Thread.run(Thread.java:929)
+                                                                                                    	Suppressed: kotlinx.coroutines.internal.DiagnosticCoroutineContextException: [StandaloneCoroutine{Cancelling}@7953073, androidx.arch.core.executor.ArchTaskExecutor$$ExternalSyntheticLambda1@b3adb30]
+2025-09-03 22:16:42.303  4699-4699  ActivityThread          com.ivanmarty.rovecast               D  Attach thread to application
+2025-09-03 22:16:42.327  4699-4721  HwActivityThreadImpl    com.ivanmarty.rovecast               I  mSocketName: 86cd8149-0d66-430b-a2bc-9670ac014279
+2025-09-03 22:16:42.328  4699-4721  HwActivityThreadImpl    com.ivanmarty.rovecast               I  initPreloadedSocked end mPreloadStatus 2
+2025-09-03 22:16:42.335  4699-4720  HwActivityThreadImpl    com.ivanmarty.rovecast               I  before connect app.socketName:86cd8149-0d66-430b-a2bc-9670ac014279
+2025-09-03 22:16:42.416  4699-4724  ActivityThread          com.ivanmarty.rovecast               I  Init compatible state: true
+2025-09-03 22:16:42.533  4699-4720  HwActivityThreadImpl    com.ivanmarty.rovecast               E  connect Error.
+2025-09-03 22:16:42.533  4699-4720  HwActivityThreadImpl    com.ivanmarty.rovecast               I  connectContinuePreload end mPreloadStatus 3
+2025-09-03 22:16:44.359  4699-4699  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-03 22:16:44.474  4699-4699  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-03 22:16:44.583  4699-4842  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-03 22:16:44.703  4699-4699  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-03 22:16:44.711  4699-4699  ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded preloadStatus 3
+2025-09-03 22:16:44.712  4699-4699  ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded end preloadStatus 3
+2025-09-03 22:16:44.713  4699-4699  RtgSchedEvent           com.ivanmarty.rovecast               I  current pid:4699 AppType:-1
+2025-09-03 22:16:44.861  4699-4699  ActivityThread          com.ivanmarty.rovecast               V  callActivityOnCreate
+2025-09-03 22:16:45.388  4699-4699  ActivityThread          com.ivanmarty.rovecast               D  add activity client record, r= ActivityRecord{1b794f1 token=android.os.BinderProxy@8ab3f3b {com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity}} token= android.os.BinderProxy@8ab3f3b
+2025-09-03 22:16:45.862  4699-4699  RtgSchedEvent           com.ivanmarty.rovecast               I  current pid:4699 AppType:-1
+2025-09-03 22:16:46.346  4699-4897  AndroidRuntime          com.ivanmarty.rovecast               E  FATAL EXCEPTION: arch_disk_io_0 (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.rovecast, PID: 4699
+                                                                                                    java.lang.IllegalStateException: Room cannot verify the data integrity. Looks like you've changed schema but forgot to update the version number. You can simply fix this by increasing the version number. Expected identity hash: d09c5277157823e26cb4dfd834bab6fa, found: 2a0d3d8d354de15cfcabe6f7820e6d71
+                                                                                                    	at androidx.room.BaseRoomConnectionManager.checkIdentity(RoomConnectionManager.kt:288)
+                                                                                                    	at androidx.room.BaseRoomConnectionManager.onOpen(RoomConnectionManager.kt:267)
+                                                                                                    	at androidx.room.RoomConnectionManager$SupportOpenHelperCallback.onOpen(RoomConnectionManager.android.kt:164)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.onOpen(FrameworkSQLiteOpenHelper.android.kt:279)
+                                                                                                    	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:447)
+                                                                                                    	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:332)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getWritableOrReadableDatabase(FrameworkSQLiteOpenHelper.android.kt:224)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.innerGetDatabase(FrameworkSQLiteOpenHelper.android.kt:180)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getSupportDatabase(FrameworkSQLiteOpenHelper.android.kt:141)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper.getWritableDatabase(FrameworkSQLiteOpenHelper.android.kt:96)
+                                                                                                    	at androidx.room.driver.SupportSQLiteDriver.open(SupportSQLiteDriver.android.kt:26)
+                                                                                                    	at androidx.room.driver.SupportSQLiteConnectionPool.getSupportConnection(SupportSQLiteConnectionPool.android.kt:35)
+                                                                                                    	at androidx.room.driver.SupportSQLiteConnectionPool.useConnection(SupportSQLiteConnectionPool.android.kt:42)
+                                                                                                    	at androidx.room.RoomConnectionManager.useConnection(RoomConnectionManager.android.kt:126)
+                                                                                                    	at androidx.room.RoomDatabase.useConnection$room_runtime_release(RoomDatabase.android.kt:593)
+                                                                                                    	at androidx.room.TriggerBasedInvalidationTracker.syncTriggers$room_runtime_release(InvalidationTracker.kt:300)
+                                                                                                    	at androidx.room.InvalidationTracker$addObserver$1.invokeSuspend(InvalidationTracker.android.kt:253)
+                                                                                                    	at androidx.room.InvalidationTracker$addObserver$1.invoke(Unknown Source:8)
+                                                                                                    	at androidx.room.InvalidationTracker$addObserver$1.invoke(Unknown Source:4)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invokeSuspend(RunBlockingUninterruptible.android.kt:52)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invoke(Unknown Source:8)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invoke(Unknown Source:4)
+                                                                                                    	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:44)
+                                                                                                    	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:112)
+                                                                                                    	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:126)
+                                                                                                    	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:56)
+                                                                                                    	at kotlinx.coroutines.BuildersKt.launch(Unknown Source:1)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1.invokeSuspend(RunBlockingUninterruptible.android.kt:51)
+                                                                                                    	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+                                                                                                    	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+                                                                                                    	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:280)
+                                                                                                    	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:85)
+                                                                                                    	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:59)
+                                                                                                    	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+                                                                                                    	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38)
+                                                                                                    	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt.runBlockingUninterruptible(RunBlockingUninterruptible.android.kt:45)
+2025-09-03 22:16:46.347  4699-4897  AndroidRuntime          com.ivanmarty.rovecast               E  	at androidx.room.InvalidationTracker.addObserver(InvalidationTracker.android.kt:253) (Ask Gemini)
+                                                                                                    	at androidx.room.InvalidationTracker.addWeakObserver(InvalidationTracker.android.kt:295)
+                                                                                                    	at androidx.room.RoomTrackingLiveData.refresh(RoomTrackingLiveData.android.kt:69)
+                                                                                                    	at androidx.room.RoomTrackingLiveData.access$refresh(RoomTrackingLiveData.android.kt:40)
+                                                                                                    	at androidx.room.RoomTrackingLiveData$onActive$1.invokeSuspend(RoomTrackingLiveData.android.kt:123)
+                                                                                                    	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+                                                                                                    	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+                                                                                                    	at java.lang.Thread.run(Thread.java:929)
+                                                                                                    	Suppressed: kotlinx.coroutines.internal.DiagnosticCoroutineContextException: [StandaloneCoroutine{Cancelling}@12672af, androidx.arch.core.executor.ArchTaskExecutor$$ExternalSyntheticLambda1@6aa56bc]
+--------- beginning of main
+---------------------------- PROCESS STARTED (5729) for package com.ivanmarty.rovecast ----------------------------
+2025-09-03 22:17:08.430  5729-5729  ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.ivanmarty.rovecast-oN-KTBB5xLC1fDq8iNYjAw==/base.apk librarySearchPath: /data/app/com.ivanmarty.rovecast-oN-KTBB5xLC1fDq8iNYjAw==/lib/arm64 libraryPermittedPath: /data/user/0/com.ivanmarty.rovecast parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 35 isBundled: false classLoaderName: null sharedLibraries: null
+2025-09-03 22:17:08.434  5729-5750  ActivityThread          com.ivanmarty.rovecast               I  Init compatible state: true
+2025-09-03 22:17:08.436  5729-5750  HwFramewor...rtsFactory com.ivanmarty.rovecast               D  HwFrameworkSecurityPartsFactory in.
+2025-09-03 22:17:08.437  5729-5750  HwFramewor...rtsFactory com.ivanmarty.rovecast               I  add HwFrameworkSecurityPartsFactory to memory.
+2025-09-03 22:17:08.438  5729-5750  BehaviorCollectManager  com.ivanmarty.rovecast               E  Fail to acquire dataAnalyzerService...
+2025-09-03 22:17:08.560  5729-5748  HwActivityThreadImpl    com.ivanmarty.rovecast               E  connect Error.
+2025-09-03 22:17:08.561  5729-5748  HwActivityThreadImpl    com.ivanmarty.rovecast               W  closeStream error.
+2025-09-03 22:17:08.561  5729-5748  HwActivityThreadImpl    com.ivanmarty.rovecast               I  connectContinuePreload end mPreloadStatus 3
+2025-09-03 22:17:08.563  5729-5747  HwPartIawareFactory     com.ivanmarty.rovecast               I  add android.common.HwPartIawareFactoryImpl to memory.
+2025-09-03 22:17:09.866  5729-5750  HwApiCacheMangerEx      com.ivanmarty.rovecast               I  apicache path=/storage/emulated/0 state=mounted key=com.ivanmarty.rovecast#10621#256
+2025-09-03 22:17:09.866  5729-5750  HwApiCacheMangerEx      com.ivanmarty.rovecast               I  need clear apicache,because volumes changed,oldCnt=0 newCnt=1
+2025-09-03 22:17:09.867  5729-5750  HwApiCacheMangerEx      com.ivanmarty.rovecast               I  apicache path=/storage/emulated/0 state=mounted key=com.ivanmarty.rovecast#10621#0
+2025-09-03 22:17:09.867  5729-5750  HwApiCacheMangerEx      com.ivanmarty.rovecast               I  need clear apicache,because volumes changed,oldCnt=1 newCnt=1
+2025-09-03 22:17:09.873  5729-5750  AwareBitmapCacher       com.ivanmarty.rovecast               I  init processName:com.ivanmarty.rovecast pid=5729 uid=10621
+2025-09-03 22:17:09.875  5729-5792  AwareLog                com.ivanmarty.rovecast               E  AtomicFileUtils: readFileLines file not exist: android.util.AtomicFile@2bba7c9
+2025-09-03 22:17:09.876  5729-5792  AwareLog                com.ivanmarty.rovecast               E  AtomicFileUtils: readFileLines file not exist: android.util.AtomicFile@57bdece
+2025-09-03 22:17:09.899  5729-5729  WM-WrkMgrInitializer    com.ivanmarty.rovecast               D  Initializing WorkManager with default configuration.
+2025-09-03 22:17:10.214  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getUnsafe()Lsun/misc/Unsafe; (greylist,core-platform-api, linking, allowed)
+2025-09-03 22:17:10.214  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J (greylist,core-platform-api, linking, allowed)
+2025-09-03 22:17:10.214  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-03 22:17:10.219  5729-5815  NetworkSecurityConfig   com.ivanmarty.rovecast               D  Using Network Security Config from resource network_security_config debugBuild: true
+2025-09-03 22:17:10.222  5729-5729  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-03 22:17:10.222  5729-5815  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-03 22:17:10.222  5729-5818  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-03 22:17:10.222  5729-5729  ConnectivityManager     com.ivanmarty.rovecast               I  requestNetwork and the calling app is: com.ivanmarty.rovecast
+2025-09-03 22:17:10.238  5729-5729  Ads                     com.ivanmarty.rovecast               I  Updating ad debug logging enablement.
+2025-09-03 22:17:10.302  5729-5729  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-03 22:17:10.303  5729-5729  ConnectivityManager     com.ivanmarty.rovecast               I  requestNetwork and the calling app is: com.ivanmarty.rovecast
+2025-09-03 22:17:10.306  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-03 22:17:10.321  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 14.500ms
+2025-09-03 22:17:10.354  5729-5844  GASS                    com.ivanmarty.rovecast               D  Clearcut logging disabled
+2025-09-03 22:17:10.367  5729-5838  Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-03 22:17:10.368  5729-5729  MediaRouter             com.ivanmarty.rovecast               V  Selecting route: RouteInfo{ name=Teléfono, description=null, status=null, category=RouteCategory{ name=Sistema types=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO  groupable=false }, supportedTypes=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO , presentationDisplay=null }
+2025-09-03 22:17:10.375  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-03 22:17:10.375  5729-5729  AxMediaRouter           com.ivanmarty.rovecast               I  Found default route: MediaRouter.RouteInfo{ uniqueId=DEFAULT_ROUTE, name=Teléfono, description=null, iconUri=null, enabled=true, isSystemRoute=true, connectionState=0, canDisconnect=false, playbackType=0, playbackStream=3, deviceType=0, volumeHandling=1, volume=13, volumeMax=15, presentationDisplayId=-1, extras=null, settingsIntent=null, providerPackageName=android }
+2025-09-03 22:17:10.375  5729-5729  AxMediaRouter           com.ivanmarty.rovecast               I  Unselecting the current route because it is no longer selectable: null
+2025-09-03 22:17:10.375  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-03 22:17:10.377  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-03 22:17:10.378  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-03 22:17:10.379  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-03 22:17:10.379  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, linking, allowed)
+2025-09-03 22:17:10.385  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->arrayBaseOffset(Ljava/lang/Class;)I (greylist,core-platform-api, linking, allowed)
+2025-09-03 22:17:10.386  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->arrayIndexScale(Ljava/lang/Class;)I (greylist, linking, allowed)
+2025-09-03 22:17:10.386  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->allocateInstance(Ljava/lang/Class;)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-03 22:17:10.386  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-03 22:17:10.386  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-03 22:17:10.387  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->peekLong(JZ)J (greylist, reflection, allowed)
+2025-09-03 22:17:10.387  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->pokeLong(JJZ)V (greylist, reflection, allowed)
+2025-09-03 22:17:10.387  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->pokeInt(JIZ)V (greylist, reflection, allowed)
+2025-09-03 22:17:10.387  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->peekInt(JZ)I (greylist, reflection, allowed)
+2025-09-03 22:17:10.387  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->pokeByte(JB)V (greylist, reflection, allowed)
+2025-09-03 22:17:10.387  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->peekByte(J)B (greylist, reflection, allowed)
+2025-09-03 22:17:10.387  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->pokeByteArray(J[BII)V (greylist, reflection, allowed)
+2025-09-03 22:17:10.387  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->peekByteArray(J[BII)V (greylist, reflection, allowed)
+2025-09-03 22:17:10.388  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->peekByte(J)B (greylist, linking, allowed)
+2025-09-03 22:17:10.388  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-03 22:17:10.388  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, reflection, allowed)
+2025-09-03 22:17:10.389  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden field Ljava/nio/Buffer;->address:J (greylist, reflection, allowed)
+2025-09-03 22:17:10.389  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, reflection, allowed)
+2025-09-03 22:17:10.389  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, reflection, allowed)
+2025-09-03 22:17:10.389  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, reflection, allowed)
+2025-09-03 22:17:10.389  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, reflection, allowed)
+2025-09-03 22:17:10.389  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, reflection, allowed)
+2025-09-03 22:17:10.389  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, reflection, allowed)
+2025-09-03 22:17:10.390  5729-5729  DynamiteModule          com.ivanmarty.rovecast               I  Considering local module com.google.android.gms.cast.framework.dynamite:0 and remote module com.google.android.gms.cast.framework.dynamite:253434000
+2025-09-03 22:17:10.390  5729-5729  DynamiteModule          com.ivanmarty.rovecast               I  Selected remote version of com.google.android.gms.cast.framework.dynamite, version >= 253434000
+2025-09-03 22:17:10.390  5729-5729  DynamiteModule          com.ivanmarty.rovecast               V  Dynamite loader version >= 2, using loadModule2NoCrashUtils
+2025-09-03 22:17:10.391  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-03 22:17:10.397  5729-5847  GASS                    com.ivanmarty.rovecast               D  Clearcut logging disabled
+2025-09-03 22:17:10.397  5729-5845  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-03 22:17:10.397  5729-5845  ConnectivityManager     com.ivanmarty.rovecast               I  requestNetwork and the calling app is: com.ivanmarty.rovecast
+2025-09-03 22:17:10.405  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-03 22:17:10.405  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-03 22:17:10.419  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-03 22:17:10.419  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-03 22:17:10.419  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-03 22:17:10.419  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, linking, allowed)
+2025-09-03 22:17:10.472  5729-5845  nmarty.rovecas          com.ivanmarty.rovecast               W  Failed execv(/system/bin/dex2oat --debuggable --instruction-set=arm64 --instruction-set-features=runtime --runtime-arg -Xhidden-api-policy:enabled --runtime-arg -Xrelocate --boot-image=/system/framework/boot.art --runtime-arg -Xms64m --runtime-arg -Xmx512m -j4 --instruction-set-variant=generic --instruction-set-features=default --generate-mini-debug-info --debuggable --generate-mini-debug-info --dex-file=/data/user/0/com.ivanmarty.rovecast/app_pccache/5/93C3DCFD0867095FE4406F170E27CC60B68F10CD/pcam.jar --output-vdex-fd=109 --oat-fd=110 --oat-location=/data/user/0/com.ivanmarty.rovecast/app_pccache/5/93C3DCFD0867095FE4406F170E27CC60B68F10CD/oat/arm64/pcam.odex --compiler-filter=verify --class-loader-context=& --compilation-reason=dynamic-load) because non-0 exit status
+2025-09-03 22:17:10.508  5729-5729  CastDynamiteModuleImpl  com.ivanmarty.rovecast               I  ui created by ClassLoader dalvik.system.DelegateLastClassLoader[DexPathList[[zip file "/data/user_de/0/com.google.android.gms/app_chimera/m/000001cc/DynamiteModulesC.uncompressed.apk"],nativeLibraryDirectories=[/data/user_de/0/com.google.android.gms/app_chimera/m/000001cc/DynamiteModulesC.uncompressed.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]].
+2025-09-03 22:17:10.520  5729-5729  AdWorker(Defaul         com.ivanmarty.rovecast               W  type=1400 audit(0.0:277199): avc: granted { execute } for pid=5729 path="/data/data/com.ivanmarty.rovecast/app_pccache/5/93C3DCFD0867095FE4406F170E27CC60B68F10CD/pcam.jar" dev="mmcblk0p71" ino=82642 scontext=u:r:untrusted_app:s0:c109,c258,c512,c768 tcontext=u:object_r:app_data_file:s0:c109,c258,c512,c768 tclass=file
+2025-09-03 22:17:10.534  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapInt(Ljava/lang/Object;JII)Z (greylist, linking, allowed)
+2025-09-03 22:17:10.534  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapLong(Ljava/lang/Object;JJJ)Z (greylist, linking, allowed)
+2025-09-03 22:17:10.534  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getIntVolatile(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-03 22:17:10.534  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObjectVolatile(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-03 22:17:10.534  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObjectVolatile(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-03 22:17:10.534  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden field Lsun/misc/Unsafe;->theUnsafe:Lsun/misc/Unsafe; (greylist, reflection, allowed)
+2025-09-03 22:17:10.543  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-03 22:17:10.543  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-03 22:17:10.547  5729-5838  WebViewFactory          com.ivanmarty.rovecast               I  Loading com.google.android.webview version 139.0.7258.158 (code 725815833)
+2025-09-03 22:17:10.551  5729-5838  ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.google.android.trichromelibrary_725815833-nlA9R800RZcuvXTQhGVjeA==/base.apk librarySearchPath: /data/app/com.google.android.webview-_VdoDrS4y4cgs3KQ-JsHKg==/lib/arm64:/data/app/com.google.android.webview-_VdoDrS4y4cgs3KQ-JsHKg==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.trichromelibrary_725815833-nlA9R800RZcuvXTQhGVjeA==/base.apk!/lib/arm64-v8a libraryPermittedPath:  parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 35 isBundled: false classLoaderName: null sharedLibraries: null
+2025-09-03 22:17:10.552  5729-5729  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-03 22:17:10.557  5729-5838  ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.google.android.webview-_VdoDrS4y4cgs3KQ-JsHKg==/base.apk librarySearchPath: /data/app/com.google.android.webview-_VdoDrS4y4cgs3KQ-JsHKg==/lib/arm64:/data/app/com.google.android.webview-_VdoDrS4y4cgs3KQ-JsHKg==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.trichromelibrary_725815833-nlA9R800RZcuvXTQhGVjeA==/base.apk!/lib/arm64-v8a libraryPermittedPath:  parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 35 isBundled: false classLoaderName: null sharedLibraries: [dalvik.system.PathClassLoader[DexPathList[[zip file "/data/app/com.google.android.trichromelibrary_725815833-nlA9R800RZcuvXTQhGVjeA==/base.apk"],nativeLibraryDirectories=[/data/app/com.google.android.webview-_VdoDrS4y4cgs3KQ-JsHKg==/lib/arm64, /data/app/com.google.android.webview-_VdoDrS4y4cgs3KQ-JsHKg==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.trichromelibrary_725815833-nlA9R800RZcuvXTQhGVjeA==/base.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]]]
+2025-09-03 22:17:10.559  5729-5729  HwTypeface              com.ivanmarty.rovecast               I  updateFont: scale=1.04
+2025-09-03 22:17:10.560  5729-5729  SystemFonts             com.ivanmarty.rovecast               D  areFontsVariable: script=Latn
+2025-09-03 22:17:10.561  5729-5729  ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded preloadStatus 3
+2025-09-03 22:17:10.562  5729-5729  ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded end preloadStatus 3
+2025-09-03 22:17:10.562  5729-5729  RmeSchedManager         com.ivanmarty.rovecast               I  init Rme, version is: v1.0
+2025-09-03 22:17:10.563  5729-5729  RtgSchedEvent           com.ivanmarty.rovecast               I  current pid:5729 AppType:-1
+2025-09-03 22:17:10.562  5729-5729  RmeSchedManager         com.ivanmarty.rovecast               I  init Rme, version is: v1.0
+2025-09-03 22:17:10.564  5729-5838  linker                  com.ivanmarty.rovecast               W  Warning: "/data/app/com.google.android.trichromelibrary_725815833-nlA9R800RZcuvXTQhGVjeA==/base.apk!/lib/arm64-v8a/libmonochrome_64.so" unused DT entry: unknown processor-specific (type 0x70000001 arg 0x0) (ignoring)
+2025-09-03 22:17:10.574  5729-5854  OpenGLRenderer          com.ivanmarty.rovecast               I  RenderThread: progress name = [com.ivanmarty.rovecast], viewCornerType = 0
+2025-09-03 22:17:10.575  5729-5856  iGraphics               com.ivanmarty.rovecast               I  [0020080c] pn: com.ivanmarty.rovecast, p: 5729
+2025-09-03 22:17:10.575  5729-5856  iGraphics               com.ivanmarty.rovecast               I  [0030080c] no spt app: com.ivanmarty.rovecast
+2025-09-03 22:17:10.603  5729-5838  cr_WVCFactoryProvider   com.ivanmarty.rovecast               I  version=139.0.7258.158 (725815833) minSdkVersion=29 multiprocess=true packageId=3 splits=<none>
+2025-09-03 22:17:10.614  5729-5861  chromium                com.ivanmarty.rovecast               E  [0903/221710.614038:ERROR:android_webview/browser/variations/variations_seed_loader.cc:39] Seed missing signature.
+2025-09-03 22:17:10.623  5729-5838  cr_LibraryLoader        com.ivanmarty.rovecast               I  Successfully loaded native library
+2025-09-03 22:17:10.625  5729-5838  cr_CachingUmaRecorder   com.ivanmarty.rovecast               I  Flushed 7 samples from 7 histograms, 0 samples were dropped.
+2025-09-03 22:17:10.653  5729-5865  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-03 22:17:10.653  5729-5865  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-03 22:17:10.657  5729-5729  AppCompatDelegate       com.ivanmarty.rovecast               D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
+2025-09-03 22:17:10.669  5729-5729  ActivityThread          com.ivanmarty.rovecast               V  callActivityOnCreate
+2025-09-03 22:17:10.673  5729-5844  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-03 22:17:10.676  5729-5844  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-03 22:17:10.702  5729-5837  AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-03 22:17:10.704  5729-5837  AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-03 22:17:10.708  5729-5837  AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-03 22:17:10.709  5729-5837  AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 13
+2025-09-03 22:17:10.710  5729-5837  AudioManager            com.ivanmarty.rovecast               V  getStreamMaxVolume  treamType: 3
+2025-09-03 22:17:10.711  5729-5837  AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-03 22:17:10.720  5729-5865  Ads                     com.ivanmarty.rovecast               W  Invoke Firebase method getInstance error.
+2025-09-03 22:17:10.720  5729-5865  Ads                     com.ivanmarty.rovecast               W  The Google Mobile Ads SDK will not integrate with Firebase. Admob/Firebase integration requires the latest Firebase SDK jar, but Firebase SDK is either missing or out of date
+2025-09-03 22:17:10.722  5729-5729  DecorView[]             com.ivanmarty.rovecast               I  pkgName:com.ivanmarty.rovecast old windowMode:0 new windoMode:1, isFixedSize:false
+2025-09-03 22:17:10.759  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (greylist, reflection, allowed)
+2025-09-03 22:17:10.979  5729-5874  UserMessagingPlatform   com.ivanmarty.rovecast               I  Use new ConsentDebugSettings.Builder().addTestDeviceHashedId("AFC033BBEAF477A33219CE7057D05B14") to set this as a debug device.
+2025-09-03 22:17:10.981  5729-5874  UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: GppMetadata
+2025-09-03 22:17:10.981  5729-5874  UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: IDFA_freqCapNumViews
+2025-09-03 22:17:10.981  5729-5874  UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: UMP_CoMoAdStoragePurposeConsentStatus
+2025-09-03 22:17:10.981  5729-5874  UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: UMP_CoMoAnalyticsStoragePurposeConsentStatus
+2025-09-03 22:17:10.981  5729-5874  UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: IABTCF_TCString
+2025-09-03 22:17:10.981  5729-5874  UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: UMP_CoMoAdPersonalizationPurposeConsentStatus
+2025-09-03 22:17:10.981  5729-5874  UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: UMP_CoMoAdUserDataPurposeConsentStatus
+2025-09-03 22:17:10.981  5729-5874  UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: IABTCF_AddtlConsent
+2025-09-03 22:17:10.981  5729-5874  UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: IABTCF_idfaFlowControl
+2025-09-03 22:17:10.982  5729-5874  UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: IABGPP_HDR_GppString
+2025-09-03 22:17:10.982  5729-5874  UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: IABGPP_GppSID
+2025-09-03 22:17:10.982  5729-5874  UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: UMP_CoMoManagedByUmpSdk
+2025-09-03 22:17:11.014  5729-5729  ActivityThread          com.ivanmarty.rovecast               D  add activity client record, r= ActivityRecord{f58960a token=android.os.BinderProxy@52af7e9 {com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity}} token= android.os.BinderProxy@52af7e9
+2025-09-03 22:17:11.020  5729-5729  AppVisibilityProxy      com.ivanmarty.rovecast               I  onAppEnteredForeground
+2025-09-03 22:17:11.067  5729-5729  OverScroll...timization com.ivanmarty.rovecast               I  start init SmartSlideOverScroller and get the overscroller config
+2025-09-03 22:17:11.067  5729-5729  OverScroll...timization com.ivanmarty.rovecast               I  get the overscroller config
+2025-09-03 22:17:11.166  5729-5838  Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-03 22:17:11.182  5729-5827  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-03 22:17:11.190  5729-5838  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-03 22:17:11.190  5729-5831  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-03 22:17:11.190  5729-5838  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-03 22:17:11.200  5729-5828  AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-03 22:17:11.201  5729-5828  AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-03 22:17:11.201  5729-5844  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-03 22:17:11.202  5729-5844  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-03 22:17:11.202  5729-5828  AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-03 22:17:11.203  5729-5828  AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 13
+2025-09-03 22:17:11.203  5729-5828  AudioManager            com.ivanmarty.rovecast               V  getStreamMaxVolume  treamType: 3
+2025-09-03 22:17:11.204  5729-5828  AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-03 22:17:11.334  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-03 22:17:11.338  5729-5729  MediaController         com.ivanmarty.rovecast               I  Init e02f905 [AndroidXMedia3/1.8.0] [HWMAR, MAR-LX3A, HUAWEI, 29]
+2025-09-03 22:17:11.407  5729-5729  MouseWheelSynthesizer   com.ivanmarty.rovecast               D  mMoveStepInDp: 64, mMoveStepInPixel: 192, mUpTimeDelayed: 100
+2025-09-03 22:17:11.407  5729-5838  Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-03 22:17:11.409  5729-5729  ViewRootImpl            com.ivanmarty.rovecast               D  ViewRootImpl mIsInProductivePCDisplay: false
+2025-09-03 22:17:11.410  5729-5729  HwPartPowe...iceFactory com.ivanmarty.rovecast               I  add HwPartPowerOfficeFactoryImpl to memory.
+2025-09-03 22:17:11.413  5729-5867  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-03 22:17:11.417  5729-5729  DecorView[]             com.ivanmarty.rovecast               I  pkgName:com.ivanmarty.rovecast old windowMode:1 new windoMode:1, isFixedSize:false
+2025-09-03 22:17:11.422  5729-5845  AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-03 22:17:11.423  5729-5845  AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-03 22:17:11.423  5729-5729  InputEventReceiver      com.ivanmarty.rovecast               D  dispatchInputInterval 1000000
+2025-09-03 22:17:11.423  5729-5845  AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-03 22:17:11.425  5729-5845  AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 13
+2025-09-03 22:17:11.425  5729-5845  AudioManager            com.ivanmarty.rovecast               V  getStreamMaxVolume  treamType: 3
+2025-09-03 22:17:11.426  5729-5729  RmeSchedManager         com.ivanmarty.rovecast               I  init Rme, version is: v1.0
+2025-09-03 22:17:11.426  5729-5845  AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-03 22:17:11.426  5729-5729  RtgSchedEvent           com.ivanmarty.rovecast               I  current pid:5729 AppType:-1
+2025-09-03 22:17:11.426  5729-5729  DisplayEventDispatcher  com.ivanmarty.rovecast               W  dispatcher 0x7553e25360 ~ ignoring unknown event type 0x736f6674
+2025-09-03 22:17:11.427  2291-2451  DollieAdapterService    com.huawei.systemserver              E  notifyActivityState pkg:com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity state:2 fg:true mUid:10621
+2025-09-03 22:17:11.428  5729-5729  Choreographer           com.ivanmarty.rovecast               I  Skipped 84 frames!  The application may be doing too much work on its main thread.
+2025-09-03 22:17:11.430  5729-5838  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-03 22:17:11.439  5729-5888  HiTouch_HiTouchSensor   com.ivanmarty.rovecast               W  depended package hiTouch does n't exist!
+2025-09-03 22:17:11.439  5729-5888  HiTouch_HiTouchSensor   com.ivanmarty.rovecast               I  HiTouch restricted: system app HiTouch don't exist.
+2025-09-03 22:17:11.439  5729-5888  HiTouch_Pr...reDetector com.ivanmarty.rovecast               D  onAttached, package=com.ivanmarty.rovecast, windowType=1, mIsHiTouchRestricted=true
+2025-09-03 22:17:11.455  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Landroid/view/View;->getViewRootImpl()Landroid/view/ViewRootImpl; (greylist, reflection, allowed)
+2025-09-03 22:17:11.455  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden field Landroid/view/View$AttachInfo;->mVisibleInsets:Landroid/graphics/Rect; (greylist, reflection, allowed)
+2025-09-03 22:17:11.455  5729-5729  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden field Landroid/view/ViewRootImpl;->mAttachInfo:Landroid/view/View$AttachInfo; (greylist, reflection, allowed)
+2025-09-03 22:17:11.513  5729-5854  mali_winsys             com.ivanmarty.rovecast               D  EGLint new_window_surface(egl_winsys_display *, void *, EGLSurface, EGLConfig, egl_winsys_surface **, EGLBoolean) returns 0x3000
+2025-09-03 22:17:11.564  5729-5854  Gralloc3                com.ivanmarty.rovecast               W  mapper 3.x is not supported
+2025-09-03 22:17:11.746  5729-5821  Ads                     com.ivanmarty.rovecast               W  Update ad debug logging enablement as false
+2025-09-03 22:17:11.767  5729-5729  cr_CombinedPProvider    com.ivanmarty.rovecast               I  #registerProvider() provider:WV.t9@be116c4 isPolicyCacheEnabled:false policyProvidersSize:0
+2025-09-03 22:17:11.769  5729-5729  cr_PolicyProvider       com.ivanmarty.rovecast               I  #setManagerAndSource() 0
+2025-09-03 22:17:11.799  5729-5729  cr_CombinedPProvider    com.ivanmarty.rovecast               I  #linkNativeInternal() 1
+2025-09-03 22:17:11.800  5729-5729  cr_AppResProvider       com.ivanmarty.rovecast               I  #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
+2025-09-03 22:17:11.800  5729-5729  cr_PolicyProvider       com.ivanmarty.rovecast               I  #notifySettingsAvailable() 0
+2025-09-03 22:17:11.800  5729-5729  cr_CombinedPProvider    com.ivanmarty.rovecast               I  #onSettingsAvailable() 0
+2025-09-03 22:17:11.800  5729-5729  cr_CombinedPProvider    com.ivanmarty.rovecast               I  #flushPolicies()
+2025-09-03 22:17:11.847  1634-1741  WindowManager           system_server                        E  win=Window{7d4701c u0 Splash Screen com.ivanmarty.rovecast EXITING} destroySurfaces: appStopped=false win.mWindowRemovalAllowed=true win.mRemoveOnExit=true
+2025-09-03 22:17:11.858  5729-5729  chromium                com.ivanmarty.rovecast               W  [WARNING:android_webview/browser/network_service/net_helpers.cc:143] HTTP Cache size is: 20971520
+2025-09-03 22:17:11.881  5729-5880  AndroidRuntime          com.ivanmarty.rovecast               E  FATAL EXCEPTION: arch_disk_io_0 (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.rovecast, PID: 5729
+                                                                                                    java.lang.IllegalStateException: Room cannot verify the data integrity. Looks like you've changed schema but forgot to update the version number. You can simply fix this by increasing the version number. Expected identity hash: d09c5277157823e26cb4dfd834bab6fa, found: 2a0d3d8d354de15cfcabe6f7820e6d71
+                                                                                                    	at androidx.room.BaseRoomConnectionManager.checkIdentity(RoomConnectionManager.kt:288)
+                                                                                                    	at androidx.room.BaseRoomConnectionManager.onOpen(RoomConnectionManager.kt:267)
+                                                                                                    	at androidx.room.RoomConnectionManager$SupportOpenHelperCallback.onOpen(RoomConnectionManager.android.kt:164)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.onOpen(FrameworkSQLiteOpenHelper.android.kt:279)
+                                                                                                    	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:447)
+                                                                                                    	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:332)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getWritableOrReadableDatabase(FrameworkSQLiteOpenHelper.android.kt:224)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.innerGetDatabase(FrameworkSQLiteOpenHelper.android.kt:180)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getSupportDatabase(FrameworkSQLiteOpenHelper.android.kt:141)
+                                                                                                    	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper.getWritableDatabase(FrameworkSQLiteOpenHelper.android.kt:96)
+                                                                                                    	at androidx.room.driver.SupportSQLiteDriver.open(SupportSQLiteDriver.android.kt:26)
+                                                                                                    	at androidx.room.driver.SupportSQLiteConnectionPool.getSupportConnection(SupportSQLiteConnectionPool.android.kt:35)
+                                                                                                    	at androidx.room.driver.SupportSQLiteConnectionPool.useConnection(SupportSQLiteConnectionPool.android.kt:42)
+                                                                                                    	at androidx.room.RoomConnectionManager.useConnection(RoomConnectionManager.android.kt:126)
+                                                                                                    	at androidx.room.RoomDatabase.useConnection$room_runtime_release(RoomDatabase.android.kt:593)
+                                                                                                    	at androidx.room.TriggerBasedInvalidationTracker.syncTriggers$room_runtime_release(InvalidationTracker.kt:300)
+                                                                                                    	at androidx.room.InvalidationTracker$addObserver$1.invokeSuspend(InvalidationTracker.android.kt:253)
+                                                                                                    	at androidx.room.InvalidationTracker$addObserver$1.invoke(Unknown Source:8)
+                                                                                                    	at androidx.room.InvalidationTracker$addObserver$1.invoke(Unknown Source:4)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invokeSuspend(RunBlockingUninterruptible.android.kt:52)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invoke(Unknown Source:8)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1$1.invoke(Unknown Source:4)
+                                                                                                    	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:44)
+                                                                                                    	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:112)
+                                                                                                    	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:126)
+                                                                                                    	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:56)
+                                                                                                    	at kotlinx.coroutines.BuildersKt.launch(Unknown Source:1)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt$runBlockingUninterruptible$1.invokeSuspend(RunBlockingUninterruptible.android.kt:51)
+                                                                                                    	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+                                                                                                    	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+                                                                                                    	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:280)
+                                                                                                    	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:85)
+                                                                                                    	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:59)
+                                                                                                    	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+                                                                                                    	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38)
+                                                                                                    	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+                                                                                                    	at androidx.room.coroutines.RunBlockingUninterruptible_androidKt.runBlockingUninterruptible(RunBlockingUninterruptible.android.kt:45)
+2025-09-03 22:17:11.881  5729-5880  AndroidRuntime          com.ivanmarty.rovecast               E  	at androidx.room.InvalidationTracker.addObserver(InvalidationTracker.android.kt:253) (Ask Gemini)
+                                                                                                    	at androidx.room.InvalidationTracker.addWeakObserver(InvalidationTracker.android.kt:295)
+                                                                                                    	at androidx.room.RoomTrackingLiveData.refresh(RoomTrackingLiveData.android.kt:69)
+                                                                                                    	at androidx.room.RoomTrackingLiveData.access$refresh(RoomTrackingLiveData.android.kt:40)
+                                                                                                    	at androidx.room.RoomTrackingLiveData$onActive$1.invokeSuspend(RoomTrackingLiveData.android.kt:123)
+                                                                                                    	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+                                                                                                    	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+                                                                                                    	at java.lang.Thread.run(Thread.java:929)
+                                                                                                    	Suppressed: kotlinx.coroutines.internal.DiagnosticCoroutineContextException: [StandaloneCoroutine{Cancelling}@ce221c1, androidx.arch.core.executor.ArchTaskExecutor$$ExternalSyntheticLambda1@ed75d66]
+2025-09-03 22:17:11.937  5729-5880  Process                 com.ivanmarty.rovecast               I  Sending signal. PID: 5729 SIG: 9
+2025-09-03 22:17:11.993  1634-1924  InputDispatcher         system_server                        E  channel '59c1bd2 com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity (server)' ~ Channel is unrecoverably broken and will be disposed!
+---------------------------- PROCESS ENDED (5729) for package com.ivanmarty.rovecast ----------------------------
+2025-09-03 22:17:12.022  1634-1838  WindowManager           system_server                        E  win=Window{59c1bd2 u0 com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity EXITING} destroySurfaces: appStopped=false win.mWindowRemovalAllowed=true win.mRemoveOnExit=true
+2025-09-03 22:17:12.082  2291-2451  DollieAdapterService    com.huawei.systemserver              E  notifyActivityState pkg:com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity state:20 fg:false mUid:10621

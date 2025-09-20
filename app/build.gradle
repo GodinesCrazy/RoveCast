@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.application' version '8.9.0'
 }
 
 android {
@@ -10,9 +10,26 @@ android {
         applicationId "com.ivanmarty.rovecast"
         minSdk 24
         targetSdk 35
-        versionCode 8
-        versionName "1.1.2"
+        versionCode 19
+        versionName "1.2.9"
         vectorDrawables.useSupportLibrary true
+    }
+
+    signingConfigs {
+        // Configuración de firma mediante propiedades del proyecto o gradle.properties
+        // Define en gradle.properties (global o del proyecto):
+        // RELEASE_STORE_FILE=/ruta/keystore.jks
+        // RELEASE_STORE_PASSWORD=***
+        // RELEASE_KEY_ALIAS=***
+        // RELEASE_KEY_PASSWORD=***
+        release {
+            if (project.hasProperty('RELEASE_STORE_FILE')) {
+                storeFile file(project.property('RELEASE_STORE_FILE'))
+                storePassword project.findProperty('RELEASE_STORE_PASSWORD') ?: ''
+                keyAlias project.findProperty('RELEASE_KEY_ALIAS') ?: ''
+                keyPassword project.findProperty('RELEASE_KEY_PASSWORD') ?: ''
+            }
+        }
     }
 
     buildTypes {
@@ -20,6 +37,9 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (project.hasProperty('RELEASE_STORE_FILE')) {
+                signingConfig signingConfigs.release
+            }
         }
         debug { minifyEnabled false }
     }
@@ -37,10 +57,10 @@ android {
 dependencies {
     // Tema (Material Components M2) + AppCompat (NECESARIOS para Theme.MaterialComponents)
     implementation "com.google.android.material:material:1.12.0"
-    implementation "androidx.appcompat:appcompat:1.7.0"
+    implementation "androidx.appcompat:appcompat:1.7.1"
 
     // Media3
-    def media3 = "1.3.1"
+    def media3 = "1.8.0"
     implementation "androidx.media3:media3-exoplayer:$media3"
     implementation "androidx.media3:media3-ui:$media3"
     implementation "androidx.media3:media3-session:$media3"
@@ -51,13 +71,13 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:4.12.0"
 
     // Room
-    def room = "2.6.1"
+    def room = "2.7.2"
     implementation "androidx.room:room-runtime:$room"
     annotationProcessor "androidx.room:room-compiler:$room"
 
     // Lifecycle + UI
-    implementation "androidx.lifecycle:lifecycle-viewmodel:2.8.4"
-    implementation "androidx.lifecycle:lifecycle-livedata:2.8.4"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.9.1"
+    implementation "androidx.lifecycle:lifecycle-livedata:2.9.1"
     implementation "androidx.recyclerview:recyclerview:1.3.2"
     implementation "androidx.constraintlayout:constraintlayout:2.1.4"
     implementation "androidx.cardview:cardview:1.0.0"
@@ -70,13 +90,13 @@ dependencies {
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
 
     // Ads + UMP + Review
-    implementation "com.google.android.gms:play-services-ads:23.3.0"
-    implementation "com.google.android.ump:user-messaging-platform:2.2.0"
+    implementation "com.google.android.gms:play-services-ads:24.5.0"
+    implementation "com.google.android.ump:user-messaging-platform:3.1.0"
     implementation "com.google.android.play:review:2.0.1"
 
     // Cast
-    implementation "com.google.android.gms:play-services-cast-framework:21.4.0"
-    implementation "androidx.mediarouter:mediarouter:1.6.0"
+    implementation "com.google.android.gms:play-services-cast-framework:22.1.0"
+    implementation "androidx.mediarouter:mediarouter:1.8.1"
 
     // Billing
     implementation "com.android.billingclient:billing:8.0.0"

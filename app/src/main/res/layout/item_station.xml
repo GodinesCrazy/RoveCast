@@ -58,6 +58,7 @@
             android:layout_height="40dp"
             android:background="@android:color/transparent"
             android:contentDescription="@null"
-            android:src="@drawable/ic_heart"/>
+            android:src="@drawable/fav_icon_selector"
+            app:tint="@color/fav_tint_selector"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

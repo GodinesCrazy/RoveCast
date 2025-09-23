@@ -2,18 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/menu_alarm"
-        android:title="@string/menu_alarm"
-        android:icon="@drawable/ic_alarm"
-        app:showAsAction="always"/>
-
-    <item
-        android:id="@+id/menu_premium"
-        android:title=""
-        android:icon="@drawable/ic_crown"
-        app:showAsAction="always"/>
-
-    <item
         android:id="@+id/menu_privacy"
         android:title="@string/menu_privacy_policy"
         app:showAsAction="never"/>

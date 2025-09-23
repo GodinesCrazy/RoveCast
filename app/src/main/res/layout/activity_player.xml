@@ -247,8 +247,8 @@
 
         <androidx.mediarouter.app.MediaRouteButton
             android:id="@+id/btnDevices"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_weight="1"
             android:theme="@style/CastMediaRouteButton.RoveCast"
             android:contentDescription="@string/desc_devices" />
@@ -271,6 +271,16 @@
             android:src="@drawable/ic_heart_outline"
             app:tint="@color/fav_tint_selector"
             android:contentDescription="Agregar a favoritos"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnAlarm"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_alarm"
+            app:tint="@color/control_button_tint_spotify"
+            android:contentDescription="@string/menu_alarm"
             android:layout_weight="1" />
 
         <ImageButton

@@ -403,35 +403,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_top, menu);
-        menu.findItem(R.id.menu_premium).setVisible(!PremiumManager.isPremium(this));
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int itemId = item.getItemId();
-        if (itemId == R.id.menu_premium) {
-            if (billing == null) {
-                billing = new BillingManager(this, new BillingManager.Listener() {
-                    @Override public void onPremiumActivated() {
-                        Toast.makeText(MainActivity.this, "Premium activado", Toast.LENGTH_SHORT).show();
-                        invalidateOptionsMenu();
-                    }
-                    @Override public void onError(String msg) {
-                        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_LONG).show();
-                    }
-                });
-                billing.start();
-            }
-            top.postDelayed(() -> billing.launchPurchase(), 400);
-            return true;
-        } else if (itemId == R.id.menu_alarm) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragmentContainer, new AlarmFragment())
-                    .addToBackStack(null)
-                    .commit();
-            return true;
-        } else if (itemId == R.id.menu_privacy) {
+        if (itemId == R.id.menu_privacy) {
             Intent intent = new Intent(this, PrivacyPolicyActivity.class);
             startActivity(intent);
             return true;

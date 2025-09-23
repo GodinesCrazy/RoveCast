@@ -38,6 +38,7 @@ import com.ivanmarty.rovecast.data.FavoriteRepository;
 import com.ivanmarty.rovecast.data.SleepTimerPreset;
 import com.ivanmarty.rovecast.data.SleepTimerPresetRepository;
 import com.ivanmarty.rovecast.model.Station;
+import com.ivanmarty.rovecast.ui.alarm.AlarmFragment;
 import com.ivanmarty.rovecast.player.PlaybackService;
 import com.ivanmarty.rovecast.player.SleepTimerManager;
 import com.ivanmarty.rovecast.ui.adapter.SleepTimerPresetAdapter;
@@ -58,7 +59,7 @@ public class PlayerActivity extends AppCompatActivity {
     private ProgressBar bufferingProgress;
     private TextView tvTitle, tvMeta;
     private ImageButton btnPlayPause, btnNext, btnPrevious, btnShuffle, btnRepeat;
-    private ImageButton btnShare, btnFavorite, btnSleepTimer;
+    private ImageButton btnShare, btnFavorite, btnSleepTimer, btnAlarm;
     private FavoriteRepository favoriteRepository;
     private SleepTimerPresetRepository sleepTimerPresetRepository;
     private boolean isFavorite;
@@ -104,6 +105,7 @@ public class PlayerActivity extends AppCompatActivity {
         CastButtonFactory.setUpMediaRouteButton(getApplicationContext(), btnDevices);
         btnShare = findViewById(R.id.btnShare);
         btnFavorite = findViewById(R.id.btnFavorite);
+        btnAlarm = findViewById(R.id.btnAlarm);
         btnSleepTimer = findViewById(R.id.btnSleepTimer);
     }
 
@@ -130,9 +132,22 @@ public class PlayerActivity extends AppCompatActivity {
             controller.setRepeatMode(nextMode);
         });
 
-        btnFavorite.setOnClickListener(v -> toggleFavorite());
+        btnFavorite.setOnClickListener(v -> {
+            toggleFavorite();
+            updateButtonStates(); // Actualizar estados después del cambio
+        });
 
-        btnSleepTimer.setOnClickListener(v -> showTimerDialog());
+        btnAlarm.setOnClickListener(v -> {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(android.R.id.content, new AlarmFragment())
+                    .addToBackStack(null)
+                    .commit();
+        });
+
+        btnSleepTimer.setOnClickListener(v -> {
+            showTimerDialog();
+            updateButtonStates(); // Actualizar estados después del cambio
+        });
 
         btnShare.setOnClickListener(v -> {
             if (currentStation != null) {
@@ -140,7 +155,7 @@ public class PlayerActivity extends AppCompatActivity {
                 shareIntent.setType("text/plain");
                 // SOLUCIÓN: Usar concatenación de String simple, es más legible.
                 String shareText = "Listening to " + currentStation.name + " on RoveCast! \n\n" +
-                                 "Download the app and tune in: https://play.google.com/store/apps/details?id=com.ivanmarty.rovecast";
+                        "Download the app and tune in: https://play.google.com/store/apps/details?id=com.ivanmarty.rovecast";
                 shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Listen to " + currentStation.name + " on RoveCast");
                 shareIntent.putExtra(Intent.EXTRA_TEXT, shareText);
                 startActivity(Intent.createChooser(shareIntent, "Share via"));
@@ -189,6 +204,7 @@ public class PlayerActivity extends AppCompatActivity {
                 }
                 setupClickListeners(); // Setup listeners once controller is available
                 initializeUIWithController(controller);
+                updateButtonStates(); // Actualizar estados de botones al iniciar
             } catch (Exception e) {
                 Log.e("PlayerActivity", "Error connecting to player", e);
             }
@@ -205,6 +221,7 @@ public class PlayerActivity extends AppCompatActivity {
             public void onEvents(@NonNull Player player, @NonNull Player.Events events) {
                 // This single callback updates the UI on any relevant change.
                 updateUI();
+                updateButtonStates(); // Actualizar estados en cada cambio
             }
         };
         mediaController.addListener(playerListener);
@@ -249,13 +266,13 @@ public class PlayerActivity extends AppCompatActivity {
         }
 
         updateFavoriteButton(mediaItem.mediaId);
-        
+
         // Integración con CastManager: enviar información actual al dispositivo Cast si está conectado
         try {
             String url = getUrlFromMediaItem(mediaItem);
             String title = metadata.title != null ? metadata.title.toString() : "Radio Station";
             String image = metadata.artworkUri != null ? metadata.artworkUri.toString() : null;
-            
+
             CastManager.get().setCurrentMedia(url, title, image);
         } catch (Exception e) {
             Log.e("PlayerActivity", "Error updating Cast information", e);
@@ -269,7 +286,7 @@ public class PlayerActivity extends AppCompatActivity {
         int favoriteColor = isFavorite ? getColor(R.color.accent) : getColor(R.color.textSecondary);
         btnFavorite.setColorFilter(favoriteColor);
     }
-    
+
     private String getUrlFromMediaItem(MediaItem mediaItem) {
         if (mediaItem.localConfiguration != null) {
             return mediaItem.localConfiguration.uri.toString();
@@ -376,10 +393,12 @@ public class PlayerActivity extends AppCompatActivity {
                     if (timerManager.isTimerRunning()) {
                         timerManager.cancelTimer();
                         Toast.makeText(this, "Temporizador cancelado", Toast.LENGTH_SHORT).show();
+                        updateButtonStates(); // Actualizar estado después de cancelar
                     } else {
                         long minutes = Long.parseLong(items[item].toString());
                         startSleepTimer(minutes);
                         Toast.makeText(this, "RoveCast se detendrá en " + minutes + " minutos", Toast.LENGTH_SHORT).show();
+                        updateButtonStates(); // Actualizar estado después de iniciar
                     }
                 })
                 .show();
@@ -398,6 +417,7 @@ public class PlayerActivity extends AppCompatActivity {
             public void onPresetClick(SleepTimerPreset preset) {
                 startSleepTimer(preset.durationMinutes);
                 Toast.makeText(PlayerActivity.this, "RoveCast se detendrá en " + preset.durationMinutes + " minutos", Toast.LENGTH_SHORT).show();
+                updateButtonStates(); // Actualizar estado después de iniciar timer
             }
 
             @Override
@@ -467,5 +487,46 @@ public class PlayerActivity extends AppCompatActivity {
 
     private void startSleepTimer(long minutes) {
         SleepTimerManager.getInstance().startTimer(minutes, controller != null ? controller::pause : null);
+    }
+
+    // ===== NUEVOS MÉTODOS PARA ESTADOS ACTIVOS DE ICONOS =====
+
+    // Método para actualizar estados visuales de los iconos
+    private void updateButtonStates() {
+        updateFavoriteButtonState();
+        updateAlarmButtonState();
+        updateSleepTimerButtonState();
+    }
+
+    private void updateFavoriteButtonState() {
+        if (currentStation != null) {
+            boolean isFav = favoriteRepository.isFavoriteNow(currentStation.stationuuid);
+            btnFavorite.setActivated(isFav);
+            btnFavorite.setSelected(isFav);
+            // Cambiar icono según estado
+            if (isFav) {
+                btnFavorite.setImageResource(R.drawable.ic_heart);
+            } else {
+                btnFavorite.setImageResource(R.drawable.ic_heart_outline);
+            }
+        }
+    }
+
+    private void updateAlarmButtonState() {
+        // Verificar si hay alarmas activas
+        boolean hasActiveAlarms = checkIfAlarmsActive();
+        btnAlarm.setActivated(hasActiveAlarms);
+    }
+
+    private void updateSleepTimerButtonState() {
+        // Verificar si sleep timer está activo
+        boolean isTimerActive = SleepTimerManager.getInstance().isTimerRunning();
+        btnSleepTimer.setActivated(isTimerActive);
+    }
+
+    private boolean checkIfAlarmsActive() {
+        // TODO: Implementar verificación de alarmas activas
+        // Por ahora retorna false, se puede mejorar consultando la base de datos de alarmas
+        return false;
     }
 }

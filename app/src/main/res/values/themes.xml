@@ -26,7 +26,8 @@
     <!-- Tema para la Toolbar, para forzar el tinte de los iconos -->
     <style name="Toolbar.RoveCast" parent="">
         <item name="iconTint">@color/on_dark</item>
-        <item name="android:textColorSecondary">@color/on_dark_60</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="colorControlNormal">@android:color/white</item>
         <item name="mediaRouteTheme">@style/CastMediaRouteButton.RoveCast</item>
     </style>
 
@@ -39,6 +40,9 @@
     <!-- Estilo para el botón de Cast -->
     <style name="CastMediaRouteButton.RoveCast" parent="Widget.MediaRouter.MediaRouteButton">
         <item name="mediaRouteButtonTint">@color/cast_button_selector</item>
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="colorOnSurface">@android:color/white</item>
     </style>
 
     

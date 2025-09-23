@@ -70,7 +70,7 @@
             android:fontFamily="sans-serif-medium"
             android:contentDescription="@string/cd_mini_player_title"
             app:layout_constraintBottom_toTopOf="@+id/miniPlayerStatus"
-            app:layout_constraintEnd_toStartOf="@+id/miniPlayerFavorite"
+            app:layout_constraintEnd_toStartOf="@+id/miniPlayerCast"
             app:layout_constraintStart_toEndOf="@+id/miniPlayerLogo"
             app:layout_constraintTop_toBottomOf="@+id/miniPlayerProgress"
             app:layout_constraintVertical_chainStyle="packed"
@@ -92,6 +92,18 @@
             app:layout_constraintStart_toStartOf="@+id/miniPlayerTitle"
             app:layout_constraintTop_toBottomOf="@+id/miniPlayerTitle"
             tools:text="@string/mini_player_status_live" />
+
+        <!-- Cast Button (estilo Spotify) -->
+        <androidx.mediarouter.app.MediaRouteButton
+            android:id="@+id/miniPlayerCast"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="8dp"
+            android:theme="@style/CastMediaRouteButton.RoveCast"
+            android:contentDescription="@string/cd_mini_player_cast"
+            app:layout_constraintBottom_toBottomOf="@+id/miniPlayerLogo"
+            app:layout_constraintEnd_toStartOf="@+id/miniPlayerFavorite"
+            app:layout_constraintTop_toTopOf="@+id/miniPlayerLogo" />
 
         <!-- Heart/Favorite Button (estilo Spotify) -->
         <ImageButton

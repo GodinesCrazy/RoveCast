@@ -43,6 +43,8 @@
         android:id="@+id/playerTopBar"
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
+        android:theme="@style/Toolbar.RoveCast"
+        app:popupTheme="@style/ThemeOverlay.RoveCast.Popup"
         app:title=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -248,6 +250,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:theme="@style/CastMediaRouteButton.RoveCast"
             android:contentDescription="@string/desc_devices" />
 
         <ImageButton

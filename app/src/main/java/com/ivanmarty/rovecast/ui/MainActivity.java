@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton miniPlayerFavorite;
     private ImageButton miniPlayerPlayPause;
     private ProgressBar miniPlayerProgress;
+    private androidx.mediarouter.app.MediaRouteButton miniPlayerCast;
 
     private MediaItem currentMediaItem;
 
@@ -156,6 +157,12 @@ public class MainActivity extends AppCompatActivity {
         miniPlayerFavorite = findViewById(R.id.miniPlayerFavorite);
         miniPlayerPlayPause = findViewById(R.id.miniPlayerPlayPause);
         miniPlayerProgress = findViewById(R.id.miniPlayerProgress);
+        miniPlayerCast = findViewById(R.id.miniPlayerCast);
+        
+        // Configurar el botón Cast del mini-player
+        try {
+            com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(getApplicationContext(), miniPlayerCast);
+        } catch (Throwable ignored) {}
 
         miniPlayerContainer.setOnClickListener(v -> {
             try {
@@ -383,9 +390,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_top, menu);
-        try {
-            com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(getApplicationContext(), menu, R.id.media_route_menu_item);
-        } catch (Throwable ignored) {}
         menu.findItem(R.id.menu_premium).setVisible(!PremiumManager.isPremium(this));
         return true;
     }

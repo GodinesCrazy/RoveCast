@@ -51,5 +51,6 @@
     <string name="cd_mini_player_progress">Progreso de reproducción</string>
     <string name="cd_mini_player_status">Estado de reproducción</string>
     <string name="cd_mini_player_favorite">Agregar a favoritos</string>
+    <string name="cd_mini_player_cast">Conectar a dispositivo Cast</string>
     <string name="mini_player_status_live">En vivo</string>
 </resources>

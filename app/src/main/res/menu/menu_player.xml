@@ -2,13 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- SOLUCIÓN: El botón de Cast es la única acción principal que debe estar siempre visible -->
-    <item
-        android:id="@+id/media_route_menu_item"
-        android:title="@string/menu_cast"
-        app:actionViewClass="androidx.mediarouter.app.MediaRouteButton"
-        app:showAsAction="always"/>
-
     <!-- SOLUCIÓN: Mover a overflow menu cambiando showAsAction a 'never' -->
     <item
         android:id="@+id/menu_timer"

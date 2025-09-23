@@ -33,6 +33,7 @@ import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.MoreExecutors;
 import com.ivanmarty.rovecast.R;
 import com.ivanmarty.rovecast.billing.PremiumManager;
+import com.ivanmarty.rovecast.cast.CastManager;
 import com.ivanmarty.rovecast.data.FavoriteRepository;
 import com.ivanmarty.rovecast.data.SleepTimerPreset;
 import com.ivanmarty.rovecast.data.SleepTimerPresetRepository;
@@ -248,6 +249,17 @@ public class PlayerActivity extends AppCompatActivity {
         }
 
         updateFavoriteButton(mediaItem.mediaId);
+        
+        // Integración con CastManager: enviar información actual al dispositivo Cast si está conectado
+        try {
+            String url = getUrlFromMediaItem(mediaItem);
+            String title = metadata.title != null ? metadata.title.toString() : "Radio Station";
+            String image = metadata.artworkUri != null ? metadata.artworkUri.toString() : null;
+            
+            CastManager.get().setCurrentMedia(url, title, image);
+        } catch (Exception e) {
+            Log.e("PlayerActivity", "Error updating Cast information", e);
+        }
         updatePlayerStateUI();
     }
 
@@ -256,6 +268,13 @@ public class PlayerActivity extends AppCompatActivity {
         btnFavorite.setImageResource(isFavorite ? R.drawable.ic_heart : R.drawable.ic_heart_outline);
         int favoriteColor = isFavorite ? getColor(R.color.accent) : getColor(R.color.textSecondary);
         btnFavorite.setColorFilter(favoriteColor);
+    }
+    
+    private String getUrlFromMediaItem(MediaItem mediaItem) {
+        if (mediaItem.localConfiguration != null) {
+            return mediaItem.localConfiguration.uri.toString();
+        }
+        return null;
     }
 
     private void updatePlayerStateUI() {
@@ -439,9 +458,7 @@ public class PlayerActivity extends AppCompatActivity {
         });
 
         if (preset != null) {
-            builder.setNeutralButton("Delete", (dialog, which) -> {
-                sleepTimerPresetRepository.delete(preset);
-            });
+            builder.setNeutralButton("Delete", (dialog, which) -> sleepTimerPresetRepository.delete(preset));
         }
 
         builder.setNegativeButton("Cancel", null);

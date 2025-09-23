@@ -8,11 +8,16 @@
 -dontwarn okhttp3.**
 -dontwarn okio.**
 
+# CRÍTICO: Protección para modelos de datos (previene crashes en release builds)
+-keep class com.ivanmarty.rovecast.model.** { *; }
+-keepclassmembers class * { @com.google.gson.annotations.SerializedName <fields>; }
+
 # Glide
 -keep public class * implements com.bumptech.glide.module.GlideModule
 -keep public class * extends com.bumptech.glide.AppGlideModule
 -keep public enum com.bumptech.glide.load.ImageHeaderParser$** { *; }
 
-# Cast
--keep class com.ivanmarty.radiola.cast.MyCastOptionsProvider
+# Cast (corregido: rovecast en lugar de radiola)
+-keep class com.ivanmarty.rovecast.cast.** { *; }
+-keep class com.ivanmarty.rovecast.App
 

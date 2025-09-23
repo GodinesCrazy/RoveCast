@@ -38,7 +38,8 @@ import com.ivanmarty.rovecast.data.FavoriteRepository;
 import com.ivanmarty.rovecast.data.SleepTimerPreset;
 import com.ivanmarty.rovecast.data.SleepTimerPresetRepository;
 import com.ivanmarty.rovecast.model.Station;
-import com.ivanmarty.rovecast.ui.alarm.AlarmFragment;
+import com.ivanmarty.rovecast.ui.alarm.AlarmFragmentSimplified;
+import com.ivanmarty.rovecast.ui.alarm.AlarmScheduler;
 import com.ivanmarty.rovecast.player.PlaybackService;
 import com.ivanmarty.rovecast.player.SleepTimerManager;
 import com.ivanmarty.rovecast.ui.adapter.SleepTimerPresetAdapter;
@@ -139,7 +140,7 @@ public class PlayerActivity extends AppCompatActivity {
 
         btnAlarm.setOnClickListener(v -> {
             getSupportFragmentManager().beginTransaction()
-                    .replace(android.R.id.content, new AlarmFragment())
+                    .replace(android.R.id.content, new AlarmFragmentSimplified())
                     .addToBackStack(null)
                     .commit();
         });
@@ -525,8 +526,7 @@ public class PlayerActivity extends AppCompatActivity {
     }
 
     private boolean checkIfAlarmsActive() {
-        // TODO: Implementar verificación de alarmas activas
-        // Por ahora retorna false, se puede mejorar consultando la base de datos de alarmas
-        return false;
+        AlarmScheduler alarmScheduler = new AlarmScheduler(this);
+        return alarmScheduler.load().isEnabled();
     }
 }

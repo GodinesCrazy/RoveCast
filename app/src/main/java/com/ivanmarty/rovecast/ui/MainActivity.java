@@ -48,8 +48,6 @@ import com.ivanmarty.rovecast.consent.ConsentManager;
 import com.ivanmarty.rovecast.data.FavoriteRepository;
 import com.ivanmarty.rovecast.model.Station;
 import com.ivanmarty.rovecast.player.PlaybackService;
-import com.ivanmarty.rovecast.ui.alarm.AlarmFragment;
-
 import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {

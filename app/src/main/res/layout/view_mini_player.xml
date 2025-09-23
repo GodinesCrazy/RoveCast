@@ -117,8 +117,7 @@
             android:contentDescription="@string/cd_mini_player_favorite"
             app:layout_constraintBottom_toBottomOf="@+id/miniPlayerLogo"
             app:layout_constraintEnd_toStartOf="@+id/miniPlayerPlayPause"
-            app:layout_constraintTop_toTopOf="@+id/miniPlayerLogo"
-            app:tint="@color/fav_tint_selector" />
+            app:layout_constraintTop_toTopOf="@+id/miniPlayerLogo" />
 
         <!-- Play/Pause Button (estilo Spotify) -->
         <ImageButton

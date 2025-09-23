@@ -1,5 +1,7 @@
 package com.ivanmarty.rovecast.ui;
-
+import androidx.core.content.ContextCompat;
+import androidx.core.widget.ImageViewCompat;
+import android.content.res.ColorStateList;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
@@ -186,6 +188,9 @@ public class MainActivity extends AppCompatActivity {
                         String message = !isCurrentlyFavorite ? "Added to favorites" : "Removed from favorites";
                         Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
 
+                        // CRÍTICO: Actualizar UI inmediatamente después de cambiar favorito
+                        updateUiWithCurrentState();
+
                         Animation pulse = AnimationUtils.loadAnimation(this, android.R.anim.fade_in);
                         miniPlayerFavorite.startAnimation(pulse);
                     } else {
@@ -304,6 +309,11 @@ public class MainActivity extends AppCompatActivity {
         // Estado de favorito
         boolean isFavorite = favoriteRepository.isFavoriteNow(mediaItem.mediaId);
         miniPlayerFavorite.setImageResource(isFavorite ? R.drawable.ic_heart : R.drawable.ic_heart_outline);
+        // Cambiar color directamente según estado de favorito
+        int color = isFavorite ? 
+            ContextCompat.getColor(this, R.color.accent) : 
+            ContextCompat.getColor(this, android.R.color.white);
+        ImageViewCompat.setImageTintList(miniPlayerFavorite, ColorStateList.valueOf(color));
 
         // SPOTIFY-LIKE: Estados visuales elegantes
         float alpha = controller.isPlaying() ? 1.0f : 0.85f;
@@ -329,6 +339,9 @@ public class MainActivity extends AppCompatActivity {
         miniPlayerLogo.setImageResource(R.mipmap.ic_launcher); // Usar icono oficial de la app
         miniPlayerPlayPause.setImageResource(R.drawable.ic_play_arrow);
         miniPlayerFavorite.setImageResource(R.drawable.ic_heart_outline);
+        // Establecer color blanco por defecto
+        ImageViewCompat.setImageTintList(miniPlayerFavorite,
+                ColorStateList.valueOf(ContextCompat.getColor(this, android.R.color.white)));
         miniPlayerProgress.setProgress(0);
         miniPlayerContainer.setAlpha(0.7f); // Opacidad reducida para indicar estado inactivo
         

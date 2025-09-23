@@ -13,7 +13,7 @@
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:background="@android:color/transparent"
-        android:theme="@style/Toolbar.RoveCast.Spotify"
+        android:theme="@style/Toolbar.RoveCast"
         app:popupTheme="@style/ThemeOverlay.RoveCast.Popup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

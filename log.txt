@@ -1,20 +1,57 @@
---------- beginning of system
 --------- beginning of crash
-2025-08-31 20:52:53.622 20587-20587 ActivityThread          com.ivanmarty.rovecast               D  Attach thread to application
-2025-08-31 20:52:53.664 20587-20616 ActivityThread          com.ivanmarty.rovecast               I  Init compatible state: true
-2025-08-31 20:53:01.161 20587-20587 ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded preloadStatus 0
-2025-08-31 20:53:03.008 21045-21045 ActivityThread          com.ivanmarty.rovecast               D  Attach thread to application
-2025-08-31 20:53:03.052 21045-21072 ActivityThread          com.ivanmarty.rovecast               I  Init compatible state: true
-2025-08-31 20:53:04.884 21045-21045 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
-2025-08-31 20:53:06.096 21045-21045 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
-2025-08-31 20:53:06.104 21045-21045 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
-2025-08-31 20:53:06.202 21045-21045 ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded preloadStatus 0
-2025-08-31 20:53:06.212 21045-21045 RtgSchedEvent           com.ivanmarty.rovecast               I  current pid:21045 AppType:-1
-2025-08-31 20:53:06.352 21045-21045 ActivityThread          com.ivanmarty.rovecast               V  callActivityOnCreate
-2025-08-31 20:53:07.022 21045-21045 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
-2025-08-31 20:53:07.080 21045-21045 AndroidRuntime          com.ivanmarty.rovecast               E  FATAL EXCEPTION: main (Ask Gemini)
-                                                                                                    Process: com.ivanmarty.rovecast, PID: 21045
-                                                                                                    java.lang.RuntimeException: Unable to start activity ComponentInfo{com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity}: java.lang.NullPointerException: Attempt to invoke virtual method 'void androidx.constraintlayout.widget.ConstraintLayout.setOnClickListener(android.view.View$OnClickListener)' on a null object reference
+2025-09-09 17:30:48.330 25235-25235 AndroidRuntime          pid-25235                            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.rovecast, PID: 25235
+                                                                                                    java.lang.RuntimeException: Unable to start service com.ivanmarty.rovecast.player.PlaybackService@41c3697 with Intent { act=com.ivanmarty.rovecast.player.ACTION_PLAY cmp=com.ivanmarty.rovecast/.player.PlaybackService (has extras) }: java.lang.NullPointerException
+                                                                                                    	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4971)
+                                                                                                    	at android.app.ActivityThread.access$3300(ActivityThread.java:260)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2486)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.NullPointerException
+                                                                                                    	at androidx.media3.common.util.Assertions.checkNotNull(Assertions.java:155)
+                                                                                                    	at androidx.media3.common.MediaItem$Builder.setMediaId(MediaItem.java:137)
+                                                                                                    	at com.ivanmarty.rovecast.player.PlaybackService.onStartCommand(PlaybackService.java:82)
+                                                                                                    	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4951)
+                                                                                                    	at android.app.ActivityThread.access$3300(ActivityThread.java:260) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2486) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+2025-09-09 17:31:22.230 26274-26274 AndroidRuntime          pid-26274                            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.rovecast, PID: 26274
+                                                                                                    java.lang.RuntimeException: Unable to start service com.ivanmarty.rovecast.player.PlaybackService@3f98b73 with Intent { act=com.ivanmarty.rovecast.player.ACTION_PLAY cmp=com.ivanmarty.rovecast/.player.PlaybackService (has extras) }: java.lang.NullPointerException
+                                                                                                    	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4971)
+                                                                                                    	at android.app.ActivityThread.access$3300(ActivityThread.java:260)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2486)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.NullPointerException
+                                                                                                    	at androidx.media3.common.util.Assertions.checkNotNull(Assertions.java:155)
+                                                                                                    	at androidx.media3.common.MediaItem$Builder.setMediaId(MediaItem.java:137)
+                                                                                                    	at com.ivanmarty.rovecast.player.PlaybackService.onStartCommand(PlaybackService.java:82)
+                                                                                                    	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4951)
+                                                                                                    	at android.app.ActivityThread.access$3300(ActivityThread.java:260) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2486) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+2025-09-19 02:12:11.918 23537-23537 AndroidRuntime          pid-23537                            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.rovecast, PID: 23537
+                                                                                                    java.lang.RuntimeException: Unable to start activity ComponentInfo{com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity}: java.lang.IllegalStateException: The fully qualified name of the implementation of OptionsProvider must be provided as a metadata in the AndroidManifest.xml with key com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME.
                                                                                                     	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4060)
                                                                                                     	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247)
                                                                                                     	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91)
@@ -27,9 +64,10 @@
                                                                                                     	at java.lang.reflect.Method.invoke(Native Method)
                                                                                                     	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
                                                                                                     	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
-                                                                                                    Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'void androidx.constraintlayout.widget.ConstraintLayout.setOnClickListener(android.view.View$OnClickListener)' on a null object reference
-                                                                                                    	at com.ivanmarty.rovecast.ui.MainActivity.setupMiniPlayer(MainActivity.java:120)
-                                                                                                    	at com.ivanmarty.rovecast.ui.MainActivity.onCreate(MainActivity.java:85)
+                                                                                                    Caused by: java.lang.IllegalStateException: The fully qualified name of the implementation of OptionsProvider must be provided as a metadata in the AndroidManifest.xml with key com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME.
+                                                                                                    	at com.google.android.gms.cast.framework.CastContext.zzg(com.google.android.gms:play-services-cast-framework@@22.1.0:6)
+                                                                                                    	at com.google.android.gms.cast.framework.CastContext.getSharedInstance(com.google.android.gms:play-services-cast-framework@@22.1.0:6)
+                                                                                                    	at com.ivanmarty.rovecast.ui.MainActivity.onCreate(MainActivity.java:79)
                                                                                                     	at android.app.Activity.performCreate(Activity.java:8214)
                                                                                                     	at android.app.Activity.performCreate(Activity.java:8202)
                                                                                                     	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1320)
@@ -45,154 +83,470 @@
                                                                                                     	at java.lang.reflect.Method.invoke(Native Method) 
                                                                                                     	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
                                                                                                     	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+2025-09-19 02:12:21.605 24091-24091 AndroidRuntime          pid-24091                            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.rovecast, PID: 24091
+                                                                                                    java.lang.RuntimeException: Unable to start activity ComponentInfo{com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity}: java.lang.IllegalStateException: The fully qualified name of the implementation of OptionsProvider must be provided as a metadata in the AndroidManifest.xml with key com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME.
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4060)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247)
+                                                                                                    	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.IllegalStateException: The fully qualified name of the implementation of OptionsProvider must be provided as a metadata in the AndroidManifest.xml with key com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME.
+                                                                                                    	at com.google.android.gms.cast.framework.CastContext.zzg(com.google.android.gms:play-services-cast-framework@@22.1.0:6)
+                                                                                                    	at com.google.android.gms.cast.framework.CastContext.getSharedInstance(com.google.android.gms:play-services-cast-framework@@22.1.0:6)
+                                                                                                    	at com.ivanmarty.rovecast.ui.MainActivity.onCreate(MainActivity.java:79)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:8214)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:8202)
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1320)
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4033)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247) 
+                                                                                                    	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91) 
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149) 
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+--------- beginning of system
+2025-09-19 02:12:43.518 24421-24421 AndroidRuntime          pid-24421                            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.rovecast, PID: 24421
+                                                                                                    java.lang.RuntimeException: Unable to start activity ComponentInfo{com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity}: java.lang.IllegalStateException: The fully qualified name of the implementation of OptionsProvider must be provided as a metadata in the AndroidManifest.xml with key com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME.
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4060)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247)
+                                                                                                    	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.IllegalStateException: The fully qualified name of the implementation of OptionsProvider must be provided as a metadata in the AndroidManifest.xml with key com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME.
+                                                                                                    	at com.google.android.gms.cast.framework.CastContext.zzg(com.google.android.gms:play-services-cast-framework@@22.1.0:6)
+                                                                                                    	at com.google.android.gms.cast.framework.CastContext.getSharedInstance(com.google.android.gms:play-services-cast-framework@@22.1.0:6)
+                                                                                                    	at com.ivanmarty.rovecast.ui.MainActivity.onCreate(MainActivity.java:79)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:8214)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:8202)
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1320)
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4033)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247) 
+                                                                                                    	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91) 
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149) 
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+2025-09-20 16:12:12.695 17005-17005 ActivityThread          com.ivanmarty.rovecast               D  Attach thread to application
+2025-09-20 16:12:12.711 17005-17023 HwActivityThreadImpl    com.ivanmarty.rovecast               I  mSocketName: 97d7bf87-ebc5-425d-80a1-f5f84cbe9734
+2025-09-20 16:12:12.715 17005-17023 HwActivityThreadImpl    com.ivanmarty.rovecast               I  initPreloadedSocked end mPreloadStatus 2
+2025-09-20 16:12:12.727 17005-17024 ActivityThread          com.ivanmarty.rovecast               I  Init compatible state: true
+2025-09-20 16:12:26.407 17622-17622 ActivityThread          com.ivanmarty.rovecast               D  Attach thread to application
+2025-09-20 16:12:26.455 17622-17656 ActivityThread          com.ivanmarty.rovecast               I  Init compatible state: true
+2025-09-20 16:12:28.824 17622-17622 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-20 16:12:29.132 17622-17862 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-20 16:12:29.154 17622-17861 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-20 16:12:29.216 17622-17622 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-20 16:12:29.236 17622-17622 ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded preloadStatus 0
+2025-09-20 16:12:29.239 17622-17622 RtgSchedEvent           com.ivanmarty.rovecast               I  current pid:17622 AppType:-1
+2025-09-20 16:12:29.403 17622-17622 ActivityThread          com.ivanmarty.rovecast               V  callActivityOnCreate
+2025-09-20 16:12:30.080 17622-17622 ActivityThread          com.ivanmarty.rovecast               D  add activity client record, r= ActivityRecord{31e434d token=android.os.BinderProxy@9b39fe4 {com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity}} token= android.os.BinderProxy@9b39fe4
+2025-09-20 16:12:30.658 17622-17622 RtgSchedEvent           com.ivanmarty.rovecast               I  current pid:17622 AppType:-1
+2025-09-20 16:12:31.309 17622-17622 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-20 16:12:31.317 17622-17622 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-20 16:12:33.493 17622-17622 ViewRootImpl            com.ivanmarty.rovecast               I  dispatchDetachedFromWindow in doDie
 --------- beginning of main
-2025-08-31 20:53:17.995 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               I  Late-enabling -Xcheck:jni
-2025-08-31 20:53:18.037 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               E  LoadAppImageStartupCache enabled : 1
-2025-08-31 20:53:18.037 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               E  Unknown bits set in runtime_flags: 0x8000
-2025-08-31 20:53:18.039 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               I  Reinit property: dalvik.vm.checkjni= false
-2025-08-31 20:53:18.039 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               I  ReInitProperties: persist.vm.debug.dumpapi= false
-2025-08-31 20:53:18.067 21865-21865 ActivityThread          com.ivanmarty.rovecast               D  Attach thread to application
-2025-08-31 20:53:18.120 21865-21887 ActivityThread          com.ivanmarty.rovecast               I  Init compatible state: true
-2025-08-31 20:53:18.121 21865-21887 HwFramewor...rtsFactory com.ivanmarty.rovecast               D  HwFrameworkSecurityPartsFactory in.
-2025-08-31 20:53:18.121 21865-21887 HwFramewor...rtsFactory com.ivanmarty.rovecast               I  add HwFrameworkSecurityPartsFactory to memory.
-2025-08-31 20:53:18.122 21865-21887 BehaviorCollectManager  com.ivanmarty.rovecast               E  Fail to acquire dataAnalyzerService...
-2025-08-31 20:53:18.125 21865-21865 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.ivanmarty.rovecast-Hc7iWp4hkVGxaQPyQPKtXA==/base.apk librarySearchPath: /data/app/com.ivanmarty.rovecast-Hc7iWp4hkVGxaQPyQPKtXA==/lib/arm64 libraryPermittedPath: /data/user/0/com.ivanmarty.rovecast parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 35 isBundled: false classLoaderName: null sharedLibraries: null
-2025-08-31 20:53:18.135 21865-21890 HwPartIawareFactory     com.ivanmarty.rovecast               I  add android.common.HwPartIawareFactoryImpl to memory.
-2025-08-31 20:53:19.474 21865-21887 HwApiCacheMangerEx      com.ivanmarty.rovecast               I  apicache path=/storage/emulated/0 state=mounted key=com.ivanmarty.rovecast#10599#256
-2025-08-31 20:53:19.474 21865-21887 HwApiCacheMangerEx      com.ivanmarty.rovecast               I  need clear apicache,because volumes changed,oldCnt=0 newCnt=1
-2025-08-31 20:53:19.475 21865-21887 HwApiCacheMangerEx      com.ivanmarty.rovecast               I  apicache path=/storage/emulated/0 state=mounted key=com.ivanmarty.rovecast#10599#0
-2025-08-31 20:53:19.475 21865-21887 HwApiCacheMangerEx      com.ivanmarty.rovecast               I  need clear apicache,because volumes changed,oldCnt=1 newCnt=1
-2025-08-31 20:53:19.481 21865-21887 AwareBitmapCacher       com.ivanmarty.rovecast               I  init processName:com.ivanmarty.rovecast pid=21865 uid=10599
-2025-08-31 20:53:19.484 21865-21975 AwareLog                com.ivanmarty.rovecast               E  AtomicFileUtils: readFileLines file not exist: android.util.AtomicFile@2bba7c9
-2025-08-31 20:53:19.484 21865-21975 AwareLog                com.ivanmarty.rovecast               E  AtomicFileUtils: readFileLines file not exist: android.util.AtomicFile@57bdece
-2025-08-31 20:53:19.511 21865-21865 WM-WrkMgrInitializer    com.ivanmarty.rovecast               D  Initializing WorkManager with default configuration.
-2025-08-31 20:53:19.641 21865-21865 StubController          com.ivanmarty.rovecast               I  system app validUid:10599, isFriend:true
-2025-08-31 20:53:19.668 21865-21865 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /system/framework/org.apache.http.legacy.jar librarySearchPath: /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
-2025-08-31 20:53:19.670 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
-2025-08-31 20:53:19.673 21865-21865 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /system/framework/com.android.media.remotedisplay.jar librarySearchPath: /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
-2025-08-31 20:53:19.675 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
-2025-08-31 20:53:19.678 21865-21865 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /system/framework/com.android.location.provider.jar librarySearchPath: /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
-2025-08-31 20:53:19.680 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
-2025-08-31 20:53:19.683 21865-21865 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk librarySearchPath: /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: [dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/org.apache.http.legacy.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]], dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/com.android.media.remotedisplay.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]], dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/com.android.location.provider.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/lib/arm64, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-jJ1idQ7uMqyVccXXk5BUbw==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]]]
-2025-08-31 20:53:19.743 21865-21865 DynamiteModule          com.ivanmarty.rovecast               I  Considering local module com.google.android.gms.ads.dynamite:0 and remote module com.google.android.gms.ads.dynamite:251815204
-2025-08-31 20:53:19.744 21865-21865 DynamiteModule          com.ivanmarty.rovecast               I  Selected remote version of com.google.android.gms.ads.dynamite, version >= 251815204
-2025-08-31 20:53:19.779 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
-2025-08-31 20:53:19.790 21865-21865 DynamitePackage         com.ivanmarty.rovecast               D  Instantiated singleton DynamitePackage.
-2025-08-31 20:53:19.791 21865-21865 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraMobileAdsSettingManagerCreatorImpl
-2025-08-31 20:53:19.813 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden field Lsun/misc/Unsafe;->theUnsafe:Lsun/misc/Unsafe; (greylist, reflection, allowed)
-2025-08-31 20:53:19.813 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J (greylist,core-platform-api, linking, allowed)
-2025-08-31 20:53:19.813 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->arrayBaseOffset(Ljava/lang/Class;)I (greylist,core-platform-api, linking, allowed)
-2025-08-31 20:53:19.814 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->arrayIndexScale(Ljava/lang/Class;)I (greylist, linking, allowed)
-2025-08-31 20:53:19.824 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getUnsafe()Lsun/misc/Unsafe; (greylist,core-platform-api, linking, allowed)
-2025-08-31 20:53:19.830 21865-22016 NetworkSecurityConfig   com.ivanmarty.rovecast               D  Using Network Security Config from resource network_security_config debugBuild: true
-2025-08-31 20:53:19.831 21865-21865 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
-2025-08-31 20:53:19.832 21865-21865 ConnectivityManager     com.ivanmarty.rovecast               I  requestNetwork and the calling app is: com.ivanmarty.rovecast
-2025-08-31 20:53:19.837 21865-22019 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
-2025-08-31 20:53:19.848 21865-21865 Ads                     com.ivanmarty.rovecast               I  Updating ad debug logging enablement.
-2025-08-31 20:53:19.851 21865-22022 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapInt(Ljava/lang/Object;JII)Z (greylist, linking, allowed)
-2025-08-31 20:53:19.851 21865-22022 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObjectVolatile(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
-2025-08-31 20:53:19.851 21865-22022 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
-2025-08-31 20:53:19.851 21865-22022 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapLong(Ljava/lang/Object;JJJ)Z (greylist, linking, allowed)
-2025-08-31 20:53:19.922 21865-21865 WebViewFactory          com.ivanmarty.rovecast               I  Loading com.google.android.webview version 139.0.7258.143 (code 725814333)
-2025-08-31 20:53:19.930 21865-21865 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk librarySearchPath: /data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/lib/arm64:/data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk!/lib/arm64-v8a libraryPermittedPath:  parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 35 isBundled: false classLoaderName: null sharedLibraries: null
-2025-08-31 20:53:19.933 21865-21865 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/base.apk librarySearchPath: /data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/lib/arm64:/data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk!/lib/arm64-v8a libraryPermittedPath:  parent: java.lang.BootClassLoader@5c47a1b targetSdkVersion: 35 isBundled: false classLoaderName: null sharedLibraries: [dalvik.system.PathClassLoader[DexPathList[[zip file "/data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk"],nativeLibraryDirectories=[/data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/lib/arm64, /data/app/com.google.android.webview-7CsbhNpKIPpaXuKy86JXhw==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]]]
-2025-08-31 20:53:19.940 21865-21865 linker                  com.ivanmarty.rovecast               W  Warning: "/data/app/com.google.android.trichromelibrary_725814333-4-g9Q-wzBW3sBULBDUV2iA==/base.apk!/lib/arm64-v8a/libmonochrome_64.so" unused DT entry: unknown processor-specific (type 0x70000001 arg 0x0) (ignoring)
-2025-08-31 20:53:19.980 21865-21865 cr_WVCFactoryProvider   com.ivanmarty.rovecast               I  version=139.0.7258.143 (725814333) minSdkVersion=29 multiprocess=true packageId=127 splits=<none>
-2025-08-31 20:53:19.991 21865-22048 chromium                com.ivanmarty.rovecast               E  [0831/205319.991533:ERROR:android_webview/browser/variations/variations_seed_loader.cc:39] Seed missing signature.
-2025-08-31 20:53:20.026 21865-21865 cr_LibraryLoader        com.ivanmarty.rovecast               I  Successfully loaded native library
-2025-08-31 20:53:20.027 21865-21865 cr_CachingUmaRecorder   com.ivanmarty.rovecast               I  Flushed 7 samples from 7 histograms, 0 samples were dropped.
-2025-08-31 20:53:20.032 21865-21865 cr_CombinedPProvider    com.ivanmarty.rovecast               I  #registerProvider() provider:WV.t9@c31f5b5 isPolicyCacheEnabled:false policyProvidersSize:0
-2025-08-31 20:53:20.034 21865-21865 cr_PolicyProvider       com.ivanmarty.rovecast               I  #setManagerAndSource() 0
-2025-08-31 20:53:20.069 21865-21865 cr_CombinedPProvider    com.ivanmarty.rovecast               I  #linkNativeInternal() 1
-2025-08-31 20:53:20.070 21865-21865 cr_AppResProvider       com.ivanmarty.rovecast               I  #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
-2025-08-31 20:53:20.070 21865-21865 cr_PolicyProvider       com.ivanmarty.rovecast               I  #notifySettingsAvailable() 0
-2025-08-31 20:53:20.071 21865-21865 cr_CombinedPProvider    com.ivanmarty.rovecast               I  #onSettingsAvailable() 0
-2025-08-31 20:53:20.071 21865-21865 cr_CombinedPProvider    com.ivanmarty.rovecast               I  #flushPolicies()
-2025-08-31 20:53:20.121 21865-21865 chromium                com.ivanmarty.rovecast               W  [WARNING:android_webview/browser/network_service/net_helpers.cc:143] HTTP Cache size is: 20971520
-2025-08-31 20:53:20.177 21865-21865 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
-2025-08-31 20:53:20.178 21865-21865 ConnectivityManager     com.ivanmarty.rovecast               I  requestNetwork and the calling app is: com.ivanmarty.rovecast
-2025-08-31 20:53:20.181 21865-21865 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
-2025-08-31 20:53:20.227 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
-2025-08-31 20:53:20.229 21865-21865 HwTypeface              com.ivanmarty.rovecast               I  updateFont: scale=1.04
-2025-08-31 20:53:20.230 21865-21865 SystemFonts             com.ivanmarty.rovecast               D  areFontsVariable: script=Latn
-2025-08-31 20:53:20.231 21865-21865 ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded preloadStatus 0
-2025-08-31 20:53:20.234 21865-21865 RmeSchedManager         com.ivanmarty.rovecast               I  init Rme, version is: v1.0
-2025-08-31 20:53:20.234 21865-21865 RmeSchedManager         com.ivanmarty.rovecast               I  init Rme, version is: v1.0
-2025-08-31 20:53:20.235 21865-21865 RtgSchedEvent           com.ivanmarty.rovecast               I  current pid:21865 AppType:-1
-2025-08-31 20:53:20.236 21865-22099 CameraManagerGlobal     com.ivanmarty.rovecast               I  Connecting to camera service
-2025-08-31 20:53:20.249 21865-22101 OpenGLRenderer          com.ivanmarty.rovecast               I  RenderThread: progress name = [com.ivanmarty.rovecast], viewCornerType = 0
-2025-08-31 20:53:20.250 21865-22103 iGraphics               com.ivanmarty.rovecast               I  [0020080c] pn: com.ivanmarty.rovecast, p: 21865
-2025-08-31 20:53:20.250 21865-22103 iGraphics               com.ivanmarty.rovecast               I  [0030080c] no spt app: com.ivanmarty.rovecast
-2025-08-31 20:53:20.343 21865-21865 AppCompatDelegate       com.ivanmarty.rovecast               D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
-2025-08-31 20:53:20.357 21865-21865 ActivityThread          com.ivanmarty.rovecast               V  callActivityOnCreate
-2025-08-31 20:53:20.434 21865-21865 DecorView[]             com.ivanmarty.rovecast               I  pkgName:com.ivanmarty.rovecast old windowMode:0 new windoMode:1, isFixedSize:false
-2025-08-31 20:53:20.467 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (greylist, reflection, allowed)
-2025-08-31 20:53:20.750 21865-22124 UserMessagingPlatform   com.ivanmarty.rovecast               I  Use new ConsentDebugSettings.Builder().addTestDeviceHashedId("AFC033BBEAF477A33219CE7057D05B14") to set this as a debug device.
-2025-08-31 20:53:20.762 21865-22124 UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: GppMetadata
-2025-08-31 20:53:20.762 21865-22124 UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: IDFA_freqCapNumViews
-2025-08-31 20:53:20.762 21865-22124 UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: UMP_CoMoAdStoragePurposeConsentStatus
-2025-08-31 20:53:20.763 21865-22124 UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: UMP_CoMoAnalyticsStoragePurposeConsentStatus
-2025-08-31 20:53:20.763 21865-22124 UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: IABTCF_TCString
-2025-08-31 20:53:20.763 21865-22124 UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: UMP_CoMoAdPersonalizationPurposeConsentStatus
-2025-08-31 20:53:20.763 21865-22124 UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: UMP_CoMoAdUserDataPurposeConsentStatus
-2025-08-31 20:53:20.763 21865-22124 UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: IABTCF_AddtlConsent
-2025-08-31 20:53:20.763 21865-22124 UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: IABTCF_idfaFlowControl
-2025-08-31 20:53:20.763 21865-22124 UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: IABGPP_HDR_GppString
-2025-08-31 20:53:20.763 21865-22124 UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: IABGPP_GppSID
-2025-08-31 20:53:20.763 21865-22124 UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: UMP_CoMoManagedByUmpSdk
-2025-08-31 20:53:20.814 21865-21865 MediaRouter             com.ivanmarty.rovecast               V  Selecting route: RouteInfo{ name=Teléfono, description=null, status=null, category=RouteCategory{ name=Sistema types=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO  groupable=false }, supportedTypes=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO , presentationDisplay=null }
-2025-08-31 20:53:20.820 21865-21865 GlobalMediaRouter       com.ivanmarty.rovecast               I  Found default route: MediaRouter.RouteInfo{ uniqueId=DEFAULT_ROUTE, name=Teléfono, description=null, iconUri=null, enabled=true, connectionState=0, canDisconnect=false, playbackType=0, playbackStream=3, deviceType=0, volumeHandling=1, volume=15, volumeMax=15, presentationDisplayId=-1, extras=null, settingsIntent=null, providerPackageName=android }
-2025-08-31 20:53:20.820 21865-21865 GlobalMediaRouter       com.ivanmarty.rovecast               I  Unselecting the current route because it is no longer selectable: null
-2025-08-31 20:53:20.823 21865-21865 MediaRouterProxy        com.ivanmarty.rovecast               I  Don't need to set MediaRouterParams for Android S v2 or below
-2025-08-31 20:53:20.832 21865-21865 DynamiteModule          com.ivanmarty.rovecast               I  Considering local module com.google.android.gms.cast.framework.dynamite:0 and remote module com.google.android.gms.cast.framework.dynamite:253334000
-2025-08-31 20:53:20.832 21865-21865 DynamiteModule          com.ivanmarty.rovecast               I  Selected remote version of com.google.android.gms.cast.framework.dynamite, version >= 253334000
-2025-08-31 20:53:20.833 21865-21865 DynamiteModule          com.ivanmarty.rovecast               V  Dynamite loader version >= 2, using loadModule2NoCrashUtils
-2025-08-31 20:53:20.884 21865-21865 CastDynamiteModuleImpl  com.ivanmarty.rovecast               I  ui created by ClassLoader dalvik.system.DelegateLastClassLoader[DexPathList[[zip file "/data/user_de/0/com.google.android.gms/app_chimera/m/000001b3/DynamiteModulesC.uncompressed.apk"],nativeLibraryDirectories=[/data/user_de/0/com.google.android.gms/app_chimera/m/000001b3/DynamiteModulesC.uncompressed.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]].
-2025-08-31 20:53:20.907 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapInt(Ljava/lang/Object;JII)Z (greylist, linking, allowed)
-2025-08-31 20:53:20.907 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapLong(Ljava/lang/Object;JJJ)Z (greylist, linking, allowed)
-2025-08-31 20:53:20.907 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getIntVolatile(Ljava/lang/Object;J)I (greylist, linking, allowed)
-2025-08-31 20:53:20.907 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObjectVolatile(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
-2025-08-31 20:53:20.908 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObjectVolatile(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
-2025-08-31 20:53:20.918 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
-2025-08-31 20:53:20.918 21865-21865 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
-2025-08-31 20:53:20.927 21865-21865 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
-2025-08-31 20:53:20.962 21865-21865 AwareAppScheduleManager com.ivanmarty.rovecast               I  post cache drawable res id to aware, resId = 2131231224, packagename = com.ivanmarty.rovecast, cost time = 5468229
-2025-08-31 20:53:20.975 21865-21865 BlockMonitor            com.ivanmarty.rovecast               I  dispatchingThrewException In MainThread
-2025-08-31 20:53:20.976 21865-21865 AndroidRuntime          com.ivanmarty.rovecast               D  Shutting down VM
-2025-08-31 20:53:20.977 21865-21865 QarthLog                com.ivanmarty.rovecast               I  [PatchStore] createDisableExceptionQarthFile
-2025-08-31 20:53:20.978 21865-21865 QarthLog                com.ivanmarty.rovecast               I  [PatchStore] create disable file for com.ivanmarty.rovecast uid is 10599
-2025-08-31 20:53:20.985 21865-21865 AndroidRuntime          com.ivanmarty.rovecast               E  FATAL EXCEPTION: main (Ask Gemini)
-                                                                                                    Process: com.ivanmarty.rovecast, PID: 21865
-                                                                                                    java.lang.RuntimeException: Unable to start activity ComponentInfo{com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity}: java.lang.NullPointerException: Attempt to invoke virtual method 'void androidx.constraintlayout.widget.ConstraintLayout.setOnClickListener(android.view.View$OnClickListener)' on a null object reference
-                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4060)
-                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247)
-                                                                                                    	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91)
-                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149)
-                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103)
-                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613)
-                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110)
-                                                                                                    	at android.os.Looper.loop(Looper.java:219)
-                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
-                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
-                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
-                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
-                                                                                                    Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'void androidx.constraintlayout.widget.ConstraintLayout.setOnClickListener(android.view.View$OnClickListener)' on a null object reference
-                                                                                                    	at com.ivanmarty.rovecast.ui.MainActivity.setupMiniPlayer(MainActivity.java:120)
-                                                                                                    	at com.ivanmarty.rovecast.ui.MainActivity.onCreate(MainActivity.java:85)
-                                                                                                    	at android.app.Activity.performCreate(Activity.java:8214)
-                                                                                                    	at android.app.Activity.performCreate(Activity.java:8202)
-                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1320)
-                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4033)
-                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247) 
-                                                                                                    	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91) 
-                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149) 
-                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103) 
-                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613) 
-                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110) 
-                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
-                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
-                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
-                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
-                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
-2025-08-31 20:53:21.019 21865-21865 Process                 com.ivanmarty.rovecast               I  Sending signal. PID: 21865 SIG: 9
-2025-08-31 20:53:21.092  1634-5871  WindowManager           system_server                        E  win=Window{20ccf5e u0 Splash Screen com.ivanmarty.rovecast EXITING} destroySurfaces: appStopped=false win.mWindowRemovalAllowed=true win.mRemoveOnExit=true
+2025-09-20 16:12:45.675 17622-17622 Hwaps                   com.ivanmarty.rovecast               I  APS: EventAnalyzed: initAPS: version is 11.0.0.4
+2025-09-20 16:12:45.679 17622-17622 Hwaps                   com.ivanmarty.rovecast               D  Fpsrequest create,type:EXACTLY_IDENTIFY
+2025-09-20 16:12:45.682 17622-17622 Hwaps                   com.ivanmarty.rovecast               D  Fpsrequest create,type:EXACTLY_IDENTIFY
+2025-09-20 16:12:45.682 17622-17622 Hwaps                   com.ivanmarty.rovecast               D  Fpsrequest create,type:OPENGL_SETTING
+2025-09-20 16:12:45.682 17622-17622 Hwaps                   com.ivanmarty.rovecast               D  FpsController create
+2025-09-20 16:12:45.691 17622-17622 Hwaps                   com.ivanmarty.rovecast               D  APS: EventAnalyzed: reInitFpsPara :mBaseFps = 60; mMaxFps = 60
+2025-09-20 16:12:45.771 17622-17622 HwApsManager            com.ivanmarty.rovecast               W  HwApsManagerService, registerCallback, start !
+2025-09-20 16:12:45.774 17622-17622 Hwaps                   com.ivanmarty.rovecast               D  APS: EventAnalyzed: registerCallbackInApsManagerService, mPkgName:com.ivanmarty.rovecast; result = true
+2025-09-20 16:12:45.816 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:12:45.895 17622-17622 HwViewRootImpl          com.ivanmarty.rovecast               I  removeInvalidNode jank list is null
+2025-09-20 16:12:47.406 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:12:47.557 17622-17857 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:12:47.600 17622-17857 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:12:47.641 17622-19089 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:12:47.641 17622-19089 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:12:47.642 17622-19089 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:12:47.643 17622-19080 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:12:47.644 17622-19080 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:12:47.644 17622-19080 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:12:47.644 17622-19080 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:12:47.644 17622-19089 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:12:47.646 17622-19089 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:12:47.663 17622-17857 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:12:47.669 17622-17857 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:12:47.693 17622-19089 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:12:47.693 17622-19089 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:12:47.694 17622-19089 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:12:47.696 17622-19089 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:12:47.712 17622-17622 HwViewRootImpl          com.ivanmarty.rovecast               I  removeInvalidNode jank list is null
+2025-09-20 16:12:47.716 17622-19082 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:12:47.716 17622-19082 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:12:47.717 17622-19082 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:12:47.720 17622-19082 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:12:47.722 17622-19082 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:12:47.733 17622-19097 ServiceBindIntentUtils  com.ivanmarty.rovecast               W  Dynamic lookup for intent failed for action: com.google.android.gms.ads.service.START
+2025-09-20 16:12:47.745 17622-19091 Ads                     com.ivanmarty.rovecast               W  Not retrying to fetch app settings
+2025-09-20 16:12:47.752 17622-19097 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:12:47.767 17622-17642 nmarty.rovecas          com.ivanmarty.rovecast               I  Background young concurrent copying GC freed 81828(5884KB) AllocSpace objects, 40(1996KB) LOS objects, 41% free, 10MB/17MB, paused 247us total 100.401ms
+2025-09-20 16:12:48.115 17622-17622 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 3
+2025-09-20 16:12:48.126 17622-17622 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 3
+2025-09-20 16:12:50.172 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:12:50.173 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:12:50.174 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:12:50.174 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:12:50.174 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, linking, allowed)
+2025-09-20 16:12:50.207 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:12:50.212 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:12:50.213 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:12:50.218 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 16:12:50.261 17622-18123 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:12:50.272 17622-19136 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Ldalvik/system/VMStack;->getStackClass2()Ljava/lang/Class; (greylist, reflection, allowed)
+2025-09-20 16:12:50.278 17622-19136 FilePhenotypeFlags      com.ivanmarty.rovecast               E  Config package com.google.android.gms.clearcut_client#com.ivanmarty.rovecast cannot use FILE backing without declarative registration. See go/phenotype-android-integration#phenotype for more information. This will lead to stale flags.
+2025-09-20 16:12:54.834 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:12:55.074 17622-17622 HwViewRootImpl          com.ivanmarty.rovecast               I  removeInvalidNode all the node in jank list is out of time
+2025-09-20 16:12:56.237 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:12:57.410 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:12:57.505 17622-17857 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:12:57.511 17622-17857 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:12:57.529 17622-19083 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:12:57.529 17622-19083 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:12:57.529 17622-19083 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:12:57.529 17622-19083 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:12:57.529 17622-19083 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:12:57.529 17622-19083 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:12:57.531 17622-19083 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:12:57.533 17622-19093 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:12:57.534 17622-19093 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:12:57.534 17622-19093 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:12:57.535 17622-19093 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:12:57.536 17622-19093 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:12:57.547 17622-17857 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:12:57.551 17622-17857 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:12:57.558 17622-19161 ServiceBindIntentUtils  com.ivanmarty.rovecast               W  Dynamic lookup for intent failed for action: com.google.android.gms.ads.service.START
+2025-09-20 16:12:57.566 17622-19082 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:12:57.567 17622-19082 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:12:57.568 17622-19082 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:12:57.571 17622-19161 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:12:57.572 17622-19082 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:12:57.577 17622-19084 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:12:57.577 17622-19084 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:12:57.578 17622-19084 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:12:57.578 17622-19084 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:12:57.578 17622-19084 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:12:57.579 17622-19082 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:12:57.594 17622-19089 Ads                     com.ivanmarty.rovecast               W  Not retrying to fetch app settings
+2025-09-20 16:12:57.598 17622-19162 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:12:57.928 17622-17622 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 3
+2025-09-20 16:12:57.975 17622-17622 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 3
+2025-09-20 16:12:58.258 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:12:59.140 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:13:00.073 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:13:00.151 17622-17857 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:13:00.158 17622-17857 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:13:00.178 17622-19082 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:13:00.178 17622-19082 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:00.178 17622-19082 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:13:00.179 17622-19088 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:13:00.179 17622-19082 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:00.179 17622-19082 chatty                  com.ivanmarty.rovecast               I  uid=10624(com.ivanmarty.rovecast) identical 1 line
+2025-09-20 16:13:00.179 17622-19082 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:00.179 17622-19082 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:13:00.179 17622-19082 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:00.180 17622-19082 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:00.180 17622-19088 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:13:00.181 17622-19088 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:13:00.183 17622-19088 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:13:00.184 17622-19082 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:00.185 17622-19088 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:13:00.188 17622-17857 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:13:00.193 17622-17857 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:13:00.195 17622-19084 Ads                     com.ivanmarty.rovecast               W  Not retrying to fetch app settings
+2025-09-20 16:13:00.202 17622-19171 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:13:00.211 17622-19080 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:00.211 17622-19080 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:13:00.212 17622-19080 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:00.212 17622-19080 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:00.212 17622-19080 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:13:00.212 17622-19080 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:00.213 17622-19080 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:00.216 17622-19093 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:13:00.216 17622-19093 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:13:00.217 17622-19093 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:13:00.218 17622-19080 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:00.218 17622-19093 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:13:00.219 17622-19093 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:13:00.226 17622-19090 Ads                     com.ivanmarty.rovecast               W  Not retrying to fetch app settings
+2025-09-20 16:13:00.234 17622-19172 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:13:00.343 17622-17646 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:13:00.343 17622-17646 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:13:00.363 17622-19136 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:13:00.529 17622-17622 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 3
+2025-09-20 16:13:00.575 17622-17622 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 3
+2025-09-20 16:13:02.200 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:13:02.635 17622-17622 HwViewRootImpl          com.ivanmarty.rovecast               I  removeInvalidNode jank list is null
+2025-09-20 16:13:02.683 17622-17622 MouseWheelSynthesizer   com.ivanmarty.rovecast               D  mMoveStepInDp: 64, mMoveStepInPixel: 192, mUpTimeDelayed: 100
+2025-09-20 16:13:02.685 17622-17622 ViewRootImpl            com.ivanmarty.rovecast               D  ViewRootImpl mIsInProductivePCDisplay: false
+2025-09-20 16:13:02.697 17622-17622 InputEventReceiver      com.ivanmarty.rovecast               D  dispatchInputInterval 1000000
+2025-09-20 16:13:02.723 17622-17924 mali_winsys             com.ivanmarty.rovecast               D  EGLint new_window_surface(egl_winsys_display *, void *, EGLSurface, EGLConfig, egl_winsys_surface **, EGLBoolean) returns 0x3000
+2025-09-20 16:13:04.213 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:13:04.261 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:13:04.261 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:13:04.265 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:04.267 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:13:04.267 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, linking, allowed)
+2025-09-20 16:13:04.271 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:13:04.272 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:13:04.274 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:13:04.274 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->pokeByte(JB)V (greylist, reflection, allowed)
+2025-09-20 16:13:04.274 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->peekByte(J)B (greylist, reflection, allowed)
+2025-09-20 16:13:04.275 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, reflection, allowed)
+2025-09-20 16:13:04.275 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, reflection, allowed)
+2025-09-20 16:13:04.275 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, reflection, allowed)
+2025-09-20 16:13:04.275 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, reflection, allowed)
+2025-09-20 16:13:04.275 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, reflection, allowed)
+2025-09-20 16:13:04.275 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, reflection, allowed)
+2025-09-20 16:13:04.275 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, reflection, allowed)
+2025-09-20 16:13:04.380 17622-19181 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:05.243 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:13:06.024 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:13:06.111 17622-17622 MouseWheelSynthesizer   com.ivanmarty.rovecast               D  mMoveStepInDp: 64, mMoveStepInPixel: 192, mUpTimeDelayed: 100
+2025-09-20 16:13:06.113 17622-17622 ViewRootImpl            com.ivanmarty.rovecast               D  ViewRootImpl mIsInProductivePCDisplay: false
+2025-09-20 16:13:06.126 17622-17622 InputEventReceiver      com.ivanmarty.rovecast               D  dispatchInputInterval 1000000
+2025-09-20 16:13:06.187 17622-17924 mali_winsys             com.ivanmarty.rovecast               D  EGLint new_window_surface(egl_winsys_display *, void *, EGLSurface, EGLConfig, egl_winsys_surface **, EGLBoolean) returns 0x3000
+2025-09-20 16:13:06.232 17622-17622 ViewRootImpl            com.ivanmarty.rovecast               I  dispatchDetachedFromWindow in doDie
+2025-09-20 16:13:06.239 17622-17924 libEGL                  com.ivanmarty.rovecast               W  EGLNativeWindowType 0x769cfc7b90 disconnect failed
+2025-09-20 16:13:06.264 17622-17622 MouseWheelSynthesizer   com.ivanmarty.rovecast               D  mMoveStepInDp: 64, mMoveStepInPixel: 192, mUpTimeDelayed: 100
+2025-09-20 16:13:06.265 17622-17622 ViewRootImpl            com.ivanmarty.rovecast               D  ViewRootImpl mIsInProductivePCDisplay: false
+2025-09-20 16:13:06.275 17622-17622 InputEventReceiver      com.ivanmarty.rovecast               D  dispatchInputInterval 1000000
+2025-09-20 16:13:06.278 17622-17622 DecorView               com.ivanmarty.rovecast               D  showOrHideHighlightView: hasFocus=false; winMode=1; isMrgNull=true
+2025-09-20 16:13:06.333 17622-17924 mali_winsys             com.ivanmarty.rovecast               D  EGLint new_window_surface(egl_winsys_display *, void *, EGLSurface, EGLConfig, egl_winsys_surface **, EGLBoolean) returns 0x3000
+2025-09-20 16:13:09.014 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:13:09.116 17622-17622 DecorView               com.ivanmarty.rovecast               D  showOrHideHighlightView: hasFocus=true; winMode=1; isMrgNull=true
+2025-09-20 16:13:09.138 17622-17622 HwRemoteIn...hodManager com.ivanmarty.rovecast               W  isCasting false because IHwDistributedWindowManager is invalid.
+2025-09-20 16:13:09.148 17622-17622 ActivityThread          com.ivanmarty.rovecast               W  handleWindowVisibility: no activity for token android.os.BinderProxy@6940b8e
+2025-09-20 16:13:09.173 17622-17622 ActivityThread          com.ivanmarty.rovecast               V  callActivityOnCreate
+2025-09-20 16:13:09.194 17622-17622 DecorView[]             com.ivanmarty.rovecast               I  pkgName:com.ivanmarty.rovecast old windowMode:0 new windoMode:1, isFixedSize:false
+2025-09-20 16:13:09.251 17622-17622 ActivityThread          com.ivanmarty.rovecast               D  add activity client record, r= ActivityRecord{4e3a533 token=android.os.BinderProxy@6940b8e {com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.PrivacyPolicyActivity}} token= android.os.BinderProxy@6940b8e
+2025-09-20 16:13:09.271 17622-17622 MouseWheelSynthesizer   com.ivanmarty.rovecast               D  mMoveStepInDp: 64, mMoveStepInPixel: 192, mUpTimeDelayed: 100
+2025-09-20 16:13:09.273 17622-17622 ViewRootImpl            com.ivanmarty.rovecast               D  ViewRootImpl mIsInProductivePCDisplay: false
+2025-09-20 16:13:09.279 17622-17622 InputEventReceiver      com.ivanmarty.rovecast               D  dispatchInputInterval 1000000
+2025-09-20 16:13:09.288 17622-17622 DecorView               com.ivanmarty.rovecast               D  showOrHideHighlightView: hasFocus=false; winMode=1; isMrgNull=true
+2025-09-20 16:13:09.289  2233-2556  DollieAdapterService    com.huawei.systemserver              E  notifyActivityState pkg:com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.PrivacyPolicyActivity state:2 fg:true mUid:10624
+2025-09-20 16:13:09.327 17622-19223 HiTouch_HiTouchSensor   com.ivanmarty.rovecast               W  depended package hiTouch does n't exist!
+2025-09-20 16:13:09.327 17622-19223 HiTouch_HiTouchSensor   com.ivanmarty.rovecast               I  HiTouch restricted: system app HiTouch don't exist.
+2025-09-20 16:13:09.328 17622-19223 HiTouch_Pr...reDetector com.ivanmarty.rovecast               D  onAttached, package=com.ivanmarty.rovecast, windowType=1, mIsHiTouchRestricted=true
+2025-09-20 16:13:09.354 17622-17924 mali_winsys             com.ivanmarty.rovecast               D  EGLint new_window_surface(egl_winsys_display *, void *, EGLSurface, EGLConfig, egl_winsys_surface **, EGLBoolean) returns 0x3000
+2025-09-20 16:13:09.460 17622-17622 DecorView               com.ivanmarty.rovecast               D  showOrHideHighlightView: hasFocus=true; winMode=1; isMrgNull=true
+2025-09-20 16:13:09.475 17622-17622 InputMethodManager      com.ivanmarty.rovecast               W  startInputReason = 1
+2025-09-20 16:13:09.476 17622-17622 HwRemoteIn...hodManager com.ivanmarty.rovecast               W  isCasting false because IHwDistributedWindowManager is invalid.
+2025-09-20 16:13:09.487 17622-17622 ViewRootImpl            com.ivanmarty.rovecast               I  dispatchDetachedFromWindow in doDie
+2025-09-20 16:13:09.492 17622-17924 libEGL                  com.ivanmarty.rovecast               W  EGLNativeWindowType 0x7683f27150 disconnect failed
+2025-09-20 16:13:09.687 17622-17622 ViewRootImpl            com.ivanmarty.rovecast               I  dispatchDetachedFromWindow in doDie
+2025-09-20 16:13:09.689 17622-17924 libEGL                  com.ivanmarty.rovecast               W  EGLNativeWindowType 0x769cfc7b90 disconnect failed
+2025-09-20 16:13:09.718 17622-17622 MouseWheelSynthesizer   com.ivanmarty.rovecast               D  mMoveStepInDp: 64, mMoveStepInPixel: 192, mUpTimeDelayed: 100
+2025-09-20 16:13:09.720 17622-17622 ViewRootImpl            com.ivanmarty.rovecast               D  ViewRootImpl mIsInProductivePCDisplay: false
+2025-09-20 16:13:09.727 17622-17622 InputEventReceiver      com.ivanmarty.rovecast               D  dispatchInputInterval 1000000
+2025-09-20 16:13:09.741 17622-17924 mali_winsys             com.ivanmarty.rovecast               D  EGLint new_window_surface(egl_winsys_display *, void *, EGLSurface, EGLConfig, egl_winsys_surface **, EGLBoolean) returns 0x3000
+2025-09-20 16:13:09.819 17622-17924 libEGL                  com.ivanmarty.rovecast               W  EGLNativeWindowType 0x7778d486d0 disconnect failed
+2025-09-20 16:13:09.848 17622-17622 MediaController         com.ivanmarty.rovecast               I  Release 828aa1 [AndroidXMedia3/1.8.0] [HWMAR, MAR-LX3A, HUAWEI, 29] [media3.common, media3.session, media3.exoplayer, media3.decoder]
+2025-09-20 16:13:09.878  1681-5695  WindowManager           system_server                        E  win=Window{d99c6a8 u0 com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity} destroySurfaces: appStopped=true win.mWindowRemovalAllowed=false win.mRemoveOnExit=false
+2025-09-20 16:13:09.883 17622-17622 MediaSessionImpl        com.ivanmarty.rovecast               I  Release fe738d3 [AndroidXMedia3/1.8.0] [HWMAR, MAR-LX3A, HUAWEI, 29] [media3.common, media3.session, media3.exoplayer, media3.decoder]
+2025-09-20 16:13:09.888 17622-17622 MediaController         com.ivanmarty.rovecast               I  Release 7ba460 [AndroidXMedia3/1.8.0] [HWMAR, MAR-LX3A, HUAWEI, 29] [media3.common, media3.session, media3.exoplayer, media3.decoder]
+2025-09-20 16:13:09.893 17622-17622 ExoPlayerImpl           com.ivanmarty.rovecast               I  Release 89c3d4f [AndroidXMedia3/1.8.0] [HWMAR, MAR-LX3A, HUAWEI, 29] [media3.common, media3.session, media3.exoplayer, media3.decoder]
+2025-09-20 16:13:10.669 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Landroid/view/MotionEvent;->getEventTimeNano()J (greylist, reflection, allowed)
+2025-09-20 16:13:13.214 17622-17622 ViewRootImpl            com.ivanmarty.rovecast               I  dispatchDetachedFromWindow in doDie
+2025-09-20 16:13:13.222 17622-17924 libEGL                  com.ivanmarty.rovecast               W  EGLNativeWindowType 0x769cfc7b90 disconnect failed
+2025-09-20 16:13:14.493 17622-17622 InputMethodManager      com.ivanmarty.rovecast               V  dispatchInputEvent
+2025-09-20 16:13:14.509 17622-17622 InputMethodManager      com.ivanmarty.rovecast               V  dispatchInputEvent
+2025-09-20 16:13:14.556 17622-17622 ActivityThread          com.ivanmarty.rovecast               D  Won't deliver top position change in state=5
+2025-09-20 16:13:14.572 17622-17622 MediaController         com.ivanmarty.rovecast               I  Init 8dbc750 [AndroidXMedia3/1.8.0] [HWMAR, MAR-LX3A, HUAWEI, 29]
+2025-09-20 16:13:14.579 17622-17622 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 16:13:14.590  2233-2556  DollieAdapterService    com.huawei.systemserver              E  notifyActivityState pkg:com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity state:2 fg:true mUid:10624
+2025-09-20 16:13:14.600 17622-17924 mali_winsys             com.ivanmarty.rovecast               D  EGLint new_window_surface(egl_winsys_display *, void *, EGLSurface, EGLConfig, egl_winsys_surface **, EGLBoolean) returns 0x3000
+2025-09-20 16:13:14.634 17622-17622 HwViewRootImpl          com.ivanmarty.rovecast               I  removeInvalidNode all the node in jank list is out of time
+2025-09-20 16:13:14.635 17622-17622 DecorView               com.ivanmarty.rovecast               D  showOrHideHighlightView: hasFocus=false; winMode=1; isMrgNull=true
+2025-09-20 16:13:14.639 17622-17622 ExoPlayerImpl           com.ivanmarty.rovecast               I  Init 4213068 [AndroidXMedia3/1.8.0] [HWMAR, MAR-LX3A, HUAWEI, 29]
+2025-09-20 16:13:14.647 17622-17622 MediaSessionImpl        com.ivanmarty.rovecast               I  Init 7517c81 [AndroidXMedia3/1.8.0] [HWMAR, MAR-LX3A, HUAWEI, 29]
+2025-09-20 16:13:14.667 17622-17622 DecorView               com.ivanmarty.rovecast               D  showOrHideHighlightView: hasFocus=true; winMode=1; isMrgNull=true
+2025-09-20 16:13:14.686 17622-17622 InputMethodManager      com.ivanmarty.rovecast               W  startInputReason = 1
+2025-09-20 16:13:14.687 17622-17622 HwRemoteIn...hodManager com.ivanmarty.rovecast               W  isCasting false because IHwDistributedWindowManager is invalid.
+2025-09-20 16:13:14.697 17622-17622 MediaController         com.ivanmarty.rovecast               I  Init 8985fbd [AndroidXMedia3/1.8.0] [HWMAR, MAR-LX3A, HUAWEI, 29]
+2025-09-20 16:13:14.990 17622-17924 libEGL                  com.ivanmarty.rovecast               W  EGLNativeWindowType 0x7780fef1d0 disconnect failed
+2025-09-20 16:13:15.005 17622-17622 ActivityThread          com.ivanmarty.rovecast               D  Remove activity client record, r= ActivityRecord{4e3a533 token=android.os.BinderProxy@6940b8e {com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.PrivacyPolicyActivity}} token= android.os.BinderProxy@6940b8e
+2025-09-20 16:13:15.005 17622-17622 ViewRootImpl            com.ivanmarty.rovecast               I  dispatchDetachedFromWindow in doDie
+2025-09-20 16:13:16.147 17622-17622 InputMethodManager      com.ivanmarty.rovecast               V  dispatchInputEvent
+2025-09-20 16:13:16.151 17622-17622 InputMethodManager      com.ivanmarty.rovecast               V  dispatchInputEvent
+2025-09-20 16:13:16.230 17622-17857 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:13:16.236 17622-17857 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:13:16.251 17622-19243 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:13:16.251 17622-19243 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:13:16.255 17622-19237 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:13:16.255 17622-19237 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:16.255 17622-19237 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:13:16.255 17622-19237 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:13:16.258 17622-19237 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:16.269 17622-19243 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:13:16.270 17622-19243 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:13:16.270 17622-17857 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:13:16.270 17622-19243 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:13:16.274 17622-17857 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:13:16.281 17622-19254 ServiceBindIntentUtils  com.ivanmarty.rovecast               W  Dynamic lookup for intent failed for action: com.google.android.gms.ads.service.START
+2025-09-20 16:13:16.283 17622-19243 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:13:16.283 17622-19243 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:13:16.284 17622-19243 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:13:16.284 17622-19243 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:13:16.285 17622-19243 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:13:16.299 17622-19254 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:13:16.307 17622-19244 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:16.307 17622-19244 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:13:16.308 17622-19244 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:13:16.320 17622-19253 Ads                     com.ivanmarty.rovecast               W  Not retrying to fetch app settings
+2025-09-20 16:13:16.323 17622-19257 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:13:16.674 17622-17622 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 3
+2025-09-20 16:13:16.683 17622-17622 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 3
+2025-09-20 16:13:17.717 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:13:17.802 17622-17857 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:13:17.809 17622-17857 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:13:17.831 17622-19238 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:13:17.831 17622-19238 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:17.831 17622-19238 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:13:17.831 17622-19238 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:13:17.833 17622-19238 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:17.834 17622-19244 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:13:17.835 17622-19244 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:13:17.836 17622-19244 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:13:17.837 17622-19244 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:13:17.841 17622-19244 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:13:17.846 17622-17857 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:13:17.850 17622-17857 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:13:17.855 17622-19251 Ads                     com.ivanmarty.rovecast               W  Not retrying to fetch app settings
+2025-09-20 16:13:17.862 17622-19262 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:13:17.864 17622-19253 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:13:17.864 17622-19237 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:17.864 17622-19237 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:13:17.865 17622-19237 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:13:17.865 17622-19253 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:13:17.866 17622-19237 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:17.867 17622-19253 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:13:17.869 17622-19253 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:13:17.870 17622-19253 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:13:17.888 17622-19245 Ads                     com.ivanmarty.rovecast               W  Not retrying to fetch app settings
+2025-09-20 16:13:17.892 17622-19264 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:13:18.121 17622-17622 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 3
+2025-09-20 16:13:18.262 17622-17622 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 3
+2025-09-20 16:13:18.831 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:13:18.919 17622-17857 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:13:18.926 17622-17857 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:13:18.939 17622-19248 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:13:18.939 17622-19248 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:13:18.941 17622-19248 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:13:18.942 17622-19248 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:13:18.944 17622-19248 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:13:18.944 17622-19252 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:13:18.944 17622-19252 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:18.944 17622-19252 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:13:18.945 17622-19252 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:13:18.945 17622-19252 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:18.947 17622-19252 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:18.953 17622-17857 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:13:18.957 17622-17857 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:13:18.958 17622-19253 Ads                     com.ivanmarty.rovecast               W  Not retrying to fetch app settings
+2025-09-20 16:13:18.961 17622-19267 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:13:18.972 17622-19240 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:13:18.973 17622-19240 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:13:18.973 17622-19240 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:13:18.974 17622-19240 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:13:18.975 17622-19240 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:13:18.976 17622-19244 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:18.976 17622-19244 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:13:18.977 17622-19244 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:13:18.991 17622-19244 Ads                     com.ivanmarty.rovecast               W  Not retrying to fetch app settings
+2025-09-20 16:13:18.993 17622-19254 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:13:19.299 17622-17622 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 3
+2025-09-20 16:13:19.335 17622-17622 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 3
+2025-09-20 16:13:19.718 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:13:20.764 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:13:21.515 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:13:22.188 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:13:22.290 17622-17857 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:13:22.298 17622-17857 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:13:22.314 17622-19243 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:13:22.315 17622-19243 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:13:22.316 17622-19249 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:13:22.316 17622-19249 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:22.316 17622-19249 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:13:22.316 17622-19249 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:22.317 17622-19243 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:13:22.317 17622-19249 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:13:22.318 17622-19243 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:13:22.320 17622-19243 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:13:22.321 17622-19249 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:22.326 17622-17857 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:13:22.330 17622-17857 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:13:22.340 17622-19244 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:13:22.340 17622-19244 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:13:22.341 17622-19244 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:13:22.341 17622-19244 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:13:22.343 17622-19244 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:13:22.347 17622-19257 ServiceBindIntentUtils  com.ivanmarty.rovecast               W  Dynamic lookup for intent failed for action: com.google.android.gms.ads.service.START
+2025-09-20 16:13:22.349 17622-19245 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:22.349 17622-19245 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:13:22.350 17622-19245 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:13:22.353 17622-19257 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:13:22.354 17622-19245 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:22.361 17622-19239 Ads                     com.ivanmarty.rovecast               W  Not retrying to fetch app settings
+2025-09-20 16:13:22.888 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:13:23.015 17622-17622 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 1
+2025-09-20 16:13:23.016 17622-17622 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 1
+2025-09-20 16:13:23.609 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:13:25.019 17622-17622 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 16:13:25.114 17622-17857 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:13:25.121 17622-17857 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:13:25.139 17622-19252 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:13:25.140 17622-19252 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:13:25.141 17622-19252 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:13:25.142 17622-19241 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:25.142 17622-19252 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:13:25.142 17622-19241 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:13:25.143 17622-19241 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:25.143 17622-19241 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:13:25.143 17622-19241 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:13:25.143 17622-19252 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:13:25.149 17622-17857 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:13:25.153 17622-17857 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:13:25.156 17622-19242 Ads                     com.ivanmarty.rovecast               W  Not retrying to fetch app settings
+2025-09-20 16:13:25.159 17622-19264 ServiceBindIntentUtils  com.ivanmarty.rovecast               W  Dynamic lookup for intent failed for action: com.google.android.gms.ads.service.START
+2025-09-20 16:13:25.170 17622-19249 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:13:25.172 17622-19249 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:13:25.172 17622-19249 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:13:25.173 17622-19264 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:13:25.174 17622-19249 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:13:25.176 17622-19249 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:13:25.179 17622-19248 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:13:25.180 17622-19248 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:13:25.180 17622-19248 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:13:25.192 17622-19248 Ads                     com.ivanmarty.rovecast               W  Not retrying to fetch app settings
+2025-09-20 16:13:25.194 17622-19267 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:13:25.459 17622-17622 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 3
+2025-09-20 16:13:25.515 17622-17622 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 3

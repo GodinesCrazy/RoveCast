@@ -9,14 +9,17 @@
         android:id="@+id/etPresetName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Preset Name" />
+        android:hint="@string/hint_preset_name"
+        android:inputType="textCapSentences"
+        android:autofillHints="name" />
 
     <EditText
         android:id="@+id/etPresetDuration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="Duration (minutes)"
-        android:inputType="number" />
+        android:hint="@string/hint_duration_minutes"
+        android:inputType="number"
+        android:importantForAutofill="no" />
 
 </LinearLayout>

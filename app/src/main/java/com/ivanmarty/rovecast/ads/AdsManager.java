@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
@@ -13,23 +14,34 @@ import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.ivanmarty.rovecast.billing.PremiumManager;
 
+
 public final class AdsManager {
 
-    private static AdsManager INSTANCE;
+    private static volatile AdsManager INSTANCE;
 
+    @Nullable
     public static AdsManager get() { return INSTANCE; }
-    public static void init(Context ctx) { if (INSTANCE == null) INSTANCE = new AdsManager(ctx.getApplicationContext()); }
+
+    public static void init(@NonNull Context ctx) {
+        if (INSTANCE == null) {
+            synchronized (AdsManager.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = new AdsManager(ctx.getApplicationContext());
+                }
+            }
+        }
+    }
 
     private final Context app;
     private InterstitialAd interstitial;
     private long lastShownMs = 0L;
 
     // --- Configuración --- //
-    private static final String AD_ID_INTERSTITIAL = "ca-app-pub-2918417880001381/8618426192";
-    private long minIntervalMs = 300_000L; // 5 minutos
-    private int maxPerDay = 8;
+    private static final String AD_ID_INTERSTITIAL = "ca-app-pub-3940256099942544/1033173712";
+    private static final long MIN_INTERVAL_MS = 300_000L; // 5 minutos
+    private static final int MAX_PER_DAY = 8;
 
-    private AdsManager(Context app) {
+    private AdsManager(@NonNull Context app) {
         this.app = app;
         preload();
     }
@@ -44,13 +56,13 @@ public final class AdsManager {
                 });
     }
 
-    public void runWithMaybeAd(Activity act, Runnable onAdClosed) {
+    public void runWithMaybeAd(@NonNull Activity act, @Nullable Runnable onAdClosed) {
         if (PremiumManager.isPremium(app)) {
             if (onAdClosed != null) onAdClosed.run();
             return;
         }
         long now = System.currentTimeMillis();
-        if (interstitial == null || (now - lastShownMs) < minIntervalMs || getShownToday() >= maxPerDay) {
+        if (interstitial == null || (now - lastShownMs) < MIN_INTERVAL_MS || getShownToday() >= MAX_PER_DAY) {
             if (onAdClosed != null) onAdClosed.run();
             if (interstitial == null) preload();
             return;
@@ -74,16 +86,19 @@ public final class AdsManager {
     }
 
     private int getShownToday() {
-        SharedPreferences sp = app.getSharedPreferences("ads_prefs", Context.MODE_PRIVATE);
-        long day = sp.getLong("day", 0L);
-        long today = System.currentTimeMillis() / (24L*60*60*1000);
-        if (day != today) { sp.edit().putLong("day", today).putInt("count", 0).apply(); return 0; }
+        final SharedPreferences sp = app.getSharedPreferences("ads_prefs", Context.MODE_PRIVATE);
+        final long day = sp.getLong("day", 0L);
+        final long today = System.currentTimeMillis() / (24L*60*60*1000);
+        if (day != today) {
+            sp.edit().putLong("day", today).putInt("count", 0).apply();
+            return 0;
+        }
         return sp.getInt("count", 0);
     }
 
     private void setShownToday(int c) {
-        SharedPreferences sp = app.getSharedPreferences("ads_prefs", Context.MODE_PRIVATE);
-        long today = System.currentTimeMillis() / (24L*60*60*1000);
+        final SharedPreferences sp = app.getSharedPreferences("ads_prefs", Context.MODE_PRIVATE);
+        final long today = System.currentTimeMillis() / (24L*60*60*1000);
         sp.edit().putLong("day", today).putInt("count", c).apply();
     }
 }

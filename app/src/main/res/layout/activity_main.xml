@@ -1,51 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_dark">
+    android:background="@drawable/bg_main_gradient"
+    android:fitsSystemWindows="true">
 
+    <!-- Modern Spotify-like toolbar -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/topBar"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="56dp"
-        android:background="@color/surface_dark"
-        android:theme="@style/Toolbar.RoveCast"
-        app:popupTheme="@style/ThemeOverlay.RoveCast.Popup" />
+        android:background="@android:color/transparent"
+        android:theme="@style/Toolbar.RoveCast.Spotify"
+        app:popupTheme="@style/ThemeOverlay.RoveCast.Popup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Contenido Principal -->
-    <!-- El margen inferior asegura que el contenido termina por encima del LinearLayout del pie de página -->
+    <!-- Main content container -->
     <FrameLayout
         android:id="@+id/fragmentContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="56dp"
-        android:layout_marginBottom="136dp"/>
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar" />
 
-    <!-- INICIO: Contenedor de Pie de Página -->
-    <!-- Agrupamos el mini-reproductor y la navegación en un LinearLayout para un posicionamiento robusto -->
+    <!-- Bottom container with modern Spotify styling -->
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/bottomContainer"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_gravity="bottom">
+        android:background="@drawable/bg_bottom_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <!-- Mini-reproductor -->
+        <!-- Mini-player with modern integration -->
         <include
-            android:id="@+id/miniPlayer"
+            android:id="@+id/miniPlayerContainer"
             layout="@layout/view_mini_player" />
 
-        <!-- Barra de navegación inferior -->
+        <!-- Modern bottom navigation -->
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNav"
             android:layout_width="match_parent"
             android:layout_height="72dp"
-            android:background="@color/surface_dark"
-            app:itemIconTint="@color/bottom_nav_selector"
-            app:menu="@menu/menu_bottom"/>
+            android:background="@android:color/transparent"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            app:itemIconTint="@color/bottom_nav_selector_spotify"
+            app:itemTextColor="@color/bottom_nav_selector_spotify"
+            app:menu="@menu/menu_bottom"
+            app:labelVisibilityMode="labeled" />
 
     </LinearLayout>
-    <!-- FIN: Contenedor de Pie de Página -->
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

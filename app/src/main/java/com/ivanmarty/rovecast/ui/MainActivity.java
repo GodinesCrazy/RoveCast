@@ -7,22 +7,31 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.media3.common.MediaItem;
+import androidx.media3.common.MediaMetadata;
 import androidx.media3.common.Player;
 import androidx.media3.session.MediaController;
 import androidx.media3.session.SessionToken;
+import androidx.media3.ui.PlayerControlView;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.cast.framework.CastContext;
@@ -34,27 +43,38 @@ import com.ivanmarty.rovecast.R;
 import com.ivanmarty.rovecast.billing.BillingManager;
 import com.ivanmarty.rovecast.billing.PremiumManager;
 import com.ivanmarty.rovecast.consent.ConsentManager;
+import com.ivanmarty.rovecast.data.FavoriteRepository;
+import com.ivanmarty.rovecast.model.Station;
 import com.ivanmarty.rovecast.player.PlaybackService;
 import com.ivanmarty.rovecast.ui.alarm.AlarmFragment;
 
 import java.util.concurrent.ExecutionException;
 
-public class MainActivity extends AppCompatActivity implements Player.Listener {
+public class MainActivity extends AppCompatActivity {
 
     private BillingManager billing;
     private MaterialToolbar top;
 
-    private ConstraintLayout miniPlayerContainer;
+    private CardView miniPlayerContainer;
+    private TextView miniPlayerTitle, miniPlayerStatus;
     private ImageView miniPlayerLogo;
-    private TextView miniPlayerTitle;
-    private TextView miniPlayerStatus;
+    private ImageButton miniPlayerFavorite;
     private ImageButton miniPlayerPlayPause;
+    private ProgressBar miniPlayerProgress;
 
-    private ListenableFuture<MediaController> mediaControllerFuture;
+    private MediaItem currentMediaItem;
+
+    private ListenableFuture<MediaController> controllerFuture;
+    private MediaController controller;
+    private Player.Listener playerListener;
+    private FavoriteRepository favoriteRepository;
 
     @Override
     protected void onCreate(Bundle b) {
         super.onCreate(b);
+
+        WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
+
         setContentView(R.layout.activity_main);
 
         com.ivanmarty.rovecast.util.FirstLaunchManager firstLaunchManager = new com.ivanmarty.rovecast.util.FirstLaunchManager(this);
@@ -70,11 +90,48 @@ public class MainActivity extends AppCompatActivity implements Player.Listener {
         });
 
         top = findViewById(R.id.topBar);
+
+        ViewCompat.setOnApplyWindowInsetsListener(top, (v, windowInsets) -> {
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
+            mlp.topMargin = insets.top;
+            v.setLayoutParams(mlp);
+            return windowInsets;
+        });
+
         setSupportActionBar(top);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
         top.setNavigationIcon(R.drawable.ic_toolbar_logo_padded);
+
+        View bottomContainer = findViewById(R.id.bottomContainer);
+        if (bottomContainer != null) {
+            ViewCompat.setOnApplyWindowInsetsListener(bottomContainer, (v, windowInsets) -> {
+                Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+                v.setPadding(v.getPaddingLeft(), v.getPaddingTop(), v.getPaddingRight(), insets.bottom);
+                return windowInsets;
+            });
+        }
+
+        View fragmentContainer = findViewById(R.id.fragmentContainer);
+        if (fragmentContainer != null) {
+            Runnable applySafePadding = () -> {
+                // SOLUCIÓN COMPLETA: Eliminar TODOS los paddings para expansión total
+                // Sin topPadding = RecyclerView comienza desde arriba (elimina espacio negro)
+                // Sin bottomPadding = RecyclerView se extiende hacia abajo (más radios visibles)
+                
+                fragmentContainer.setPadding(
+                        fragmentContainer.getPaddingLeft(),
+                        0, // Sin padding top - permite que la lista comience arriba
+                        fragmentContainer.getPaddingRight(),
+                        0 // Sin padding bottom - permite expansión completa
+                );
+            };
+            fragmentContainer.post(applySafePadding);
+            // Mantener solo el listener del top para cambios de sistema UI
+            top.getViewTreeObserver().addOnGlobalLayoutListener(applySafePadding::run);
+        }
 
         BottomNavigationView nav = findViewById(R.id.bottomNav);
         nav.setOnItemSelectedListener(item -> {
@@ -90,7 +147,52 @@ public class MainActivity extends AppCompatActivity implements Player.Listener {
         });
         nav.setSelectedItemId(R.id.menu_home);
 
-        setupMiniPlayer();
+        favoriteRepository = new FavoriteRepository(this);
+
+        miniPlayerContainer = findViewById(R.id.miniPlayerContainer);
+        miniPlayerTitle = findViewById(R.id.miniPlayerTitle);
+        miniPlayerStatus = findViewById(R.id.miniPlayerStatus);
+        miniPlayerLogo = findViewById(R.id.miniPlayerLogo);
+        miniPlayerFavorite = findViewById(R.id.miniPlayerFavorite);
+        miniPlayerPlayPause = findViewById(R.id.miniPlayerPlayPause);
+        miniPlayerProgress = findViewById(R.id.miniPlayerProgress);
+
+        miniPlayerContainer.setOnClickListener(v -> {
+            try {
+                Intent intent = new Intent(this, PlayerActivity.class);
+                startActivity(intent);
+            } catch (Exception e) {
+                Log.e("MainActivity", "Error starting PlayerActivity", e);
+            }
+        });
+
+        miniPlayerFavorite.setOnClickListener(v -> {
+            if (currentMediaItem != null && currentMediaItem.mediaMetadata != null) {
+                try {
+                    Station station = createStationFromMediaItem(currentMediaItem);
+                    String stationId = extractStationId(currentMediaItem);
+
+                    if (station != null && stationId != null) {
+                        boolean isCurrentlyFavorite = favoriteRepository.isFavoriteNow(stationId);
+                        favoriteRepository.toggleFavorite(station, !isCurrentlyFavorite);
+
+                        String message = !isCurrentlyFavorite ? "Added to favorites" : "Removed from favorites";
+                        Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
+
+                        Animation pulse = AnimationUtils.loadAnimation(this, android.R.anim.fade_in);
+                        miniPlayerFavorite.startAnimation(pulse);
+                    } else {
+                        Toast.makeText(this, "Unable to add to favorites", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (Exception e) {
+                    Log.e("MainActivity", "Error handling favorite button", e);
+                    Toast.makeText(this, "Error updating favorites", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        // FIX CRÍTICO: Mostrar mini-player desde el inicio para consistencia visual
+        updateUiWithCurrentState();
     }
 
     @Override
@@ -102,140 +204,188 @@ public class MainActivity extends AppCompatActivity implements Player.Listener {
     @Override
     protected void onStop() {
         super.onStop();
-        releaseMediaController();
-    }
-
-    private void setupMiniPlayer() {
-        miniPlayerContainer = findViewById(R.id.miniPlayer);
-        miniPlayerLogo = miniPlayerContainer.findViewById(R.id.miniPlayerLogo);
-        miniPlayerTitle = miniPlayerContainer.findViewById(R.id.miniPlayerTitle);
-        miniPlayerStatus = miniPlayerContainer.findViewById(R.id.miniPlayerStatus);
-        miniPlayerPlayPause = miniPlayerContainer.findViewById(R.id.miniPlayerPlayPause);
-
-        miniPlayerPlayPause.setOnClickListener(v -> {
-            try {
-                MediaController mediaController = mediaControllerFuture.get();
-                if (mediaController != null) {
-                    if (mediaController.isPlaying()) {
-                        mediaController.pause();
-                    } else {
-                        mediaController.play();
-                    }
-                }
-            } catch (Exception e) { /* Ignored */ }
-        });
-
-        miniPlayerContainer.setOnClickListener(v -> {
-            Intent intent = new Intent(this, PlayerActivity.class);
-            startActivity(intent);
-        });
+        if (controller != null && playerListener != null) {
+            controller.removeListener(playerListener);
+        }
+        if (controllerFuture != null) {
+            MediaController.releaseFuture(controllerFuture);
+        }
     }
 
     private void initializeMediaController() {
         SessionToken sessionToken = new SessionToken(this, new ComponentName(this, PlaybackService.class));
-        mediaControllerFuture = new MediaController.Builder(this, sessionToken).buildAsync();
-        mediaControllerFuture.addListener(() -> {
+        controllerFuture = new MediaController.Builder(this, sessionToken).buildAsync();
+        controllerFuture.addListener(() -> {
             try {
-                MediaController mediaController = mediaControllerFuture.get();
-                mediaController.addListener(this);
-                updateUiWithCurrentState(mediaController);
-            } catch (InterruptedException | ExecutionException e) {
-                Log.e("MainActivity", "Error al conectar con MediaController", e);
+                controller = controllerFuture.get();
+                // Configurar OnClickListener para el botón play/pause
+                setupPlayPauseButton();
+
+                playerListener = new Player.Listener() {
+                    @Override
+                    public void onEvents(@NonNull Player player, @NonNull Player.Events events) {
+                        updateUiWithCurrentState();
+                    }
+                };
+                controller.addListener(playerListener);
+
+                updateUiWithCurrentState();
+            } catch (Exception e) {
+                Log.e("MainActivity", "Error connecting to MediaController", e);
             }
         }, MoreExecutors.directExecutor());
     }
 
-    private void releaseMediaController() {
-        try {
-            mediaControllerFuture.get().removeListener(this);
-        } catch (Exception e) { /* Ignored */ }
-        MediaController.releaseFuture(mediaControllerFuture);
+    private void setupPlayPauseButton() {
+        if (miniPlayerPlayPause != null) {
+            miniPlayerPlayPause.setOnClickListener(v -> {
+                if (controller != null) {
+                    if (controller.isPlaying()) {
+                        controller.pause();
+                    } else {
+                        controller.play();
+                    }
+                    // Actualizar inmediatamente el icono
+                    updatePlayPauseButton(controller.isPlaying());
+                }
+            });
+        }
     }
 
-    @SuppressWarnings("unused")
-    public void onMediaItemChanged(@Nullable MediaItem mediaItem, int reason) {
-        updateUiWithCurrentState(null); // Pass null to force re-evaluation
-    }
-
-    @Override
-    public void onIsPlayingChanged(boolean isPlaying) {
-        updateMiniPlayerState(isPlaying);
-    }
-
-    private void updateUiWithCurrentState(MediaController mediaController) {
-        // If controller is null, try to get it from the future
-        if (mediaController == null) {
-            try {
-                mediaController = mediaControllerFuture.get();
-            } catch (Exception e) {
-                setMiniPlayerVisibility(false);
-                return;
+    private void updatePlayPauseButton(boolean isPlaying) {
+        if (miniPlayerPlayPause != null) {
+            if (isPlaying) {
+                miniPlayerPlayPause.setImageResource(R.drawable.ic_pause);
+            } else {
+                miniPlayerPlayPause.setImageResource(R.drawable.ic_play_arrow);
             }
         }
-
-        boolean shouldBeVisible = mediaController != null && mediaController.getCurrentMediaItem() != null;
-        setMiniPlayerVisibility(shouldBeVisible);
-
-        if (shouldBeVisible) {
-            updateMiniPlayerMetadata(mediaController.getCurrentMediaItem());
-            updateMiniPlayerState(mediaController.isPlaying());
-        }
     }
 
-    private void updateMiniPlayerMetadata(MediaItem item) {
-        if (item != null && item.mediaMetadata != null) {
-            miniPlayerTitle.setText(item.mediaMetadata.title);
-            Glide.with(this)
-                    .load(item.mediaMetadata.artworkUri)
-                    .placeholder(R.drawable.ic_radio_placeholder)
-                    .error(R.drawable.ic_radio_placeholder)
-                    .into(miniPlayerLogo);
-        }
-    }
-
-    private void updateMiniPlayerState(boolean isPlaying) {
-        if (isPlaying) {
-            miniPlayerStatus.setText(R.string.status_playing);
-            miniPlayerPlayPause.setImageResource(R.drawable.ic_pause);
-        } else {
-            miniPlayerStatus.setText(R.string.status_paused);
-            miniPlayerPlayPause.setImageResource(R.drawable.ic_play_arrow);
-        }
-    }
-
-    private void setMiniPlayerVisibility(boolean shouldBeVisible) {
-        if (miniPlayerContainer == null) return;
-
-        boolean isVisible = miniPlayerContainer.getVisibility() == View.VISIBLE;
-        if (isVisible == shouldBeVisible) {
+    private void updateUiWithCurrentState() {
+        // FIX CRÍTICO: Mini-player siempre visible para consistencia visual
+        miniPlayerContainer.setVisibility(View.VISIBLE);
+        
+        if (controller == null || controller.getCurrentMediaItem() == null) {
+            // Mostrar estado por defecto cuando no hay reproducción
+            showDefaultMiniPlayerState();
             return;
         }
+        MediaItem mediaItem = controller.getCurrentMediaItem();
+        MediaMetadata metadata = mediaItem.mediaMetadata;
+        currentMediaItem = mediaItem; // Actualizar referencia actual
 
-        if (shouldBeVisible) {
-            miniPlayerContainer.setVisibility(View.VISIBLE);
-            Animation slideUp = AnimationUtils.loadAnimation(this, R.anim.slide_up);
-            miniPlayerContainer.startAnimation(slideUp);
+        // Habilitar botones cuando hay reproducción activa
+        miniPlayerPlayPause.setEnabled(true);
+        miniPlayerFavorite.setEnabled(true);
+        miniPlayerContainer.setClickable(true);
+
+        // Actualizar el icono del botón play/pause según el estado actual
+        updatePlayPauseButton(controller != null && controller.isPlaying());
+
+        // Información de la estación
+        miniPlayerTitle.setText(metadata.title);
+        String status = controller.isPlaying() ? getString(R.string.playback_state_playing) : getString(R.string.playback_state_paused);
+        miniPlayerStatus.setText(status);
+
+        // Logo con carga elegante
+        Glide.with(this)
+                .load(metadata.artworkUri)
+                .placeholder(R.drawable.ic_radio_placeholder)
+                .into(miniPlayerLogo);
+
+        // Estado de favorito
+        boolean isFavorite = favoriteRepository.isFavoriteNow(mediaItem.mediaId);
+        miniPlayerFavorite.setImageResource(isFavorite ? R.drawable.ic_heart : R.drawable.ic_heart_outline);
+
+        // SPOTIFY-LIKE: Estados visuales elegantes
+        float alpha = controller.isPlaying() ? 1.0f : 0.85f;
+        miniPlayerContainer.setAlpha(alpha);
+
+        // SPOTIFY-LIKE: Progreso de reproducción fluido (para streams en vivo, mostrar actividad)
+        if (controller.isPlaying()) {
+            miniPlayerProgress.setIndeterminate(false);
+            // Para radio en vivo, simular progreso continuo
+            miniPlayerProgress.setProgress(75); // Indicador visual de actividad
         } else {
-            Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
-            slideDown.setAnimationListener(new Animation.AnimationListener() {
-                @Override
-                public void onAnimationStart(Animation animation) {}
-
-                @Override
-                public void onAnimationEnd(Animation animation) {
-                    miniPlayerContainer.setVisibility(View.GONE);
-                }
-
-                @Override
-                public void onAnimationRepeat(Animation animation) {}
-            });
-            miniPlayerContainer.startAnimation(slideDown);
+            miniPlayerProgress.setProgress(0);
         }
+    }
+
+    /**
+     * Muestra el estado por defecto del mini-player cuando no hay reproducción activa
+     * Esto garantiza que el mini-player esté siempre visible para consistencia visual
+     */
+    private void showDefaultMiniPlayerState() {
+        miniPlayerTitle.setText("RoveCast");
+        miniPlayerStatus.setText("Selecciona una estación para comenzar");
+        miniPlayerLogo.setImageResource(R.drawable.ic_radio_placeholder);
+        miniPlayerPlayPause.setImageResource(R.drawable.ic_play_arrow);
+        miniPlayerFavorite.setImageResource(R.drawable.ic_heart_outline);
+        miniPlayerProgress.setProgress(0);
+        miniPlayerContainer.setAlpha(0.7f); // Opacidad reducida para indicar estado inactivo
+        
+        // Deshabilitar botones cuando no hay reproducción
+        miniPlayerPlayPause.setEnabled(false);
+        miniPlayerFavorite.setEnabled(false);
+        miniPlayerContainer.setClickable(false);
+    }
+
+    private Station createStationFromMediaItem(MediaItem mediaItem) {
+        if (mediaItem == null || mediaItem.mediaMetadata == null) {
+            return null;
+        }
+
+        Station station = new Station();
+        try {
+            if (mediaItem.mediaMetadata.title != null) {
+                station.name = mediaItem.mediaMetadata.title.toString();
+            }
+
+            if (mediaItem.requestMetadata != null && mediaItem.requestMetadata.mediaUri != null) {
+                station.url = mediaItem.requestMetadata.mediaUri.toString();
+            } else if (mediaItem.localConfiguration != null && mediaItem.localConfiguration.uri != null) {
+                station.url = mediaItem.localConfiguration.uri.toString();
+            }
+
+            if (mediaItem.mediaMetadata.artworkUri != null) {
+                station.favicon = mediaItem.mediaMetadata.artworkUri.toString();
+            }
+
+            if (mediaItem.mediaId != null) {
+                station.stationuuid = mediaItem.mediaId;
+            }
+        } catch (Exception e) {
+            Log.e("MainActivity", "Error creating Station from MediaItem", e);
+        }
+
+        return station;
+    }
+
+    private String extractStationId(MediaItem mediaItem) {
+        if (mediaItem == null) {
+            return null;
+        }
+
+        if (mediaItem.mediaId != null && !mediaItem.mediaId.isEmpty()) {
+            return mediaItem.mediaId;
+        }
+
+        if (mediaItem.requestMetadata != null && mediaItem.requestMetadata.mediaUri != null) {
+            return mediaItem.requestMetadata.mediaUri.toString();
+        } else if (mediaItem.localConfiguration != null && mediaItem.localConfiguration.uri != null) {
+            return mediaItem.localConfiguration.uri.toString();
+        }
+
+        return null;
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_top, menu);
+        try {
+            com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(getApplicationContext(), menu, R.id.media_route_menu_item);
+        } catch (Throwable ignored) {}
         menu.findItem(R.id.menu_premium).setVisible(!PremiumManager.isPremium(this));
         return true;
     }

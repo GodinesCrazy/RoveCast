@@ -1,68 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<!-- SPOTIFY-STYLE MINI PLAYER - Diseño completamente rediseñado -->
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/miniPlayerContainer"
     android:layout_width="match_parent"
     android:layout_height="64dp"
-    android:background="@drawable/bg_mini_player"
+    android:layout_marginStart="0dp"
+    android:layout_marginEnd="0dp"
+    android:layout_marginBottom="0dp"
+    android:foreground="?attr/selectableItemBackground"
     android:clickable="true"
     android:focusable="true"
-    android:elevation="8dp"
     android:visibility="gone"
+    app:cardBackgroundColor="#121212"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="4dp"
     tools:visibility="visible">
 
-    <ImageView
-        android:id="@+id/miniPlayerLogo"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_radio_placeholder" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#121212"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
 
-    <TextView
-        android:id="@+id/miniPlayerTitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:textColor="@color/textPrimary"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/miniPlayerStatus"
-        app:layout_constraintEnd_toStartOf="@+id/miniPlayerPlayPause"
-        app:layout_constraintStart_toEndOf="@+id/miniPlayerLogo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        tools:text="No station selected" />
+        <!-- Barra de progreso ultra-fina en la parte superior (estilo Spotify) -->
+        <ProgressBar
+            android:id="@+id/miniPlayerProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:progressTint="#1DB954"
+            android:progressBackgroundTint="#404040"
+            android:secondaryProgressTint="#404040"
+            android:progress="45"
+            android:contentDescription="@string/cd_mini_player_progress"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/miniPlayerStatus"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/textSecondary"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/miniPlayerTitle"
-        app:layout_constraintStart_toStartOf="@+id/miniPlayerTitle"
-        app:layout_constraintTop_toBottomOf="@+id/miniPlayerTitle"
-        tools:text=" " />
+        <!-- Album Art / Station Logo -->
+        <ImageView
+            android:id="@+id/miniPlayerLogo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_radio_placeholder"
+            android:background="@drawable/bg_circle"
+            android:contentDescription="@string/cd_mini_player_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/miniPlayerProgress" />
+        <!-- Song/Station Title -->
+        <TextView
+            android:id="@+id/miniPlayerTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-medium"
+            android:contentDescription="@string/cd_mini_player_title"
+            app:layout_constraintBottom_toTopOf="@+id/miniPlayerStatus"
+            app:layout_constraintEnd_toStartOf="@+id/miniPlayerFavorite"
+            app:layout_constraintStart_toEndOf="@+id/miniPlayerLogo"
+            app:layout_constraintTop_toBottomOf="@+id/miniPlayerProgress"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Radio Station Name" />
 
-    <ImageButton
-        android:id="@+id/miniPlayerPlayPause"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_play_arrow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/on_dark" />
+        <!-- Artist/Station Info -->
+        <TextView
+            android:id="@+id/miniPlayerStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#B3B3B3"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif"
+            android:contentDescription="@string/cd_mini_player_status"
+            app:layout_constraintBottom_toBottomOf="@+id/miniPlayerLogo"
+            app:layout_constraintEnd_toEndOf="@+id/miniPlayerTitle"
+            app:layout_constraintStart_toStartOf="@+id/miniPlayerTitle"
+            app:layout_constraintTop_toBottomOf="@+id/miniPlayerTitle"
+            tools:text="@string/mini_player_status_live" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Heart/Favorite Button (estilo Spotify) -->
+        <ImageButton
+            android:id="@+id/miniPlayerFavorite"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_favorite_border"
+            android:contentDescription="@string/cd_mini_player_favorite"
+            app:layout_constraintBottom_toBottomOf="@+id/miniPlayerLogo"
+            app:layout_constraintEnd_toStartOf="@+id/miniPlayerPlayPause"
+            app:layout_constraintTop_toTopOf="@+id/miniPlayerLogo"
+            app:tint="#B3B3B3" />
+
+        <!-- Play/Pause Button (estilo Spotify) -->
+        <ImageButton
+            android:id="@+id/miniPlayerPlayPause"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="0dp"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_play_arrow"
+            android:scaleType="fitCenter"
+            android:contentDescription="Reproducir o pausar"
+            app:layout_constraintBottom_toBottomOf="@+id/miniPlayerLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/miniPlayerLogo"
+            app:tint="#FFFFFF" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

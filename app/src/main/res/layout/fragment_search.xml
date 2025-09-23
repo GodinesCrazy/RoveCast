@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@android:color/black"
     android:padding="8dp"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <EditText
         android:id="@+id/etSearch"
-        android:layout_width="match_parent" android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:backgroundTint="@android:color/white"
         android:textColor="@android:color/white"
-        android:hint="Buscar"
+        android:hint="@string/search_hint"
+        android:inputType="text"
+        android:importantForAutofill="no"
         android:drawableStart="@android:drawable/ic_menu_search"
         android:drawablePadding="8dp"
-        android:padding="8dp"/>
+        android:padding="8dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerSearch"
         android:layout_width="match_parent" android:layout_height="0dp"
         android:layout_weight="1"
         android:paddingTop="8dp"/>
+
+    <!-- Shimmer for search results -->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/item_station_shimmer" />
+            <include layout="@layout/item_station_shimmer" />
+            <include layout="@layout/item_station_shimmer" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
 </LinearLayout>

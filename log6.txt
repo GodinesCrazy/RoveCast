@@ -1,0 +1,159 @@
+     com.ivanmarty.rovecast               I  sendRawEvent. wpId = 258
+2025-09-20 20:06:06.389 25360-25404 HiView.HiEvent          com.ivanmarty.rovecast               E  length is 0 or exceed MAX: 1024
+2025-09-20 20:06:06.389 25360-25404 HiView.HiEvent          com.ivanmarty.rovecast               E  length is 0 or exceed MAX: 1024
+2025-09-20 20:06:10.030 25360-25533 Ads                     com.ivanmarty.rovecast               E  Fail to get isAdIdFakeForDebugLogging (Ask Gemini)
+                                                                                                    java.io.IOException: java.util.concurrent.TimeoutException: Timed out waiting for the service connection
+                                                                                                    	at com.google.android.gms.ads.identifier.d.c(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:142)
+                                                                                                    	at com.google.android.gms.ads.internal.util.c.a(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:11)
+                                                                                                    	at com.google.android.gms.ads.internal.util.a.run(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:9)
+                                                                                                    	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:462)
+                                                                                                    	at m84.dbr.a(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:3)
+                                                                                                    	at m84.day.run(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:19)
+                                                                                                    	at m84.dbs.run(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:5)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+                                                                                                    	at java.lang.Thread.run(Thread.java:929)
+                                                                                                    Caused by: java.util.concurrent.TimeoutException: Timed out waiting for the service connection
+                                                                                                    	at com.google.android.gms.ads.identifier.d.c(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:126)
+                                                                                                    	at com.google.android.gms.ads.internal.util.c.a(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:11) 
+                                                                                                    	at com.google.android.gms.ads.internal.util.a.run(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:9) 
+                                                                                                    	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:462) 
+                                                                                                    	at m84.dbr.a(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:3) 
+                                                                                                    	at m84.day.run(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:19) 
+                                                                                                    	at m84.dbs.run(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:5) 
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167) 
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641) 
+                                                                                                    	at java.lang.Thread.run(Thread.java:929) 
+2025-09-20 20:06:10.031 25360-25533 Ads                     com.ivanmarty.rovecast               W  Update ad debug logging enablement as false
+2025-09-20 20:06:10.396 25360-25404 ZrHung.AppEyeUiProbe    com.ivanmarty.rovecast               D  stop UiProbe
+2025-09-20 20:06:10.396 25360-25404 ZrHung.AppEyeUiProbe    com.ivanmarty.rovecast               D  not watching, wait.
+2025-09-20 20:06:23.029 25360-25379 nmarty.rovecas          com.ivanmarty.rovecast               I  Thread[5,tid=25379,WaitingInMainSignalCatcherLoop,Thread*=0x7772434400,peer=0x13801be0,"Signal Catcher"]: reacting to signal 3
+2025-09-20 20:06:23.029 25360-25379 nmarty.rovecas          com.ivanmarty.rovecast               I  
+2025-09-20 20:06:23.150 25360-25379 nmarty.rovecas          com.ivanmarty.rovecast               I  Wrote stack traces to tombstoned
+2025-09-20 20:06:28.883  1681-1747  ActivityManager         system_server                        E  ANR in com.ivanmarty.rovecast
+                                                                                                    PID: 25360
+                                                                                                    Reason: executing service com.ivanmarty.rovecast/.player.PlaybackService
+                                                                                                    Load: 48.12 / 47.96 / 47.43
+                                                                                                    CPU usage from 0ms to 6790ms later (2025-09-20 20:06:22.007 to 2025-09-20 20:06:28.797):
+                                                                                                      31% 158/kswapd0: 0% user + 31% kernel
+                                                                                                      31% 25692/com.facebook.katana: 17% user + 14% kernel / faults: 56050 minor 425 major
+                                                                                                      28% 1681/system_server: 17% user + 11% kernel / faults: 12130 minor
+                                                                                                      15% 7245/com.google.android.gms: 10% user + 5.1% kernel / faults: 30068 minor 40 major
+                                                                                                      14% 6466/com.google.android.gms.persistent: 10% user + 3.6% kernel / faults: 18495 minor 52 major
+                                                                                                      12% 25357/kworker/2:0H: 0% user + 12% kernel
+                                                                                                      8.6% 4846/com.whatsapp: 3.5% user + 5.1% kernel / faults: 19996 minor 32 major
+                                                                                                      7.7% 1144/hiview: 1% user + 6.7% kernel / faults: 339 minor
+                                                                                                      6.2% 22685/kworker/3:0H: 0% user + 6.2% kernel
+                                                                                                      5.2% 678/surfaceflinger: 2.6% user + 2.6% kernel / faults: 83 minor
+                                                                                                      4.8% 21049/kworker/1:1H: 0% user + 4.8% kernel
+                                                                                                      3.6% 2065/com.android.systemui: 2% user + 1.6% kernel / faults: 352 minor
+                                                                                                      3.5% 23861/kworker/0:0H: 0% user + 3.5% kernel
+                                                                                                      3% 20922/kworker/4:2H: 0% user + 3% kernel
+                                                                                                      3% 24186/adbd: 0.8% user + 2.1% kernel / faults: 158 minor
+                                                                                                      2.6% 19407/com.android.chrome: 0.5% user + 2% kernel / faults: 5309 minor 21 major
+                                                                                                      1.9% 455/logd: 0.5% user + 1.3% kernel / faults: 239 minor
+                                                                                                      1.9% 25360/com.ivanmarty.rovecast: 1.1% user + 0.7% kernel / faults: 6338 minor
+                                                                                                      1.7% 9385/com.android.phone: 0.8% user + 0.8% kernel / faults: 802 minor
+                                                                                                      1.3% 25732/kworker/u16:1: 0% user + 1.3% kernel
+                                                                                                      1.1% 21923/kworker/u16:6: 0% user + 1.1% kernel
+                                                                                                      1.1% 22278/kworker/u16:9: 0% user + 1.1% kernel / faults: 1 minor
+                                                                                                      1.1% 24217/process-tracker: 0.1% user + 1% kernel / faults: 97 minor
+                                                                                                      1.1% 24875/com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:4: 0.1% user + 1% kernel / faults: 3463 minor 12 major
+                                                                                                      1% 1315/hisi_hcc: 0% user + 1% kernel
+                                                                                                      1% 2279/com.huawei.systemmanager:service: 0.4% user + 0.5% kernel / faults: 1559 minor 5 major
+                                                                                                      1% 2468/com.huawei.iaware: 0.4% user + 0.5% kernel / faults: 1425 minor
+                                                                                                      0.8% 24219/logcat: 0.2% user + 0.5% kernel / faults: 58 minor
+                                                                                                      0.8% 25257/kworker/7:1H: 0% user + 0.8% kernel
+                                                                                                      0.7% 9/rcu_preempt: 0% user + 0.7% kernel
+                                                                                                      0.7% 19541/com.android.chrome:privileged_process0: 0.1% user + 0.5% kernel / faults: 1636 minor 22 major
+                                                                                                      0.7% 31535/com.touchtype.swiftkey: 0.5% user + 0.1% kernel / faults: 306 minor
+                                                                                                      0.5% 680/powerlogd: 0.2% user + 0.2% kernel / faults: 14 minor
+                                                                                                      0.5% 1099/hwpged: 0.1% user + 0.4% kernel / faults: 114 minor
+                                                                                                      0.5% 1936/wificond: 0.1% user + 0.4% kernel / faults: 74 minor
+                                                                                                      0.5% 10406/hilogd: 0.4% user + 0.1% kernel / faults: 130 minor
+                                                                                                      0.5% 22489/com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:2: 0.1% user + 0.4% kernel / faults: 1301 minor 23 major
+                                                                                                      0.4% 10/rcu_sched: 0% user + 0.4% kernel
+                                                                                                      0.4% 673/ashmemd: 0.1% user + 0.2% kernel / faults: 12 minor
+                                                                                                      0.4% 677/lmkd: 0.1% user + 0.2% kernel / faults: 21 minor
+                                                                                                      0.4% 1020/statsd: 0.1% user + 0.2% kernel / faults: 50 minor
+                                                                                                      0.4% 1133/vendor.huawei.hardware.sensors@1.2-service: 0.1% user + 0.2% kernel / faults: 35 minor
+                                                                                                      0.4% 1303/oal_gpio_rx_dat: 0% user + 0.4% kernel
+                                                                                                      0.4% 1307/hisi_frw/0: 0% user + 0.4% kernel
+                                                                                                      0.4% 3568/sugov:4: 0% user + 0.4% kernel
+                                                                                                      0.4% 5547/com.huawei.hiai.engineservice: 0.2% user + 0.1% kernel / faults: 903 minor 1 major
+                                                                                                      0.4% 15641/com.instagram.android: 0.1% user + 0.2% kernel / faults: 936 minor
+                                                                                                      0.4% 25019/com.huawei.hwid.core: 0.1% user + 0.2% kernel / faults: 989 minor
+                                                                                                      0.2% 606/zygote64: 0% user + 0.2% kernel / faults: 634 minor
+                                                                                                      0.2% 1939/vendor.huawei.hardware.wifi@1.2-service: 0.1% user + 0.1% kernel / faults: 130 minor
+                                                                                                      0.2% 2233/com.huawei.systemserver: 0.1% user + 0.1% kernel / faults: 350 minor
+                                                                                                      0.2% 3562/sugov:0: 0% user + 0.2% kernel
+                                                                                                      0.2% 23230/com.duolingo: 0.1% user + 0.1% kernel / faults: 396 minor
+                                                                                                      0.1% 8/ksoftirqd/0: 0% user + 0.1% kernel
+                                                                                                      0.1% 18/ksoftirqd/1: 0% user + 0.1% kernel
+                                                                                                      0.1% 
+2025-09-20 20:06:53.683 25360-25379 nmarty.rovecas          com.ivanmarty.rovecast               I  Thread[5,tid=25379,WaitingInMainSignalCatcherLoop,Thread*=0x7772434400,peer=0x13801be0,"Signal Catcher"]: reacting to signal 3
+2025-09-20 20:06:53.683 25360-25379 nmarty.rovecas          com.ivanmarty.rovecast               I  
+2025-09-20 20:06:53.855 25360-25379 nmarty.rovecas          com.ivanmarty.rovecast               I  Wrote stack traces to tombstoned
+2025-09-20 20:07:03.130 25360-25546 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 20:07:08.021  1681-1747  ActivityManager         system_server                        E  ANR in com.ivanmarty.rovecast
+                                                                                                    PID: 25360
+                                                                                                    Reason: executing service com.ivanmarty.rovecast/.player.PlaybackService
+                                                                                                    Load: 48.03 / 47.92 / 47.43
+                                                                                                    CPU usage from 0ms to 15213ms later (2025-09-20 20:06:52.740 to 2025-09-20 20:07:07.952):
+                                                                                                      23% 25692/com.facebook.katana: 16% user + 7.4% kernel / faults: 45782 minor 4 major
+                                                                                                      17% 1681/system_server: 10% user + 7.3% kernel / faults: 5078 minor 26 major
+                                                                                                      7.6% 678/surfaceflinger: 3.4% user + 4.2% kernel / faults: 68 minor
+                                                                                                      5.8% 24875/com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:4: 4.3% user + 1.4% kernel / faults: 17967 minor 13 major
+                                                                                                      5.7% 2065/com.android.systemui: 3.2% user + 2.4% kernel / faults: 3153 minor
+                                                                                                      5.4% 1144/hiview: 0.8% user + 4.5% kernel / faults: 616 minor 1 major
+                                                                                                      2.8% 24186/adbd: 0.8% user + 1.9% kernel / faults: 49 minor
+                                                                                                      2.2% 9385/com.android.phone: 1.5% user + 0.6% kernel / faults: 217 minor
+                                                                                                      2.2% 19407/com.android.chrome: 1.2% user + 0.9% kernel / faults: 3282 minor 1 major
+                                                                                                      1.9% 455/logd: 0.6% user + 1.2% kernel / faults: 49 minor
+                                                                                                      1.9% 25360/com.ivanmarty.rovecast: 1.1% user + 0.7% kernel / faults: 8267 minor 5 major
+                                                                                                      1.8% 21049/kworker/1:1H: 0% user + 1.8% kernel
+                                                                                                      1.7% 23861/kworker/0:0H: 0% user + 1.7% kernel
+                                                                                                      1.7% 22548/android.process.media: 0.9% user + 0.7% kernel / faults: 3161 minor 9 major
+                                                                                                      1.5% 2468/com.huawei.iaware: 1% user + 0.5% kernel / faults: 2461 minor
+                                                                                                      1.3% 25732/kworker/u16:1: 0% user + 1.3% kernel
+                                                                                                      1.2% 158/kswapd0: 0% user + 1.2% kernel
+                                                                                                      1.2% 17434/kworker/u16:8: 0% user + 1.2% kernel
+                                                                                                      1.1% 1315/hisi_hcc: 0% user + 1.1% kernel
+                                                                                                      1.1% 24217/process-tracker: 0.1% user + 1% kernel / faults: 6 minor
+                                                                                                      1% 24219/logcat: 0.4% user + 0.5% kernel / faults: 1 minor
+                                                                                                      0.8% 15641/com.instagram.android: 0.4% user + 0.3% kernel / faults: 770 minor
+                                                                                                      0.7% 680/powerlogd: 0.4% user + 0.2% kernel / faults: 13 minor
+                                                                                                      0.7% 1133/vendor.huawei.hardware.sensors@1.2-service: 0.1% user + 0.5% kernel
+                                                                                                      0.6% 1303/oal_gpio_rx_dat: 0% user + 0.6% kernel
+                                                                                                      0.6% 1307/hisi_frw/0: 0% user + 0.6% kernel
+                                                                                                      0.6% 1936/wificond: 0.1% user + 0.4% kernel
+                                                                                                      0.6% 4204/com.google.android.googlequicksearchbox:googleapp: 0% user + 0.5% kernel / faults: 2012 minor 17 major
+                                                                                                      0.6% 31535/com.touchtype.swiftkey: 0.5% user + 0% kernel / faults: 35 minor
+                                                                                                      0.1% 3292/com.huawei.android.instantshare: 0% user + 0.1% kernel / faults: 4758 minor 12 major
+                                                                                                      0.1% 4604/com.google.android.googlequicksearchbox:interactor: 0% user + 0.1% kernel / faults: 3075 minor 1 major
+                                                                                                      0.5% 22278/kworker/u16:9: 0% user + 0.5% kernel
+                                                                                                      0.5% 9/rcu_preempt: 0% user + 0.5% kernel
+                                                                                                      0.5% 1020/statsd: 0.4% user + 0% kernel / faults: 13 minor
+                                                                                                      0.5% 10406/hilogd: 0.3% user + 0.1% kernel / faults: 35 minor
+                                                                                                      0.5% 25019/com.huawei.hwid.core: 0.2% user + 0.2% kernel / faults: 641 minor 5 major
+                                                                                                      0.4% 20402/kworker/u16:10: 0% user + 0.4% kernel
+                                                                                                      0.3% 2233/com.huawei.systemserver: 0.1% user + 0.1% kernel / faults: 113 minor
+                                                                                                      0.3% 1316/hisi_rxdata: 0% user + 0.3% kernel
+                                                                                                      0.2% 456/servicemanager: 0.1% user + 0.1% kernel
+                                                                                                      0.2% 653/vendor.huawei.hardware.hwdisplay.displayengine@1.2-service: 0.1% user + 0.1% kernel
+                                                                                                      0.2% 995/dubaid: 0.1% user + 0.1% kernel / faults: 14 minor
+                                                                                                      0.2% 1099/hwpged: 0% user + 0.1% kernel / faults: 3 minor
+                                                                                                      0.2% 1282/com.huawei.lbs: 0.1% user + 0% kernel / faults: 2 minor
+                                                                                                      0.2% 2279/com.huawei.systemmanager:service: 0% user + 0.1% kernel / faults: 465 minor
+                                                                                                      0.2% 4846/com.whatsapp: 0.1% user + 0% kernel / faults: 37 minor
+                                                                                                      0.2% 23230/com.duolingo: 0.1% user + 0% kernel / faults: 542 minor
+                                                                                                      0.2% 25257/kworker/7:1H: 0% user + 0.2% kernel
+                                                                                                      0.1% 10/rcu_sched: 0% user + 0.1% kernel
+                                                                                                      0.1% 637/android.hardware.graphics.composer@2.2-service: 0% user + 0.1% kernel / faults: 18 minor
+                                                                                                      0.1% 673/ashmemd: 0% user + 0.1% kernel
+                                                                                                      0.1% 3562/sugov:0: 0% user + 0.1% kernel
+                                                                                                      0.1% 5547/com.huawei.hiai.engineservice: 0% user + 0.1% kernel / faults: 112 minor
+                                                                                                      0.1% 6466/com.google.android.gms.persistent: 0% user + 0.1% kernel / faults: 370 minor
+                                                                                                      0.1% 22685/kworker/3:0H: 0% user + 0.1% kernel
+                                                                                                      0.
+2025-09-20 20:07:25.287  1681-2110  WindowManager           system_server                        E  win=Window{8b5047b u0 Splash Screen com.ivanmarty.rovecast EXITING} destroySurfaces: appStopped=false win.mWindowRemovalAllowed=true win.mRemoveOnExit=true

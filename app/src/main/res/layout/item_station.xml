@@ -4,13 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:foreground="@drawable/ripple_effect"
-    android:layout_margin="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
     app:cardBackgroundColor="@color/bgElevated"
-    app:cardCornerRadius="14dp"
-    app:cardUseCompatPadding="true">
+    app:cardCornerRadius="12dp"
+    app:cardUseCompatPadding="false">
 
     <LinearLayout
-        android:padding="12dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -18,17 +24,17 @@
 
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_radio_placeholder"
-            android:background="@drawable/shape_logo_bg"
-            android:contentDescription="@null"/>
+            android:contentDescription="@string/station_logo_description"/>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
             android:orientation="vertical"
             android:layout_weight="1">
 
@@ -54,10 +60,11 @@
 
         <ImageButton
             android:id="@+id/btnFav"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:background="@android:color/transparent"
-            android:contentDescription="@null"
-            android:src="@drawable/ic_heart"/>
+            android:contentDescription="@string/cd_favorite_button"
+            android:src="@drawable/fav_icon_selector"
+            app:tint="@color/fav_tint_selector"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

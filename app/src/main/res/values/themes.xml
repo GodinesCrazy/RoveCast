@@ -41,9 +41,9 @@
         <item name="mediaRouteButtonTint">@color/cast_button_selector</item>
     </style>
 
-    <style name="WhiteCastButton" parent="Widget.MediaRouter.MediaRouteButton">
-        <item name="mediaRouteButtonTint">@android:color/white</item>
-    </style>
+    
+
+    
 
     <!-- Estilo para el Switch de la alarma -->
     <style name="Switch.RoveCast" parent="Widget.AppCompat.CompoundButton.Switch">
@@ -51,10 +51,6 @@
         <item name="trackTint">@color/switch_track_selector</item>
     </style>
 
-    <!-- Estilo para los componentes de la alarma -->
-    <style name="Widget.RoveCast.Alarm" parent="Theme.RoveCast">
-        <item name="android:textColorPrimary">@color/on_dark</item>
-        <item name="android:textColorSecondary">@color/on_dark_60</item>
-    </style>
+    
 
 </resources>

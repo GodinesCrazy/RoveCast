@@ -16,6 +16,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_marginTop="16dp"
-        android:text="Añadir Preset" />
+        android:text="@string/add_preset" />
 
 </LinearLayout>

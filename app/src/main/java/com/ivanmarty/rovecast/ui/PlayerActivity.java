@@ -1,20 +1,23 @@
 package com.ivanmarty.rovecast.ui;
 
 import android.content.ComponentName;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.media3.common.MediaItem;
 import androidx.media3.common.MediaMetadata;
 import androidx.media3.common.Player;
 import androidx.media3.session.MediaController;
@@ -40,6 +43,8 @@ import com.ivanmarty.rovecast.ui.adapter.SleepTimerPresetAdapter;
 
 import java.util.concurrent.TimeUnit;
 
+import jp.wasabeef.glide.transformations.BlurTransformation;
+
 @androidx.media3.common.util.UnstableApi
 public class PlayerActivity extends AppCompatActivity {
 
@@ -47,13 +52,17 @@ public class PlayerActivity extends AppCompatActivity {
     private MediaController controller;
     private PlayerView playerView;
     private ImageView ivLogo;
+    private ImageView ivBackground; // Para el fondo difuso
+    private com.facebook.shimmer.ShimmerFrameLayout shimmerArt;
+    private ProgressBar bufferingProgress;
     private TextView tvTitle, tvMeta;
+    private ImageButton btnPlayPause, btnNext, btnPrevious, btnShuffle, btnRepeat;
+    private ImageButton btnShare, btnFavorite, btnSleepTimer;
     private FavoriteRepository favoriteRepository;
     private SleepTimerPresetRepository sleepTimerPresetRepository;
     private boolean isFavorite;
-    private String stationId;
     private Station currentStation;
-
+    private Player.Listener playerListener; // Para poder removerlo después
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,14 +86,72 @@ public class PlayerActivity extends AppCompatActivity {
         playerView = findViewById(R.id.playerView);
         playerView.setControllerAutoShow(false);
         ivLogo = findViewById(R.id.ivLogo);
+        ivBackground = findViewById(R.id.ivBackground); // Obtener referencia
+        shimmerArt = findViewById(R.id.shimmerArt);
+        bufferingProgress = findViewById(R.id.bufferingProgress);
+        if (shimmerArt != null) { shimmerArt.startShimmer(); }
         tvTitle = findViewById(R.id.tvTitle);
         tvMeta = findViewById(R.id.tvMeta);
+
+        // --- Initialize Control Buttons ---
+        btnPlayPause = findViewById(R.id.btnPlayPause);
+        btnNext = findViewById(R.id.btnNext);
+        btnPrevious = findViewById(R.id.btnPrevious);
+        btnShuffle = findViewById(R.id.btnShuffle);
+        btnRepeat = findViewById(R.id.btnRepeat);
+        androidx.mediarouter.app.MediaRouteButton btnDevices = findViewById(R.id.btnDevices);
+        CastButtonFactory.setUpMediaRouteButton(getApplicationContext(), btnDevices);
+        btnShare = findViewById(R.id.btnShare);
+        btnFavorite = findViewById(R.id.btnFavorite);
+        btnSleepTimer = findViewById(R.id.btnSleepTimer);
+    }
+
+    private void setupClickListeners() {
+        if (controller == null) return;
+
+        btnPlayPause.setOnClickListener(v -> {
+            if (controller.isPlaying()) {
+                controller.pause();
+            } else {
+                // SOLUCIÓN ALTERNATIVA: Preparar antes de reproducir para reanudar streams.
+                controller.prepare();
+                controller.play();
+            }
+        });
+
+        btnNext.setOnClickListener(v -> controller.seekToNextMediaItem());
+        btnPrevious.setOnClickListener(v -> controller.seekToPreviousMediaItem());
+
+        btnShuffle.setOnClickListener(v -> controller.setShuffleModeEnabled(!controller.getShuffleModeEnabled()));
+
+        btnRepeat.setOnClickListener(v -> {
+            int nextMode = (controller.getRepeatMode() + 1) % 3;
+            controller.setRepeatMode(nextMode);
+        });
+
+        btnFavorite.setOnClickListener(v -> toggleFavorite());
+
+        btnSleepTimer.setOnClickListener(v -> showTimerDialog());
+
+        btnShare.setOnClickListener(v -> {
+            if (currentStation != null) {
+                Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                shareIntent.setType("text/plain");
+                // SOLUCIÓN: Usar concatenación de String simple, es más legible.
+                String shareText = "Listening to " + currentStation.name + " on RoveCast! \n\n" +
+                                 "Download the app and tune in: https://play.google.com/store/apps/details?id=com.ivanmarty.rovecast";
+                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Listen to " + currentStation.name + " on RoveCast");
+                shareIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+                startActivity(Intent.createChooser(shareIntent, "Share via"));
+            } else {
+                Toast.makeText(this, "Station info not available to share.", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_player, menu);
-        
         MenuItem favoriteItem = menu.findItem(R.id.menu_favorite);
         if (isFavorite) {
             favoriteItem.setIcon(R.drawable.ic_heart);
@@ -96,19 +163,12 @@ public class PlayerActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.menu_timer) {
+        int itemId = item.getItemId();
+        if (itemId == R.id.menu_timer) {
             showTimerDialog();
             return true;
-        } else if (item.getItemId() == R.id.menu_favorite) {
-            isFavorite = !isFavorite;
-            favoriteRepository.toggleFavorite(currentStation, isFavorite);
-            if (isFavorite) {
-                item.setIcon(R.drawable.ic_heart);
-                Toast.makeText(this, "Añadido a favoritos", Toast.LENGTH_SHORT).show();
-            } else {
-                item.setIcon(R.drawable.ic_heart_outline);
-                Toast.makeText(this, "Eliminado de favoritos", Toast.LENGTH_SHORT).show();
-            }
+        } else if (itemId == R.id.menu_favorite) {
+            toggleFavorite();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -122,6 +182,11 @@ public class PlayerActivity extends AppCompatActivity {
         controllerFuture.addListener(() -> {
             try {
                 controller = controllerFuture.get();
+                // SOLUCIÓN: Crear el objeto Station aquí, una sola vez.
+                if (controller.getCurrentMediaItem() != null) {
+                    currentStation = createStationFromMediaItem(controller.getCurrentMediaItem());
+                }
+                setupClickListeners(); // Setup listeners once controller is available
                 initializeUIWithController(controller);
             } catch (Exception e) {
                 Log.e("PlayerActivity", "Error connecting to player", e);
@@ -132,51 +197,139 @@ public class PlayerActivity extends AppCompatActivity {
     private void initializeUIWithController(MediaController mediaController) {
         this.controller = mediaController;
         playerView.setPlayer(mediaController);
-        updateUiForMediaItem(mediaController.getCurrentMediaItem());
-        mediaController.addListener(new Player.Listener() {
+        updateUI(); // Initial UI update
+
+        playerListener = new Player.Listener() {
             @Override
-            public void onMediaMetadataChanged(@NonNull MediaMetadata mediaMetadata) {
-                updateUiForMediaMetadata(mediaMetadata);
+            public void onEvents(@NonNull Player player, @NonNull Player.Events events) {
+                // This single callback updates the UI on any relevant change.
+                updateUI();
             }
-        });
+        };
+        mediaController.addListener(playerListener);
     }
 
-    private void updateUiForMediaItem(androidx.media3.common.MediaItem mediaItem) {
-        if (mediaItem != null) {
-            updateUiForMediaMetadata(mediaItem.mediaMetadata);
-            stationId = mediaItem.mediaId;
-            isFavorite = favoriteRepository.isFavoriteNow(stationId);
-            currentStation = new Station();
-            currentStation.stationuuid = stationId;
-            currentStation.name = mediaItem.mediaMetadata.title.toString();
-            currentStation.url_resolved = mediaItem.requestMetadata.mediaUri.toString();
-            currentStation.favicon = mediaItem.mediaMetadata.artworkUri.toString();
-            invalidateOptionsMenu();
-        } else {
-            tvTitle.setText(R.string.app_name);
-            tvMeta.setText("");
-            ivLogo.setImageResource(R.drawable.ic_radio_placeholder);
-        }
-    }
+    private void updateUI() {
+        if (controller == null || controller.getCurrentMediaItem() == null) return;
 
-    private void updateUiForMediaMetadata(MediaMetadata meta) {
-        tvTitle.setText(meta.title);
-        tvMeta.setText(meta.artist);
-        if (meta.artworkUri != null) {
+        MediaItem mediaItem = controller.getCurrentMediaItem();
+        MediaMetadata metadata = mediaItem.mediaMetadata;
+
+        tvTitle.setText(metadata.title);
+        tvMeta.setText(metadata.artist);
+
+        if (metadata.artworkUri != null) {
+            shimmerArt.stopShimmer();
+            shimmerArt.hideShimmer();
+
+            // Cargar logo principal
             Glide.with(this)
-                    .load(meta.artworkUri)
+                    .load(metadata.artworkUri)
                     .placeholder(R.drawable.ic_radio_placeholder)
+                    .error(R.drawable.ic_radio_placeholder) // Fallback si la carga falla
                     .into(ivLogo);
+
+            // Cargar fondo difuminado con fallback a gradiente
+            try {
+                Glide.with(this)
+                        .load(metadata.artworkUri)
+                        .transform(new BlurTransformation(25, 3))
+                        .error(R.drawable.bg_player_gradient)
+                        .into(ivBackground);
+            } catch (Exception e) {
+                Log.e("PlayerActivity", "Error applying blur transformation", e);
+                ivBackground.setImageResource(R.drawable.bg_player_gradient);
+            }
+        } else {
+            // Si no hay artwork, mantener el shimmer y el fondo por defecto
+            shimmerArt.startShimmer();
+            ivLogo.setImageResource(R.drawable.ic_radio_placeholder);
+            ivBackground.setImageResource(R.drawable.bg_player_gradient);
         }
+
+        updateFavoriteButton(mediaItem.mediaId);
+        updatePlayerStateUI();
+    }
+
+    private void updateFavoriteButton(String stationUuid) {
+        isFavorite = favoriteRepository.isFavoriteNow(stationUuid);
+        btnFavorite.setImageResource(isFavorite ? R.drawable.ic_heart : R.drawable.ic_heart_outline);
+        int favoriteColor = isFavorite ? getColor(R.color.accent) : getColor(R.color.textSecondary);
+        btnFavorite.setColorFilter(favoriteColor);
+    }
+
+    private void updatePlayerStateUI() {
+        // Update play/pause button
+        btnPlayPause.setImageResource(controller.isPlaying() ? R.drawable.ic_pause : R.drawable.ic_play_arrow);
+
+        // Update shuffle button with tinting
+        boolean isShuffleEnabled = controller.getShuffleModeEnabled();
+        btnShuffle.setAlpha(isShuffleEnabled ? 1f : 0.7f);
+        int shuffleColor = isShuffleEnabled ? getColor(R.color.accent) : getColor(R.color.textSecondary);
+        btnShuffle.setColorFilter(shuffleColor);
+
+        // Update repeat button with tinting
+        int repeatMode = controller.getRepeatMode();
+        float repeatAlpha = 0.7f;
+        int repeatIcon = R.drawable.ic_repeat;
+        int repeatColor = getColor(R.color.textSecondary);
+
+        if (repeatMode == Player.REPEAT_MODE_ONE) {
+            repeatAlpha = 1f;
+            repeatIcon = R.drawable.ic_repeat_one;
+            repeatColor = getColor(R.color.accent);
+        } else if (repeatMode == Player.REPEAT_MODE_ALL) {
+            repeatAlpha = 1f;
+            repeatColor = getColor(R.color.accent);
+        }
+        btnRepeat.setAlpha(repeatAlpha);
+        btnRepeat.setImageResource(repeatIcon);
+        btnRepeat.setColorFilter(repeatColor);
+
+        // Update buffering indicator
+        if (bufferingProgress != null) {
+            bufferingProgress.setVisibility(controller.getPlaybackState() == Player.STATE_BUFFERING ? View.VISIBLE : View.GONE);
+        }
+    }
+
+    private Station createStationFromMediaItem(MediaItem mediaItem) {
+        if (mediaItem == null) return null;
+        Station station = new Station();
+        station.stationuuid = mediaItem.mediaId;
+        if (mediaItem.mediaMetadata.title != null) {
+            station.name = mediaItem.mediaMetadata.title.toString();
+        }
+        if (mediaItem.requestMetadata.mediaUri != null) {
+            station.url_resolved = mediaItem.requestMetadata.mediaUri.toString();
+        }
+        if (mediaItem.mediaMetadata.artworkUri != null) {
+            station.favicon = mediaItem.mediaMetadata.artworkUri.toString();
+        }
+        return station;
+    }
+
+    private void toggleFavorite() {
+        if (currentStation == null) {
+            Toast.makeText(this, "Station data not available.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        isFavorite = !isFavorite;
+        favoriteRepository.toggleFavorite(currentStation, isFavorite);
+        updateUI(); // Update UI to reflect the change
+        Toast.makeText(this, isFavorite ? "Added to favorites" : "Removed from favorites", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        if (controller != null) {
-            MediaController.releaseFuture(controllerFuture);
-            controller = null;
+        // SOLUCIÓN: Liberar el controlador y remover el listener para evitar memory leaks.
+        if (controller != null && playerListener != null) {
+            controller.removeListener(playerListener);
         }
+        if (controllerFuture != null) {
+            MediaController.releaseFuture(controllerFuture);
+        }
+        controller = null;
     }
 
     private void showTimerDialog() {
@@ -296,10 +449,6 @@ public class PlayerActivity extends AppCompatActivity {
     }
 
     private void startSleepTimer(long minutes) {
-        SleepTimerManager.getInstance().startTimer(TimeUnit.MINUTES.toMillis(minutes), () -> {
-            if (controller != null) {
-                controller.stop();
-            }
-        });
+        SleepTimerManager.getInstance().startTimer(minutes, controller != null ? controller::pause : null);
     }
 }

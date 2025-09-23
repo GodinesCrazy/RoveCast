@@ -1,0 +1,457 @@
+2025-09-20 16:53:35.810  1099-1214  AwareLog                hwpged                               E  iawared: WorkingsetPathCheckInternal Failed to lstat(/data/system/iaware/workingset/com.ivanmarty.rovecast/): 2
+2025-09-20 16:53:35.810  1099-1214  AwareLog                hwpged                               E  iawared: WorkingsetPathCheck Failed to delete directory(/data/system/iaware/workingset/com.ivanmarty.rovecast/): 2
+2025-09-20 16:53:36.219  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               I  Late-enabling -Xcheck:jni
+2025-09-20 16:53:36.266  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               E  LoadAppImageStartupCache enabled : 1
+2025-09-20 16:53:36.266  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               E  Unknown bits set in runtime_flags: 0x8000
+2025-09-20 16:53:36.269  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               I  Reinit property: dalvik.vm.checkjni= false
+2025-09-20 16:53:36.269  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               I  ReInitProperties: persist.vm.debug.dumpapi= false
+2025-09-20 16:53:36.335  1580-1580  ActivityThread          com.ivanmarty.rovecast               D  Attach thread to application
+2025-09-20 16:53:36.476  1580-1787  ActivityThread          com.ivanmarty.rovecast               I  Init compatible state: true
+2025-09-20 16:53:36.485  1580-1787  HwFramewor...rtsFactory com.ivanmarty.rovecast               D  HwFrameworkSecurityPartsFactory in.
+2025-09-20 16:53:36.485  1580-1787  HwFramewor...rtsFactory com.ivanmarty.rovecast               I  add HwFrameworkSecurityPartsFactory to memory.
+2025-09-20 16:53:36.502  1580-1787  BehaviorCollectManager  com.ivanmarty.rovecast               E  Fail to acquire dataAnalyzerService...
+2025-09-20 16:53:36.503  1580-1580  ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.ivanmarty.rovecast-RBexy-kc6Hm0OMD8gTrm_g==/base.apk librarySearchPath: /data/app/com.ivanmarty.rovecast-RBexy-kc6Hm0OMD8gTrm_g==/lib/arm64 libraryPermittedPath: /data/user/0/com.ivanmarty.rovecast parent: java.lang.BootClassLoader@c069c4e targetSdkVersion: 35 isBundled: false classLoaderName: null sharedLibraries: null
+2025-09-20 16:53:39.248  1580-1797  HwPartIawareFactory     com.ivanmarty.rovecast               I  add android.common.HwPartIawareFactoryImpl to memory.
+2025-09-20 16:53:40.429  1580-1787  HwApiCacheMangerEx      com.ivanmarty.rovecast               I  apicache path=/storage/emulated/0 state=mounted key=com.ivanmarty.rovecast#10626#256
+2025-09-20 16:53:40.430  1580-1787  HwApiCacheMangerEx      com.ivanmarty.rovecast               I  need clear apicache,because volumes changed,oldCnt=0 newCnt=1
+2025-09-20 16:53:40.440  1580-1787  HwApiCacheMangerEx      com.ivanmarty.rovecast               I  apicache path=/storage/emulated/0 state=mounted key=com.ivanmarty.rovecast#10626#0
+2025-09-20 16:53:40.440  1580-1787  HwApiCacheMangerEx      com.ivanmarty.rovecast               I  need clear apicache,because volumes changed,oldCnt=1 newCnt=1
+2025-09-20 16:53:40.461  1580-1580  WM-WrkMgrInitializer    com.ivanmarty.rovecast               D  Initializing WorkManager with default configuration.
+2025-09-20 16:53:40.462  1580-2347  AwareLog                com.ivanmarty.rovecast               E  AtomicFileUtils: readFileLines file not exist: android.util.AtomicFile@67fa6b9
+2025-09-20 16:53:40.464  1580-2347  AwareLog                com.ivanmarty.rovecast               E  AtomicFileUtils: readFileLines file not exist: android.util.AtomicFile@53c8afe
+2025-09-20 16:53:40.464  1580-1787  AwareBitmapCacher       com.ivanmarty.rovecast               I  init processName:com.ivanmarty.rovecast pid=1580 uid=10626
+2025-09-20 16:53:41.059  1580-1580  ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /system/framework/org.apache.http.legacy.jar librarySearchPath: /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/lib/arm64:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@c069c4e targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
+2025-09-20 16:53:41.063  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
+2025-09-20 16:53:41.069  1580-1580  ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /system/framework/com.android.media.remotedisplay.jar librarySearchPath: /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/lib/arm64:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@c069c4e targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
+2025-09-20 16:53:41.076  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
+2025-09-20 16:53:41.079  1580-1580  ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /system/framework/com.android.location.provider.jar librarySearchPath: /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/lib/arm64:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@c069c4e targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
+2025-09-20 16:53:41.083  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
+2025-09-20 16:53:41.086  1580-1580  ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/base.apk:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.es.apk:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.xxhdpi.apk librarySearchPath: /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/lib/arm64:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@c069c4e targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: [dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/org.apache.http.legacy.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/lib/arm64, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]], dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/com.android.media.remotedisplay.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/lib/arm64, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]], dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/com.android.location.provider.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/lib/arm64, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]]]
+2025-09-20 16:53:41.318  1580-1580  DynamiteModule          com.ivanmarty.rovecast               I  Considering local module com.google.android.gms.ads.dynamite:0 and remote module com.google.android.gms.ads.dynamite:253405700
+2025-09-20 16:53:41.324  1580-1580  DynamiteModule          com.ivanmarty.rovecast               I  Selected remote version of com.google.android.gms.ads.dynamite, version >= 253405700
+2025-09-20 16:53:41.981  1580-1580  DynamitePackage         com.ivanmarty.rovecast               D  Instantiated singleton DynamitePackage.
+2025-09-20 16:53:41.981  1580-1580  DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraMobileAdsSettingManagerCreatorImpl
+2025-09-20 16:53:42.058  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->arrayBaseOffset(Ljava/lang/Class;)I (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:53:42.058  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->arrayIndexScale(Ljava/lang/Class;)I (greylist, linking, allowed)
+2025-09-20 16:53:42.058  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapInt(Ljava/lang/Object;JII)Z (greylist, linking, allowed)
+2025-09-20 16:53:42.058  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapLong(Ljava/lang/Object;JJJ)Z (greylist, linking, allowed)
+2025-09-20 16:53:42.058  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getIntVolatile(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:53:42.058  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObjectVolatile(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:53:42.058  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:53:42.058  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObjectVolatile(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:53:42.058  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden field Lsun/misc/Unsafe;->theUnsafe:Lsun/misc/Unsafe; (greylist, reflection, allowed)
+2025-09-20 16:53:42.129  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getUnsafe()Lsun/misc/Unsafe; (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:53:42.130  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:53:42.141  1580-1580  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-20 16:53:42.142  1580-1580  ConnectivityManager     com.ivanmarty.rovecast               I  requestNetwork and the calling app is: com.ivanmarty.rovecast
+2025-09-20 16:53:42.154  1580-1580  Ads                     com.ivanmarty.rovecast               I  Updating ad debug logging enablement.
+2025-09-20 16:53:42.156  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 16:53:42.157  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:53:42.159  1580-2490  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 16:53:42.159  1580-2490  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:53:42.684  1580-2487  NetworkSecurityConfig   com.ivanmarty.rovecast               D  Using Network Security Config from resource network_security_config debugBuild: true
+2025-09-20 16:53:42.692  1580-2503  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:53:42.771  1580-1580  DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdPreloaderCreatorImpl
+2025-09-20 16:53:42.790  1580-2505  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 16:53:42.825  1580-2515  DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:53:42.882  1580-2515  Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:53:42.898  1580-1580  MediaRouter             com.ivanmarty.rovecast               V  Selecting route: RouteInfo{ name=Teléfono, description=null, status=null, category=RouteCategory{ name=Sistema types=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO  groupable=false }, supportedTypes=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO , presentationDisplay=null }
+2025-09-20 16:53:42.901  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:53:42.902  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:53:42.918  1580-1580  AxMediaRouter           com.ivanmarty.rovecast               I  Found default route: MediaRouter.RouteInfo{ uniqueId=DEFAULT_ROUTE, name=Teléfono, description=null, iconUri=null, enabled=true, isSystemRoute=true, connectionState=0, canDisconnect=false, playbackType=0, playbackStream=3, deviceType=0, volumeHandling=1, volume=12, volumeMax=15, presentationDisplayId=-1, extras=null, settingsIntent=null, providerPackageName=android }
+2025-09-20 16:53:42.919  1580-1580  AxMediaRouter           com.ivanmarty.rovecast               I  Unselecting the current route because it is no longer selectable: null
+2025-09-20 16:53:42.919  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:53:42.920  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:53:42.921  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:53:42.921  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, linking, allowed)
+2025-09-20 16:53:42.922  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:53:42.936  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->allocateInstance(Ljava/lang/Class;)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:53:42.937  1580-1580  DynamiteModule          com.ivanmarty.rovecast               I  Considering local module com.google.android.gms.cast.framework.dynamite:0 and remote module com.google.android.gms.cast.framework.dynamite:253534000
+2025-09-20 16:53:42.937  1580-1580  DynamiteModule          com.ivanmarty.rovecast               I  Selected remote version of com.google.android.gms.cast.framework.dynamite, version >= 253534000
+2025-09-20 16:53:42.937  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->peekLong(JZ)J (greylist, reflection, allowed)
+2025-09-20 16:53:42.937  1580-1580  DynamiteModule          com.ivanmarty.rovecast               V  Dynamite loader version >= 2, using loadModule2NoCrashUtils
+2025-09-20 16:53:42.937  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->pokeLong(JJZ)V (greylist, reflection, allowed)
+2025-09-20 16:53:42.938  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->pokeInt(JIZ)V (greylist, reflection, allowed)
+2025-09-20 16:53:42.938  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->peekInt(JZ)I (greylist, reflection, allowed)
+2025-09-20 16:53:42.938  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->pokeByte(JB)V (greylist, reflection, allowed)
+2025-09-20 16:53:42.938  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->peekByte(J)B (greylist, reflection, allowed)
+2025-09-20 16:53:42.938  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->pokeByteArray(J[BII)V (greylist, reflection, allowed)
+2025-09-20 16:53:42.938  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->peekByteArray(J[BII)V (greylist, reflection, allowed)
+2025-09-20 16:53:42.938  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->peekByte(J)B (greylist, linking, allowed)
+2025-09-20 16:53:42.939  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, reflection, allowed)
+2025-09-20 16:53:42.939  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden field Ljava/nio/Buffer;->address:J (greylist, reflection, allowed)
+2025-09-20 16:53:42.939  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, reflection, allowed)
+2025-09-20 16:53:42.939  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, reflection, allowed)
+2025-09-20 16:53:42.939  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, reflection, allowed)
+2025-09-20 16:53:42.939  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, reflection, allowed)
+2025-09-20 16:53:42.939  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, reflection, allowed)
+2025-09-20 16:53:42.939  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, reflection, allowed)
+2025-09-20 16:53:42.963  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  ClassLoaderContext type mismatch. expected=PCL, found=DLC (PCL[] | DLC[];PCL[/data/app/com.ivanmarty.rovecast-RBexy-kc6Hm0OMD8gTrm_g==/base.apk*3005761464:/data/app/com.ivanmarty.rovecast-RBexy-kc6Hm0OMD8gTrm_g==/base.apk!classes2.dex*3838903545:/data/app/com.ivanmarty.rovecast-RBexy-kc6Hm0OMD8gTrm_g==/base.apk!classes3.dex*4049262258:/data/app/com.ivanmarty.rovecast-RBexy-kc6Hm0OMD8gTrm_g==/base.apk!classes4.dex*703073500:/data/app/com.ivanmarty.rovecast-RBexy-kc6Hm0OMD8gTrm_g==/base.apk!classes5.dex*176331362:/data/app/com.ivanmarty.rovecast-RBexy-kc6Hm0OMD8gTrm_g==/base.apk!classes6.dex*2091565728:/data/app/com.ivanmarty.rovecast-RBexy-kc6Hm0OMD8gTrm_g==/base.apk!classes7.dex*398708974:/data/app/com.ivanmarty.rovecast-RBexy-kc6Hm0OMD8gTrm_g==/base.apk!classes8.dex*734504789:/data/app/com.ivanmarty.rovecast-RBexy-kc6Hm0OMD8gTrm_g==/base.apk!classes9.dex*2888158322:/data/app/com.ivanmarty.rovecast-RBexy-kc6Hm0OMD8gTrm_g==/base.apk!classes10.dex*3232595436:/data/app/com.ivanmarty.rovecast-RBexy-kc6Hm0OMD8gTr
+2025-09-20 16:53:42.976  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Found duplicate classes, falling back to extracting from APK : /data/user_de/0/com.google.android.gms/app_chimera/m/000001e3/DynamiteModulesC.uncompressed.apk
+2025-09-20 16:53:42.976  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  NOTE: This wastes RAM and hurts startup performance.
+2025-09-20 16:53:42.976  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Found duplicated class when checking oat files: 'Landroid/support/v4/graphics/drawable/IconCompatParcelizer;' in /data/app/com.ivanmarty.rovecast-RBexy-kc6Hm0OMD8gTrm_g==/base.apk and /data/user_de/0/com.google.android.gms/app_chimera/m/000001e3/DynamiteModulesC.uncompressed.apk
+2025-09-20 16:53:42.976  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  
+2025-09-20 16:53:43.051  1580-1580  CastDynamiteModuleImpl  com.ivanmarty.rovecast               I  ui created by ClassLoader dalvik.system.DelegateLastClassLoader[DexPathList[[zip file "/data/user_de/0/com.google.android.gms/app_chimera/m/000001e3/DynamiteModulesC.uncompressed.apk"],nativeLibraryDirectories=[/data/user_de/0/com.google.android.gms/app_chimera/m/000001e3/DynamiteModulesC.uncompressed.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]].
+2025-09-20 16:53:43.077  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapInt(Ljava/lang/Object;JII)Z (greylist, linking, allowed)
+2025-09-20 16:53:43.077  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapLong(Ljava/lang/Object;JJJ)Z (greylist, linking, allowed)
+2025-09-20 16:53:43.077  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getIntVolatile(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:53:43.077  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObjectVolatile(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:53:43.077  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObjectVolatile(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:53:43.089  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 16:53:43.089  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:53:43.102  1580-1580  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-20 16:53:43.114  1580-1580  HwTypeface              com.ivanmarty.rovecast               I  updateFont: scale=1.04
+2025-09-20 16:53:43.115  1580-1580  SystemFonts             com.ivanmarty.rovecast               D  areFontsVariable: script=Latn
+2025-09-20 16:53:43.117  1580-1580  ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded preloadStatus 0
+2025-09-20 16:53:43.118  1580-2515  WebViewFactory          com.ivanmarty.rovecast               I  Loading com.google.android.webview version 140.0.7339.51 (code 733905133)
+2025-09-20 16:53:43.120  1580-1580  RmeSchedManager         com.ivanmarty.rovecast               I  init Rme, version is: v1.0
+2025-09-20 16:53:43.121  1580-1580  RtgSchedEvent           com.ivanmarty.rovecast               I  current pid:1580 AppType:-1
+2025-09-20 16:53:43.120  1580-1580  RmeSchedManager         com.ivanmarty.rovecast               I  init Rme, version is: v1.0
+2025-09-20 16:53:43.126  1580-2515  ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.google.android.trichromelibrary_733905133-g9ZdU2hML5mNOGTbzt3g8Q==/base.apk librarySearchPath: /data/app/com.google.android.webview-Zwh7fKdd9-q397BEZib8pw==/lib/arm64:/data/app/com.google.android.webview-Zwh7fKdd9-q397BEZib8pw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.trichromelibrary_733905133-g9ZdU2hML5mNOGTbzt3g8Q==/base.apk!/lib/arm64-v8a libraryPermittedPath:  parent: java.lang.BootClassLoader@c069c4e targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
+2025-09-20 16:53:43.132  1580-2515  ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.google.android.webview-Zwh7fKdd9-q397BEZib8pw==/base.apk librarySearchPath: /data/app/com.google.android.webview-Zwh7fKdd9-q397BEZib8pw==/lib/arm64:/data/app/com.google.android.webview-Zwh7fKdd9-q397BEZib8pw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.trichromelibrary_733905133-g9ZdU2hML5mNOGTbzt3g8Q==/base.apk!/lib/arm64-v8a libraryPermittedPath:  parent: java.lang.BootClassLoader@c069c4e targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: [dalvik.system.PathClassLoader[DexPathList[[zip file "/data/app/com.google.android.trichromelibrary_733905133-g9ZdU2hML5mNOGTbzt3g8Q==/base.apk"],nativeLibraryDirectories=[/data/app/com.google.android.webview-Zwh7fKdd9-q397BEZib8pw==/lib/arm64, /data/app/com.google.android.webview-Zwh7fKdd9-q397BEZib8pw==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.trichromelibrary_733905133-g9ZdU2hML5mNOGTbzt3g8Q==/base.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]]]
+2025-09-20 16:53:43.141  1580-2551  OpenGLRenderer          com.ivanmarty.rovecast               I  RenderThread: progress name = [com.ivanmarty.rovecast], viewCornerType = 0
+2025-09-20 16:53:43.146  1580-2515  linker                  com.ivanmarty.rovecast               W  Warning: "/data/app/com.google.android.trichromelibrary_733905133-g9ZdU2hML5mNOGTbzt3g8Q==/base.apk!/lib/arm64-v8a/libmonochrome_64.so" unused DT entry: unknown processor-specific (type 0x70000001 arg 0x0) (ignoring)
+2025-09-20 16:53:43.151  1580-2553  iGraphics               com.ivanmarty.rovecast               I  [0020080c] pn: com.ivanmarty.rovecast, p: 1580
+2025-09-20 16:53:43.151  1580-2553  iGraphics               com.ivanmarty.rovecast               I  [0030080c] no spt app: com.ivanmarty.rovecast
+2025-09-20 16:53:43.167  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:43.191  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 24.433ms
+2025-09-20 16:53:43.208  1580-2515  cr_WVCFactoryProvider   com.ivanmarty.rovecast               I  version=140.0.7339.51 (733905133) minSdkVersion=29 multiprocess=true packageId=3 splits=<none>
+2025-09-20 16:53:43.223  1580-2561  chromium                com.ivanmarty.rovecast               I  [0920/165343.221638:INFO:android_webview/browser/variations/variations_seed_loader.cc:67] Failed to open file for reading.: No such file or directory (2)
+2025-09-20 16:53:43.223  1580-2561  chromium                com.ivanmarty.rovecast               I  [0920/165343.223699:INFO:android_webview/browser/variations/variations_seed_loader.cc:67] Failed to open file for reading.: No such file or directory (2)
+2025-09-20 16:53:43.236  1580-2515  cr_LibraryLoader        com.ivanmarty.rovecast               I  Successfully loaded native library
+2025-09-20 16:53:43.238  1580-2515  cr_CachingUmaRecorder   com.ivanmarty.rovecast               I  Flushed 7 samples from 7 histograms, 0 samples were dropped.
+2025-09-20 16:53:43.263  1580-1580  AppCompatDelegate       com.ivanmarty.rovecast               D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
+2025-09-20 16:53:43.263  1580-2565  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:53:43.263  1580-2565  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 16:53:43.280  1580-1580  ActivityThread          com.ivanmarty.rovecast               V  callActivityOnCreate
+2025-09-20 16:53:43.300  1580-2515  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 16:53:43.307  1580-2589  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 16:53:43.338  1580-2489  AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:53:43.350  1580-2514  Ads                     com.ivanmarty.rovecast               W  Invoke Firebase method getInstance error.
+2025-09-20 16:53:43.353  1580-2514  Ads                     com.ivanmarty.rovecast               W  The Google Mobile Ads SDK will not integrate with Firebase. Admob/Firebase integration requires the latest Firebase SDK jar, but Firebase SDK is either missing or out of date
+2025-09-20 16:53:43.353  1580-2489  AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:53:43.365  1580-2489  AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:53:43.365  1580-1580  DecorView[]             com.ivanmarty.rovecast               I  pkgName:com.ivanmarty.rovecast old windowMode:0 new windoMode:1, isFixedSize:false
+2025-09-20 16:53:43.367  1580-2515  ServiceBindIntentUtils  com.ivanmarty.rovecast               W  Dynamic lookup for intent failed for action: com.google.android.gms.ads.service.CACHE
+2025-09-20 16:53:43.367  1580-2489  AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:53:43.369  1580-2489  AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:53:43.370  1580-2565  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:53:43.376  1580-2565  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:53:43.378  1580-2565  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:53:43.379  1580-2565  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:53:43.403  1580-2565  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:53:43.422  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (greylist, reflection, allowed)
+2025-09-20 16:53:43.773  1580-2600  UserMessagingPlatform   com.ivanmarty.rovecast               I  Use new ConsentDebugSettings.Builder().addTestDeviceHashedId("AFC033BBEAF477A33219CE7057D05B14") to set this as a debug device.
+2025-09-20 16:53:43.777  1580-2600  UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: IABTCF_TCString
+2025-09-20 16:53:43.778  1580-2600  UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: IABGPP_HDR_GppString
+2025-09-20 16:53:43.778  1580-2600  UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: IABGPP_GppSID
+2025-09-20 16:53:43.778  1580-2600  UserMessagingPlatform   com.ivanmarty.rovecast               D  Stored info not exists: IABUSPrivacy_String
+2025-09-20 16:53:43.802  1580-1580  AwareAppScheduleManager com.ivanmarty.rovecast               I  post cache drawable res id to aware, resId = 2131231242, packagename = com.ivanmarty.rovecast, cost time = 6699479
+2025-09-20 16:53:43.819  1580-1580  MainActivity            com.ivanmarty.rovecast               E  miniPlayerContainer not found or wrong type
+2025-09-20 16:53:43.824  1580-1580  ActivityThread          com.ivanmarty.rovecast               D  add activity client record, r= ActivityRecord{899e989 token=android.os.BinderProxy@ba1dba2 {com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity}} token= android.os.BinderProxy@ba1dba2
+2025-09-20 16:53:43.830  1580-1580  AppVisibilityProxy      com.ivanmarty.rovecast               I  onAppEnteredForeground
+2025-09-20 16:53:43.882  1580-1580  OverScroll...timization com.ivanmarty.rovecast               I  start init SmartSlideOverScroller and get the overscroller config
+2025-09-20 16:53:43.883  1580-1580  OverScroll...timization com.ivanmarty.rovecast               I  get the overscroller config
+2025-09-20 16:53:43.981  1580-2515  DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:53:43.991  1580-2515  Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:53:44.005  1580-2586  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:53:44.020  1580-2589  AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:53:44.063  1580-2589  AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:53:44.087  1580-2589  AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:53:44.088  1580-2589  AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:53:44.088  1580-2589  AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:53:44.106  1580-2586  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:53:44.107  1580-2586  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:53:44.107  1580-2586  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:53:44.167  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:53:44.172  1580-1580  MediaController         com.ivanmarty.rovecast               I  Init 847c3a [AndroidXMedia3/1.8.0] [HWMAR, MAR-LX3A, HUAWEI, 29]
+2025-09-20 16:53:44.240  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 16:53:44.241  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:53:44.263  1580-2515  DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 16:53:44.267  1580-2515  Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 16:53:44.273  1580-2524  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:53:44.275  1580-1580  MouseWheelSynthesizer   com.ivanmarty.rovecast               D  mMoveStepInDp: 64, mMoveStepInPixel: 192, mUpTimeDelayed: 100
+2025-09-20 16:53:44.276  1580-2491  AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 16:53:44.277  1580-2491  AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 16:53:44.277  1580-2491  AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 16:53:44.278  1580-2491  AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 16:53:44.281  1580-1580  ViewRootImpl            com.ivanmarty.rovecast               D  ViewRootImpl mIsInProductivePCDisplay: false
+2025-09-20 16:53:44.283  1580-1580  HwPartPowe...iceFactory com.ivanmarty.rovecast               I  add HwPartPowerOfficeFactoryImpl to memory.
+2025-09-20 16:53:44.283  1580-2491  AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 16:53:44.289  1580-1580  DecorView[]             com.ivanmarty.rovecast               I  pkgName:com.ivanmarty.rovecast old windowMode:1 new windoMode:1, isFixedSize:false
+2025-09-20 16:53:44.296  1580-1580  InputEventReceiver      com.ivanmarty.rovecast               D  dispatchInputInterval 1000000
+2025-09-20 16:53:44.301  1580-1580  RmeSchedManager         com.ivanmarty.rovecast               I  init Rme, version is: v1.0
+2025-09-20 16:53:44.302  1580-1580  RtgSchedEvent           com.ivanmarty.rovecast               I  current pid:1580 AppType:-1
+2025-09-20 16:53:44.311  2233-2556  DollieAdapterService    com.huawei.systemserver              E  notifyActivityState pkg:com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity state:2 fg:true mUid:10626
+2025-09-20 16:53:44.316  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:53:44.316  1580-1580  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 16:53:44.374  1580-2524  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:53:44.374  1580-2524  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:53:44.374  1580-2524  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:53:44.572  1580-1799  ZrHung.AppEyeUiProbe    com.ivanmarty.rovecast               D  not watching, wait.
+2025-09-20 16:53:44.831  1580-2538  nmarty.rovecas          com.ivanmarty.rovecast               W  Failed execv(/system/bin/dex2oat --debuggable --instruction-set=arm64 --instruction-set-features=runtime --runtime-arg -Xhidden-api-policy:enabled --runtime-arg -Xrelocate --boot-image=/system/framework/boot.art --runtime-arg -Xms64m --runtime-arg -Xmx512m -j4 --instruction-set-variant=generic --instruction-set-features=default --generate-mini-debug-info --debuggable --generate-mini-debug-info --dex-file=/data/user/0/com.ivanmarty.rovecast/cache/1754603592408.jar --output-vdex-fd=110 --oat-fd=111 --oat-location=/data/user/0/com.ivanmarty.rovecast/cache/oat/arm64/1754603592408.odex --compiler-filter=verify --class-loader-context=& --compilation-reason=dynamic-load) because non-0 exit status
+2025-09-20 16:53:44.844  1580-2544  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.844  1580-2633  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.844  1580-2629  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.844  1580-2637  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.844  1580-2634  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.845  1580-2646  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.846  1580-2647  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.847  1580-2648  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.847  1580-2649  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.848  1580-2651  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.849  1580-2650  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.849  1580-2655  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.850  1580-2656  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.851  1580-2657  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.852  1580-2544  nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 8.810ms
+2025-09-20 16:53:44.853  1580-2633  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.853  1580-2629  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.853  1580-2634  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.853  1580-2637  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.853  1580-2649  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.853  1580-2646  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.853  1580-2651  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.853  1580-2650  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.853  1580-2655  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.853  1580-2647  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.853  1580-2656  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.853  1580-2657  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.853  1580-2648  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.854  1580-2649  nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 6.442ms
+2025-09-20 16:53:44.854  1580-2629  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.854  1580-2634  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.854  1580-2637  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.854  1580-2646  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.854  1580-2651  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.854  1580-2650  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.854  1580-2655  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.854  1580-2647  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.854  1580-2656  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.854  1580-2648  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.855  1580-2657  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.855  1580-2633  nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 11.005ms
+2025-09-20 16:53:44.855  1580-2629  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.855  1580-2634  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.855  1580-2637  nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 10.916ms
+2025-09-20 16:53:44.855  1580-2650  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.855  1580-2646  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.855  1580-2647  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.855  1580-2656  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.855  1580-2648  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.855  1580-2657  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.855  1580-2629  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.855  1580-2634  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.856  1580-2634  nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 11.421ms
+2025-09-20 16:53:44.856  1580-2651  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.856  1580-2655  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.856  1580-2646  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.856  1580-2650  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.856  1580-2647  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.856  1580-2648  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.856  1580-2657  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.856  1580-2629  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.856  1580-2651  nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 8.369ms
+2025-09-20 16:53:44.857  1580-2655  nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 7.297ms
+2025-09-20 16:53:44.857  1580-2650  nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 7.975ms
+2025-09-20 16:53:44.857  1580-2646  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.857  1580-2647  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.857  1580-2657  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.857  1580-2629  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.857  1580-2648  nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 9.861ms
+2025-09-20 16:53:44.857  1580-2646  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.857  1580-2647  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.857  1580-2629  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.857  1580-2656  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.857  1580-2657  nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 6.568ms
+2025-09-20 16:53:44.857  1580-2647  nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 11.304ms
+2025-09-20 16:53:44.857  1580-2629  nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 13.471ms
+2025-09-20 16:53:44.857  1580-2656  nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 16:53:44.857  1580-2656  nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 7.306ms
+2025-09-20 16:53:44.858  1580-2646  nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 12.835ms
+2025-09-20 16:53:44.858  1580-2538  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-20 16:53:44.858  1580-2538  ConnectivityManager     com.ivanmarty.rovecast               I  requestNetwork and the calling app is: com.ivanmarty.rovecast
+2025-09-20 16:53:44.867  1580-2544  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:53:44.871  1580-2682  HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-20 16:53:44.872  1580-2682  ConnectivityManager     com.ivanmarty.rovecast               I  requestNetwork and the calling app is: com.ivanmarty.rovecast
+2025-09-20 16:53:45.120  1580-2555  SharedPreferencesImpl   com.ivanmarty.rovecast               D  Time required to fsync /data/user/0/com.ivanmarty.rovecast/shared_prefs/WebViewChromiumPrefs.xml: [<1: 0, <2: 0, <4: 0, <8: 0, <16: 0, <32: 0, <64: 0, <128: 0, <256: 0, <512: 0, <1024: 0, <2048: 1, <4096: 0, <8192: 0, <16384: 0, >=16384: 0]
+2025-09-20 16:53:45.358  1580-2565  Ads                     com.ivanmarty.rovecast               W  Not retrying to fetch app settings
+2025-09-20 16:53:45.367  1580-2713  ServiceBindIntentUtils  com.ivanmarty.rovecast               W  Dynamic lookup for intent failed for action: com.google.android.gms.ads.service.START
+2025-09-20 16:53:45.379  1580-2713  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:53:46.041  1580-2504  Ads                     com.ivanmarty.rovecast               W  Not retrying to fetch app settings
+2025-09-20 16:53:46.048  1580-2715  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:53:46.291  1580-2491  Ads                     com.ivanmarty.rovecast               W  Not retrying to fetch app settings
+2025-09-20 16:53:46.295  1580-2718  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:53:46.452  1580-1767  nmarty.rovecas          com.ivanmarty.rovecast               I  Thread[7,tid=1767,WaitingInMainSignalCatcherLoop,Thread*=0x7780fd9400,peer=0x13082528,"Signal Catcher"]: reacting to signal 3
+2025-09-20 16:53:46.453  1580-1767  nmarty.rovecas          com.ivanmarty.rovecast               I  
+2025-09-20 16:53:46.782  1580-1767  nmarty.rovecas          com.ivanmarty.rovecast               I  Wrote stack traces to tombstoned
+2025-09-20 16:53:46.876  1580-2535  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:53:46.876  1580-2541  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 16:53:46.876  1580-2535  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:53:46.876  1580-2541  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 16:53:46.876  1580-2541  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:53:46.876  1580-2535  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 16:53:46.877  1580-2535  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:53:46.878  1580-2541  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 16:53:46.878  1580-2680  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, linking, allowed)
+2025-09-20 16:53:46.879  1580-2680  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:53:46.887  1580-2637  nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 16:53:52.169  1580-2490  Ads                     com.ivanmarty.rovecast               E  Fail to get isAdIdFakeForDebugLogging (Ask Gemini)
+                                                                                                    java.io.IOException: java.util.concurrent.TimeoutException: Timed out waiting for the service connection
+                                                                                                    	at com.google.android.gms.ads.identifier.d.c(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:142)
+                                                                                                    	at com.google.android.gms.ads.internal.util.c.a(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:11)
+                                                                                                    	at com.google.android.gms.ads.internal.util.a.run(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:9)
+                                                                                                    	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:462)
+                                                                                                    	at m84.dbr.a(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:3)
+                                                                                                    	at m84.day.run(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:19)
+                                                                                                    	at m84.dbs.run(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:5)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+                                                                                                    	at java.lang.Thread.run(Thread.java:929)
+                                                                                                    Caused by: java.util.concurrent.TimeoutException: Timed out waiting for the service connection
+                                                                                                    	at com.google.android.gms.ads.identifier.d.c(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:126)
+                                                                                                    	at com.google.android.gms.ads.internal.util.c.a(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:11) 
+                                                                                                    	at com.google.android.gms.ads.internal.util.a.run(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:9) 
+                                                                                                    	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:462) 
+                                                                                                    	at m84.dbr.a(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:3) 
+                                                                                                    	at m84.day.run(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:19) 
+                                                                                                    	at m84.dbs.run(:com.google.android.gms.policy_ads_fdr_dynamite@253405702@253405700017.794833465.794833465:5) 
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167) 
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641) 
+                                                                                                    	at java.lang.Thread.run(Thread.java:929) 
+2025-09-20 16:53:52.169  1580-2490  Ads                     com.ivanmarty.rovecast               W  Update ad debug logging enablement as false
+2025-09-20 16:54:05.175  1580-1767  nmarty.rovecas          com.ivanmarty.rovecast               I  Thread[7,tid=1767,WaitingInMainSignalCatcherLoop,Thread*=0x7780fd9400,peer=0x13082528,"Signal Catcher"]: reacting to signal 3
+2025-09-20 16:54:05.175  1580-1767  nmarty.rovecas          com.ivanmarty.rovecast               I  
+2025-09-20 16:54:05.332  1580-1767  nmarty.rovecas          com.ivanmarty.rovecast               I  Wrote stack traces to tombstoned
+2025-09-20 16:54:05.508  2233-2556  DollieAdapterService    com.huawei.systemserver              E  notifyActivityState pkg:com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity state:11 fg:false mUid:10626
+2025-09-20 16:54:11.384  1681-1747  ActivityManager         system_server                        E  ANR in com.ivanmarty.rovecast
+                                                                                                    PID: 1580
+                                                                                                    Reason: executing service com.ivanmarty.rovecast/.player.PlaybackService
+                                                                                                    Load: 50.59 / 46.23 / 45.61
+                                                                                                    CPU usage from 0ms to 7090ms later (2025-09-20 16:54:04.244 to 2025-09-20 16:54:11.333):
+                                                                                                      83% 25692/com.facebook.katana: 66% user + 16% kernel / faults: 116014 minor 76 major
+                                                                                                      45% 1681/system_server: 26% user + 19% kernel / faults: 21059 minor 14 major
+                                                                                                      39% 2065/com.android.systemui: 27% user + 12% kernel / faults: 34889 minor 8 major
+                                                                                                      35% 4204/com.google.android.googlequicksearchbox:googleapp: 23% user + 12% kernel / faults: 32190 minor 48 major
+                                                                                                      21% 158/kswapd0: 0% user + 21% kernel
+                                                                                                      18% 2353/com.google.android.gms: 11% user + 7.2% kernel / faults: 53965 minor 52 major
+                                                                                                      14% 678/surfaceflinger: 7.7% user + 7.2% kernel / faults: 1737 minor 1 major
+                                                                                                      8.1% 637/android.hardware.graphics.composer@2.2-service: 2.5% user + 5.6% kernel / faults: 515 minor 1 major
+                                                                                                      7.3% 1144/hiview: 1.2% user + 6% kernel / faults: 628 minor 1 major
+                                                                                                      5.3% 16794/adbd: 1.2% user + 4.1% kernel / faults: 128 minor
+                                                                                                      4.6% 455/logd: 1.6% user + 2.9% kernel / faults: 445 minor
+                                                                                                      3.8% 31973/kworker/3:2H: 0% user + 3.8% kernel
+                                                                                                      3.2% 653/vendor.huawei.hardware.hwdisplay.displayengine@1.2-service: 1.6% user + 1.5% kernel / faults: 215 minor
+                                                                                                      3.1% 2279/com.huawei.systemmanager:service: 1.5% user + 1.5% kernel / faults: 7810 minor 15 major
+                                                                                                      3.1% 2468/com.huawei.iaware: 1.8% user + 1.2% kernel / faults: 5796 minor
+                                                                                                      3.1% 9385/com.android.phone: 1.9% user + 1.1% kernel / faults: 2098 minor
+                                                                                                      2.6% 32496/com.android.vending: 2.4% user + 0.2% kernel / faults: 3912 minor 1 major
+                                                                                                      2.6% 32601/com.android.vending:background: 1.8% user + 0.8% kernel / faults: 9076 minor 2 major
+                                                                                                      2.5% 1580/com.ivanmarty.rovecast: 1.6% user + 0.8% kernel / faults: 5576 minor
+                                                                                                      2.2% 520/android.hardware.keymaster@3.0-service: 0.1% user + 2.1% kernel / faults: 233 minor
+                                                                                                      2.1% 596/kworker/2:2H: 0% user + 2.1% kernel
+                                                                                                      0.5% 521/tee_auth_daemon: 0.3% user + 0.1% kernel / faults: 4866 minor
+                                                                                                      1.9% 995/dubaid: 1.2% user + 0.7% kernel / faults: 1404 minor
+                                                                                                      1.9% 2126/com.google.android.gms.persistent: 1.4% user + 0.5% kernel / faults: 3593 minor 4 major
+                                                                                                      1.9% 19296/logcat: 0.5% user + 1.4% kernel / faults: 30 minor
+                                                                                                      1.9% 30605/kworker/u16:1: 0% user + 1.9% kernel
+                                                                                                      1.8% 30026/kworker/0:1H: 0% user + 1.8% kernel
+                                                                                                      1.6% 1282/com.huawei.lbs: 0.8% user + 0.8% kernel / faults: 4724 minor 21 major
+                                                                                                      1.6% 32012/kworker/u16:2: 0% user + 1.6% kernel
+                                                                                                      1.5% 680/powerlogd: 0.8% user + 0.7% kernel / faults: 47 minor
+                                                                                                      1.5% 1960/kworker/u16:5: 0% user + 1.5% kernel
+                                                                                                      1.5% 32745/kworker/1:1H: 0% user + 1.5% kernel
+                                                                                                      0.3% 635/android.hardware.gatekeeper@1.0-service: 0% user + 0.3% kernel / faults: 150 minor
+                                                                                                      1.1% 30606/kworker/u17:1: 0% user + 1.1% kernel
+                                                                                                      0.9% 252/ts_thread:0: 0% user + 0.9% kernel
+                                                                                                      0.9% 1315/hisi_hcc: 0% user + 0.9% kernel
+                                                                                                      0.9% 2510/com.huawei.android.launcher: 0.5% user + 0.4% kernel / faults: 1830 minor 17 major
+                                                                                                      0.9% 31772/kworker/u16:0: 0% user + 0.9% kernel
+                                                                                                      0.9% 31832/kworker/u17:3: 0% user + 0.9% kernel
+                                                                                                      0.8% 630/android.system.suspend@1.0-service: 0.5% user + 0.2% kernel / faults: 109 minor
+                                                                                                      0.8% 1537/oam_hisi: 0.7% user + 0.1% kernel / faults: 52 minor
+                                                                                                      0.8% 10406/hilogd: 0.4% user + 0.4% kernel / faults: 269 minor
+                                                                                                      0.8% 16840/process-tracker: 0% user + 0.8% kernel / faults: 81 minor
+                                                                                                      0.8% 21589/kworker/u17:0: 0% user + 0.8% kernel
+                                                                                                      0.8% 31901/kworker/7:2H: 0% user + 0.8% kernel
+                                                                                                      0.7% 456/servicemanager: 0.1% user + 0.5% kernel / faults: 35 minor
+                                                                                                      0.7% 1020/statsd: 0.4% user + 0.2% kernel / faults: 145 minor
+                                                                                                      0.7% 1099/hwpged: 0.1% user + 0.5% kernel / faults: 113 minor
+                                                                                                      0.7% 1124/rild: 0.1% user + 0.5% kernel / faults: 391 minor
+                                                                                                      0.7% 7456/com.android.bluetooth: 0.5% user + 0.1% kernel / faults: 2247 minor 1 major
+                                                                                                      0.1% 16004/kworker/u16:6: 0% user + 0.1% kernel
+                                                                                                      0.7% 25019/com.huawei.hwid.core: 0.4% user + 0.2% kernel / faults: 1904 minor
+                                                                                                      0.7% 29184/com.instagram.android: 0.4% user + 0.2% kernel / faults: 1626 minor
+                                                                                                      0.5% 1/init: 0.4% user + 0.1% kernel / fa
+2025-09-20 16:54:16.626  1580-1767  nmarty.rovecas          com.ivanmarty.rovecast               I  Thread[7,tid=1767,WaitingInMainSignalCatcherLoop,Thread*=0x7780fd9400,peer=0x13082528,"Signal Catcher"]: reacting to signal 3
+2025-09-20 16:54:16.626  1580-1767  nmarty.rovecas          com.ivanmarty.rovecast               I  
+2025-09-20 16:54:16.821  1580-1767  nmarty.rovecas          com.ivanmarty.rovecast               I  Wrote stack traces to tombstoned
+2025-09-20 16:54:26.243  1580-1767  nmarty.rovecas          com.ivanmarty.rovecast               I  Thread[7,tid=1767,WaitingInMainSignalCatcherLoop,Thread*=0x7780fd9400,peer=0x13082528,"Signal Catcher"]: reacting to signal 3
+2025-09-20 16:54:26.243  1580-1767  nmarty.rovecas          com.ivanmarty.rovecast               I  
+2025-09-20 16:54:26.444  1580-1767  nmarty.rovecas          com.ivanmarty.rovecast               I  Wrote stack traces to tombstoned
+2025-09-20 16:54:31.243  1681-1747  ActivityManager         system_server                        E  ANR in com.ivanmarty.rovecast
+                                                                                                    PID: 1580
+                                                                                                    Reason: Broadcast of Intent { act=android.intent.action.SCREEN_OFF flg=0x58200010 }
+                                                                                                    Load: 48.75 / 46.1 / 45.58
+                                                                                                    CPU usage from 0ms to 5906ms later (2025-09-20 16:54:25.273 to 2025-09-20 16:54:31.178):
+                                                                                                      60% 25692/com.facebook.katana: 34% user + 25% kernel / faults: 42703 minor
+                                                                                                      18% 1681/system_server: 8.3% user + 10% kernel / faults: 2526 minor
+                                                                                                      14% 2353/com.google.android.gms: 10% user + 4.4% kernel / faults: 19932 minor
+                                                                                                      11% 2126/com.google.android.gms.persistent: 9.8% user + 2% kernel / faults: 10028 minor 23 major
+                                                                                                      6.4% 32601/com.android.vending:background: 6.4% user + 0% kernel / faults: 712 minor
+                                                                                                      6.1% 678/surfaceflinger: 2.7% user + 3.3% kernel
+                                                                                                      4.4% 31535/com.touchtype.swiftkey: 2.7% user + 1.6% kernel / faults: 3999 minor 6 major
+                                                                                                      3.3% 1580/com.ivanmarty.rovecast: 2.2% user + 1.1% kernel / faults: 3751 minor
+                                                                                                      3.3% 2065/com.android.systemui: 1.8% user + 1.5% kernel / faults: 6 minor
+                                                                                                      1.5% 158/kswapd0: 0% user + 1.5% kernel
+                                                                                                      1.3% 1144/hiview: 0.6% user + 0.6% kernel / faults: 40 minor
+                                                                                                      1.3% 31772/kworker/u16:0: 0% user + 1.3% kernel
+                                                                                                      1% 16794/adbd: 0.1% user + 0.8% kernel / faults: 11 minor
+                                                                                                      1% 16840/process-tracker: 0.1% user + 0.8% kernel
+                                                                                                      1% 29184/com.instagram.android: 0.3% user + 0.6% kernel / faults: 352 minor 1 major
+                                                                                                      0.8% 9/rcu_preempt: 0% user + 0.8% kernel
+                                                                                                      0.8% 30605/kworker/u16:1: 0% user + 0.8% kernel
+                                                                                                      0.5% 455/logd: 0.3% user + 0.1% kernel / faults: 3 minor
+                                                                                                      0.5% 1307/hisi_frw/0: 0% user + 0.5% kernel
+                                                                                                      0.5% 32012/kworker/u16:2: 0% user + 0.5% kernel
+                                                                                                      0.3% 10/rcu_sched: 0% user + 0.3% kernel
+                                                                                                      0% 631/healthd: 0% user + 0% kernel / faults: 166 minor 46 major
+                                                                                                      0.1% 639/android.hardware.memtrack@1.0-service: 0% user + 0% kernel
+                                                                                                      0.3% 1133/vendor.huawei.hardware.sensors@1.2-service: 0.1% user + 0.1% kernel
+                                                                                                      0.3% 2354/com.huawei.HwOPServer: 0% user + 0.3% kernel / faults: 38 minor 1 major
+                                                                                                      0.3% 2468/com.huawei.iaware: 0.1% user + 0.1% kernel / faults: 85 minor
+                                                                                                      0.3% 3562/sugov:0: 0% user + 0.3% kernel
+                                                                                                      0.3% 19296/logcat: 0.1% user + 0.1% kernel
+                                                                                                      0.3% 29966/com.google.android.googlequicksearchbox:search: 0% user + 0.3% kernel / faults: 486 minor
+                                                                                                      0.1% 8/ksoftirqd/0: 0% user + 0.1% kernel
+                                                                                                      0% 287/hw_kstate: 0% user + 0% kernel
+                                                                                                      0% 434/ueventd: 0% user + 0% kernel / faults: 108 minor 14 major
+                                                                                                      0.1% 480/jbd2/mmcblk0p27: 0% user + 0.1% kernel
+                                                                                                      0.1% 596/kworker/2:2H: 0% user + 0.1% kernel
+                                                                                                      0.1% 605/netd: 0.1% user + 0% kernel
+                                                                                                      0% 638/android.hardware.health@2.0-service: 0% user + 0% kernel / faults: 141 minor
+                                                                                                      0.1% 677/lmkd: 0% user + 0.1% kernel
+                                                                                                      0% 753/ADS_UL: 0% user + 0% kernel
+                                                                                                      0% 784/distributedsche: 0% user + 0% kernel / faults: 130 minor 1 major
+                                                                                                      0% 950/irqbalance: 0% user + 0% kernel / faults: 96 minor 18 major
+                                                                                                      0.1% 993/displayengineserver: 0% user + 0.1% kernel
+                                                                                                      0.1% 1303/oal_gpio_rx_dat: 0% user + 0.1% kernel
+                                                                                                      0.1% 1315/hisi_hcc: 0% user + 0.1% kernel
+                                                                                                      0.1% 1316/hisi_rxdata: 0% user + 0.1% kernel
+                                                                                                      0% 1539/gnss_engine_hisi: 0% user + 0% kernel
+                                                                                                      0% 1544/gnss_supl20clientd_hisi: 0% user + 0% kernel / faults: 23 minor
+                                                                                                      0.1% 2233/com.huawei.systemserver: 0.1% user + 0% kernel / faults: 2 minor
+                                                                                                      0.1% 2279/com.huawei.systemmanager:service: 0% user + 0.1% kernel
+                                                                                                      0.1% 3568/sugov:4: 0% user + 0.1% kernel
+                                                                                                      0.1% 4204/com.google.android.googlequicksearchbox:googleapp: 0% user + 0.1% kernel / faults: 293 minor
+                                                                                                      0.1% 4846/com.whatsapp: 0% user + 0.1% kernel / faults: 431 minor 1 major
+                                                                                                      0% 8207/modemchr: 0% user + 0% kernel / faults: 13 minor
+                                                                                                      0.1% 9385/com.android.phone: 0.1% user + 0% kernel / faults: 3 minor
+                                                                                                      0.1% 10406/hilogd: 0% user + 0.1% kernel / faults: 1 minor
+                                                                                                      0.1% 16033/chargelogcat-c: 0% user + 0.1% kernel
+                                                                                                      0.1% 30026/kworker/0:1H: 0% user + 0.1% kernel
+                                                                                                      0% 31707/com.android.providers.calendar: 0% user + 0% kernel / faults: 373 minor
+                                                                                                      0.1% 31973/kworker/3:2H: 0% user + 0.1% kernel
+                                                                                                      0.1% 32745/kworker/1:1H: 0% user + 0.1% kernel
+                                                                                                    18% TOTAL: 9.9% user + 7.2% kernel + 0.2% iowait + 0.7% irq + 0.5% softirq
+                                                                                                    CPU usage from 117ms to 840ms later (2025-09-20 16:54:25.390 t

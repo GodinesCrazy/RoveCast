@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPOTIFY-STYLE: Controles optimizados para mini-player -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <!-- Botón Play - visible cuando está pausado -->
+    <ImageButton
+        android:id="@+id/exo_play"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_play_arrow"
+        android:scaleType="fitCenter"
+        android:padding="8dp"
+        app:tint="#FFFFFF"
+        android:contentDescription="Reproducir" />
+
+    <!-- Botón Pause - visible cuando está reproduciendo -->
+    <ImageButton
+        android:id="@+id/exo_pause"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_pause"
+        android:scaleType="fitCenter"
+        android:padding="8dp"
+        app:tint="#FFFFFF"
+        android:contentDescription="Pausar" />
+
+</FrameLayout>

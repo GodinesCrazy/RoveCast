@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- SOLUCIÓN: Cambiar el color del estado seleccionado a blanco para unificar el estilo -->
+    <item android:state_selected="true" android:color="@android:color/white"/>
+    <item android:color="@color/textSecondary"/>
+</selector>

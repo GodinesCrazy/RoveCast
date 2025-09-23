@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spotify-like Toolbar Style -->
+    <style name="Toolbar.RoveCast.Spotify" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="titleTextColor">#FFFFFF</item>
+        <item name="subtitleTextColor">#B3B3B3</item>
+        <item name="android:elevation">0dp</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <!-- Spotify-like Theme Overlay -->
+    <style name="ThemeOverlay.RoveCast.Spotify" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="colorPrimary">#1DB954</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSurface">#121212</item>
+        <item name="colorOnSurface">#FFFFFF</item>
+    </style>
+
+    <!-- SOLUCIÓN: Estilo para las esquinas redondeadas de los logos -->
+    <style name="ShapeAppearance.App.RoundedCorners" parent="ShapeAppearance.MaterialComponents">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+</resources>

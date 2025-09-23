@@ -1,0 +1,571 @@
+2025-09-20 18:08:30.780 19511-19694 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) expire 1 line
+2025-09-20 18:08:30.793 19511-19511 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) expire 2 lines
+2025-09-20 18:08:30.825 19511-19596 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) expire 5 lines
+2025-09-20 18:08:30.838 19511-19697 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) expire 2 lines
+2025-09-20 18:08:30.903 19511-19511 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) expire 3 lines
+2025-09-20 18:08:30.939 19511-19677 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) expire 2 lines
+2025-09-20 18:08:30.945 19511-19618 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) expire 5 lines
+2025-09-20 18:08:30.979 19511-19511 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) expire 1 line
+2025-09-20 18:08:30.998 19511-19583 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) expire 1 line
+2025-09-20 18:08:31.000 19511-19585 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) expire 1 line
+2025-09-20 18:08:31.005 19511-19577 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) expire 1 line
+2025-09-20 18:08:31.022 19511-19716 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) expire 2 lines
+2025-09-20 18:08:31.109 19511-19511 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) expire 2 lines
+2025-09-20 18:08:31.159 19511-19511 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-20 18:08:31.202 19511-19686 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) expire 10 lines
+2025-09-20 18:08:31.661 19511-19731 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) expire 1 line
+2025-09-20 18:08:33.784 19511-19511 HwApsManager            com.ivanmarty.rovecast               W  HwApsManagerService, registerCallback, start !
+2025-09-20 18:08:34.716 19511-19511 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) expire 3 lines
+2025-09-20 18:08:36.065 19511-19814 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) expire 1 line
+2025-09-20 18:08:36.826 19511-19511 Glide                   com.ivanmarty.rovecast               W  Load failed for [] with dimensions [168x168]
+                                                                                                    class com.bumptech.glide.load.engine.GlideException: Failed to load resource
+2025-09-20 18:08:41.096 19511-19511 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 18:08:42.723 19511-19511 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 18:08:42.858 19511-19579 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 18:08:42.864 19511-19579 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 18:08:42.898 19511-19839 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 18:08:42.899 19511-19837 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 18:08:42.899 19511-19839 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 18:08:42.899 19511-19837 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 18:08:42.900 19511-19837 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 18:08:42.905 19511-19839 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 18:08:42.907 19511-19839 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 18:08:42.908 19511-19839 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 18:08:42.909 19511-19579 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 18:08:42.915 19511-19579 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 18:08:42.920 19511-19854 ServiceBindIntentUtils  com.ivanmarty.rovecast               W  Dynamic lookup for intent failed for action: com.google.android.gms.ads.service.START
+2025-09-20 18:08:42.930 19511-19854 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 18:08:42.934 19511-19842 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 18:08:42.935 19511-19842 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 18:08:42.935 19511-19842 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 18:08:42.936 19511-19842 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 18:08:42.937 19511-19842 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 18:08:42.948 19511-19846 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 18:08:42.954 19511-19852 Ads                     com.ivanmarty.rovecast               W  Not retrying to fetch app settings
+2025-09-20 18:08:42.956 19511-19855 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 18:08:43.065 19511-19511 Glide                   com.ivanmarty.rovecast               W  Load failed for [null] with dimensions [168x168]
+                                                                                                    class com.bumptech.glide.load.engine.GlideException: Failed to load resource
+                                                                                                    There were 3 root causes:
+                                                                                                    java.io.FileNotFoundException(/null: open failed: ENOENT (No such file or directory))
+                                                                                                    java.io.FileNotFoundException(open failed: ENOENT (No such file or directory))
+                                                                                                    java.io.FileNotFoundException(open failed: ENOENT (No such file or directory))
+                                                                                                     call GlideException#logRootCauses(String) for more detail
+                                                                                                      Cause (1 of 3): class com.bumptech.glide.load.engine.GlideException: Fetching data failed, class java.io.InputStream, LOCAL
+                                                                                                    There was 1 root cause:
+                                                                                                    java.io.FileNotFoundException(/null: open failed: ENOENT (No such file or directory))
+                                                                                                     call GlideException#logRootCauses(String) for more detail
+                                                                                                        Cause (1 of 1): class com.bumptech.glide.load.engine.GlideException: Fetch failed
+                                                                                                    There was 1 root cause:
+                                                                                                    java.io.FileNotFoundException(/null: open failed: ENOENT (No such file or directory))
+                                                                                                     call GlideException#logRootCauses(String) for more detail
+                                                                                                          Cause (1 of 1): class java.io.FileNotFoundException: /null: open failed: ENOENT (No such file or directory)
+                                                                                                      Cause (2 of 3): class com.bumptech.glide.load.engine.GlideException: Fetching data failed, class android.os.ParcelFileDescriptor, LOCAL
+                                                                                                    There was 1 root cause:
+                                                                                                    java.io.FileNotFoundException(open failed: ENOENT (No such file or directory))
+                                                                                                     call GlideException#logRootCauses(String) for more detail
+                                                                                                        Cause (1 of 1): class com.bumptech.glide.load.engine.GlideException: Fetch failed
+                                                                                                    There was 1 root cause:
+                                                                                                    java.io.FileNotFoundException(open failed: ENOENT (No such file or directory))
+                                                                                                     call GlideException#logRootCauses(String) for more detail
+                                                                                                          Cause (1 of 1): class java.io.FileNotFoundException: open failed: ENOENT (No such file or directory)
+                                                                                                      Cause (3 of 3): class com.bumptech.glide.load.engine.GlideException: Fetching data failed, class android.content.res.AssetFileDescriptor, LOCAL
+                                                                                                    There was 1 root cause:
+                                                                                                    java.io.FileNotFoundException(open failed: ENOENT (No such file or directory))
+                                                                                                     call GlideException#logRootCauses(String) for more detail
+                                                                                                        Cause (1 of 1): class com.bumptech.glide.load.engine.GlideException: Fetch failed
+                                                                                                    There was 1 root cause:
+                                                                                                    java.io.FileNotFoundException(open failed: ENOENT (No such file or directory))
+                                                                                                     call GlideException#logRootCauses(String) for more detail
+                                                                                                          Cause (1 of 1): class java.io.FileNotFoundException: open failed: ENOENT (No such file or directory)
+2025-09-20 18:08:43.066 19511-19511 Glide                   com.ivanmarty.rovecast               I  Root cause (1 of 3) (Ask Gemini)
+                                                                                                    java.io.FileNotFoundException: /null: open failed: ENOENT (No such file or directory)
+                                                                                                    	at libcore.io.IoBridge.open(IoBridge.java:496)
+                                                                                                    	at java.io.FileInputStream.<init>(FileInputStream.java:159)
+                                                                                                    	at java.io.FileInputStream.<init>(FileInputStream.java:115)
+                                                                                                    	at android.content.ContentResolver.openInputStream(ContentResolver.java:1196)
+                                                                                                    	at com.bumptech.glide.load.data.StreamLocalUriFetcher.loadResourceFromUri(StreamLocalUriFetcher.java:74)
+                                                                                                    	at com.bumptech.glide.load.data.StreamLocalUriFetcher.loadResource(StreamLocalUriFetcher.java:50)
+                                                                                                    	at com.bumptech.glide.load.data.StreamLocalUriFetcher.loadResource(StreamLocalUriFetcher.java:13)
+                                                                                                    	at com.bumptech.glide.load.data.LocalUriFetcher.loadData(LocalUriFetcher.java:44)
+                                                                                                    	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.loadData(MultiModelLoader.java:100)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNextLoad(SourceGenerator.java:95)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNext(SourceGenerator.java:88)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.runGenerators(DecodeJob.java:311)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.runWrapped(DecodeJob.java:280)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.run(DecodeJob.java:235)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+                                                                                                    	at com.bumptech.glide.load.engine.executor.GlideExecutor$DefaultThreadFactory$1.run(GlideExecutor.java:424)
+                                                                                                    	at java.lang.Thread.run(Thread.java:929)
+                                                                                                    	at com.bumptech.glide.load.engine.executor.GlideExecutor$DefaultPriorityThreadFactory$1.run(GlideExecutor.java:383)
+                                                                                                    Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+                                                                                                    	at libcore.io.Linux.open(Native Method)
+                                                                                                    	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+                                                                                                    	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
+                                                                                                    	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+                                                                                                    	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8464)
+                                                                                                    	at libcore.io.IoBridge.open(IoBridge.java:482)
+                                                                                                    	at java.io.FileInputStream.<init>(FileInputStream.java:159) 
+                                                                                                    	at java.io.FileInputStream.<init>(FileInputStream.java:115) 
+                                                                                                    	at android.content.ContentResolver.openInputStream(ContentResolver.java:1196) 
+                                                                                                    	at com.bumptech.glide.load.data.StreamLocalUriFetcher.loadResourceFromUri(StreamLocalUriFetcher.java:74) 
+                                                                                                    	at com.bumptech.glide.load.data.StreamLocalUriFetcher.loadResource(StreamLocalUriFetcher.java:50) 
+                                                                                                    	at com.bumptech.glide.load.data.StreamLocalUriFetcher.loadResource(StreamLocalUriFetcher.java:13) 
+                                                                                                    	at com.bumptech.glide.load.data.LocalUriFetcher.loadData(LocalUriFetcher.java:44) 
+                                                                                                    	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.loadData(MultiModelLoader.java:100) 
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNextLoad(SourceGenerator.java:95) 
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNext(SourceGenerator.java:88) 
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.runGenerators(DecodeJob.java:311) 
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.runWrapped(DecodeJob.java:280) 
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.run(DecodeJob.java:235) 
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167) 
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641) 
+                                                                                                    	at com.bumptech.glide.load.engine.executor.GlideExecutor$DefaultThreadFactory$1.run(GlideExecutor.java:424) 
+                                                                                                    	at java.lang.Thread.run(Thread.java:929) 
+                                                                                                    	at com.bumptech.glide.load.engine.executor.GlideExecutor$DefaultPriorityThreadFactory$1.run(GlideExecutor.java:383) 
+2025-09-20 18:08:43.066 19511-19511 Glide                   com.ivanmarty.rovecast               I  Root cause (2 of 3) (Ask Gemini)
+                                                                                                    java.io.FileNotFoundException: open failed: ENOENT (No such file or directory)
+                                                                                                    	at android.os.ParcelFileDescriptor.openInternal(ParcelFileDescriptor.java:315)
+                                                                                                    	at android.os.ParcelFileDescriptor.open(ParcelFileDescriptor.java:220)
+                                                                                                    	at android.content.ContentResolver.openAssetFileDescriptor(ContentResolver.java:1509)
+                                                                                                    	at android.content.ContentResolver.openAssetFileDescriptor(ContentResolver.java:1431)
+                                                                                                    	at com.bumptech.glide.load.data.FileDescriptorLocalUriFetcher.loadResource(FileDescriptorLocalUriFetcher.java:20)
+                                                                                                    	at com.bumptech.glide.load.data.FileDescriptorLocalUriFetcher.loadResource(FileDescriptorLocalUriFetcher.java:12)
+                                                                                                    	at com.bumptech.glide.load.data.LocalUriFetcher.loadData(LocalUriFetcher.java:44)
+                                                                                                    	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.loadData(MultiModelLoader.java:100)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNextLoad(SourceGenerator.java:95)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNext(SourceGenerator.java:88)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.runGenerators(DecodeJob.java:311)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.onDataFetcherFailed(DecodeJob.java:416)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.onLoadFailedInternal(SourceGenerator.java:223)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator$1.onLoadFailed(SourceGenerator.java:108)
+                                                                                                    	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.startNextOrFail(MultiModelLoader.java:167)
+                                                                                                    	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.onLoadFailed(MultiModelLoader.java:154)
+                                                                                                    	at com.bumptech.glide.load.data.LocalUriFetcher.loadData(LocalUriFetcher.java:50)
+                                                                                                    	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.loadData(MultiModelLoader.java:100)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNextLoad(SourceGenerator.java:95)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNext(SourceGenerator.java:88)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.runGenerators(DecodeJob.java:311)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.runWrapped(DecodeJob.java:280)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.run(DecodeJob.java:235)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+                                                                                                    	at com.bumptech.glide.load.engine.executor.GlideExecutor$DefaultThreadFactory$1.run(GlideExecutor.java:424)
+                                                                                                    	at java.lang.Thread.run(Thread.java:929)
+                                                                                                    	at com.bumptech.glide.load.engine.executor.GlideExecutor$DefaultPriorityThreadFactory$1.run(GlideExecutor.java:383)
+2025-09-20 18:08:43.067 19511-19511 Glide                   com.ivanmarty.rovecast               I  Root cause (3 of 3) (Ask Gemini)
+                                                                                                    java.io.FileNotFoundException: open failed: ENOENT (No such file or directory)
+                                                                                                    	at android.os.ParcelFileDescriptor.openInternal(ParcelFileDescriptor.java:315)
+                                                                                                    	at android.os.ParcelFileDescriptor.open(ParcelFileDescriptor.java:220)
+                                                                                                    	at android.content.ContentResolver.openAssetFileDescriptor(ContentResolver.java:1509)
+                                                                                                    	at android.content.ContentResolver.openAssetFileDescriptor(ContentResolver.java:1431)
+                                                                                                    	at com.bumptech.glide.load.data.AssetFileDescriptorLocalUriFetcher.loadResource(AssetFileDescriptorLocalUriFetcher.java:20)
+                                                                                                    	at com.bumptech.glide.load.data.AssetFileDescriptorLocalUriFetcher.loadResource(AssetFileDescriptorLocalUriFetcher.java:11)
+                                                                                                    	at com.bumptech.glide.load.data.LocalUriFetcher.loadData(LocalUriFetcher.java:44)
+                                                                                                    	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.loadData(MultiModelLoader.java:100)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNextLoad(SourceGenerator.java:95)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNext(SourceGenerator.java:88)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.runGenerators(DecodeJob.java:311)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.onDataFetcherFailed(DecodeJob.java:416)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.onLoadFailedInternal(SourceGenerator.java:223)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator$1.onLoadFailed(SourceGenerator.java:108)
+                                                                                                    	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.startNextOrFail(MultiModelLoader.java:167)
+                                                                                                    	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.onLoadFailed(MultiModelLoader.java:154)
+                                                                                                    	at com.bumptech.glide.load.data.LocalUriFetcher.loadData(LocalUriFetcher.java:50)
+                                                                                                    	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.loadData(MultiModelLoader.java:100)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNextLoad(SourceGenerator.java:95)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNext(SourceGenerator.java:88)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.runGenerators(DecodeJob.java:311)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.onDataFetcherFailed(DecodeJob.java:416)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.onLoadFailedInternal(SourceGenerator.java:223)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator$1.onLoadFailed(SourceGenerator.java:108)
+                                                                                                    	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.startNextOrFail(MultiModelLoader.java:167)
+                                                                                                    	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.onLoadFailed(MultiModelLoader.java:154)
+                                                                                                    	at com.bumptech.glide.load.data.LocalUriFetcher.loadData(LocalUriFetcher.java:50)
+                                                                                                    	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.loadData(MultiModelLoader.java:100)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNextLoad(SourceGenerator.java:95)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNext(SourceGenerator.java:88)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.runGenerators(DecodeJob.java:311)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.runWrapped(DecodeJob.java:280)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.run(DecodeJob.java:235)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+                                                                                                    	at com.bumptech.glide.load.engine.executor.GlideExecutor$DefaultThreadFactory$1.run(GlideExecutor.java:424)
+                                                                                                    	at java.lang.Thread.run(Thread.java:929)
+                                                                                                    	at com.bumptech.glide.load.engine.executor.GlideExecutor$DefaultPriorityThreadFactory$1.run(GlideExecutor.java:383)
+2025-09-20 18:08:43.069 19511-19511 Glide                   com.ivanmarty.rovecast               W  Load failed for [] with dimensions [168x168]
+                                                                                                    class com.bumptech.glide.load.engine.GlideException: Failed to load resource
+2025-09-20 18:08:43.257 19511-19511 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 3
+2025-09-20 18:08:43.266 19511-19511 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 3
+2025-09-20 18:08:43.731 19511-19511 Glide                   com.ivanmarty.rovecast               W  Load failed for [] with dimensions [168x168]
+                                                                                                    class com.bumptech.glide.load.engine.GlideException: Failed to load resource
+2025-09-20 18:08:45.312 19511-19511 Glide                   com.ivanmarty.rovecast               W  Load failed for [https://dulcefm.cl/wp-content/uploads/elementor/thumbs/logo-web-q0val34wkm3p6wh8gop0g4apeqxdpct5lleoaa1omg.png] with dimensions [168x168]
+                                                                                                    class com.bumptech.glide.load.engine.GlideException: Failed to load resource
+                                                                                                    There was 1 root cause:
+                                                                                                    com.bumptech.glide.load.HttpException(Failed to connect or obtain data, status code: 404)
+                                                                                                     call GlideException#logRootCauses(String) for more detail
+                                                                                                      Cause (1 of 1): class com.bumptech.glide.load.engine.GlideException: Fetching data failed, class java.io.InputStream, REMOTE
+                                                                                                    There was 1 root cause:
+                                                                                                    com.bumptech.glide.load.HttpException(Failed to connect or obtain data, status code: 404)
+                                                                                                     call GlideException#logRootCauses(String) for more detail
+                                                                                                        Cause (1 of 1): class com.bumptech.glide.load.engine.GlideException: Fetch failed
+                                                                                                    There was 1 root cause:
+                                                                                                    com.bumptech.glide.load.HttpException(Failed to connect or obtain data, status code: 404)
+                                                                                                     call GlideException#logRootCauses(String) for more detail
+                                                                                                          Cause (1 of 1): class com.bumptech.glide.load.HttpException: Failed to connect or obtain data, status code: 404
+2025-09-20 18:08:45.318 19511-19511 Glide                   com.ivanmarty.rovecast               I  Root cause (1 of 1) (Ask Gemini)
+                                                                                                    com.bumptech.glide.load.HttpException: Failed to connect or obtain data, status code: 404
+                                                                                                    	at com.bumptech.glide.load.data.HttpUrlFetcher.loadDataWithRedirects(HttpUrlFetcher.java:98)
+                                                                                                    	at com.bumptech.glide.load.data.HttpUrlFetcher.loadData(HttpUrlFetcher.java:58)
+                                                                                                    	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.loadData(MultiModelLoader.java:100)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNextLoad(SourceGenerator.java:95)
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNext(SourceGenerator.java:88)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.runGenerators(DecodeJob.java:311)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.runWrapped(DecodeJob.java:280)
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.run(DecodeJob.java:235)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+                                                                                                    	at com.bumptech.glide.load.engine.executor.GlideExecutor$DefaultThreadFactory$1.run(GlideExecutor.java:424)
+                                                                                                    	at java.lang.Thread.run(Thread.java:929)
+                                                                                                    	at com.bumptech.glide.load.engine.executor.GlideExecutor$DefaultPriorityThreadFactory$1.run(GlideExecutor.java:383)
+                                                                                                    Caused by: java.io.FileNotFoundException: https://dulcefm.cl/wp-content/uploads/elementor/thumbs/logo-web-q0val34wkm3p6wh8gop0g4apeqxdpct5lleoaa1omg.png
+                                                                                                    	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getInputStream(HttpURLConnectionImpl.java:255)
+                                                                                                    	at com.android.okhttp.internal.huc.DelegatingHttpsURLConnection.getInputStream(DelegatingHttpsURLConnection.java:211)
+                                                                                                    	at com.android.okhttp.internal.huc.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:30)
+                                                                                                    	at com.bumptech.glide.load.data.HttpUrlFetcher.loadDataWithRedirects(HttpUrlFetcher.java:95)
+                                                                                                    	at com.bumptech.glide.load.data.HttpUrlFetcher.loadData(HttpUrlFetcher.java:58) 
+                                                                                                    	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.loadData(MultiModelLoader.java:100) 
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNextLoad(SourceGenerator.java:95) 
+                                                                                                    	at com.bumptech.glide.load.engine.SourceGenerator.startNext(SourceGenerator.java:88) 
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.runGenerators(DecodeJob.java:311) 
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.runWrapped(DecodeJob.java:280) 
+                                                                                                    	at com.bumptech.glide.load.engine.DecodeJob.run(DecodeJob.java:235) 
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167) 
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641) 
+                                                                                                    	at com.bumptech.glide.load.engine.executor.GlideExecutor$DefaultThreadFactory$1.run(GlideExecutor.java:424) 
+                                                                                                    	at java.lang.Thread.run(Thread.java:929) 
+                                                                                                    	at com.bumptech.glide.load.engine.executor.GlideExecutor$DefaultPriorityThreadFactory$1.run(GlideExecutor.java:383) 
+2025-09-20 18:08:49.035 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->pokeByte(JB)V (greylist, reflection, allowed)
+2025-09-20 18:08:49.036 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->peekByte(J)B (greylist, reflection, allowed)
+2025-09-20 18:08:49.038 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, reflection, allowed)
+2025-09-20 18:08:49.039 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, reflection, allowed)
+2025-09-20 18:08:49.040 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, reflection, allowed)
+2025-09-20 18:08:49.040 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, reflection, allowed)
+2025-09-20 18:08:49.041 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, reflection, allowed)
+2025-09-20 18:08:49.041 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, reflection, allowed)
+2025-09-20 18:08:49.041 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, reflection, allowed)
+2025-09-20 18:08:49.045 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 18:08:49.049 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 18:08:49.052 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 18:08:49.053 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 18:08:49.054 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, linking, allowed)
+2025-09-20 18:08:49.104 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 18:08:49.110 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 18:08:49.110 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 18:08:49.115 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 18:08:49.198 19511-19648 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 18:08:49.225 19511-19887 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Ldalvik/system/VMStack;->getStackClass2()Ljava/lang/Class; (greylist, reflection, allowed)
+2025-09-20 18:08:49.233 19511-19887 FilePhenotypeFlags      com.ivanmarty.rovecast               E  Config package com.google.android.gms.clearcut_client#com.ivanmarty.rovecast cannot use FILE backing without declarative registration. See go/phenotype-android-integration#phenotype for more information. This will lead to stale flags.
+2025-09-20 18:08:49.234 19511-19648 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 18:08:49.234 19511-19648 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, linking, allowed)
+2025-09-20 18:08:52.849 19511-19511 AudioManager            com.ivanmarty.rovecast               V  querySoundEffectsEnabled...
+2025-09-20 18:08:52.898 19511-19544 ZrHung.AppEyeUiProbe    com.ivanmarty.rovecast               D  not watching, wait.
+2025-09-20 18:08:52.937 19511-19511 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 18:08:52.955 19511-19511 ActivityThread          com.ivanmarty.rovecast               W  handleWindowVisibility: no activity for token android.os.BinderProxy@27599ad
+2025-09-20 18:08:52.956 19511-19708 AudioManager            com.ivanmarty.rovecast               I  requestAudioFocus focusRequest
+2025-09-20 18:08:52.958 19511-19544 ZrHung.AppEyeUiProbe    com.ivanmarty.rovecast               D  restart watching
+2025-09-20 18:08:52.987 19511-19511 ActivityThread          com.ivanmarty.rovecast               V  callActivityOnCreate
+2025-09-20 18:08:53.004 19511-19511 DecorView[]             com.ivanmarty.rovecast               I  pkgName:com.ivanmarty.rovecast old windowMode:0 new windoMode:1, isFixedSize:false
+2025-09-20 18:08:53.236 19511-19511 BlockMonitor            com.ivanmarty.rovecast               I  dispatchingThrewException In MainThread
+2025-09-20 18:08:53.236 19511-19511 AndroidRuntime          com.ivanmarty.rovecast               D  Shutting down VM
+2025-09-20 18:08:53.237 19511-19511 QarthLog                com.ivanmarty.rovecast               I  [PatchStore] createDisableExceptionQarthFile
+2025-09-20 18:08:53.237 19511-19511 QarthLog                com.ivanmarty.rovecast               I  [PatchStore] create disable file for com.ivanmarty.rovecast uid is 10627
+2025-09-20 18:08:53.242 19511-19511 AndroidRuntime          com.ivanmarty.rovecast               E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: com.ivanmarty.rovecast, PID: 19511
+                                                                                                    java.lang.RuntimeException: Unable to start activity ComponentInfo{com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.PlayerActivity}: java.lang.ClassCastException: androidx.constraintlayout.widget.ConstraintLayout cannot be cast to com.google.android.material.appbar.MaterialToolbar
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4060)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247)
+                                                                                                    	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149)
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110)
+                                                                                                    	at android.os.Looper.loop(Looper.java:219)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109)
+                                                                                                    Caused by: java.lang.ClassCastException: androidx.constraintlayout.widget.ConstraintLayout cannot be cast to com.google.android.material.appbar.MaterialToolbar
+                                                                                                    	at com.ivanmarty.rovecast.ui.PlayerActivity.onCreate(PlayerActivity.java:70)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:8214)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:8202)
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1320)
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4033)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4247) 
+                                                                                                    	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:91) 
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:149) 
+                                                                                                    	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:103) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2613) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:110) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:219) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:8668) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1109) 
+2025-09-20 18:08:53.264 19511-19511 Process                 com.ivanmarty.rovecast               I  Sending signal. PID: 19511 SIG: 9
+2025-09-20 18:08:53.424  1681-2212  WindowManager           system_server                        E  win=Window{8d7fe51 u0 com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity EXITING} destroySurfaces: appStopped=false win.mWindowRemovalAllowed=true win.mRemoveOnExit=true
+2025-09-20 18:08:53.530  2233-2556  DollieAdapterService    com.huawei.systemserver              E  notifyActivityState pkg:com.ivanmarty.rovecast/com.ivanmarty.rovecast.ui.MainActivity state:20 fg:false mUid:10627
+2025-09-20 18:08:54.461 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               I  Late-enabling -Xcheck:jni
+2025-09-20 18:08:54.518 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               E  LoadAppImageStartupCache enabled : 1
+2025-09-20 18:08:54.518 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               E  Unknown bits set in runtime_flags: 0x8000
+2025-09-20 18:08:54.520 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               I  Reinit property: dalvik.vm.checkjni= false
+2025-09-20 18:08:54.520 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               I  ReInitProperties: persist.vm.debug.dumpapi= false
+2025-09-20 18:08:54.540 19918-19918 ActivityThread          com.ivanmarty.rovecast               D  Attach thread to application
+2025-09-20 18:08:54.579 19918-19938 ActivityThread          com.ivanmarty.rovecast               I  Init compatible state: true
+2025-09-20 18:08:54.582 19918-19938 HwFramewor...rtsFactory com.ivanmarty.rovecast               D  HwFrameworkSecurityPartsFactory in.
+2025-09-20 18:08:54.582 19918-19938 HwFramewor...rtsFactory com.ivanmarty.rovecast               I  add HwFrameworkSecurityPartsFactory to memory.
+2025-09-20 18:08:54.583 19918-19938 BehaviorCollectManager  com.ivanmarty.rovecast               E  Fail to acquire dataAnalyzerService...
+2025-09-20 18:08:54.594 19918-19918 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.ivanmarty.rovecast-rCPlP9hlOJgBks-Mz31Gjg==/base.apk librarySearchPath: /data/app/com.ivanmarty.rovecast-rCPlP9hlOJgBks-Mz31Gjg==/lib/arm64 libraryPermittedPath: /data/user/0/com.ivanmarty.rovecast parent: java.lang.BootClassLoader@c069c4e targetSdkVersion: 35 isBundled: false classLoaderName: null sharedLibraries: null
+2025-09-20 18:08:58.536 19918-19938 HwApiCacheMangerEx      com.ivanmarty.rovecast               I  apicache path=/storage/emulated/0 state=mounted key=com.ivanmarty.rovecast#10627#256
+2025-09-20 18:08:58.536 19918-19938 HwApiCacheMangerEx      com.ivanmarty.rovecast               I  need clear apicache,because volumes changed,oldCnt=0 newCnt=1
+2025-09-20 18:08:58.542 19918-19938 HwApiCacheMangerEx      com.ivanmarty.rovecast               I  apicache path=/storage/emulated/0 state=mounted key=com.ivanmarty.rovecast#10627#0
+2025-09-20 18:08:58.542 19918-19938 HwApiCacheMangerEx      com.ivanmarty.rovecast               I  need clear apicache,because volumes changed,oldCnt=1 newCnt=1
+2025-09-20 18:08:58.559 19918-19938 HwPartIawareFactory     com.ivanmarty.rovecast               I  add android.common.HwPartIawareFactoryImpl to memory.
+2025-09-20 18:08:58.559 19918-19938 AwareBitmapCacher       com.ivanmarty.rovecast               I  init processName:com.ivanmarty.rovecast pid=19918 uid=10627
+2025-09-20 18:08:58.673 19918-19918 WM-WrkMgrInitializer    com.ivanmarty.rovecast               D  Initializing WorkManager with default configuration.
+2025-09-20 18:08:59.482 19918-19918 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /system/framework/org.apache.http.legacy.jar librarySearchPath: /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/lib/arm64:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@c069c4e targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
+2025-09-20 18:08:59.486 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
+2025-09-20 18:08:59.494 19918-19918 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /system/framework/com.android.media.remotedisplay.jar librarySearchPath: /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/lib/arm64:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@c069c4e targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
+2025-09-20 18:08:59.498 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
+2025-09-20 18:08:59.504 19918-19918 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /system/framework/com.android.location.provider.jar librarySearchPath: /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/lib/arm64:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@c069c4e targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
+2025-09-20 18:08:59.510 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               I  The ClassLoaderContext is a special shared library.
+2025-09-20 18:08:59.517 19918-19918 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/base.apk:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.es.apk:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.xxhdpi.apk librarySearchPath: /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/lib/arm64:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.es.apk!/lib/arm64-v8a:/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.xxhdpi.apk!/lib/arm64-v8a libraryPermittedPath: /data/user/0/com.google.android.gms parent: java.lang.BootClassLoader@c069c4e targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: [dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/org.apache.http.legacy.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/lib/arm64, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]], dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/com.android.media.remotedisplay.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/lib/arm64, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]], dalvik.system.PathClassLoader[DexPathList[[zip file "/system/framework/com.android.location.provider.jar"],nativeLibraryDirectories=[/data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/lib/arm64, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.es.apk!/lib/arm64-v8a, /data/app/com.google.android.gms-rRksavvBNXgRsDVlt2sxZQ==/split_config.xxhdpi.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]]]
+2025-09-20 18:08:59.616 19918-19918 DynamiteModule          com.ivanmarty.rovecast               I  Considering local module com.google.android.gms.ads.dynamite:0 and remote module com.google.android.gms.ads.dynamite:253405700
+2025-09-20 18:08:59.617 19918-19918 DynamiteModule          com.ivanmarty.rovecast               I  Selected remote version of com.google.android.gms.ads.dynamite, version >= 253405700
+2025-09-20 18:08:59.976 19918-19918 DynamitePackage         com.ivanmarty.rovecast               D  Instantiated singleton DynamitePackage.
+2025-09-20 18:08:59.976 19918-19918 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraMobileAdsSettingManagerCreatorImpl
+2025-09-20 18:09:00.156 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->arrayBaseOffset(Ljava/lang/Class;)I (greylist,core-platform-api, linking, allowed)
+2025-09-20 18:09:00.156 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->arrayIndexScale(Ljava/lang/Class;)I (greylist, linking, allowed)
+2025-09-20 18:09:00.156 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapInt(Ljava/lang/Object;JII)Z (greylist, linking, allowed)
+2025-09-20 18:09:00.157 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapLong(Ljava/lang/Object;JJJ)Z (greylist, linking, allowed)
+2025-09-20 18:09:00.157 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getIntVolatile(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 18:09:00.157 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObjectVolatile(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 18:09:00.157 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 18:09:00.157 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObjectVolatile(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 18:09:00.157 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden field Lsun/misc/Unsafe;->theUnsafe:Lsun/misc/Unsafe; (greylist, reflection, allowed)
+2025-09-20 18:09:00.278 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getUnsafe()Lsun/misc/Unsafe; (greylist,core-platform-api, linking, allowed)
+2025-09-20 18:09:00.279 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 18:09:00.294 19918-19969 NetworkSecurityConfig   com.ivanmarty.rovecast               D  Using Network Security Config from resource network_security_config debugBuild: true
+2025-09-20 18:09:00.298 19918-19918 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-20 18:09:00.299 19918-19918 ConnectivityManager     com.ivanmarty.rovecast               I  requestNetwork and the calling app is: com.ivanmarty.rovecast
+2025-09-20 18:09:00.321 19918-19972 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 18:09:00.321 19918-19972 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 18:09:00.325 19918-19918 Ads                     com.ivanmarty.rovecast               I  Updating ad debug logging enablement.
+2025-09-20 18:09:00.331 19918-19969 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 18:09:00.344 19918-19973 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 18:09:00.344 19918-19973 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 18:09:00.492 19918-19918 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdPreloaderCreatorImpl
+2025-09-20 18:09:00.531 19918-19978 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 18:09:00.635 19918-19985 DynamitePackage         com.ivanmarty.rovecast               D  Instantiating com.google.android.gms.ads.ChimeraAdManagerCreatorImpl
+2025-09-20 18:09:00.742 19918-19985 Ads                     com.ivanmarty.rovecast               I  Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("AFC033BBEAF477A33219CE7057D05B14")) to get test ads on this device.
+2025-09-20 18:09:00.756 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 18:09:00.756 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 18:09:00.763 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 18:09:00.763 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 18:09:00.766 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 18:09:00.767 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, linking, allowed)
+2025-09-20 18:09:00.774 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 18:09:00.802 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->allocateInstance(Ljava/lang/Class;)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 18:09:00.805 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->peekLong(JZ)J (greylist, reflection, allowed)
+2025-09-20 18:09:00.805 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->pokeLong(JJZ)V (greylist, reflection, allowed)
+2025-09-20 18:09:00.806 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->pokeInt(JIZ)V (greylist, reflection, allowed)
+2025-09-20 18:09:00.806 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->peekInt(JZ)I (greylist, reflection, allowed)
+2025-09-20 18:09:00.806 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->pokeByte(JB)V (greylist, reflection, allowed)
+2025-09-20 18:09:00.806 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->peekByte(J)B (greylist, reflection, allowed)
+2025-09-20 18:09:00.806 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->pokeByteArray(J[BII)V (greylist, reflection, allowed)
+2025-09-20 18:09:00.806 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->peekByteArray(J[BII)V (greylist, reflection, allowed)
+2025-09-20 18:09:00.807 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Llibcore/io/Memory;->peekByte(J)B (greylist, linking, allowed)
+2025-09-20 18:09:00.813 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, reflection, allowed)
+2025-09-20 18:09:00.817 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden field Ljava/nio/Buffer;->address:J (greylist, reflection, allowed)
+2025-09-20 18:09:00.817 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, reflection, allowed)
+2025-09-20 18:09:00.818 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, reflection, allowed)
+2025-09-20 18:09:00.818 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, reflection, allowed)
+2025-09-20 18:09:00.819 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, reflection, allowed)
+2025-09-20 18:09:00.819 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, reflection, allowed)
+2025-09-20 18:09:00.819 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, reflection, allowed)
+2025-09-20 18:09:00.861 19918-19981 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-20 18:09:00.861 19918-19981 ConnectivityManager     com.ivanmarty.rovecast               I  requestNetwork and the calling app is: com.ivanmarty.rovecast
+2025-09-20 18:09:00.964 19918-19918 MediaRouter             com.ivanmarty.rovecast               V  Selecting route: RouteInfo{ name=Teléfono, description=null, status=null, category=RouteCategory{ name=Sistema types=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO  groupable=false }, supportedTypes=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO , presentationDisplay=null }
+2025-09-20 18:09:00.973 19918-19994 nmarty.rovecas          com.ivanmarty.rovecast               W  Verification of void m84.bbt.s(m84.bco, java.util.Set) took 103.280ms
+2025-09-20 18:09:01.001 19918-19918 AxMediaRouter           com.ivanmarty.rovecast               I  Found default route: MediaRouter.RouteInfo{ uniqueId=DEFAULT_ROUTE, name=Teléfono, description=null, iconUri=null, enabled=true, isSystemRoute=true, connectionState=0, canDisconnect=false, playbackType=0, playbackStream=3, deviceType=0, volumeHandling=1, volume=12, volumeMax=15, presentationDisplayId=-1, extras=null, settingsIntent=null, providerPackageName=android }
+2025-09-20 18:09:01.002 19918-19918 AxMediaRouter           com.ivanmarty.rovecast               I  Unselecting the current route because it is no longer selectable: null
+2025-09-20 18:09:01.069 19918-19918 DynamiteModule          com.ivanmarty.rovecast               I  Considering local module com.google.android.gms.cast.framework.dynamite:0 and remote module com.google.android.gms.cast.framework.dynamite:253534000
+2025-09-20 18:09:01.069 19918-19918 DynamiteModule          com.ivanmarty.rovecast               I  Selected remote version of com.google.android.gms.cast.framework.dynamite, version >= 253534000
+2025-09-20 18:09:01.070 19918-19918 DynamiteModule          com.ivanmarty.rovecast               V  Dynamite loader version >= 2, using loadModule2NoCrashUtils
+2025-09-20 18:09:01.149 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  ClassLoaderContext type mismatch. expected=PCL, found=DLC (PCL[] | DLC[];PCL[/data/app/com.ivanmarty.rovecast-rCPlP9hlOJgBks-Mz31Gjg==/base.apk*3005761464:/data/app/com.ivanmarty.rovecast-rCPlP9hlOJgBks-Mz31Gjg==/base.apk!classes2.dex*3838903545:/data/app/com.ivanmarty.rovecast-rCPlP9hlOJgBks-Mz31Gjg==/base.apk!classes3.dex*4049262258:/data/app/com.ivanmarty.rovecast-rCPlP9hlOJgBks-Mz31Gjg==/base.apk!classes4.dex*703073500:/data/app/com.ivanmarty.rovecast-rCPlP9hlOJgBks-Mz31Gjg==/base.apk!classes5.dex*2330824257:/data/app/com.ivanmarty.rovecast-rCPlP9hlOJgBks-Mz31Gjg==/base.apk!classes6.dex*2091565728:/data/app/com.ivanmarty.rovecast-rCPlP9hlOJgBks-Mz31Gjg==/base.apk!classes7.dex*398708974:/data/app/com.ivanmarty.rovecast-rCPlP9hlOJgBks-Mz31Gjg==/base.apk!classes8.dex*3556802394:/data/app/com.ivanmarty.rovecast-rCPlP9hlOJgBks-Mz31Gjg==/base.apk!classes9.dex*2888158322:/data/app/com.ivanmarty.rovecast-rCPlP9hlOJgBks-Mz31Gjg==/base.apk!classes10.dex*3232595436:/data/app/com.ivanmarty.rovecast-rCPlP9hlOJgBks-Mz
+2025-09-20 18:09:01.150 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Found duplicate classes, falling back to extracting from APK : /data/user_de/0/com.google.android.gms/app_chimera/m/000001e3/DynamiteModulesC.uncompressed.apk
+2025-09-20 18:09:01.150 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  NOTE: This wastes RAM and hurts startup performance.
+2025-09-20 18:09:01.150 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Found duplicated class when checking oat files: 'Landroid/support/v4/graphics/drawable/IconCompatParcelizer;' in /data/app/com.ivanmarty.rovecast-rCPlP9hlOJgBks-Mz31Gjg==/base.apk and /data/user_de/0/com.google.android.gms/app_chimera/m/000001e3/DynamiteModulesC.uncompressed.apk
+2025-09-20 18:09:01.150 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  
+2025-09-20 18:09:01.193 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               W  Failed execv(/system/bin/dex2oat --debuggable --instruction-set=arm64 --instruction-set-features=runtime --runtime-arg -Xhidden-api-policy:enabled --runtime-arg -Xrelocate --boot-image=/system/framework/boot.art --runtime-arg -Xms64m --runtime-arg -Xmx512m -j4 --instruction-set-variant=generic --instruction-set-features=default --generate-mini-debug-info --debuggable --generate-mini-debug-info --dex-file=/data/user/0/com.ivanmarty.rovecast/app_pccache/5/FDFFAF1835DBEDC691602F4FD7FCF27E0E4E7649/pcam.jar --output-vdex-fd=110 --oat-fd=111 --oat-location=/data/user/0/com.ivanmarty.rovecast/app_pccache/5/FDFFAF1835DBEDC691602F4FD7FCF27E0E4E7649/oat/arm64/pcam.odex --compiler-filter=verify --class-loader-context=& --compilation-reason=dynamic-load) because non-0 exit status
+2025-09-20 18:09:01.199 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 18:09:01.262 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               I  Waiting for a blocking GC ClassLinker
+2025-09-20 18:09:01.278 19918-19931 nmarty.rovecas          com.ivanmarty.rovecast               I  Background young concurrent copying GC freed 34313(3208KB) AllocSpace objects, 18(640KB) LOS objects, 43% free, 4008KB/7132KB, paused 465us total 438.833ms
+2025-09-20 18:09:01.278 19918-19981 nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 79.294ms
+2025-09-20 18:09:01.284 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               I  WaitForGcToComplete blocked ClassLinker on ClassLinker for 22.367ms
+2025-09-20 18:09:01.391 19918-19918 CastDynamiteModuleImpl  com.ivanmarty.rovecast               I  ui created by ClassLoader dalvik.system.DelegateLastClassLoader[DexPathList[[zip file "/data/user_de/0/com.google.android.gms/app_chimera/m/000001e3/DynamiteModulesC.uncompressed.apk"],nativeLibraryDirectories=[/data/user_de/0/com.google.android.gms/app_chimera/m/000001e3/DynamiteModulesC.uncompressed.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]].
+2025-09-20 18:09:01.478 19918-19985 WebViewFactory          com.ivanmarty.rovecast               I  Loading com.google.android.webview version 140.0.7339.51 (code 733905133)
+2025-09-20 18:09:01.498 19918-19918 AdWorker(Defaul         com.ivanmarty.rovecast               W  type=1400 audit(0.0:508151): avc: granted { execute } for pid=19918 path="/data/data/com.ivanmarty.rovecast/app_pccache/5/FDFFAF1835DBEDC691602F4FD7FCF27E0E4E7649/pcam.jar" dev="mmcblk0p71" ino=136158 scontext=u:r:untrusted_app:s0:c115,c258,c512,c768 tcontext=u:object_r:app_data_file:s0:c115,c258,c512,c768 tclass=file
+2025-09-20 18:09:01.498 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapInt(Ljava/lang/Object;JII)Z (greylist, linking, allowed)
+2025-09-20 18:09:01.498 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapLong(Ljava/lang/Object;JJJ)Z (greylist, linking, allowed)
+2025-09-20 18:09:01.498 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getIntVolatile(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 18:09:01.498 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObjectVolatile(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 18:09:01.498 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObjectVolatile(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 18:09:01.506 19918-19985 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.google.android.trichromelibrary_733905133-g9ZdU2hML5mNOGTbzt3g8Q==/base.apk librarySearchPath: /data/app/com.google.android.webview-Zwh7fKdd9-q397BEZib8pw==/lib/arm64:/data/app/com.google.android.webview-Zwh7fKdd9-q397BEZib8pw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.trichromelibrary_733905133-g9ZdU2hML5mNOGTbzt3g8Q==/base.apk!/lib/arm64-v8a libraryPermittedPath:  parent: java.lang.BootClassLoader@c069c4e targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: null
+2025-09-20 18:09:01.514 19918-19985 ApplicationLoaders      com.ivanmarty.rovecast               D  createClassLoader zip: /data/app/com.google.android.webview-Zwh7fKdd9-q397BEZib8pw==/base.apk librarySearchPath: /data/app/com.google.android.webview-Zwh7fKdd9-q397BEZib8pw==/lib/arm64:/data/app/com.google.android.webview-Zwh7fKdd9-q397BEZib8pw==/base.apk!/lib/arm64-v8a:/data/app/com.google.android.trichromelibrary_733905133-g9ZdU2hML5mNOGTbzt3g8Q==/base.apk!/lib/arm64-v8a libraryPermittedPath:  parent: java.lang.BootClassLoader@c069c4e targetSdkVersion: 36 isBundled: false classLoaderName: null sharedLibraries: [dalvik.system.PathClassLoader[DexPathList[[zip file "/data/app/com.google.android.trichromelibrary_733905133-g9ZdU2hML5mNOGTbzt3g8Q==/base.apk"],nativeLibraryDirectories=[/data/app/com.google.android.webview-Zwh7fKdd9-q397BEZib8pw==/lib/arm64, /data/app/com.google.android.webview-Zwh7fKdd9-q397BEZib8pw==/base.apk!/lib/arm64-v8a, /data/app/com.google.android.trichromelibrary_733905133-g9ZdU2hML5mNOGTbzt3g8Q==/base.apk!/lib/arm64-v8a, /system/lib64, /hw_product/lib64, /system/product/lib64]]]]
+2025-09-20 18:09:01.535 19918-19985 linker                  com.ivanmarty.rovecast               W  Warning: "/data/app/com.google.android.trichromelibrary_733905133-g9ZdU2hML5mNOGTbzt3g8Q==/base.apk!/lib/arm64-v8a/libmonochrome_64.so" unused DT entry: unknown processor-specific (type 0x70000001 arg 0x0) (ignoring)
+2025-09-20 18:09:01.545 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 18:09:01.546 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 18:09:01.587 19918-19918 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-20 18:09:01.629 19918-19918 HwTypeface              com.ivanmarty.rovecast               I  updateFont: scale=1.04
+2025-09-20 18:09:01.631 19918-19918 SystemFonts             com.ivanmarty.rovecast               D  areFontsVariable: script=Latn
+2025-09-20 18:09:01.633 19918-19918 ActivityThread          com.ivanmarty.rovecast               I  finishPreloaded preloadStatus 0
+2025-09-20 18:09:01.680 19918-19985 cr_WVCFactoryProvider   com.ivanmarty.rovecast               I  version=140.0.7339.51 (733905133) minSdkVersion=29 multiprocess=true packageId=127 splits=<none>
+2025-09-20 18:09:01.698 19918-19918 Choreographer           com.ivanmarty.rovecast               I  Skipped 180 frames!  The application may be doing too much work on its main thread.
+2025-09-20 18:09:01.720 19918-19973 Ads                     com.ivanmarty.rovecast               W  Update ad debug logging enablement as false
+2025-09-20 18:09:01.720 19918-19973 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 18:09:01.738 19918-20013 chromium                com.ivanmarty.rovecast               I  [0920/180901.737779:INFO:android_webview/browser/variations/variations_seed_loader.cc:67] Failed to open file for reading.: No such file or directory (2)
+2025-09-20 18:09:01.819 19918-19985 cr_LibraryLoader        com.ivanmarty.rovecast               I  Successfully loaded native library
+2025-09-20 18:09:01.824 19918-19985 cr_CachingUmaRecorder   com.ivanmarty.rovecast               I  Flushed 7 samples from 7 histograms, 0 samples were dropped.
+2025-09-20 18:09:01.928 19918-19918 cr_CombinedPProvider    com.ivanmarty.rovecast               I  #registerProvider() provider:WV.zj@a4f9261 isPolicyCacheEnabled:false policyProvidersSize:0
+2025-09-20 18:09:01.933 19918-19918 cr_PolicyProvider       com.ivanmarty.rovecast               I  #setManagerAndSource() 0
+2025-09-20 18:09:01.955 19918-19984 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 18:09:01.955 19918-19984 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 18:09:02.023 19918-20011 ExoPlayerImpl           com.ivanmarty.rovecast               I  Init c1fe1c5 [AndroidXMedia3/1.8.0] [HWMAR, MAR-LX3A, HUAWEI, 29]
+2025-09-20 18:09:02.063 19918-19997 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 18:09:02.077 19918-19984 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 18:09:02.081 19918-19984 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+2025-09-20 18:09:02.086 19918-19984 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 18:09:02.145 19918-19918 cr_CombinedPProvider    com.ivanmarty.rovecast               I  #linkNativeInternal() 1
+2025-09-20 18:09:02.165 19918-19918 cr_AppResProvider       com.ivanmarty.rovecast               I  #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
+2025-09-20 18:09:02.165 19918-19918 cr_PolicyProvider       com.ivanmarty.rovecast               I  #notifySettingsAvailable() 0
+2025-09-20 18:09:02.165 19918-19918 cr_CombinedPProvider    com.ivanmarty.rovecast               I  #onSettingsAvailable() 0
+2025-09-20 18:09:02.166 19918-19918 cr_CombinedPProvider    com.ivanmarty.rovecast               I  #flushPolicies()
+2025-09-20 18:09:02.234 19918-19984 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 18:09:02.235 19918-19984 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 18:09:02.408 19918-19985 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 18:09:02.412 19918-19969 Ads                     com.ivanmarty.rovecast               W  Invoke Firebase method getInstance error.
+2025-09-20 18:09:02.412 19918-19969 Ads                     com.ivanmarty.rovecast               W  The Google Mobile Ads SDK will not integrate with Firebase. Admob/Firebase integration requires the latest Firebase SDK jar, but Firebase SDK is either missing or out of date
+2025-09-20 18:09:02.509 19918-19982 AudioManager            com.ivanmarty.rovecast               V  getMode...
+2025-09-20 18:09:02.514 19918-19982 AudioManager            com.ivanmarty.rovecast               V  isMusicActive...
+2025-09-20 18:09:02.528 19918-19982 AudioManager            com.ivanmarty.rovecast               V  isSpeakerphoneOn: false
+2025-09-20 18:09:02.534 19918-19982 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 3 volume: 12
+2025-09-20 18:09:02.542 19918-19982 AudioManager            com.ivanmarty.rovecast               V  getStreamVolume streamType: 2 volume: 0
+2025-09-20 18:09:02.573 19918-19918 chromium                com.ivanmarty.rovecast               W  [WARNING:android_webview/browser/network_service/net_helpers.cc:143] HTTP Cache size is: 20971520
+2025-09-20 18:09:02.756 19918-19985 ServiceBindIntentUtils  com.ivanmarty.rovecast               W  Dynamic lookup for intent failed for action: com.google.android.gms.ads.service.CACHE
+2025-09-20 18:09:02.812 19918-19918 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-20 18:09:02.813 19918-19918 ConnectivityManager     com.ivanmarty.rovecast               I  requestNetwork and the calling app is: com.ivanmarty.rovecast
+2025-09-20 18:09:02.821 19918-19918 HwCustConn...anagerImpl com.ivanmarty.rovecast               D  isBlockNetworkRequestByNonAis, INVALID_SUBSCRIPTION_ID
+2025-09-20 18:09:02.843 19918-20011 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Landroid/media/AudioTrack;->getLatency()I (greylist, reflection, allowed)
+2025-09-20 18:09:02.847 19918-19931 nmarty.rovecas          com.ivanmarty.rovecast               I  Background concurrent copying GC freed 39811(2678KB) AllocSpace objects, 8(268KB) LOS objects, 51% free, 5883KB/11MB, paused 2.529ms total 978.813ms
+2025-09-20 18:09:02.973 19918-19929 nmarty.rovecas          com.ivanmarty.rovecast               I  Thread[5,tid=19929,WaitingInMainSignalCatcherLoop,Thread*=0x7780f0b400,peer=0x13289068,"Signal Catcher"]: reacting to signal 3
+2025-09-20 18:09:02.976 19918-19929 nmarty.rovecas          com.ivanmarty.rovecast               I  
+2025-09-20 18:09:03.082 19918-20098 CameraManagerGlobal     com.ivanmarty.rovecast               I  Connecting to camera service
+2025-09-20 18:09:03.090 19918-19918 AxMediaRouter           com.ivanmarty.rovecast               W  Ignoring attempt to select selected route: MediaRouter.RouteInfo{ uniqueId=DEFAULT_ROUTE, name=Teléfono, description=null, iconUri=null, enabled=true, isSystemRoute=true, connectionState=0, canDisconnect=false, playbackType=0, playbackStream=3, deviceType=0, volumeHandling=1, volume=12, volumeMax=15, presentationDisplayId=-1, extras=null, settingsIntent=null, providerPackageName=android }
+2025-09-20 18:09:03.092 19918-19918 MediaRouter             com.ivanmarty.rovecast               V  Selecting route: RouteInfo{ name=Teléfono, description=null, status=null, category=RouteCategory{ name=Sistema types=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO  groupable=false }, supportedTypes=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO , presentationDisplay=null }
+2025-09-20 18:09:03.229 19918-20103 iGraphics               com.ivanmarty.rovecast               I  [0020080c] pn: com.ivanmarty.rovecast, p: 19918
+2025-09-20 18:09:03.229 19918-20103 iGraphics               com.ivanmarty.rovecast               I  [0030080c] no spt app: com.ivanmarty.rovecast
+2025-09-20 18:09:03.242 19918-20057 cr_media                com.ivanmarty.rovecast               W  getBluetoothAdapter() requires BLUETOOTH permission
+2025-09-20 18:09:03.242 19918-20057 cr_media                com.ivanmarty.rovecast               W  registerBluetoothIntentsIfNeeded: Requires BLUETOOTH permission
+2025-09-20 18:09:03.369 19918-20011 nmarty.rovecas          com.ivanmarty.rovecast               W  Verification of void androidx.media3.exoplayer.ExoPlayerImplInternal.doSomeWork() took 117.173ms
+2025-09-20 18:09:03.521 19918-20001 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+2025-09-20 18:09:03.521 19918-20001 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 18:09:03.521 19918-20001 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+2025-09-20 18:09:03.521 19918-20001 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, linking, allowed)
+2025-09-20 18:09:03.522 19918-20001 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+2025-09-20 18:09:03.635 19918-19944 ZrHung.AppEyeUiProbe    com.ivanmarty.rovecast               D  stop UiProbe
+2025-09-20 18:09:03.635 19918-19944 ZrHung.AppEyeUiProbe    com.ivanmarty.rovecast               D  not watching, wait.
+2025-09-20 18:09:04.561 19918-19980 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 18:09:04.693 19918-19989 Ads                     com.ivanmarty.rovecast               W  Not retrying to fetch app settings
+2025-09-20 18:09:04.845 19918-20132 ServiceBindIntentUtils  com.ivanmarty.rovecast               W  Dynamic lookup for intent failed for action: com.google.android.gms.ads.service.START
+2025-09-20 18:09:04.927 19918-20132 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+2025-09-20 18:09:04.938 19918-19999 nmarty.rovecas          com.ivanmarty.rovecast               W  Verification of void com.google.android.gms.internal.cast.zzfv.disconnect() took 105.011ms
+2025-09-20 18:09:04.953 19918-20087 VideoCapabilities       com.ivanmarty.rovecast               W  Unrecognized profile/level 0/0 for video/mpeg2
+2025-09-20 18:09:04.953 19918-20087 VideoCapabilities       com.ivanmarty.rovecast               W  Unrecognized profile/level 0/2 for video/mpeg2
+2025-09-20 18:09:04.953 19918-20087 VideoCapabilities       com.ivanmarty.rovecast               W  Unrecognized profile/level 0/3 for video/mpeg2
+2025-09-20 18:09:04.953 19918-20087 VideoCapabilities       com.ivanmarty.rovecast               I  Unsupported profile 5 for video/mpeg2
+2025-09-20 18:09:04.953 19918-20087 chatty                  com.ivanmarty.rovecast               I  uid=10627(com.ivanmarty.rovecast) ThreadPoolSingl identical 2 lines
+2025-09-20 18:09:04.953 19918-20087 VideoCapabilities       com.ivanmarty.rovecast               I  Unsupported profile 5 for video/mpeg2
+2025-09-20 18:09:04.956 19918-20087 VideoCapabilities       com.ivanmarty.rovecast               W  Unrecognized profile/level 1/32 for video/mp4v-es
+2025-09-20 18:09:04.956 19918-20087 VideoCapabilities       com.ivanmarty.rovecast               W  Unrecognized profile/level 32768/2 for video/mp4v-es
+2025-09-20 18:09:04.956 19918-20087 VideoCapabilities       com.ivanmarty.rovecast               W  Unrecognized profile/level 32768/64 for video/mp4v-es
+2025-09-20 18:09:05.014 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden field Landroid/content/pm/ApplicationInfo;->primaryCpuAbi:Ljava/lang/String; (greylist, reflection, allowed)
+2025-09-20 18:09:05.067 19918-19918 AwareBitmapCacher       com.ivanmarty.rovecast               D  handleInit switch not opened pid=19918
+2025-09-20 18:09:05.068 19918-19918 Choreographer           com.ivanmarty.rovecast               I  Skipped 83 frames!  The application may be doing too much work on its main thread.
+2025-09-20 18:09:05.223 19918-19918 MediaSessionImpl        com.ivanmarty.rovecast               I  Init 613e961 [AndroidXMedia3/1.8.0] [HWMAR, MAR-LX3A, HUAWEI, 29]
+2025-09-20 18:09:05.575 19918-19918 Ads                     com.ivanmarty.rovecast               I  JS: The jsLoaded GMSG has been sent (https://googleads.g.doubleclick.net/mads/static/sdk/native/sdk-core-v40.html:985)
+2025-09-20 18:09:05.575 19918-19918 chromium                com.ivanmarty.rovecast               I  [INFO:CONSOLE:985] "The jsLoaded GMSG has been sent", source: https://googleads.g.doubleclick.net/mads/static/sdk/native/sdk-core-v40.html (985)
+2025-09-20 18:09:05.581 19918-19918 Choreographer           com.ivanmarty.rovecast               I  Skipped 30 frames!  The application may be doing too much work on its main thread.
+2025-09-20 18:09:05.647 19918-19918 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 18:09:05.873 19918-19936 nmarty.rovecas          com.ivanmarty.rovecast               W  Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+2025-09-20 18:09:05.965 19918-19918 Ads                     com.ivanmarty.rovecast               I  Ad failed to load : 3
+2025-09-20 18:09:06.225 19918-19929 nmarty.rovecas          com.ivanmarty.rovecast               I  Wrote stack traces to tombstoned
+2025-09-20 18:09:06.231  1681-1747  ActivityManager         system_server                        E  ANR in com.ivanmarty.rovecast
+                                                                                                    PID: 19918
+                                                                                                    Reason: Context.startForegroundService() did not then call Service.startForeground(): ServiceRecord{bf9de8c u0 com.ivanmarty.rovecast/.player.PlaybackService}
+                                                                                                    Load: 0.0 / 0.0 / 0.0
+                                                                                                    CPU usage from 15699ms to 0ms ago (2025-09-20 18:08:47.157 to 2025-09-20 18:09:02.856) with 99% awake:
+                                                                                                      23% 1681/system_server: 16% user + 7.3% kernel / faults: 18167 minor 3 major
+                                                                                                      11% 25692/com.facebook.katana: 9.3% user + 2.6% kernel / faults: 18334 minor
+                                                                                                      10% 678/surfaceflinger: 4.6% user + 5.7% kernel / faults: 482 minor
+                                                                                                      4.7% 2065/com.android.systemui: 2.9% user + 1.7% kernel / faults: 4844 minor
+                                                                                                      4.4% 455/logd: 2.2% user + 2.1% kernel / faults: 189 minor 11 major
+                                                                                                      3.5% 6466/com.google.android.gms.persistent: 1.9% user + 1.5% kernel / faults: 11078 minor 20 major
+                                                                                                      3.1% 1144/hiview: 2.3% user + 0.8% kernel / faults: 1151 minor 3 major
+                                                                                                      2.7% 9385/com.android.phone: 1.7% user + 1% kernel / faults: 446 minor
+                                                                                                      2.1% 653/vendor.huawei.hardware.hwdisplay.displayengine@1.2-service: 1.1% user + 0.9% kernel / faults: 21 minor
+                                                                                                      2% 637/android.hardware.graphics.composer@2.2-service: 0.8% user + 1.2% kernel / faults: 513 minor
+                                                                                                      1.8% 995/dubaid: 0.7% user + 1% kernel / faults: 1758 minor 3 major
+                                                                                                      1.7% 32496/com.android.vending: 1.6% user + 0% kernel / faults: 6126 minor
+                                                                                                      1.6% 7245/com.google.android.gms: 1% user + 0.6% kernel / faults: 2111 minor
+                                                                                                      1.5% 2510/com.huawei.android.launcher: 0.8% user + 0.6% kernel / faults: 6957 minor 76 major
+                                                                                                      1.2% 11367/kworker/u16:9: 0% user + 1.2% kernel
+                                                                                                      1.2% 16794/adbd: 0.1% user + 1% kernel / faults: 382 minor
+                                                                                                      1.2% 19369/kworker/u16:8: 0% user + 1.2% kernel
+                                                                                                      1% 1315/hisi_hcc: 0% user + 1% kernel
+                                                                                                      1% 17334/process-tracker: 0% user + 0.9% kernel
+                                                                                                      0.9% 2468/com.huawei.iaware: 0.5% user + 0.3% kernel / faults: 757 minor
+                                                                                                      0.9% 16849/kworker/u16:1: 0% user + 0.9% kernel
+                                                                                                      0.9% 25019/com.huawei.hwid.core: 0.6% user + 0.3% kernel / faults: 986 minor 5 major
+                                                                                                      0.8% 993/displayengineserver: 0.5% user + 0.3% kernel / faults: 85 minor
+                                                                                                      0.8% 664/vendor.huawei.hardware.light@2.0-service: 0.2% user + 0.5% kernel / faults: 100 minor
+                                                                                                      0.8% 680/powerlogd: 0.3% user + 0.4% kernel / faults: 14 minor
+                                                                                                      0.7% 5547/com.huawei.hiai.engineservice: 0.3% user + 0.3% kernel / faults: 1067 minor
+                                                                                                      0.6% 1936/wificond: 0.1% user + 0.4% kernel / faults: 37 minor
+                                                                                                      0.6% 2233/com.huawei.systemserver: 0.4% user + 0.1% kernel / faults: 436 minor
+                                                                                                      0.6% 11335/kworker/u16:7: 0% user + 0.6% kernel
+                                                                                                      0.6% 31535/com.touchtype.swiftkey: 0.5% user + 0.1% kernel / faults: 278 minor
+                                                                                                      0.5% 9/rcu_preempt: 0% user + 0.5% kernel
+                                                                                                      0.5% 1099/hwpged: 0.1% user + 0.3% kernel / faults: 8 minor
+                                                                                                      0.5% 1307/hisi_frw/0: 0% user + 0.5% kernel
+                                                                                                      0.5% 10406/hilogd: 0.3% user + 0.2% kernel / faults: 32 minor
+                                                                                                      0.5% 1303/oal_gpio_rx_dat: 0% user + 0.5% kernel
+                                                                                                      0.5% 12096/com.mercadolibre: 0.2% user + 0.2% kernel / faults: 235 minor
+                                                                                                      0.4% 88/xreclaimer: 0% user + 0.4% kernel
+                                                                                                      0.4% 4204/com.google.android.googlequicksearchbox:googleapp: 0.2% user + 0.1% kernel / faults: 2735 minor 2 major
+                                                                                                      0.3% 309/workingset:coll: 0% user + 0.3% kernel
+                                                                                                      0.3% 456/servicemanager: 0.1% user + 0.1% kernel
+                                                                                                      0.3% 3562/sugov:0: 0% user + 0.3% kernel
+                                                                                                      0.3% 657/vendor.huawei.hardware.hwhiview@1.1-service: 0.1% user + 0.1% kernel / faults: 207 minor
+                                                                                                      0.3% 1020/statsd: 0.1% user + 0.1% kernel / faults: 20 minor
+                                                                                                      0.3% 2279/com.huawei.systemmanager:service: 0.1% user + 0.1% kernel / faults: 636 minor
+                                                                                                      0.3% 2354/com.huawei.HwOPServer: 0.2% user + 0% kernel / faults: 40 minor
+                                                                                                      0.2% 158/kswapd0: 0% user + 0.2% kernel
+                                                                                                      0.2% 457/hwservicemanager: 0.1% user + 0% kernel / faults: 116 minor 1 major
+                                                                                                      0.2% 606/zygote64: 0% user + 0.2% kernel / faults: 447 minor
+                                                                                                      0.2% 674/audioserver: 0.1% user + 0% kernel / faults: 85 minor
+                                                                                                      0.2% 677/lmkd: 0% user + 0.2% kernel / faults: 1 minor
+                                                                                                      0.2% 1282/com.huawei.lbs: 0.1% user + 0.1% kernel / faults: 4 minor
+                                                                                                      0.2% 12536/kworker/6:2H: 0% user + 0.2% kernel
+                                                                                                      0.2% 16684/com.duolingo: 0.1% user + 0.1% kernel / faults: 17 minor
+                                                                                                      0.1% 605/netd: 0.1% user + 

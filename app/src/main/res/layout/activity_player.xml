@@ -2,74 +2,310 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_dark">
+    android:background="#121212"
+    android:fitsSystemWindows="true">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/playerTopBar"
+    <ImageView
+        android:id="@+id/ivBackground"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="@color/surface_dark"
-        android:theme="@style/Toolbar.RoveCast"
-        app:popupTheme="@style/ThemeOverlay.RoveCast.Popup"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Logo -->
-    <ImageView
-        android:id="@+id/ivLogo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_radio_placeholder"
-        app:layout_constraintTop_toBottomOf="@id/playerTopBar"
-        app:layout_constraintStart_toStartOf="parent"
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Título -->
-    <TextView
-        android:id="@+id/tvTitle"
+    <!-- Top gradient overlay -->
+    <View
+        android:id="@+id/topGradientOverlay"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@drawable/gradient_top_overlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Modern toolbar with back button -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/playerTopBar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:title=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Large album art with shimmer effect -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/albumArtCard"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerTopBar">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerArt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_radio_placeholder"
+                android:contentDescription="Logo de la estación de radio actual" />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Station info section -->
+    <LinearLayout
+        android:id="@+id/stationInfoContainer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Radio"
-        android:textColor="@color/on_dark"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         android:gravity="center"
-        android:paddingHorizontal="16dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/ivLogo"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/albumArtCard">
 
-    <!-- Meta -->
-    <TextView
-        android:id="@+id/tvMeta"
+        <!-- Station name -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Station Name"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:lineSpacingExtra="2dp"
+            android:contentDescription="Nombre de la estación de radio"
+            tools:text="Radio Station Name" />
+
+        <!-- Station metadata -->
+        <TextView
+            android:id="@+id/tvMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Live Radio"
+            android:textColor="#B3FFFFFF"
+            android:textSize="16sp"
+            android:lineSpacingExtra="1dp"
+            android:contentDescription="Información de la estación"
+            tools:text="Playing • Live Radio • Country" />
+
+    </LinearLayout>
+
+    <!-- Progress bar (for visual effect) -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:max="100"
+        android:progress="0"
+        android:progressBackgroundTint="#33FFFFFF"
+        android:progressTint="@android:color/white"
+        android:contentDescription="Progreso de reproducción"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stationInfoContainer" />
+
+    <!-- Control buttons section -->
+    <LinearLayout
+        android:id="@+id/controlsContainer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Meta"
-        android:textColor="@color/on_dark_60"
-        android:textSize="14sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         android:gravity="center"
-        android:maxLines="2"
-        android:ellipsize="end"
-        android:paddingHorizontal="16dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/progressBar">
 
-    <!-- PlayerView -->
+        <!-- Shuffle button -->
+        <ImageButton
+            android:id="@+id/btnShuffle"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_shuffle"
+            app:tint="#B3FFFFFF"
+            android:contentDescription="Activar reproducción aleatoria"
+            android:layout_weight="0" />
+
+        <!-- Previous button -->
+        <ImageButton
+            android:id="@+id/btnPrevious"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_skip_previous"
+            app:tint="@android:color/white"
+            android:contentDescription="Estación anterior"
+            android:layout_weight="0" />
+
+        <!-- Play/Pause button (main) -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="8dp"
+            android:layout_weight="0">
+
+            <ImageButton
+                android:id="@+id/btnPlayPause"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_play_arrow"
+                app:tint="@color/surface_dark"
+                android:contentDescription="Reproducir o pausar la estación" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Next button -->
+        <ImageButton
+            android:id="@+id/btnNext"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_skip_next"
+            app:tint="@android:color/white"
+            android:contentDescription="Siguiente estación"
+            android:layout_weight="0" />
+
+        <!-- Repeat button -->
+        <ImageButton
+            android:id="@+id/btnRepeat"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_repeat"
+            app:tint="#B3FFFFFF"
+            android:contentDescription="Activar repetición"
+            android:layout_weight="0" />
+
+    </LinearLayout>
+
+    <!-- Bottom action buttons -->
+    <LinearLayout
+        android:id="@+id/bottomActionsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.mediarouter.app.MediaRouteButton
+            android:id="@+id/btnDevices"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc_devices" />
+
+        <ImageButton
+            android:id="@+id/btnShare"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_share"
+            app:tint="#B3FFFFFF"
+            android:contentDescription="Compartir estación"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnFavorite"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_heart_outline"
+            app:tint="#B3FFFFFF"
+            android:contentDescription="Agregar a favoritos"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnSleepTimer"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_timer"
+            app:tint="#B3FFFFFF"
+            android:contentDescription="Configurar temporizador de apagado"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!-- Buffering indicator -->
+    <ProgressBar
+        android:id="@+id/bufferingProgress"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:contentDescription="Cargando contenido"
+        app:layout_constraintBottom_toBottomOf="@+id/albumArtCard"
+        app:layout_constraintEnd_toEndOf="@+id/albumArtCard"
+        app:layout_constraintStart_toStartOf="@+id/albumArtCard"
+        app:layout_constraintTop_toTopOf="@+id/albumArtCard" />
+
+    <!-- Hidden PlayerView for media control -->
     <androidx.media3.ui.PlayerView
         android:id="@+id/playerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:use_controller="true"
-        app:show_shuffle_button="false"
-        app:show_timeout="0"
-        app:layout_constraintTop_toBottomOf="@id/tvMeta"
+        android:visibility="gone"
+        app:use_controller="false"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

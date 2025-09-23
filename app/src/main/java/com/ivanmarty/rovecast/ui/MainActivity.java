@@ -319,7 +319,7 @@ public class MainActivity extends AppCompatActivity {
     private void showDefaultMiniPlayerState() {
         miniPlayerTitle.setText("RoveCast");
         miniPlayerStatus.setText("Selecciona una estación para comenzar");
-        miniPlayerLogo.setImageResource(R.drawable.ic_radio_placeholder);
+        miniPlayerLogo.setImageResource(R.mipmap.ic_launcher); // Usar icono oficial de la app
         miniPlayerPlayPause.setImageResource(R.drawable.ic_play_arrow);
         miniPlayerFavorite.setImageResource(R.drawable.ic_heart_outline);
         miniPlayerProgress.setProgress(0);

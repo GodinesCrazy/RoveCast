@@ -166,7 +166,7 @@
             android:layout_height="56dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_shuffle"
-            app:tint="#B3FFFFFF"
+            app:tint="@color/control_button_tint_spotify"
             android:contentDescription="Activar reproducción aleatoria"
             android:layout_weight="0" />
 
@@ -178,7 +178,7 @@
             android:layout_marginStart="16dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_skip_previous"
-            app:tint="@android:color/white"
+            app:tint="@color/control_button_tint_spotify"
             android:contentDescription="Estación anterior"
             android:layout_weight="0" />
 
@@ -212,7 +212,7 @@
             android:layout_marginEnd="16dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_skip_next"
-            app:tint="@android:color/white"
+            app:tint="@color/control_button_tint_spotify"
             android:contentDescription="Siguiente estación"
             android:layout_weight="0" />
 
@@ -223,7 +223,7 @@
             android:layout_height="56dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_repeat"
-            app:tint="#B3FFFFFF"
+            app:tint="@color/control_button_tint_spotify"
             android:contentDescription="Activar repetición"
             android:layout_weight="0" />
 
@@ -256,7 +256,7 @@
             android:layout_height="48dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_share"
-            app:tint="#B3FFFFFF"
+            app:tint="@color/control_button_tint_spotify"
             android:contentDescription="Compartir estación"
             android:layout_weight="1" />
 
@@ -266,7 +266,7 @@
             android:layout_height="48dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_heart_outline"
-            app:tint="#B3FFFFFF"
+            app:tint="@color/fav_tint_selector"
             android:contentDescription="Agregar a favoritos"
             android:layout_weight="1" />
 
@@ -276,7 +276,7 @@
             android:layout_height="48dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_timer"
-            app:tint="#B3FFFFFF"
+            app:tint="@color/control_button_tint_spotify"
             android:contentDescription="Configurar temporizador de apagado"
             android:layout_weight="1" />
 

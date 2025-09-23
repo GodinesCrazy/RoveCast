@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Verde Spotify cuando está seleccionado/favorito -->
+    <!-- Verde Spotify cuando está presionado o activo -->
+    <item android:color="#1DB954" android:state_pressed="true" />
     <item android:color="#1DB954" android:state_selected="true" />
-    <item android:color="#1DB954" android:state_checked="true" />
     <item android:color="#1DB954" android:state_activated="true" />
-    <!-- Blanco cuando no está seleccionado -->
+    <!-- Gris cuando está deshabilitado -->
+    <item android:color="#666666" android:state_enabled="false" />
+    <!-- Blanco por defecto -->
     <item android:color="#FFFFFF" />
 </selector>

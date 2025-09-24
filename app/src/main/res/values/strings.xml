@@ -9,7 +9,7 @@
     <string name="hint_duration_minutes" translatable="false">Duration (minutes)</string>
     <string name="add_preset" translatable="false">Añadir Preset</string>
     <string name="alarm_default_time" translatable="false">07:00</string>
-    <string name="hint_select_radio" translatable="false">Seleccionar radio</string>
+    <string name="hint_select_radio" translatable="false">Select radio station</string>
     <string name="day_monday_short" translatable="false">L</string>
     <string name="day_tuesday_short" translatable="false">M</string>
     <string name="day_wednesday_short" translatable="false">X</string>
@@ -17,18 +17,19 @@
     <string name="day_friday_short" translatable="false">V</string>
     <string name="day_saturday_short" translatable="false">S</string>
     <string name="day_sunday_short" translatable="false">D</string>
-    <string name="alarm_activate" translatable="false">Activar Alarma</string>
-    <string name="save" translatable="false">Guardar</string>
+    <string name="alarm_activate" translatable="false">Set Alarm</string>
+    <string name="alarm_deactivate" translatable="false">Deactivate Alarm</string>
+    <string name="update_alarm" translatable="false">Update Alarm</string>
+    <string name="save" translatable="false">Save</string>
     <string name="search_hint" translatable="false">Buscar</string>
     <string name="menu_sleep_timer" translatable="false">Sleep Timer</string>
     <string name="menu_cast" translatable="false">Cast</string>
     <string name="menu_favorite" translatable="false">Favorite</string>
-    <string name="menu_alarm" translatable="false">Alarma</string>
+    <string name="menu_alarm" translatable="false">Alarm</string>
     <string name="menu_privacy_policy" translatable="false">Privacy Policy</string>
     <string name="preset_display_format" translatable="false">%1$s (%2$d min)</string>
     <string name="cd_station_logo" translatable="false">Station logo</string>
     <string name="cd_play_pause_button" translatable="false">Play or pause button</string>
-    <string name="home_empty_state" translatable="false">No se pudo cargar radios. Revisa tu conexión o inténtalo más tarde.</string>
     <string name="cd_mini_player_title">Nombre de la estación</string>
     <string name="favorites_empty_state" translatable="false">Aún no tienes favoritos. Toca una estación y agrégala desde el reproductor.</string>
     <string name="notif_channel_name" translatable="false">Reproducción</string>

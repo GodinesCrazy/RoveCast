@@ -23,6 +23,7 @@ import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.MoreExecutors;
 import com.ivanmarty.rovecast.R;
+import com.ivanmarty.rovecast.R.string;
 import com.ivanmarty.rovecast.model.Station;
 import com.ivanmarty.rovecast.player.PlaybackService;
 
@@ -80,7 +81,7 @@ public class AlarmFragmentSimplified extends Fragment {
 
         // Switch listener with clear feedback
         switchAlarm.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            btnSaveAlarm.setText(isChecked ? "Activar Alarma" : "Desactivar Alarma");
+            btnSaveAlarm.setText(isChecked ? getString(R.string.alarm_activate) : getString(R.string.alarm_deactivate));
             btnSaveAlarm.setEnabled(true);
         });
 
@@ -153,7 +154,7 @@ public class AlarmFragmentSimplified extends Fragment {
 
         // Load switch state
         switchAlarm.setChecked(alarmInfo.isEnabled());
-        btnSaveAlarm.setText(alarmInfo.isEnabled() ? "Actualizar Alarma" : "Activar Alarma");
+        btnSaveAlarm.setText(alarmInfo.isEnabled() ? getString(R.string.update_alarm) : getString(R.string.alarm_activate));
 
         // Load selected days
         List<Integer> selectedDays = alarmInfo.getDays();

@@ -29,6 +29,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import android.os.Handler;
+import android.os.Looper;
 
 public class HomeFragment extends Fragment implements StationAdapter.StationListener {
 
@@ -40,6 +42,8 @@ public class HomeFragment extends Fragment implements StationAdapter.StationList
     private ProgressBar progressBar;
     private List<Station> currentStations = new ArrayList<>();
     private Set<String> favoriteStationIds = new HashSet<>();
+    private long loadStartTime = 0;
+    private static final long MIN_LOADING_TIME_MS = 3000; // 3 seconds minimum loading time
 
     @Nullable
     @Override
@@ -80,26 +84,42 @@ public class HomeFragment extends Fragment implements StationAdapter.StationList
         if (shimmer != null) {
             shimmer.setVisibility(View.VISIBLE);
             shimmer.startShimmer();
+            loadStartTime = System.currentTimeMillis();
         }
         progressBar.setVisibility(View.GONE);
         vm.refreshStations();
 
         // Observer para estaciones
         vm.getStations().observe(getViewLifecycleOwner(), stations -> {
-            if (shimmer != null) {
-                shimmer.stopShimmer();
-                shimmer.setVisibility(View.GONE);
+            long currentTime = System.currentTimeMillis();
+            long timeElapsed = currentTime - loadStartTime;
+            long remainingTime = MIN_LOADING_TIME_MS - timeElapsed;
+            
+            Runnable hideShimmer = () -> {
+                if (shimmer != null && shimmer.getVisibility() == View.VISIBLE) {
+                    shimmer.stopShimmer();
+                    shimmer.setVisibility(View.GONE);
+                }
+                // Update the UI with the loaded stations
+                currentStations = stations != null ? stations : new ArrayList<>();
+                updateAdapterList();
+                if (emptyStateContainer != null) {
+                    emptyStateContainer.setVisibility(currentStations.isEmpty() ? View.VISIBLE : View.GONE);
+                }
+                if (firstLaunchBanner != null && !currentStations.isEmpty() && showFirstBanner) {
+                    firstLaunchBanner.setVisibility(View.GONE);
+                    flm.setFirstLaunch(false);
+                }
+            };
+            
+            if (remainingTime > 0) {
+                // Aún no ha pasado el tiempo mínimo de carga
+                new Handler(Looper.getMainLooper()).postDelayed(hideShimmer, remainingTime);
+            } else {
+                // Ya pasó el tiempo mínimo, ocultar inmediatamente
+                hideShimmer.run();
             }
             progressBar.setVisibility(View.GONE);
-            currentStations = stations != null ? stations : new ArrayList<>();
-            updateAdapterList();
-            if (emptyStateContainer != null) {
-                emptyStateContainer.setVisibility(currentStations.isEmpty() ? View.VISIBLE : View.GONE);
-            }
-            if (firstLaunchBanner != null && !currentStations.isEmpty() && showFirstBanner) {
-                firstLaunchBanner.setVisibility(View.GONE);
-                flm.setFirstLaunch(false);
-            }
         });
 
         // Observer para favoritos

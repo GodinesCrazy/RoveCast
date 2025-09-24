@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="⏰ Configurar Alarma"
+                android:text="Set Alarm"
                 android:textColor="@color/on_dark"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="4dp"
-                android:text="Despierta con tu radio favorita"
+                android:text="Wake up to your favorite radio"
                 android:textColor="@color/textSecondary"
                 android:textSize="14sp" />
 
@@ -85,14 +85,14 @@
                 android:textColor="@color/accent"
                 android:textSize="56sp"
                 android:textStyle="bold"
-                android:contentDescription="Seleccionar hora de la alarma" />
+                android:contentDescription="Select alarm time" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="4dp"
-                android:text="Toca para cambiar la hora"
+                android:text="Tap to change time"
                 android:textColor="@color/textSecondary"
                 android:textSize="12sp" />
 
@@ -108,7 +108,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="📻 Radio seleccionada:"
+                    android:text="Selected Radio:"
                     android:textColor="@color/textSecondary"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -118,7 +118,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="🎵 Cargando radio actual..."
+                    android:text="Loading current radio..."
                     android:textColor="@color/accent"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -127,7 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Se usará automáticamente la radio que está sonando"
+                    android:text="The alarm will automatically use the currently playing radio"
                     android:textColor="@color/textSecondary"
                     android:textSize="11sp" />
 
@@ -138,7 +138,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="📅 Días de la semana:"
+                android:text="Days of the week:"
                 android:textColor="@color/on_dark"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -156,7 +156,7 @@
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/day_monday_short"
+                    android:text="Mon"
                     app:chipStrokeColor="@color/accent"
                     app:chipStrokeWidth="1dp" />
 
@@ -165,7 +165,7 @@
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/day_tuesday_short"
+                    android:text="Tue"
                     app:chipStrokeColor="@color/accent"
                     app:chipStrokeWidth="1dp" />
 
@@ -174,7 +174,7 @@
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/day_wednesday_short"
+                    android:text="Wed"
                     app:chipStrokeColor="@color/accent"
                     app:chipStrokeWidth="1dp" />
 
@@ -183,7 +183,7 @@
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/day_thursday_short"
+                    android:text="Thu"
                     app:chipStrokeColor="@color/accent"
                     app:chipStrokeWidth="1dp" />
 
@@ -192,7 +192,7 @@
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/day_friday_short"
+                    android:text="Fri"
                     app:chipStrokeColor="@color/accent"
                     app:chipStrokeWidth="1dp" />
 
@@ -201,7 +201,7 @@
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/day_saturday_short"
+                    android:text="Sat"
                     app:chipStrokeColor="@color/accent"
                     app:chipStrokeWidth="1dp" />
 
@@ -210,7 +210,7 @@
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/day_sunday_short"
+                    android:text="Sun"
                     app:chipStrokeColor="@color/accent"
                     app:chipStrokeWidth="1dp" />
 
@@ -234,7 +234,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="🔔 Estado de la alarma"
+                        android:text="Alarm State"
                         android:textColor="@color/on_dark"
                         android:textSize="14sp"
                         android:textStyle="bold" />
@@ -243,7 +243,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:text="Activar o desactivar la alarma"
+                        android:text="Enable or disable the alarm"
                         android:textColor="@color/textSecondary"
                         android:textSize="12sp" />
 
@@ -267,7 +267,7 @@
                 android:layout_marginTop="24dp"
                 android:backgroundTint="@color/accent"
                 android:enabled="false"
-                android:text="Activar Alarma"
+                android:text="Save Alarm"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -304,7 +304,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="💡 Cómo funciona:"
+                android:text="How it works:"
                 android:textColor="@color/textSecondary"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -313,7 +313,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="• La alarma usará automáticamente la radio que está sonando\n• Selecciona los días que quieres que suene\n• Activa el switch y guarda para confirmar\n• El icono de alarma se pondrá verde cuando esté activa"
+                android:text="• The alarm will sound at the scheduled time. Make sure the volume is turned on.\n• Select the days you want the alarm to sound\n• Enable the switch and save to confirm\n• The alarm icon will turn green when it's active"
                 android:textColor="@color/textSecondary"
                 android:textSize="11sp"
                 android:lineSpacingExtra="2dp" />

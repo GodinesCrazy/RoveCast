@@ -26,7 +26,7 @@
         <!-- AdMob -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-2918417880001381~2125154128"/>
 
         <!-- Cast: Options provider (usa el DEFAULT_MEDIA_RECEIVER) -->
         <meta-data

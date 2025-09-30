@@ -15,9 +15,9 @@ public final class RestClient {
         if (rb == null) {
             OkHttpClient ok = new OkHttpClient.Builder()
                     .retryOnConnectionFailure(true)
-                    .connectTimeout(java.time.Duration.ofSeconds(10))
-                    .readTimeout(java.time.Duration.ofSeconds(20))
-                    .callTimeout(java.time.Duration.ofSeconds(30))
+                    .connectTimeout(10, java.util.concurrent.TimeUnit.SECONDS)
+                    .readTimeout(20, java.util.concurrent.TimeUnit.SECONDS)
+                    .callTimeout(30, java.util.concurrent.TimeUnit.SECONDS)
                     .connectionSpecs(java.util.Arrays.asList(
                             okhttp3.ConnectionSpec.MODERN_TLS,
                             okhttp3.ConnectionSpec.COMPATIBLE_TLS

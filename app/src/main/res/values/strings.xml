@@ -47,6 +47,18 @@
     <string name="playback_state_paused" translatable="false">Pausado</string>
 
     <string name="station_logo_description" translatable="false">Logo de la estación</string>
+    
+    <!-- Privacy Policy and Consent Strings -->
+    <string name="privacy_policy_title">Privacy Policy</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="manage_privacy_settings">Manage Privacy Settings</string>
+    <string name="update_privacy_settings">Update Privacy Settings</string>
+    <string name="thank_you">Thank You</string>
+    <string name="consent_accepted_message">Thank you for accepting our privacy policy. Your preferences have been saved.</string>
+    <string name="consent_rejected_message">Your privacy preferences have been updated. Some features may be limited.</string>
+    <string name="privacy_policy_url">https://tusitio.com/politica-de-privacidad</string>
+    
     <!-- Mini-player content descriptions -->
     <string name="cd_mini_player_logo">Logo de la estación de radio</string>
     <string name="cd_mini_player_progress">Progreso de reproducción</string>

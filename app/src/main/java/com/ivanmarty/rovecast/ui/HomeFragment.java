@@ -147,7 +147,6 @@ public class HomeFragment extends Fragment implements StationAdapter.StationList
     @Override
     public void onResume() {
         super.onResume();
-        AdsManager.get().runWithMaybeAd(requireActivity(), null);
         
         // Ajustar padding dinámicamente según visibilidad del mini-player
         // Esto garantiza que se muestren 6+ radios consistentemente

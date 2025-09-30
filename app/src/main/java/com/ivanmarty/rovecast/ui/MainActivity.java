@@ -1,4 +1,5 @@
 package com.ivanmarty.rovecast.ui;
+
 import androidx.core.content.ContextCompat;
 import androidx.core.widget.ImageViewCompat;
 import android.content.res.ColorStateList;
@@ -39,6 +40,8 @@ import com.bumptech.glide.Glide;
 import com.google.android.gms.cast.framework.CastContext;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.MoreExecutors;
 import com.ivanmarty.rovecast.R;
@@ -54,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     private BillingManager billing;
     private MaterialToolbar top;
+    private AdView adView;
 
     private CardView miniPlayerContainer;
     private TextView miniPlayerTitle, miniPlayerStatus;
@@ -78,13 +82,28 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
+        adView = findViewById(R.id.adView);
+
+        // Iniciar el proceso de consentimiento. Los anuncios se cargarán cuando termine.
+        ConsentManager.getInstance(this).gatherConsent(this, () -> {
+            if (ConsentManager.getInstance(this).canRequestAds()) {
+                if (!PremiumManager.isPremium(this)) {
+                    AdRequest adRequest = new AdRequest.Builder().build();
+                    adView.loadAd(adRequest);
+                    adView.setVisibility(View.VISIBLE);
+                } else {
+                    adView.setVisibility(View.GONE);
+                }
+            } else {
+                adView.setVisibility(View.GONE);
+            }
+        });
+
         com.ivanmarty.rovecast.util.FirstLaunchManager firstLaunchManager = new com.ivanmarty.rovecast.util.FirstLaunchManager(this);
         if (firstLaunchManager.isFirstLaunch()) {
             Toast.makeText(this, "Welcome! It might take a moment to load nearby stations and images for the first time.", Toast.LENGTH_LONG).show();
             firstLaunchManager.setFirstLaunch(false);
         }
-
-        ConsentManager.requestIfNeeded(this);
 
         CastContext.getSharedInstance(this).addCastStateListener(state -> {
             Log.d("CastState", "State changed: " + state);
@@ -217,18 +236,18 @@ public class MainActivity extends AppCompatActivity {
         if (controller != null && playerListener != null) {
             controller.removeListener(playerListener);
         }
-        if (controllerFuture != null) {
-            MediaController.releaseFuture(controllerFuture);
-        }
     }
 
     private void initializeMediaController() {
-        SessionToken sessionToken = new SessionToken(this, new ComponentName(this, PlaybackService.class));
-        controllerFuture = new MediaController.Builder(this, sessionToken).buildAsync();
+        controllerFuture = new MediaController.Builder(
+            this,
+            new SessionToken(this, new ComponentName(this, PlaybackService.class))
+        ).buildAsync();
+
         controllerFuture.addListener(() -> {
             try {
                 controller = controllerFuture.get();
-                // Configurar OnClickListener para el botón play/pause
+                // Set up play/pause button
                 setupPlayPauseButton();
 
                 playerListener = new Player.Listener() {
@@ -238,7 +257,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 };
                 controller.addListener(playerListener);
-
                 updateUiWithCurrentState();
             } catch (Exception e) {
                 Log.e("MainActivity", "Error connecting to MediaController", e);

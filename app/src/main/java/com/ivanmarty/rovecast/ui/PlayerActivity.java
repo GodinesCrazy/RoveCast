@@ -32,6 +32,7 @@ import com.google.android.material.appbar.MaterialToolbar;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.MoreExecutors;
 import com.ivanmarty.rovecast.R;
+import com.ivanmarty.rovecast.ads.AdsManager;
 import com.ivanmarty.rovecast.billing.PremiumManager;
 import com.ivanmarty.rovecast.cast.CastManager;
 import com.ivanmarty.rovecast.data.FavoriteRepository;
@@ -66,6 +67,13 @@ public class PlayerActivity extends AppCompatActivity {
     private boolean isFavorite;
     private Station currentStation;
     private Player.Listener playerListener; // Para poder removerlo después
+
+    @Override
+    public void finish() {
+        AdsManager.get().runWithMaybeAd(this, () -> {
+            super.finish();
+        });
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -12,8 +12,8 @@ android {
         applicationId "com.ivanmarty.rovecast"
         minSdk 24
         targetSdk 35
-        versionCode 27
-        versionName "2.2.7"
+        versionCode 28
+        versionName "2.2.8"
         vectorDrawables.useSupportLibrary true
     }
 
@@ -110,7 +110,7 @@ dependencies {
     implementation "com.google.android.gms:play-services-cast-framework:22.1.0"
     implementation "androidx.mediarouter:mediarouter:1.8.1"
 
-    // Billing
+    // Billing (direct dependency, ya en v8)
     implementation "com.android.billingclient:billing:8.0.0"
 
     // Pruebas
@@ -118,3 +118,17 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:1.2.1"
     androidTestImplementation "androidx.test.espresso:espresso-core:3.6.1"
 }
+
+// --- Garantizar que siempre se use Billing v8.0.0 (evita dependencias transitivas antiguas) ---
+configurations.all {
+    resolutionStrategy {
+        // Fuerza la versión que queremos evitar que transitivas bajen la versión
+        force 'com.android.billingclient:billing:8.0.0'
+    }
+}
+
+// Ejemplo (comentado) de cómo excluir billing si una dependencia concreta la arrastra:
+// Si dependencyInsight muestra que com.example:old-iap:1.2.3 trae billing:6.0.0, descomenta y adapta:
+// implementation('com.example:old-iap:1.2.3') {
+//     exclude group: 'com.android.billingclient', module: 'billing'
+//}
